@@ -1,0 +1,50 @@
+- type: entity
+  parent: BaseItem
+  id: SellableBatteryConnector
+  name: sellable battery connector port
+  description: sellable battery connector port
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Item
+      size: Huge
+    - type: Sprite
+      sprite: AWS/economy/sellablebatteries.rsi
+      layers:
+        - state: station
+          map: [ "enum.SubfloorLayers.FirstLayer" ]
+        - state: indicator
+    - type: Appearance
+    - type: Tag
+      tags:
+        - Unstackable
+    - type: SubFloorHide
+      blockInteractions: false
+      blockAmbience: false
+    - type: Anchorable
+
+
+
+
+
+
+# - type: construction
+#   id: SellableBatteryConnector
+#   name: sellable battery connector port
+#   description: sellable battery connector port
+#   graph: GasBinary
+#   startNode: start
+#   targetNode: port
+#   category: construction-category-utilities
+#   placementMode: SnapgridCenter
+#   canBuildInImpassable: false
+#   icon:
+#     sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
+#     state: gasCanisterPort
+#   layers:
+#   - sprite: Structures/Piping/Atmospherics/pipe.rsi
+#     state: pipeHalf
+#   - sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
+#     state: gasCanisterPort
+#   conditions:
+#     - !type:NoUnstackableInTile
