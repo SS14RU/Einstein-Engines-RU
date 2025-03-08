@@ -1,0 +1,47 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:ui="clr-namespace:Content.Client.AWS.Economy.UI.ManagementConsole">
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
+        <!-- Left: Account List -->
+        <BoxContainer Orientation="Vertical" Margin="5" MinWidth="300">
+            <LineEdit Name="FindAccount"
+                      HorizontalExpand="True"/>
+            <OptionButton Name="DepartmentFilterOptionButton"/>
+            <ScrollContainer VerticalExpand="True">
+                <ItemList Name="AccountList" />
+            </ScrollContainer>
+        </BoxContainer>
+
+        <!-- Right: Bonus Management -->
+        <BoxContainer Orientation="Vertical" Margin="5" VerticalExpand="True" HorizontalExpand="True">
+            <Label Text="{Loc 'economybanksystem-management-console-bonus-tab'}" HorizontalExpand="True" Align="Center"/>
+            <PanelContainer StyleClasses="LowDivider" />
+            <ScrollContainer VerticalExpand="True" MinHeight="200">
+                <ItemList Name="SelectedAccountList" />
+            </ScrollContainer>
+            <PanelContainer StyleClasses="LowDivider" />
+            <GridContainer Columns="2"
+                    HorizontalExpand="True"
+                    Margin="0 0 0 10">
+                <Label Text="{Loc 'economybanksystem-management-console-bonus-payer-account'}"
+                        HorizontalExpand="True"/>
+                <OptionButton Name="PayerAccountOptionButton"
+                              Disabled="True"/>
+                <Label Text="{Loc 'economy-bank-atm-menu-account-balance'}"
+                        HorizontalExpand="True"/>
+                <Label Name="PayerAccountBalanceLabel"
+                        HorizontalExpand="True"/>
+                <Label Text="{Loc 'economybanksystem-management-console-bonus-total-bonus'}"
+                        HorizontalExpand="True"/>
+                <Label Name="TotalBonusLabel"
+                        HorizontalExpand="True"/>
+            </GridContainer>
+            <PanelContainer StyleClasses="LowDivider" />
+            <Label Text="{Loc 'economybanksystem-management-console-bonus-percent'}" />
+            <SpinBox Name="BonusPercentBox" HorizontalExpand="True" Value="10" />
+            <Button Name="PayBonusButton" Text="{Loc 'economybanksystem-management-console-bonus-pay-button'}" Disabled="True" Margin="0 5" HorizontalAlignment="Left" MaxWidth="300"/>
+            <Button Name="ClearSelectedButton" Text="{Loc 'economybanksystem-management-console-bonus-clear-selected-button'}" HorizontalAlignment="Left" MaxWidth="300"/>
+        </BoxContainer>
+    </BoxContainer>
+</Control>

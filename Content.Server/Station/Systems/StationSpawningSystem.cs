@@ -28,6 +28,8 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Server.AWS.Economy;
+using Content.Shared.AWS.Economy;
 
 namespace Content.Server.Station.Systems;
 
@@ -48,6 +50,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly IdentitySystem _identity = default!;
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly InternalEncryptionKeySpawner _internalEncryption = default!;
+    [Dependency] private readonly EconomyBankAccountSystem _bankAccountSystem = default!;
 
     private bool _randomizeCharacters;
 
@@ -210,6 +213,11 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         if (pdaComponent != null)
             _pdaSystem.SetOwner(idUid.Value, pdaComponent, characterName);
+
+        // SS14RU
+        if (TryComp<EconomyAccountHolderComponent>(cardId, out var economyAccountHolder))
+            _bankAccountSystem.TryActivate((cardId, economyAccountHolder), out _);
+        // SS14RU
     }
 
 

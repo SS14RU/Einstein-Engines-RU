@@ -1,0 +1,97 @@
+- type: entity
+  id: BankATM
+  parent: BaseMachinePowered
+  name: ATM
+  components:
+  - type: Sprite
+    sprite: AWS/economy/ATM.rsi
+    layers:
+      - map: ["computerLayerBody"]
+        state: ATM
+      - map: ["enum.PowerDeviceVisualLayers.Powered"]
+        state: ATM-on
+        shader: unshaded
+      - map: ["enum.WiresVisualLayers.MaintenancePanel"]
+        state: panel
+        visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Icon
+    sprite: AWS/economy/ATM.rsi
+    state: icon
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.45,0.25,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+      - !type:EjectVendorItems
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+  - type: Repairable
+    doAfterDelay: 8
+  - type: ActivatableUI
+    key: enum.EconomyBankATMUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.EconomyBankATMUiKey.Key:
+        type: EconomyBankATMBoundUserInteface
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Anchorable
+  - type: DoAfter
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 1.5
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Actions
+  - type: Appearance
+  - type: EconomyBankATM
+    emagDropMoneyHolderRandomCount: 3
+    moneyHolderEntId: "ThalerHolder"
+    emagDropMoneyValues: [50, 100, 150, 300]
+    cardSlot:
+      priority: 0
+      whitelist:
+        components:
+        - EconomyAccountHolder

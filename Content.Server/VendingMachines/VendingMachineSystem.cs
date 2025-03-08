@@ -20,11 +20,13 @@ using Content.Shared.Power;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
 using Content.Shared.VendingMachines;
+using Content.Shared.Wall;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Shared.AWS.Economy;
 
 namespace Content.Server.VendingMachines
 {
@@ -39,6 +41,13 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly SpeakOnUIClosedSystem _speakOnUIClosed = default!;
+        [Dependency] private readonly SharedPopupSystem _popup = default!;
+
+        // SS14RU
+        [Dependency] private readonly AWS.Economy.EconomyBankAccountSystem _bankAccountSystem = default!;
+        // SS14RU
+
+        private const float WallVendEjectDistanceFromWall = 1f;
 
         public override void Initialize()
         {
@@ -48,7 +57,7 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineComponent, PowerChangedEvent>(OnPowerChanged);
             SubscribeLocalEvent<VendingMachineComponent, BreakageEventArgs>(OnBreak);
             SubscribeLocalEvent<VendingMachineComponent, GotEmaggedEvent>(OnEmagged);
-            SubscribeLocalEvent<VendingMachineComponent, DamageChangedEvent>(OnDamage);
+            SubscribeLocalEvent<VendingMachineComponent, DamageChangedEvent>(OnDamageChanged);
             SubscribeLocalEvent<VendingMachineComponent, PriceCalculationEvent>(OnVendingPrice);
 
             SubscribeLocalEvent<VendingMachineComponent, ActivatableUIOpenAttemptEvent>(OnActivatableUIOpenAttempt);
@@ -57,6 +66,9 @@ namespace Content.Server.VendingMachines
             {
                 subs.Event<BoundUIOpenedEvent>(OnBoundUIOpened);
                 subs.Event<VendingMachineEjectMessage>(OnInventoryEjectMessage);
+                // SS14RU
+                subs.Event<VendingMachineSelectMessage>(OnSelectMessage);
+                // SS14RU
             });
 
             SubscribeLocalEvent<VendingMachineComponent, VendingMachineSelfDispenseEvent>(OnSelfDispense);
@@ -64,6 +76,24 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineComponent, RestockDoAfterEvent>(OnDoAfter);
 
             SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
+        }
+
+        private void OnSelectMessage(EntityUid uid, VendingMachineComponent component, VendingMachineSelectMessage args)
+        {
+            var entry = GetEntry(uid, args.ID, args.Type, component);
+            if (!TryComp<EconomyBankTerminalComponent>(uid, out var economyBankTerminalComponent) || HasComp<EmaggedComponent>(uid) || (entry is not null && entry.Price == 0))
+            {
+                OnInventoryEjectMessage(uid, component, new VendingMachineEjectMessage(args.Type, args.ID) { Actor = args.Actor });
+                return;
+            }
+            if (economyBankTerminalComponent is not null && entry is not null)
+            {
+                _bankAccountSystem.UpdateTerminal((uid, economyBankTerminalComponent),
+                    entry.Price,
+                    Loc.GetString("economyBankTerminal-component-vending-reason", ("itemName", args.ID)));
+                component.SelectedItemInventoryType = args.Type;
+                component.SelectedItemId = args.ID;
+            }
         }
 
         private void OnComponentMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
@@ -146,8 +176,15 @@ namespace Content.Server.VendingMachines
             args.Handled = component.EmaggedInventory.Count > 0;
         }
 
-        private void OnDamage(EntityUid uid, VendingMachineComponent component, DamageChangedEvent args)
+        private void OnDamageChanged(EntityUid uid, VendingMachineComponent component, DamageChangedEvent args)
         {
+            if (!args.DamageIncreased && component.Broken)
+            {
+                component.Broken = false;
+                TryUpdateVisualState(uid, component);
+                return;
+            }
+
             if (component.Broken || component.DispenseOnHitCoolingDown ||
                 component.DispenseOnHitChance == null || args.DamageDelta == null)
                 return;
@@ -384,7 +421,20 @@ namespace Content.Server.VendingMachines
                 return;
             }
 
-            var ent = Spawn(vendComponent.NextItemToEject, Transform(uid).Coordinates);
+            // Default spawn coordinates
+            var spawnCoordinates = Transform(uid).Coordinates;
+
+            //Make sure the wallvends spawn outside of the wall.
+
+            if (TryComp<WallMountComponent>(uid, out var wallMountComponent))
+            {
+
+                var offset = wallMountComponent.Direction.ToWorldVec() * WallVendEjectDistanceFromWall;
+                spawnCoordinates = spawnCoordinates.Offset(offset);
+            }
+
+            var ent = Spawn(vendComponent.NextItemToEject, spawnCoordinates);
+
             if (vendComponent.ThrowNextItem)
             {
                 var range = vendComponent.NonLimitedEjectRange;
@@ -498,3 +548,4 @@ namespace Content.Server.VendingMachines
         }
     }
 }
+

@@ -1,0 +1,386 @@
+- type: entity
+  id: Thaler
+  suffix: 1 TR
+  # components:
+  # - type: Stack
+  #   count: 1
+
+- type: entity
+  parent: BaseItem
+  id: MoneyHolder
+  name: money holder
+  description: A lot of money, probably.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: AWS/economy/moneyholder.rsi
+    layers:
+    - state: icon
+  - type: Item
+    size: Small
+    heldPrefix: default
+    shape:
+    - 0,0,1,0
+  - type: EconomyMoneyHolder
+    allowCurrency: Thaler
+    amount: 0
+
+- type: entity
+  parent: MoneyHolder
+  id: ThalerHolder
+  name: thaler holder
+  suffix: Economy
+  components:
+  - type: Sprite
+    sprite: AWS/economy/moneyholder.rsi
+    layers:
+    - state: icon
+  - type: EconomyMoneyHolder
+    allowCurrency: Thaler
+
+- type: entity
+  parent: MoneyHolder
+  id: AdminThalerHolder
+  name: admin thaler holder
+  suffix: Economy
+  components:
+  - type: Sprite
+    sprite: AWS/economy/moneyholder.rsi
+    layers:
+    - state: icon
+  - type: EconomyMoneyHolder
+    balance: 10000
+    allowCurrency: Thaler
+
+- type: currency
+  id: Thaler
+  displayName: store-currency-display-telecrystal
+  cash:
+    1: Thaler
+  canWithdraw: true
+
+- type: economyAccountId
+  id: Nanotrasen
+  descriptior: "-"
+  prefix: "NT"
+  streak: 1
+  numbersPerStreak: 6
+
+- type: entity
+  parent: BaseItem
+  id: BankAccountNanotrasen
+  name: bank account
+  suffix: Economy
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: captain
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      generateAccountID: true
+      allowedCurrency: Thaler
+      balance: 10000
+
+# - type: entity
+#   parent: IDCardStandard
+#   id: IDCardNT
+#   name: passenger ID card
+#   components:
+#   - type: EconomyAccountHolder
+#     allowCurrency: Thaler
+#     accountIdByProto: Nanotrasen
+#     moneyHolderEntId: ThalerHolder
+
+#Отделы
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Command
+  name: Платёжный счет "Станции"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Command
+      accountName: Станция
+      allowedCurrency: Thaler
+      balance: 10000
+      accountTags:
+        - Department
+        - Station
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Engineering
+  name: Платёжный счет "Инженерного отдела"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Engineering
+      accountName: Инженерный отдел
+      allowedCurrency: Thaler
+      balance: 1000
+      accountTags:
+        - Department
+
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Service
+  name: Платёжный счет "Сервисного отдела"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Service
+      accountName: Сервисный отдел
+      allowedCurrency: Thaler
+      balance: 500
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Security
+  name: Платёжный счет "Службы безопасности"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Security
+      allowedCurrency: Thaler
+      accountName: Служба безопасности
+      balance: 1000
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Medical
+  name: Платёжный счет "Медицинского отдела"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Medical
+      accountName: Медицинский отдел
+      allowedCurrency: Thaler
+      balance: 900
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Science
+  name: Платёжный счет "Научного отдела"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Science
+      accountName: Научный отдел
+      allowedCurrency: Thaler
+      balance: 1000
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Cargo
+  name: Платёжный счет "Отдела снабжения"
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Cargo
+      accountName: Карго отдел
+      allowedCurrency: Thaler
+      balance: 1000
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-CentCom
+  name: Платежный счет "Центального Командования"
+  description: ТВОЙ БОГ
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-CentCom
+      accountName: Центком
+      allowedCurrency: Thaler
+      balance: 18446744073709524615
+
+#Кассы
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Service-B
+  name: Касса Бара
+  description: Счет для оплаты напитков для клиентов.
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Service-B
+      accountName: Касса Бара
+      allowedCurrency: Thaler
+      balance: 250
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Service-K
+  name: Касса Кухни
+  description: Счет для оплаты продуктов для клиентов.
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Service-K
+      accountName: Касса Кухни
+      allowedCurrency: Thaler
+      balance: 125
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Service-H
+  name: Касса Гидропоники
+  description: Счет для оплаты семян.
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Service-H
+      accountName: Касса Гидропоники
+      allowedCurrency: Thaler
+      balance: 125
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Medical-C
+  name: Касса Химии
+  description: Счет для оплаты химических реагентов.
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Medical-C
+      accountName: Касса Химии
+      allowedCurrency: Thaler
+      balance: 100
+      accountTags:
+        - Department
+
+- type: entity
+  parent: BankAccountNanotrasen
+  id: IDCard-NT-Medical-M
+  name: Касса Меда
+  description: Счет для оплаты медицинских расходников.
+  suffix: Economy
+  components:
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      accountID: NT-Medical-M
+      accountName: Касса Меда
+      allowedCurrency: Thaler
+      balance: 50
+      accountTags:
+        - Department
+
+#Сейфы
+- type: entity
+  parent: [GunSafe]
+  id: SafeMedical
+  name: Сейф кассы меда.
+  suffix: Economy
+  components:
+  - type: StorageFill
+    contents:
+    - id: IDCard-NT-Medical-C
+    - id: IDCard-NT-Medical-M
+  - type: AccessReader
+    access: [["Command"]]
+
+- type: entity
+  parent: [GunSafe]
+  id: SafeService
+  name: Сейф кассы Сервиса.
+  suffix: Economy
+  components:
+  - type: StorageFill
+    contents:
+    - id: IDCard-NT-Service-B
+    - id: IDCard-NT-Service-K
+    - id: IDCard-NT-Service-H
+  - type: AccessReader
+    access: [["Command"]]
+
+- type: entity
+  parent: [GunSafe]
+  id: SafeEconomy
+  name: Сейф счетов станции.
+  suffix: Economy
+  components:
+  - type: StorageFill
+    contents:
+    - id: IDCard-NT-Cargo
+    - id: IDCard-NT-Science
+    - id: IDCard-NT-Medical
+    - id: IDCard-NT-Security
+    - id: IDCard-NT-Service
+    - id: IDCard-NT-Engineering
+  - type: AccessReader
+    access: [["Command"]]
+
+- type: entity
+  parent: [GunSafe]
+  id: SafeCentCom
+  name: Сейф счета ЦК.
+  suffix: Economy
+  components:
+  - type: StorageFill
+    contents:
+    - id: IDCard-NT-CentCom
+  - type: AccessReader
+    access: [["Command"]]

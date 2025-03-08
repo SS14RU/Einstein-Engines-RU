@@ -30,7 +30,24 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
     protected virtual void OnComponentInit(EntityUid uid, VendingMachineComponent component, ComponentInit args)
     {
         RestockInventoryFromPrototype(uid, component, component.InitialStockQuality);
+        ReCalculateEntriesPrice(uid, component); //SS14-RU
     }
+
+    //SS14-RU
+    public void ReCalculateEntriesPrice(EntityUid uid, VendingMachineComponent component)
+    {
+        if (!PrototypeManager.TryIndex<VendingMachineInventoryPricingPrototype>("AllEntsPricing", out var prototype))
+            return;
+        var inv = GetAllInventory(uid, component);
+        foreach (var item in inv)
+        {
+            if (item is null)
+                continue;
+            if (prototype.EntsPricing.ContainsKey(item.ID))
+                item.Price = prototype.EntsPricing[item.ID];
+        }
+    }
+    //SS14-RU
 
     public void RestockInventoryFromPrototype(EntityUid uid,
         VendingMachineComponent? component = null, float restockQuality = 1f)

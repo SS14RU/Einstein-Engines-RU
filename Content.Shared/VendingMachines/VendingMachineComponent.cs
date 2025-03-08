@@ -187,6 +187,15 @@ namespace Content.Shared.VendingMachines
         [DataField("loopDeny")]
         public bool LoopDenyAnimation = true;
         #endregion
+
+        /// <summary>
+        /// SS14RU
+        /// </summary>
+        public string? SelectedItemId;
+        /// <summary>
+        /// SS14RU
+        /// </summary>
+        public InventoryType SelectedItemInventoryType;
     }
 
     [Serializable, NetSerializable]
@@ -196,6 +205,10 @@ namespace Content.Shared.VendingMachines
         public InventoryType Type;
         [ViewVariables(VVAccess.ReadWrite)]
         public string ID;
+        // SS14RU
+        [ViewVariables(VVAccess.ReadWrite)]
+        public ulong Price = 0;
+        // SS14RU
         [ViewVariables(VVAccess.ReadWrite)]
         public uint Amount;
         public VendingMachineInventoryEntry(InventoryType type, string id, uint amount)

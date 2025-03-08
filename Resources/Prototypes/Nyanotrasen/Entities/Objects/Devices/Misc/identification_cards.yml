@@ -13,6 +13,13 @@
     - state: warden
   - type: PresetIdCard
     job: Prisoner
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
 
 - type: entity
   parent: IDCardStandard
@@ -29,6 +36,13 @@
     - state: gladiator
   - type: PresetIdCard
     job: Gladiator
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
 
 - type: entity
   parent: IDCardStandard
@@ -45,6 +59,13 @@
     - state: prisonguard
   - type: PresetIdCard
     job: PrisonGuard
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
 
 - type: entity
   parent: IDCardStandard
@@ -61,6 +82,13 @@
     - state: mailcarrier
   - type: PresetIdCard
     job: MailCarrier
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
 
 
 - type: entity
@@ -78,6 +106,13 @@
     - state: martialartist
   - type: PresetIdCard
     job: MartialArtist
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
 
 - type: entity
   parent: IDCardStandard
@@ -94,3 +129,10 @@
     - state: detective
   - type: PresetIdCard
     job: ForensicMantis
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal

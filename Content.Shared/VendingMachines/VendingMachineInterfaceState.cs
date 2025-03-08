@@ -25,6 +25,20 @@ namespace Content.Shared.VendingMachines
         }
     }
 
+    //SS14-RU
+    [Serializable, NetSerializable]
+    public sealed class VendingMachineSelectMessage : BoundUserInterfaceMessage
+    {
+        public readonly InventoryType Type;
+        public readonly string ID;
+        public VendingMachineSelectMessage(InventoryType type, string id)
+        {
+            Type = type;
+            ID = id;
+        }
+    }
+    //SS14-RU
+
     [Serializable, NetSerializable]
     public enum VendingMachineUiKey
     {

@@ -9,6 +9,13 @@
     - state: idhobo
   - type: PresetIdCard
     job: Passenger
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
 
 - type: entity
   parent: IDCardStandard
@@ -21,3 +28,10 @@
     - state: idmaid
   - type: PresetIdCard
     job: Maid
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
