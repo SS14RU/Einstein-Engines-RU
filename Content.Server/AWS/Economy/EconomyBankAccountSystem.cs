@@ -44,6 +44,7 @@ namespace Content.Server.AWS.Economy
         public override void Initialize()
         {
             SubscribeLocalEvent<EconomyAccountHolderComponent, ComponentInit>(OnAccountComponentInit);
+            SubscribeLocalEvent<EconomyBankAccountComponent, ComponentRemove>(OnBankComponentRemove);
 
             SubscribeLocalEvent<EconomyBankTerminalComponent, InteractUsingEvent>(OnTerminalInteracted);
 
@@ -102,7 +103,7 @@ namespace Content.Server.AWS.Economy
 
             account = (accountEntity, accountComp);
             _pvsOverrideSystem.AddGlobalOverride(accountEntity);
-            Dirty(accountEntity, accountComp);
+            Dirty(account);
             return true;
         }
 
@@ -137,30 +138,6 @@ namespace Content.Server.AWS.Economy
 
             var station = _stationSystem.GetOwningStation(entity);
             var cords = station != null ? _transformSystem.GetMapCoordinates(station.Value) : MapCoordinates.Nullspace;
-            // if (entity.Comp.AccountSetup is { } setup && presetIdCardComponent is null && idCardComponent is null)
-            // {
-            //     var setupID = setup.GenerateAccountID || setup.AccountID is null ? accountID :
-            //                                             setup.AccountID;
-
-            //     if (!TryCreateAccount(setupID,
-            //                           setup.AccountName ?? accountName,
-            //                           setup.AllowedCurrency ?? "Thaler",
-            //                           setup.Balance ?? balance,
-            //                           setup.Penalty ?? 0,
-            //                           setup.Blocked ?? false,
-            //                           setup.CanReachPayDay ?? true,
-            //                           setup.AccountTags ?? [],
-            //                           jobName,
-            //                           salary,
-            //                           cords,
-            //                           out activatedAccount))
-            //         return false;
-
-            //     entity.Comp.AccountID = setupID;
-            //     entity.Comp.AccountName = setup.AccountName ?? "UNEXPECTED USER";
-            //     Dirty(entity);
-            //     return true;
-            // }
 
             // Setup values are always coming first if they can
             var accountSetup = entity.Comp.AccountSetup;
@@ -529,6 +506,11 @@ namespace Content.Server.AWS.Economy
                 return;
 
             TryActivate(entity, out _);
+        }
+
+        private void OnBankComponentRemove(Entity<EconomyBankAccountComponent> entity, ref ComponentRemove args)
+        {
+            _pvsOverrideSystem.RemoveGlobalOverride(entity);
         }
 
         private void OnATMWithdrawMessage(EntityUid uid, EconomyBankATMComponent atm, EconomyBankATMWithdrawMessage args)
