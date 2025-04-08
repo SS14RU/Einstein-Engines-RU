@@ -15,6 +15,15 @@
         },
         {
             "name": "battery"
+        },
+        {
+            "name": "indicator-stopped"
+        },
+        {
+            "name": "indicator-running"
+        },
+        {
+            "name": "indicator-nopower"
         }
     ]
 }

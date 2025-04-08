@@ -4,7 +4,7 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.AWS.Economy.SellableBatteries
 {
-    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
+    [RegisterComponent, NetworkedComponent]
     public sealed partial class SellableBatteryDischargerComponent : Component
     {
     }
