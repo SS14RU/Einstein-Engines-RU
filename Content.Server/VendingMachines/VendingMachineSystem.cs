@@ -26,7 +26,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Content.Shared.AWS.Economy;
+using Content.Shared.AWS.Economy.Bank;
 
 namespace Content.Server.VendingMachines
 {
@@ -44,7 +44,7 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly SharedPopupSystem _popup = default!;
 
         // SS14RU
-        [Dependency] private readonly AWS.Economy.EconomyBankAccountSystem _bankAccountSystem = default!;
+        [Dependency] private readonly AWS.Economy.Bank.EconomyBankAccountSystem _bankAccountSystem = default!;
         // SS14RU
 
         private const float WallVendEjectDistanceFromWall = 1f;

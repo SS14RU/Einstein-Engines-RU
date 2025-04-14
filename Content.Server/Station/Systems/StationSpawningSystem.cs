@@ -28,8 +28,8 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Server.AWS.Economy;
-using Content.Shared.AWS.Economy;
+using Content.Server.AWS.Economy.Bank;
+using Content.Shared.AWS.Economy.Bank;
 
 namespace Content.Server.Station.Systems;
 
