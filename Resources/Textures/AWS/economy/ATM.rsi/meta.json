@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by fantik (discord) for SS220",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "ATM",
+            "directions": 4
+        },
+        {
+            "name": "ATM-on",
+            "directions": 4
+        },
+        {
+            "name": "ATM-emag",
+            "directions": 4
+        },
+        {
+            "name": "panel",
+            "directions": 4
+        }
+    ]
+}

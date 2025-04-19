@@ -1,0 +1,156 @@
+- type: economySallaries
+  id: NanotrasenDefaultSallaries
+  jobs:
+    # cargo
+    CargoTechnician:
+      startMoney: 30
+      sallary: 30
+    Quartermaster:
+      startMoney: 100
+      sallary: 100
+    SalvageSpecialist:
+      startMoney: 60
+      sallary: 60
+    # CenCom
+    CBURN:
+      startMoney: 5000
+      sallary: 10000
+    DeathSquad:
+      startMoney: 5000
+      sallary: 10000
+    ERTLeader:
+      startMoney: 5000
+      sallary: 10000
+    ERTChaplain:
+      startMoney: 5000
+      sallary: 10000
+    ERTEngineer:
+      startMoney: 5000
+      sallary: 10000
+    ERTSecurity:
+      startMoney: 5000
+      sallary: 10000
+    ERTMedical:
+      startMoney: 5000
+      sallary: 10000
+    ERTJanitor:
+      startMoney: 5000
+      sallary: 10000
+    CentralCommandOfficial:
+      startMoney: 5000
+      sallary: 10000
+    # civilian
+    Passenger:
+      startMoney: 15
+      sallary: 15
+    Bartender:
+      startMoney: 30
+      sallary: 30
+    Botanist:
+      startMoney: 30
+      sallary: 30
+    Chaplain:
+      startMoney: 30
+      sallary: 30
+    Chef:
+      startMoney: 30
+      sallary: 30
+    Clown:
+      startMoney: 30
+      sallary: 30
+    Janitor:
+      startMoney: 30
+      sallary: 30
+    Lawyer:
+      startMoney: 30
+      sallary: 30
+    Librarian:
+      startMoney: 30
+      sallary: 30
+    Mime:
+      startMoney: 30
+      sallary: 30
+    Musician:
+      startMoney: 30
+      sallary: 30
+    ServiceWorker:
+      startMoney: 25
+      sallary: 25
+    Visitor:
+      startMoney: 500
+      sallary: 1000
+    # command
+    Captain:
+      startMoney: 200
+      sallary: 200
+    HeadOfPersonnel:
+      startMoney: 150
+      sallary: 150
+    # Engineering
+    AtmosphericTechnician:
+      startMoney: 50
+      sallary: 50
+    ChiefEngineer:
+      startMoney: 100
+      sallary: 100
+    StationEngineer:
+      startMoney: 50
+      sallary: 50
+    TechnicalAssistant:
+      startMoney: 25
+      sallary: 25
+    # Medical
+    Chemist:
+      startMoney: 40
+      sallary: 40
+    ChiefMedicalOfficer:
+      startMoney: 100
+      sallary: 100
+    MedicalDoctor:
+      startMoney: 50
+      sallary: 50
+    MedicalIntern:
+      startMoney: 25
+      sallary: 25
+    Paramedic:
+      startMoney: 60
+      sallary: 60
+    # Science
+    ResearchAssistant:
+      startMoney: 25
+      sallary: 25
+    ResearchDirector:
+      startMoney: 100
+      sallary: 100
+    Scientist:
+      startMoney: 50
+      sallary: 50
+    # Security
+    Detective:
+      startMoney: 50
+      sallary: 50
+    HeadOfSecurity:
+      startMoney: 100
+      sallary: 100
+    SecurityCadet:
+      startMoney: 25
+      sallary: 25
+    SecurityOfficer:
+      startMoney: 40
+      sallary: 40
+    Warden:
+      startMoney: 60
+      sallary: 60
+    # Widcards
+    Boxer:
+      startMoney: 30
+      sallary: 30
+    Psychologist:
+      startMoney: 30
+      sallary: 30
+    Reporter:
+      startMoney: 30
+      sallary: 30
+    Zookeeper:
+      startMoney: 30
+      sallary: 30

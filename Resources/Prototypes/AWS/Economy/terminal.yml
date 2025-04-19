@@ -1,0 +1,104 @@
+- type: entity
+  parent: BaseItem
+  id: BaseTerminal
+  name: base terminal
+  description: You're rich now, probably.
+  abstract: true
+  suffix: Economy
+  components:
+  - type: Item
+    size: Small
+    heldPrefix: default
+  - type: EconomyBankTerminal
+  - type: ActivatableUI
+    key: enum.EconomyTerminalUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.EconomyTerminalUiKey.Key:
+        type: EconomyTerminalBoundUserInterface
+#хз, мне нечего писать дальше, думай сам
+#Disssr top 1 razrab
+
+- type: entity
+  id: ServiceTerminal
+  parent: BaseTerminal
+  name: service terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: ser
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Service
+
+- type: entity
+  id: SecurityTerminal
+  parent: BaseTerminal
+  name: security terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: sec
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Security
+
+- type: entity
+  id: ScienceTerminal
+  parent: BaseTerminal
+  name: science terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: sci
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Science
+
+- type: entity
+  id: MedicalTerminal
+  parent: BaseTerminal
+  name: medical terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: med
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Medical
+
+- type: entity
+  id: CargoTerminal
+  parent: BaseTerminal
+  name: cargo terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: cargo
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Cargo
+
+- type: entity
+  id: EngineeringTerminal
+  parent: BaseTerminal
+  name: engineering terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: eng
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Engineer
+
+- type: entity
+  id: CCTerminal
+  parent: BaseTerminal
+  name: central command terminal
+  components:
+  - type: Sprite
+    sprite: AWS/economy/terminal.rsi
+    state: cc
+  - type: EconomyBankTerminal
+    allowCurrency: Thaler
+    linkedAccount: NT-Centcom

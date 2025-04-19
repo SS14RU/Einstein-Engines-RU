@@ -1,0 +1,25 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="Bank Accounts"
+                      MinSize="1000 400"
+                      Resizable="False">
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
+        <!-- Left: Account List -->
+        <BoxContainer Orientation="Vertical" Margin="5" MinWidth="300">
+            <Label Text="{Loc 'economybanksystem-console-accounts-title'}" HorizontalExpand="True" Align="Center"/>
+            <LineEdit Name="FindAccount" HorizontalExpand="True" />
+            <ScrollContainer VerticalExpand="True">
+                <ItemList Name="AccountList" />
+            </ScrollContainer>
+        </BoxContainer>
+
+        <!-- Right: Account Logs -->
+        <BoxContainer Orientation="Vertical" Margin="5" VerticalExpand="True" HorizontalExpand="True">
+            <Label Text="{Loc 'economybanksystem-console-logs-title'}" HorizontalExpand="True" Align="Center"/>
+            <LineEdit Name="FindLog" HorizontalExpand="True" />
+            <ScrollContainer VerticalExpand="True">
+                <ItemList Name="LogDetails" />
+            </ScrollContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

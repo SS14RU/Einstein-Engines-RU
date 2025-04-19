@@ -8,9 +8,16 @@
     layers:
     - state: centcom
   - type: Item
-    heldPrefix: 
+    heldPrefix:
   - type: PresetIdCard
     job: BlueshieldOfficer
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
   - type: Access
     tags:
     - CentralCommand

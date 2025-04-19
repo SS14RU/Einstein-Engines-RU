@@ -1,0 +1,9 @@
+economybanksystem-log-withdraw = Снятие {$amount} {$currencyName}.
+economybanksystem-log-insert = Пополнение на {$amount} {$currencyName}.
+economybanksystem-log-send-to = Перевод {$amount} {$currencyName} на {$accountId}.
+economybanksystem-log-send-from = Пополнение на {$amount} {$currencyName} с {$accountId}.
+economybanksystem-log-reason-bonus = Причина: выплата премии.
+economybanksystem-log-reason-payday = Причина: выплата зарплаты.
+economybanksystem-log-vending-buying = Покупка {$itemName}.
+economybanksystem-console-accounts-title = Список счетов
+economybanksystem-console-logs-title = Список операций
