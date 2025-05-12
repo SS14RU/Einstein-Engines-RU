@@ -47,16 +47,16 @@ public sealed class EconomyInsuranceSystem : EntitySystem
 
         var preparedData = PerformPrepareData(playerUid, profile);
 
-        //if (preparedData is null)
-        //    DebugTools.Assert($"Unable to proccess insurance by getting necessary components");
+        if (preparedData is null)
+            DebugTools.Assert($"Unable to proccess insurance by getting necessary components");
 
-        //if (!TryCreateInsuranceRecord(preparedData.InsurancePrototype,
-        //        preparedData.InsurerName,
-        //        preparedData.InsurerAccountId,
-        //        preparedData.InsurerDna,
-        //        out var economyInsuranceInfo,
-        //        out var error))
-        //    DebugTools.Assert($"Unable to create record for {playerUid}!\n{error}");
+        if (!TryCreateInsuranceRecord(preparedData.InsurancePrototype,
+                preparedData.InsurerName,
+                preparedData.InsurerAccountId,
+                preparedData.InsurerDna,
+                out var economyInsuranceInfo,
+                out var error))
+            DebugTools.Assert($"Unable to create insurance record for {playerUid}!\n{error}");
     }
 
     private PreparedInsurerData? PerformPrepareData(EntityUid playerUid, HumanoidCharacterProfile profile)
@@ -75,10 +75,10 @@ public sealed class EconomyInsuranceSystem : EntitySystem
         if (!TryComp<IdCardComponent>(cardUid, out var cardComponent) || cardComponent.FullName is null)
             return null;
 
-        if (!TryComp<EconomyBankAccountComponent>(cardUid, out var accountComponent))
+        if (!TryComp<EconomyAccountHolderComponent>(cardUid, out var accountHolderComponent))
             return null;
 
-        return new(profile.Insurance, cardComponent.FullName, accountComponent.AccountID, dnaComponent.DNA);
+        return new(profile.Insurance, cardComponent.FullName, accountHolderComponent.AccountID, dnaComponent.DNA);
     }
 
     [PublicAPI]
@@ -130,7 +130,7 @@ public sealed class EconomyInsuranceSystem : EntitySystem
     {
         server = GetServer();
 
-        return server is not null;
+        return server is not null && server?.Comp is not null;
     }
 
     private Entity<EconomyInsuranceServerComponent>? GetServer()
