@@ -130,7 +130,7 @@ public sealed class EconomyInsuranceSystem : EntitySystem
     {
         server = GetServer();
 
-        return server is not null && server?.Comp is not null;
+        return server?.Comp is not null;
     }
 
     private Entity<EconomyInsuranceServerComponent>? GetServer()
