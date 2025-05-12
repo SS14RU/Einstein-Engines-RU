@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared._White.TTS;
+using Content.Shared.AWS.Economy.Insurance;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
@@ -86,6 +87,11 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     [DataField]
     public string Voice { get; set; } = SharedHumanoidAppearanceSystem.DefaultVoice;
     // WD EDIT END
+
+    // SS14RU
+    [DataField]
+    public ProtoId<EconomyInsurancePrototype> Insurance { get; set; } = "NonStatus";
+    // SS14RU
 
     [DataField]
     public Gender Gender { get; private set; } = Gender.Male;

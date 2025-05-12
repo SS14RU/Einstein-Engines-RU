@@ -4,8 +4,10 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.AWS.Economy.SellableBatteries
 {
-    [RegisterComponent, NetworkedComponent]
-    public sealed partial class SellableBatteryChargerComponent : Component
+    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+    public sealed partial class SellableBatteryProxySwitcherComponent : Component
     {
+        [AutoNetworkedField] public bool Connected { get; set; }
+        [AutoNetworkedField] public EntityUid ConnectedBattery { get; set; }
     }
 }

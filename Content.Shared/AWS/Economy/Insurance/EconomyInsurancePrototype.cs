@@ -9,17 +9,17 @@ public sealed partial class EconomyInsurancePrototype : IPrototype
     [IdDataField]
     public string ID { get; private set; } = default!;
 
-    [DataField]
+    [DataField(required: true)]
     public string Name { get; private set; } = default!;
 
-    [DataField]
-    public string Description = string.Empty;
-
     [DataField(required: true)]
-    public int Cost = 0;
+    public string Description { get; set; } = string.Empty;
 
     [DataField]
-    public bool CanBeBought = true;
+    public int Cost { get; set; } = 0;
+
+    [DataField]
+    public bool CanBeBought { get; set; } = true;
 
     // [DataField]
     // public Enum PayerType = EconomyInsurancePayerType.Character;
@@ -28,5 +28,5 @@ public sealed partial class EconomyInsurancePrototype : IPrototype
     public SpriteSpecifier Icon = default!;
 
     [DataField]
-    public int Priority = 0;
+    public int Priority { get; set; } = 0;
 }
