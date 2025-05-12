@@ -26,7 +26,7 @@ public sealed class SellableBatteriesSystem : EntitySystem
         if (!TryComp<BatteryComponent>(ent, out var batteryComponent))
             return;
 
-        args.Price += float.Ceiling(CalculateAdditionalBatteryCost(batteryComponent, comp));
+        args.Price += float.Floor(CalculateAdditionalBatteryCost(batteryComponent, comp));
     }
 
     private float CalculateAdditionalBatteryCost(BatteryComponent batteryComponent, SellableBatteryComponent sellableBatteryComponent)
@@ -40,7 +40,7 @@ public sealed class SellableBatteriesSystem : EntitySystem
         if (batteryTransformComp.GridUid is not { } gridUid)
             return;
 
-        if (!TryFindCharger(gridUid, batteryTransformComp.LocalPosition.Ceiled(), out var charger))
+        if (!TryFindCharger(gridUid, batteryTransformComp.LocalPosition.Floored(), out var charger))
             return;
 
         if (args.Anchored)
