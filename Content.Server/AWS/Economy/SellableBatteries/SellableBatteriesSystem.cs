@@ -52,7 +52,7 @@ public sealed class SellableBatteriesSystem : EntitySystem
                 return;
             }
 
-        DeAttachBattery(charger.Value);
+        DetachBattery(charger.Value);
     }
 
     public bool TryFindCharger(EntityUid gridUid, Vector2i pos, [NotNullWhen(true)] out Entity<SellableBatteryProxySwitcherComponent>? charger)
@@ -61,6 +61,9 @@ public sealed class SellableBatteriesSystem : EntitySystem
 
         HashSet<Entity<SellableBatteryProxySwitcherComponent>> chargers = new();
         _lookupSystem.GetLocalEntitiesIntersecting(gridUid, pos, chargers);
+
+        if (chargers.Count == 0)
+            return false;
 
         if (chargers.Count > 1)
         {
@@ -80,7 +83,7 @@ public sealed class SellableBatteriesSystem : EntitySystem
         Dirty(charger);
     }
 
-    private void DeAttachBattery(Entity<SellableBatteryProxySwitcherComponent> charger)
+    private void DetachBattery(Entity<SellableBatteryProxySwitcherComponent> charger)
     {
         charger.Comp.Connected = false;
 
