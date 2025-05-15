@@ -5,7 +5,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared.AWS.Economy.Insurance;
 
 [RegisterComponent]
-public sealed partial class EconomyShowInsuranceHudComponent : Component
+public sealed partial class EconomyShowInsuranceIconsComponent : Component
 {
 
 }

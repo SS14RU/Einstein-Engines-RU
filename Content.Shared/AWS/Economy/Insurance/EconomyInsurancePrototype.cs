@@ -25,7 +25,7 @@ public sealed partial class EconomyInsurancePrototype : IPrototype
     // public Enum PayerType = EconomyInsurancePayerType.Character;
 
     [DataField(required: true)]
-    public SpriteSpecifier Icon = default!;
+    public ProtoId<EconomyInsuranceIconPrototype> Icon = default!;
 
     [DataField]
     public int Priority { get; set; } = 0;

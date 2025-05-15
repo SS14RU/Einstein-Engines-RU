@@ -2,28 +2,28 @@
   id: NonStatus
   name: Гражданская
   description: Экстренная стабилизация командой медблока — даже в критическом состоянии вы вернетесь к обязанностям. Минимум услуг, максимум функционала
-  icon: { sprite: Objects/Tools/crowbar.rsi, state: NonStatus }
+  icon: NonStatus
 
 - type: insurance
   id: Copper
   name: Бронзовая
   cost: 25
   description: Полный цикл лечения под контролем штатных врачей, доступ к капсулам регенерации. Ваше выживание — стандарт корпоративной этики
-  icon: { sprite: Objects/Tools/crowbar.rsi, state: Copper }
+  icon: Copper
 
 - type: insurance
   id: Silver
   name: Серебряная
   cost: 50
   description: Срочная эвакуация из жилых и рабочих секторов парамедиком, премиум-реабилитация. Ваша жизнь стоит дороже, чем нарушение протокола
-  icon: { sprite: Objects/Tools/crowbar.rsi, state: Silver }
+  icon: Silver
 
 - type: insurance
   id: Gold
   name: Золотая
   cost: 75
   description: Приоритетный выезд спецгруппы с вооруженным парамедиком в любой сектор станции, включая закрытые зоны. Ваша безопасность — закон, который мы готовы подкрепить силой
-  icon: { sprite: Objects/Tools/crowbar.rsi, state: Gold }
+  icon: Gold
 
 - type: insurance
   id: Platinum
@@ -32,4 +32,4 @@
   canBeBought: false
   # payerType: enum.EconomyInsurancePayerType.Organization
   description: Личное внимание Главного врача, экстренное клонирование, "теневая" эвакуация с устранением угроз. Вы не просто клиент — вы часть инфраструктуры станции
-  icon: { sprite: Objects/Tools/crowbar.rsi, state: Platinum }
+  icon: Platinum

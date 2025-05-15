@@ -67,7 +67,7 @@ public sealed class SellableBatteriesSystem : EntitySystem
 
         if (chargers.Count > 1)
         {
-            DebugTools.Assert($"Error configured prototype when applied {typeof(SellableBatteryProxySwitcherComponent)}! Only 1 charger can be at 1 tile!");
+            DebugTools.Assert($"Error configured prototype when applied {typeof(SellableBatteryProxySwitcherComponent)}! Only 1 charger can be at 1 tile!\nEntities: {String.Join(", ", chargers.AsEnumerable())}");
             return false;
         }
 

@@ -1,5 +1,3 @@
-using System;
-using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Forensics;
@@ -10,13 +8,14 @@ using Content.Shared.AWS.Economy.Bank;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Preferences;
+using Content.Shared.AWS.Economy.Insurance;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.AWS.Economy.Insurance;
+namespace Content.Server.AWS.Economy.Insurance;
 
-public sealed class EconomyInsuranceSystem : EntitySystem
+public sealed class EconomyInsuranceSystem : EconomyInsuranceSystemShared
 {
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
 
@@ -50,13 +49,13 @@ public sealed class EconomyInsuranceSystem : EntitySystem
         if (preparedData is null)
             DebugTools.Assert($"Unable to proccess insurance by getting necessary components");
 
-        if (!TryCreateInsuranceRecord(preparedData.InsurancePrototype,
-                preparedData.InsurerName,
-                preparedData.InsurerAccountId,
-                preparedData.InsurerDna,
-                out var economyInsuranceInfo,
-                out var error))
-            DebugTools.Assert($"Unable to create insurance record for {playerUid}!\n{error}");
+        //if (!TryCreateInsuranceRecord(preparedData.InsurancePrototype,
+        //        preparedData.InsurerName,
+        //        preparedData.InsurerAccountId,
+        //        preparedData.InsurerDna,
+        //        out var economyInsuranceInfo,
+        //        out var error))
+        //    DebugTools.Assert($"Unable to create insurance record for {playerUid}!\n{error}");
     }
 
     private PreparedInsurerData? PerformPrepareData(EntityUid playerUid, HumanoidCharacterProfile profile)
@@ -123,21 +122,6 @@ public sealed class EconomyInsuranceSystem : EntitySystem
         serverComponent.InsuranceInfo.Add(economyInsuranceInfo);
 
         return economyInsuranceInfo;
-    }
-
-    [PublicAPI]
-    public bool TryGetServer([NotNullWhen(true)] out Entity<EconomyInsuranceServerComponent>? server)
-    {
-        server = GetServer();
-
-        return server?.Comp is not null;
-    }
-
-    private Entity<EconomyInsuranceServerComponent>? GetServer()
-    {
-        EntityManager.EntityQueryEnumerator<EconomyInsuranceServerComponent>().MoveNext(out var uid, out var comp);
-
-        return (uid, comp)!;
     }
 
     private record PreparedInsurerData(

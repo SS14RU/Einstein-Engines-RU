@@ -4,7 +4,7 @@ using Content.Shared.StatusIcon;
 
 namespace Content.Shared.AWS.Economy.Insurance;
 
-[Prototype]
+[Prototype("insuranceIcon")]
 public sealed partial class EconomyInsuranceIconPrototype : StatusIconPrototype, IInheritingPrototype
 {
     /// <inheritdoc />
