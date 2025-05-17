@@ -1,32 +1,32 @@
 {
-    "version": 1,
-    "size": {
-      "x": 32,
-      "y": 32
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by fantik (Discord) for SS220",
+  "states": [
+    {
+      "name": "ser"
     },
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Created by fantik (Discord) for SS220",
-    "states": [
-      {
-        "name": "ser"
-      },
-      {
-        "name": "sec"
-      },
-      {
-        "name": "sci"
-      },
-      {
-        "name": "med"
-      },
-      {
-        "name": "cc"
-      },
-      {
-        "name": "cargo"
-      },
-      {
-        "name": "eng"
-      }
-    ]
-  }
+    {
+      "name": "sec"
+    },
+    {
+      "name": "sci"
+    },
+    {
+      "name": "med"
+    },
+    {
+      "name": "cc"
+    },
+    {
+      "name": "cargo"
+    },
+    {
+      "name": "eng"
+    }
+  ]
+}

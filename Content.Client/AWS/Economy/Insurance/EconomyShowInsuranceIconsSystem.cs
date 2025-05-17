@@ -11,6 +11,7 @@ using Robust.Shared.Utility;
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.IdentityManagement.Components;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Store;
 
 namespace Content.Client.AWS.Economy.Insurance;
 
@@ -21,6 +22,7 @@ public sealed class EconomyShowInsuranceIconsSystem : EquipmentHudSystem<Economy
     [Dependency] private readonly EconomyInsuranceSystem _insurance = default!;
 
     private readonly TimeSpan _checkTimeRelay = TimeSpan.FromSeconds(3);
+    private readonly ProtoId<EconomyInsuranceIconPrototype> _defaultIcon = "NonStatus";
 
     public override void Initialize()
     {
@@ -34,10 +36,10 @@ public sealed class EconomyShowInsuranceIconsSystem : EquipmentHudSystem<Economy
         if (!IsActive)
             return;
 
-        if (!TryGetInsuranceIcon(uid, component, out var icon))
-            return;
+        //if (!TryGetInsuranceIcon(uid, component, out var icon))
+        //    icon = _prototype.Index(_defaultIcon);
 
-        ev.StatusIcons.Add(icon);
+        ev.StatusIcons.Add(component.Icon ?? _prototype.Index(_defaultIcon));
     }
 
     private bool TryGetInsuranceIcon(EntityUid uid, EconomyInsuranceComponent component, [NotNullWhen(true)] out EconomyInsuranceIconPrototype? icon)

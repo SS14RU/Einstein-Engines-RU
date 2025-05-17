@@ -8,34 +8,34 @@
 - type: insuranceIcon
   parent: InsuranceIcon
   id: NonStatus
-  icon: 
-    sprite: /AWS/economy/insurance.rsi
+  icon:
+    sprite: /Textures/AWS/economy/insurance.rsi
     state: NonStatus
 
 - type: insuranceIcon
   parent: InsuranceIcon
   id: Copper
   icon: 
-    sprite: /AWS/economy/insurance.rsi
+    sprite: /Textures/AWS/economy/insurance.rsi
     state: Copper
 
 - type: insuranceIcon
   parent: InsuranceIcon
   id: Silver
   icon:
-    sprite: /AWS/economy/insurance.rsi
+    sprite: /Textures/AWS/economy/insurance.rsi
     state: Silver
 
 - type: insuranceIcon
   parent: InsuranceIcon
   id: Gold
   icon:
-    sprite: /AWS/economy/insurance.rsi
+    sprite: /Textures/AWS/economy/insurance.rsi
     state: Gold
 
 - type: insuranceIcon
   parent: InsuranceIcon
   id: Platinum
   icon:
-    sprite: /AWS/economy/insurance.rsi
+    sprite: /Textures/AWS/economy/insurance.rsi
     state: Platinum
