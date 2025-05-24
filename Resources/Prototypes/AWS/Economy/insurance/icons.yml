@@ -1,0 +1,41 @@
+- type: insuranceIcon
+  id: InsuranceIcon
+  abstract: true
+  offset: 1
+  locationPreference: Right
+  isShaded: true
+
+- type: insuranceIcon
+  parent: InsuranceIcon
+  id: NonStatus
+  icon:
+    sprite: /Textures/AWS/economy/insurance.rsi
+    state: NonStatus
+
+- type: insuranceIcon
+  parent: InsuranceIcon
+  id: Copper
+  icon: 
+    sprite: /Textures/AWS/economy/insurance.rsi
+    state: Copper
+
+- type: insuranceIcon
+  parent: InsuranceIcon
+  id: Silver
+  icon:
+    sprite: /Textures/AWS/economy/insurance.rsi
+    state: Silver
+
+- type: insuranceIcon
+  parent: InsuranceIcon
+  id: Gold
+  icon:
+    sprite: /Textures/AWS/economy/insurance.rsi
+    state: Gold
+
+- type: insuranceIcon
+  parent: InsuranceIcon
+  id: Platinum
+  icon:
+    sprite: /Textures/AWS/economy/insurance.rsi
+    state: Platinum

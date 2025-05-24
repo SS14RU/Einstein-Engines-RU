@@ -1,0 +1,9 @@
+economy-bank-atm-menu-title = Банкомат
+economy-bank-atm-menu-account-id = Номер счёта
+economy-bank-atm-menu-account-owner = Владелец
+economy-bank-atm-menu-account-balance = Баланс
+economy-bank-atm-menu-withdraw-label = Снять со счёта
+economy-bank-atm-menu-withdraw-button = Снять
+economy-bank-atm-menu-transfer-label = Перевод на счёт
+economy-bank-atm-menu-transfer-recipient-label = Номер счёта-получателя
+economy-bank-atm-menu-transfer-button = Перевести

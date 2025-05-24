@@ -1,0 +1,19 @@
+economyBankTerminal-component-on-examine-connected-to = Подключен к счёту: {$accountId}
+economyBankTerminal-component-on-examine-pay-for-iflessthanzero = Оплата не выставлена
+economyBankTerminal-component-on-examine-pay-for-ifmorethanzero = Оплата на [color=#85bb65]{$amount}[/color] {$currencyName}
+economyBankTerminal-component-on-examine-reason = Оплата за: {$reason}
+economyBankTerminal-component-vending-reason = Покупка {$itemName}
+economyBankTerminal-component-vending-error-no-account = Привязанный счёт не найден
+economyBankTerminal-component-vending-error = Произошла ошибка при выдаче, деньги возвращены
+ent-BaseTerminal = терминал
+    .desc = Ты теперь богатый, наверное.
+ent-ServiceTerminal = терминал сервисного отдела
+ent-SecurityTerminal = терминал отдела СБ
+ent-ScienceTerminal = терминал научного отдела
+ent-MedicalTerminal = терминал медицинского отдела
+ent-CargoTerminal = терминал отдела снабжения
+ent-CCTerminal = терминал центрального командования
+ent-EngineeringTerminal = терминал инженерного отдела
+economy-Terminal-SetButton-button = Установить
+economy-Terminal-Reason = Причина
+economy-Terminal-Amount = Сумма

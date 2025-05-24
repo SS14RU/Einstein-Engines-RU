@@ -103,6 +103,15 @@ namespace Content.Client.VendingMachines.UI
                     continue;
                 }
 
+                //SS14-RU
+                var adjustText = "";
+                if (entry.Price > 0)
+                {
+                    adjustText = $" [{entry.Price}]";
+                }
+                itemName = $"{itemName} [{entry.Amount}]{adjustText}";
+                //SS14-RU
+
                 if (itemName.Length > longestEntry.Length)
                     longestEntry = itemName;
 
