@@ -135,6 +135,10 @@
       collection: Welder
     endSound:
       collection: WelderOff
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
 
 - type: entity
   name: industrial welding tool

@@ -87,3 +87,7 @@
     - type: ContainerContainer
       containers:
         AccessOverrider-privilegedId: !type:ContainerSlot
+    - type: RequiredSkill
+      container:
+        skills:
+          electricity: enum.SkillLevel.Basic

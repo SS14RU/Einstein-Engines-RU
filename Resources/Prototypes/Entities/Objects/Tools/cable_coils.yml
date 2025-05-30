@@ -40,6 +40,10 @@
       types: # these are all split across multiple types
         Heat: -1.66
         Shock: -1.66
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
 
 - type: entity
   id: CableHVStack

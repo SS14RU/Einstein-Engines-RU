@@ -26,3 +26,7 @@
       Circuitry: 25
   - type: StaticPrice
     price: 60
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic

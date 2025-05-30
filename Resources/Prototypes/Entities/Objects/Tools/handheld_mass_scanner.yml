@@ -41,6 +41,10 @@
     difficulty: 3
     recipes:
       - HandHeldMassScanner
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
 
 - type: entity
   id: HandHeldMassScannerEmpty

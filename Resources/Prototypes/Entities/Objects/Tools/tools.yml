@@ -80,6 +80,10 @@
       path: /Audio/Items/wirecutter.ogg
       params:
         variation: 0.125
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
 
 - type: entity
   name: screwdriver
@@ -159,6 +163,10 @@
       collection: Screwdriver
     endSound:
       path: /Audio/Medical/Surgery/retractor2.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
 
 - type: entity
   name: wrench
@@ -217,6 +225,10 @@
       Steel: 100
   - type: StaticPrice
     price: 22
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: crowbar
@@ -281,6 +293,10 @@
     speed: 0.55
   - type: SurgeryTool
     startSound: /Audio/Items/crowbar.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.NonSkilled
 
 - type: entity
   parent: Crowbar
@@ -361,6 +377,10 @@
       Circuitry: 25
   - type: StaticPrice
     price: 56
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Trained
 
 - type: entity
   name: network configurator
@@ -412,6 +432,10 @@
     - type: GuideHelp
       guides:
         - NetworkConfigurator
+    - type: RequiredSkill
+      container:
+        skills:
+          electricity: enum.SkillLevel.Trained
 
 #Power tools
 #Later on these should switch probably switch damage when changing the tool behavior.
@@ -488,6 +512,10 @@
     difficulty: 2
     recipes:
       - PowerDrill
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
 
 - type: entity
   id: RCD
@@ -547,6 +575,12 @@
     difficulty: 3
     recipes:
       - RCD
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Basic
+        construction: enum.SkillLevel.Basic
+
 
 - type: entity
   id: RCDEmpty
@@ -683,6 +717,10 @@
           state: omnitool-pulsing
         changeSound:
           path: /Audio/Items/change_drill.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        electricity: enum.SkillLevel.Trained
 
 #Other
 - type: entity
