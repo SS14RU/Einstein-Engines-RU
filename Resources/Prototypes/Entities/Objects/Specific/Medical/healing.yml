@@ -45,6 +45,10 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 10 #Was 5, Buffed due to surgery changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: Ointment1
@@ -54,6 +58,10 @@
   - type: Stack
     stackType: Ointment
     count: 1
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: Ointment10Lingering
@@ -63,6 +71,10 @@
   - type: Stack
     lingering: true
     count: 10
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: regenerative mesh
@@ -96,6 +108,10 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 40 #Was 20, Buffed due to limb damage changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   id: OintmentAdvanced1
@@ -105,6 +121,10 @@
   - type: Stack
     stackType: RegenerativeMesh
     count: 1
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   name: bruise pack
@@ -133,6 +153,10 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 10 #Was 5, Buffed due to limb damage changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: Brutepack1
@@ -142,6 +166,10 @@
   - type: Stack
     stackType: Brutepack
     count: 1
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: Brutepack10Lingering
@@ -151,6 +179,10 @@
   - type: Stack
     lingering: true
     count: 10
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: medicated suture
@@ -183,6 +215,10 @@
     count: 15 #Was 10, Buffed due to surgery changes
   - type: StackPrice
     price: 40 #Was 20, Buffed due to limb damage changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   id: BrutepackAdvanced1
@@ -192,6 +228,10 @@
   - type: Stack
     stackType: MedicatedSuture
     count: 1
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   name: blood pack
@@ -221,6 +261,10 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 20 #Was 10, Buffed due to limb damage changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   parent: Bloodpack
@@ -229,6 +273,10 @@
   components:
   - type: Stack
     lingering: true
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   parent: BaseHealingItem
@@ -255,6 +303,10 @@
         path: "/Audio/Items/Medical/brutepack_begin.ogg"
       healingEndSound:
         path: "/Audio/Items/Medical/brutepack_end.ogg"
+    - type: RequiredSkill
+      container:
+        skills:
+          medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: roll of gauze
@@ -288,6 +340,10 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 20 #Was 10, Buffed due to limb damage changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: Gauze1
@@ -296,6 +352,10 @@
   components:
   - type: Stack
     count: 1
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: Gauze10Lingering
@@ -305,6 +365,10 @@
   - type: Stack
     lingering: true
     count: 1
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: aloe cream
@@ -318,6 +382,10 @@
   - type: Stack
     stackType: AloeCream
     count: 15 #Was 10, Buffed due to limb damage changes
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.NonSkilled
 
 - type: entity
   parent: BaseHealingItem
@@ -877,6 +945,7 @@
         reagents:
         - ReagentId: Ephedrine
           Quantity: 15
+
 
 - type: entity
   name: inaprovaline syringe

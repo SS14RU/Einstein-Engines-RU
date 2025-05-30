@@ -51,3 +51,7 @@
   - type: Sprite
     sprite: Objects/Specific/Medical/medipen.rsi
     state: salpen
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic

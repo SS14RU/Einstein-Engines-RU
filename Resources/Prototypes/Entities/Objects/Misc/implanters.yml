@@ -53,6 +53,10 @@
           implantOnly:
             True: {state: broken}
             False: {state: implanter0}
+    - type: RequiredSkill
+      container:
+        skills:
+          medicine: enum.SkillLevel.Trained
 
 - type: entity
   id: Implanter

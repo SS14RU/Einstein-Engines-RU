@@ -25,3 +25,8 @@
       machine_board: !type:Container
       machine_parts: !type:Container
   - type: RequireProjectileTarget
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
+        chemistry: enum.SkillLevel.Basic

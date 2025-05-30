@@ -17,6 +17,11 @@
   - type: Appearance
   - type: Machine
     board: DiagnoserMachineCircuitboard
+  - type: RequiredSkill
+    container:
+      skills:
+        chemistry: enum.SkillLevel.Basic
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   name: disease diagnoser report

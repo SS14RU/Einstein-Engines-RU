@@ -40,6 +40,10 @@
     - Chemist
   - type: StealTarget
     stealGroup: ChemDispenser
+  - type: RequiredSkill
+    container:
+      skills:
+        chemistry: enum.SkillLevel.Trained
 
 - type: entity
   id: ChemDispenserEmpty

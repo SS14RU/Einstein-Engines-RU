@@ -43,6 +43,10 @@
     endSound:
       path: /Audio/_Shitmed/Medical/Surgery/cautery2.ogg
   - type: Cautery
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 # Drill
 
@@ -88,6 +92,10 @@
     startSound:
       path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
   - type: Drill
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 # Scalpel
 
@@ -140,6 +148,10 @@
     endSound:
       path: /Audio/_Shitmed/Medical/Surgery/scalpel2.ogg
   - type: Scalpel
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   name: shiv
@@ -238,6 +250,10 @@
     endSound:
       path: /Audio/_Shitmed/Medical/Surgery/retractor2.ogg
   - type: Retractor
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 
 # Hemostat
@@ -284,6 +300,10 @@
   - type: Hemostat
   - type: Tweezers # Shitmed
   - type: Tending # Shitmed
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 # Bone setter - Shitmed Change
 - type: entity
@@ -298,6 +318,10 @@
   - type: Item
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/bonesetter.rsi
   - type: BoneSetter
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 # Bone Gel - Shitmed Change
 - type: entity
@@ -310,6 +334,10 @@
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/bone-gel.rsi
     state: bone-gel
   - type: BoneGel
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 # Saws
 
@@ -358,6 +386,10 @@
   - type: SurgeryTool
     startSound:
       path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   name: choppa
@@ -391,6 +423,10 @@
     speedModifier: 0.5
   - type: BoneSaw # Shitmed
     speed: 0.5
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   name: circular saw
@@ -435,6 +471,10 @@
       path: /Audio/Medical/Surgery/saw.ogg
   - type: BoneSaw
     speed: 1.25
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   name: advanced circular saw
@@ -510,6 +550,10 @@
     speed: 1.5
   - type: Drill
     speed: 1.5
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   name: energy scalpel
@@ -576,6 +620,10 @@
     speed: 1.5
   - type: Tending
     speed: 1.5
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   name: medical multitool
@@ -610,6 +658,10 @@
     speed: 2
   - type: Tending
     speed: 2
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained
 
 - type: entity
   parent: OmnimedTool
@@ -620,3 +672,7 @@
   - type: Item
     size: Small
     heldPrefix: evil
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained

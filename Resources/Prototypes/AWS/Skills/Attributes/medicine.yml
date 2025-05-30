@@ -1,6 +1,7 @@
 - type: skill
   id: medicine
   category: medicine
+  color: "#27e6ff"
   cost:
     enum.SkillLevel.NonSkilled: 0
     enum.SkillLevel.Basic: 1

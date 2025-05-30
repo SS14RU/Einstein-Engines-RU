@@ -43,6 +43,10 @@
     damage:
       types:
         Blunt: 5
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   id: HandheldHealthAnalyzer
@@ -56,7 +60,7 @@
   - type: RequiredSkill
     container:
       skills:
-        electricity: enum.SkillLevel.Trained
+        medicine: enum.SkillLevel.Basic
 
 
 - type: entity

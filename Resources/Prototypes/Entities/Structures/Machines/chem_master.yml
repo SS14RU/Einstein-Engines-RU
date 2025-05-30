@@ -94,3 +94,7 @@
     guides:
     - Chemicals
     - Chemist
+  - type: RequiredSkill
+    container:
+      skills:
+        chemistry: enum.SkillLevel.Trained

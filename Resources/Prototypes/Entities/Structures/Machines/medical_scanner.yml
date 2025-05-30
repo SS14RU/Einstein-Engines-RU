@@ -79,3 +79,7 @@
   - type: GuideHelp
     guides:
     - Cloning
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Trained

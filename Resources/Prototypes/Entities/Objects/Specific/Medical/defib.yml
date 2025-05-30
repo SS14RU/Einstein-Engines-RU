@@ -55,6 +55,11 @@
       soundHit:
         path: /Audio/Weapons/smash.ogg
     - type: ToggleCellDraw
+    - type: RequiredSkill
+      container:
+        skills:
+          medicine: enum.SkillLevel.Basic
+          electricity: enum.SkillLevel.Basic
 
 - type: entity
   id: Defibrillator

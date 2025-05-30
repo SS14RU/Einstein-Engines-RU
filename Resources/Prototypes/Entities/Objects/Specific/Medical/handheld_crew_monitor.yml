@@ -37,6 +37,10 @@
     damage:
       types:
         Blunt: 5
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   id: HandheldCrewMonitorEmpty
@@ -47,6 +51,10 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+  - type: RequiredSkill
+    container:
+      skills:
+        medicine: enum.SkillLevel.Basic
 
 - type: entity
   id: SpyCrewMonitor
