@@ -39,6 +39,10 @@
   - type: DamageOtherOnHit
     staminaCost: 14
   - type: Execution
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: china lake
@@ -215,6 +219,11 @@
           unshaded:
             True: { visible: true }
             False: { visible: false }
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.NonSkilled
+
 
 - type: entity
   name: force gun
@@ -263,6 +272,10 @@
               unshaded:
                 True: { visible: true }
                 False: { visible: false }
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: grappling gun
@@ -294,7 +307,10 @@
           unshaded:
             True: { state: base-unshaded }
             False: { state: base-unshaded-off }
-
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.NonSkilled
 # Admeme
 - type: entity
   name: tether gun
@@ -335,6 +351,10 @@
             True: { visible: true }
             False: { visible: false }
     - type: GiftIgnore # WD EDIT
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: force gun
@@ -378,7 +398,11 @@
             True: { visible: true }
             False: { visible: false }
     - type: GiftIgnore # WD EDIT
-
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.NonSkilled
+          
 - type: entity
   name: meteor launcher
   parent: WeaponLauncherMultipleRocket

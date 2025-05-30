@@ -25,3 +25,7 @@
   - type: Tag
     tags:
     - WizardWand
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic

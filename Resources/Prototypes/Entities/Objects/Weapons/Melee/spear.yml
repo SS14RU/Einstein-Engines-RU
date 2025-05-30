@@ -117,7 +117,11 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: spear
-
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
+        
 - type: entity
   name: reinforced spear
   parent: Spear

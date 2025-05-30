@@ -44,6 +44,10 @@
     sprite: Objects/Weapons/Melee/pickaxe.rsi
     storedRotation: -45
   - type: UseDelay
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: mining drill
@@ -83,6 +87,10 @@
         Structural: 15
   - type: ThrowingAngle
     angle: 270
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: diamond tipped mining drill
@@ -127,6 +135,10 @@
     enabled: false
     radius: 4
   - type: PressureDamageChange # Lavaland Change: Pressure damage change for kinetic weapons
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   parent: BaseWeaponCrusher

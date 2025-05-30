@@ -63,7 +63,11 @@
       cell_slot: !type:ContainerSlot {}
   - type: KnockdownOnHit # WD EDIT
     knockdownTime: 3
-
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
+        
 - type: entity
   name: stun prod
   parent: StunprodBase

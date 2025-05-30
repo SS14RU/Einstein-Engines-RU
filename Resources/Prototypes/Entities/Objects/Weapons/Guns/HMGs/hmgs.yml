@@ -39,6 +39,10 @@
       collection: MetalThud
   - type: DamageOtherOnHit
     staminaCost: 16
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: minigun

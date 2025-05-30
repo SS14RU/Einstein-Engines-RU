@@ -5,5 +5,5 @@
     enum.SkillLevel.NonSkilled: 0
     enum.SkillLevel.Basic: 1
     enum.SkillLevel.Trained: 2
-    enum.SkillLevel.Experienced: 4
-    enum.SkillLevel.Master: 6
+#    enum.SkillLevel.Experienced: 4
+#    enum.SkillLevel.Master: 6

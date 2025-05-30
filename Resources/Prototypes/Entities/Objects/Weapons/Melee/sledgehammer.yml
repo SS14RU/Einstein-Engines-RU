@@ -34,3 +34,7 @@
         Structural: 10
   - type: Item
     size: Large
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic

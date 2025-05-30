@@ -83,3 +83,7 @@
         Blunt: 2.5
   - type: DamageOtherOnHit
     staminaCost: 8
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic

@@ -85,6 +85,10 @@
         Blunt: 3
   - type: DamageOtherOnHit
     staminaCost: 12
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: L6 SAW

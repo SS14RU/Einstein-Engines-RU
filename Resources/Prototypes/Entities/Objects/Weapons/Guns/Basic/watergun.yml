@@ -49,6 +49,10 @@
   - type: PhysicalComposition
     materialComposition:
       Plastic: 150
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: WeaponWaterPistol

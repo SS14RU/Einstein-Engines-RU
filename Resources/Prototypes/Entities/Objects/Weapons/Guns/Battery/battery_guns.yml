@@ -55,6 +55,10 @@
   - type: SurgeryTool
     endSound:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: BaseWeaponPowerCell
@@ -114,6 +118,10 @@
   - type: SurgeryTool
     endSound:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   id: BaseWeaponBatterySmall
@@ -274,6 +282,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: laser rifle
@@ -300,6 +312,10 @@
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
     fireCost: 62.5
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: practice laser rifle
@@ -394,6 +410,10 @@
   - type: Battery
     maxCharge: 5000
     startingCharge: 5000
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: pulse rifle
@@ -421,6 +441,10 @@
   - type: Battery
     maxCharge: 40000
     startingCharge: 40000
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: laser cannon
@@ -453,6 +477,10 @@
     bluntStaminaDamageFactor: 1.3333
   - type: DamageOtherOnHit
     staminaCost: 9.5
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: portable particle decelerator
@@ -500,6 +528,10 @@
       wideAnimationRotation: 270
     - type: DamageOtherOnHit
       staminaCost: 48
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: x-ray cannon
@@ -528,6 +560,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: disabler
@@ -575,6 +611,11 @@
           Blunt: 5.0
       bluntStaminaDamageFactor: 2.5
       wideAnimationRotation: 135
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.NonSkilled
+
 
 - type: entity
   name: CentCom disabler
@@ -652,6 +693,10 @@
         Blunt: 6.5
     bluntStaminaDamageFactor: 2.5
     wideAnimationRotation: 180
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: practice disabler
@@ -906,6 +951,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: energy shotgun
@@ -958,3 +1007,7 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 10
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained

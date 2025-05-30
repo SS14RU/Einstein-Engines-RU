@@ -24,3 +24,7 @@
     providerWhitelist:
       tags:
       - NozzleBackTank
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
