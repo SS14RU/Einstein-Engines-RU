@@ -36,10 +36,10 @@ public sealed class EconomyShowInsuranceIconsSystem : EquipmentHudSystem<Economy
         if (!IsActive)
             return;
 
-        //if (!TryGetInsuranceIcon(uid, component, out var icon))
-        //    icon = _prototype.Index(_defaultIcon);
+        if (!TryGetInsuranceIcon(uid, component, out var icon))
+            icon = _prototype.Index(_defaultIcon);
 
-        ev.StatusIcons.Add(component.Icon ?? _prototype.Index(_defaultIcon));
+        ev.StatusIcons.Add(icon);
     }
 
     private bool TryGetInsuranceIcon(EntityUid uid, EconomyInsuranceComponent component, [NotNullWhen(true)] out EconomyInsuranceIconPrototype? icon)
