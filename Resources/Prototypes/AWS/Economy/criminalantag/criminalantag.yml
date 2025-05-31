@@ -1,0 +1,63 @@
+- type: antag
+  id: CriminalAntag
+  name: economy-criminalantag-name
+  antagonist: true
+  setPreference: true
+  objective: economy-criminalantag-objective
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleCriminalAntag
+  name: Traitor Role
+  components:
+  - type: MindRole
+    antagPrototype: CriminalAntag
+    exclusiveAntag: true
+    roleType: SoloAntagonist
+  - type: CriminalAntagRole
+
+- type: entity
+  abstract: true
+  parent: BaseGameRule
+  id: BaseCriminalAntagRule
+  components:
+  - type: CriminalAntagRule
+  - type: AntagSelection
+    agentName: traitor-round-end-agent-name
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseCriminalAntagRule
+  id: CriminalAntag
+  components:
+  - type: GameRule
+    minPlayers: 5
+    delay:
+      min: 240
+      max: 420
+  - type: CriminalAntagRule
+  - type: AntagObjectives
+    objectives:
+    - CriminalAntagObjective
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ CriminalAntag ]
+      max: 8
+      playerRatio: 10
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleCriminalAntag
+
+- type: entity
+  parent: BaseObjective
+  id: CriminalAntagObjective
+  components:
+  - type: Objective
+    issuer: yourself
+  - type: RoleRequirement
+    roles:
+      mindRoles:
+      - CriminalAntagRole
