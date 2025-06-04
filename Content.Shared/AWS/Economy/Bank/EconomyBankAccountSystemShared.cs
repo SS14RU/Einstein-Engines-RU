@@ -10,6 +10,9 @@ using Content.Shared.Access.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.Mind;
+using Content.Shared.Movement.Pulling.Components;
+using Content.Shared.Mind.Components;
 
 namespace Content.Shared.AWS.Economy.Bank
 {
@@ -22,9 +25,14 @@ namespace Content.Shared.AWS.Economy.Bank
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
+        private EntityQuery<ContainerManagerComponent> _containerQuery;
+
         public override void Initialize()
         {
             base.Initialize();
+
+            _containerQuery = GetEntityQuery<ContainerManagerComponent>();
+
             SubscribeLocalEvent<EconomyBankTerminalComponent, ExaminedEvent>(OnBankTerminalExamine);
             SubscribeLocalEvent<EconomyBankTerminalComponent, EconomyTerminalMessage>(OnTerminalMessage);
 
@@ -293,5 +301,92 @@ namespace Content.Shared.AWS.Economy.Bank
             };
             _userInterfaceSystem.SetUiState(ent.Owner, EconomyManagementConsoleUiKey.Key, uiState);
         }
+
+        //[PublicAPI]
+        //public List<IEconomyMoneyHolder> GetEntityMoneyHolders(EntityUid entityUid, HolderProccessType type)
+        //{
+        //    var moneyHolders = new List<IEconomyMoneyHolder>();
+
+        //    if (type.HasFlag(HolderProccessType.AccountHolder))
+        //    {
+
+        //    }
+
+        //    if (type.HasFlag(HolderProccessType.MoneyHolder))
+        //    {
+        //        var proccessEmagged = type.HasFlag(HolderProccessType.Emagged);
+        //        var proccessNotEmagged = type.HasFlag(HolderProccessType.NotEmagged);
+
+        //        if (!proccessEmagged && !proccessNotEmagged)
+        //            goto skip;
+        //    }
+
+        //skip:
+
+        //    return moneyHolders;
+        //}
+
+        [PublicAPI]
+        public ulong CountHoldMoney(EntityUid entityUid)
+        {
+            ulong totalMoney = GetEntityMoney(entityUid);
+
+            if (!_containerQuery.TryGetComponent(entityUid, out var containerManager))
+                return totalMoney;
+
+            var containersToProcess = new Stack<ContainerManagerComponent>();
+            containersToProcess.Push(containerManager);
+
+            ProcessPulledEntity(entityUid, ref totalMoney, containersToProcess);
+            ProcessContainedEntities(containersToProcess, ref totalMoney);
+
+            return totalMoney;
+        }
+
+        private void ProcessPulledEntity(EntityUid entityUid, ref ulong totalMoney, Stack<ContainerManagerComponent> containersToProcess)
+        {
+            if (!TryComp<PullerComponent>(entityUid, out var puller) || puller.Pulling is not { } pulledEntity)
+                return;
+
+            totalMoney += GetEntityMoney(pulledEntity);
+
+            if (!HasComp<MindContainerComponent>(pulledEntity)
+                && _containerQuery.TryGetComponent(pulledEntity, out var pulledContainerManager))
+                containersToProcess.Push(pulledContainerManager);
+        }
+
+        private void ProcessContainedEntities(Stack<ContainerManagerComponent> containersToProcess, ref ulong totalMoney)
+        {
+            while (containersToProcess.TryPop(out var currentManager))
+                foreach (var container in currentManager.Containers.Values)
+                    foreach (var containedEntity in container.ContainedEntities)
+                    {
+                        totalMoney += GetEntityMoney(containedEntity);
+
+                        if (_containerQuery.TryGetComponent(containedEntity, out var containedContainerManager))
+                            containersToProcess.Push(containedContainerManager);
+                    }
+        }
+
+        private ulong GetEntityMoney(EntityUid entity)
+        {
+            if (TryComp<EconomyAccountHolderComponent>(entity, out var accountHolder)
+                && TryGetAccount(accountHolder.AccountID, out var account))
+                return account.Comp.Balance;
+
+            if (TryComp<EconomyMoneyHolderComponent>(entity, out var moneyHolder))
+                return moneyHolder.Balance;
+
+            return 0;
+        }
+
+        //[Flags]
+        //public enum HolderProccessType
+        //{
+        //    MoneyHolder,
+        //    AccountHolder,
+        //    Emagged,
+        //    NotEmagged
+        //}
     }
 }
