@@ -15,7 +15,7 @@ public class SkillPointController
     private void CopyUnblocked(Dictionary<ProtoId<SkillPrototype>, List<Enum>> from, Dictionary<ProtoId<SkillPrototype>, List<Enum>> to)
     {
         foreach (var (key, value) in from)
-            to[key] = new List<Enum>(value);
+            to[key] = [.. value];
     }
 
     public SkillLevel GetCurrentSkillLevel(ProtoId<SkillPrototype> protoId)
