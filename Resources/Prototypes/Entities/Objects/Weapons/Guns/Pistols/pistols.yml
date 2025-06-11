@@ -84,6 +84,10 @@
       collection: MetalThud
   - type: DamageOtherOnHit
     staminaCost: 5
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: viper

@@ -65,6 +65,10 @@
   - type: SurgeryTool
     startSound:
       path: /Audio/Medical/Surgery/saw.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   id: FireAxeFlaming

@@ -57,6 +57,10 @@
         enum.TelescopicBatonVisuals.Layer:
           True: { state: icon }
           False: { state: icon-off }
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   parent: TelescopicBaton

@@ -19,3 +19,7 @@
         Blunt: 20
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic

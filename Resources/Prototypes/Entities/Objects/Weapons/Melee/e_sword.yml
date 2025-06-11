@@ -103,6 +103,10 @@
     delay: 6.1
     blockSound:
       path: /Audio/Weapons/eblade1.ogg
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: energy sword
@@ -246,7 +250,11 @@
     - id: EnergyDagger
     sound:
       path: /Audio/Effects/unwrap.ogg
-
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
+        
 - type: entity
   name: energy cutlass
   parent: EnergySwordBase

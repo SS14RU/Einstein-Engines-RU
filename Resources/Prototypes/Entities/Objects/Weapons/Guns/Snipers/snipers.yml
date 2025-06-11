@@ -63,6 +63,10 @@
         Blunt: 2.5
   - type: DamageOtherOnHit
     staminaCost: 7.5
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: Kardashev-Mosin
@@ -157,6 +161,10 @@
     zeroVisible: true
   - type: Appearance
   # WD EDIT END
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: musket

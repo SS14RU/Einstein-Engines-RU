@@ -74,6 +74,10 @@
       collection: MetalThud
   - type: DamageOtherOnHit
     staminaCost: 8
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: pie cannon
@@ -117,7 +121,11 @@
       storagebase: !type:Container
         ents: []
   - type: Execution
-
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
+        
 # shoots bullets instead of throwing them, no other changes
 - type: entity
   parent: WeaponImprovisedPneumaticCannon

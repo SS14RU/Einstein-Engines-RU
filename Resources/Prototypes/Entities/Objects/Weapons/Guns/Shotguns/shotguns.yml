@@ -68,6 +68,10 @@
   - type: DamageOtherOnHit
     staminaCost: 9.5
   - type: GunRequiresWield # WD EDIT
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity # supposed to be similiar to pistols
   name: BaseWeaponShotgunSmall
@@ -297,6 +301,10 @@
         Blunt: 7.5
   - type: DamageOtherOnHit
     staminaCost: 6
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: sawn-off shogun
@@ -344,6 +352,10 @@
     wideAnimationRotation: 135
   - type: DamageOtherOnHit
     staminaCost: 5
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: blunderbuss
@@ -393,6 +405,10 @@
     node: shotgun
   - type: StaticPrice
     price: 20
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: improvised shotgun

@@ -20,4 +20,7 @@
   - type: Tag
     tags:
     - WizardStaff
-
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic

@@ -18,6 +18,10 @@
   - type: Utensil
     types:
       - Knife
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Basic
 
 - type: entity
   name: captain's sabre
@@ -67,6 +71,10 @@
     # not putting a BlockMovement component here cause that's funny.
   - type: MeleeBlock # WD EDIT
     delay: 6.1
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: katana
@@ -142,6 +150,10 @@
     reflectProb: 0.3
     velocityBeforeNotMaxProb: 6.0 # don't punish ninjas for being ninjas
     velocityBeforeMinProb: 10.0
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.Trained
 
 - type: entity
   name: machete
@@ -282,3 +294,7 @@
     - type: Item
       size: Ginormous
       sprite: Objects/Weapons/Melee/Throngler-in-hand.rsi
+    - type: RequiredSkill
+      container:
+        skills:
+          weapon: enum.SkillLevel.Trained

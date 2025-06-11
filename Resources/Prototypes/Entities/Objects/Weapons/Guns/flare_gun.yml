@@ -49,7 +49,10 @@
     - Belt
     - suitStorage
   - type: Appearance
-
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
 
 - type: entity
   name: security shell gun

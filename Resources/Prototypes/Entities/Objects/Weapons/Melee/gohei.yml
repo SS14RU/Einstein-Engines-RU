@@ -16,3 +16,7 @@
   - type: Item
     size: Small
     sprite: Objects/Weapons/Melee/gohei.rsi
+  - type: RequiredSkill
+    container:
+      skills:
+        weapon: enum.SkillLevel.NonSkilled
