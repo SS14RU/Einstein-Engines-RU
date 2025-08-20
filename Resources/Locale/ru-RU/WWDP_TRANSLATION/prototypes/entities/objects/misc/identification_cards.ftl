@@ -14,7 +14,7 @@ ent-MedicalInternIDCard = ID карта врача-интерна
     .desc = { ent-PassengerIDCard.desc }
     .suffix = { "" }
 
-ent-SecurityCadetIDCard = ID карта кадета СБ
+ent-SecurityCadetIDCard = ID карта кадета ДШ
     .desc = { ent-PassengerIDCard.desc }
     .suffix = { "" }
 
@@ -26,7 +26,7 @@ ent-CaptainIDCard = ID карта капитана
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
-ent-SecurityIDCard = ID карта службы безопасности
+ent-SecurityIDCard = ID карта Департамента Шерифа
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
@@ -118,11 +118,11 @@ ent-RDIDCard = ID карта научного руководителя
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
-ent-HoSIDCard = ID карта главы службы безопасности
+ent-HoSIDCard = ID карта главы Департамента Шерифа
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
-ent-CentcomIDCard = ID карта ветерана СБ
+ent-CentcomIDCard = ID карта ветерана ДШ
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 

@@ -50,7 +50,7 @@ ent-ClothingOuterWinterHoP = зимнее пальто главы персона
     .desc = { ent-ClothingOuterWinterCoat.desc }
     .suffix = { "" }
 
-ent-ClothingOuterWinterHoS = зимнее пальто главы службы безопасности
+ent-ClothingOuterWinterHoS = зимнее пальто главы Департамента Шерифа
     .desc = { ent-ClothingOuterWinterCoat.desc }
     .suffix = { "" }
 
@@ -94,7 +94,7 @@ ent-ClothingOuterWinterSci = зимнее пальто учёного
     .desc = { ent-ClothingOuterWinterCoat.desc }
     .suffix = { "" }
 
-ent-ClothingOuterWinterSec = зимнее пальто службы безопасности
+ent-ClothingOuterWinterSec = зимнее пальто Департамента Шерифа
     .desc = { ent-ClothingOuterWinterCoat.desc }
     .suffix = { "" }
 

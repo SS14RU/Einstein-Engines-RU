@@ -19,7 +19,7 @@ ent-ClothingBackpackDuffelClown = клоунский вещмешок
     .suffix = { "" }
 
 ent-ClothingBackpackDuffelSecurity = охранный вещмешок
-    .desc = Большой вещмешок для хранения дополнительных припасов СБ.
+    .desc = Большой вещмешок для хранения дополнительных припасов ДШ.
     .suffix = { "" }
 
 ent-ClothingBackpackDuffelChemistry = химический вещмешок

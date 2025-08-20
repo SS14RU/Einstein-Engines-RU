@@ -10,7 +10,7 @@ ent-ClothingOuterCoatGentle = аккуратное пальто
     .desc = Пальто для леди или джентльменов.
     .suffix = { "" }
 
-ent-ClothingOuterCoatHoSTrench = тренч главы службы безопасности
+ent-ClothingOuterCoatHoSTrench = тренч главы Департамента Шерифа
     .desc = Этот плащ был разработан специально для демонстрации власти.
     .suffix = { "" }
 

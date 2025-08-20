@@ -1,6 +1,6 @@
-﻿ent-LockerSecurityMedicine = шкаф для медикаментов службы безопасности
+﻿ent-LockerSecurityMedicine = шкаф для медикаментов Департамента Шерифа
     .desc = Место для хранения медицинских припасов.
 
-ent-LockerSecurityMedicineFilled = шкаф для медикаментов службы безопасности
+ent-LockerSecurityMedicineFilled = шкаф для медикаментов Департамента Шерифа
     .desc = Место для хранения медицинских припасов.
     .suffix = Заполненный

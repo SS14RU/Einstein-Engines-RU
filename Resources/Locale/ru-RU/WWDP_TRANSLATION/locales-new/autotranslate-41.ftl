@@ -52,7 +52,7 @@ ent-WindoorSecureExternalLocked = { ent-WindoorSecure }
 
 ent-WindoorSecureSecurityLocked = { ent-WindoorSecure }
    .desc = { ent-WindoorSecure.desc }
-   .suffix = СБ, Закрыт
+   .suffix = ДШ, Закрыт
 
 ent-WindoorSecureScienceLocked = { ent-WindoorSecure }
    .desc = { ent-WindoorSecure.desc }

@@ -3,7 +3,7 @@ ent-ClothingShoesBootsWork = рабочие ботинки
     .suffix = { "" }
 
 ent-ClothingShoesBootsJack = подкованные сапоги
-    .desc = Обувь службы безопасности Nanotrasen, для боевых операций или боевых действий. Борьба - всё, борьба - всегда.
+    .desc = Обувь Департамента Шерифа Nanotrasen, для боевых операций или боевых действий. Борьба - всё, борьба - всегда.
     .suffix = { "" }
 
 ent-ClothingShoesBootsJackFake = подкованные сапоги

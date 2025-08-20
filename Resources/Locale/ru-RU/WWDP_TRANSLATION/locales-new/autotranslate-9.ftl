@@ -28,7 +28,7 @@ ent-RandomMedicCorpseSpawner = Спавнер случайного тела ме
 ent-RandomScienceCorpseSpawner = Спавнер случайного тела учёного
    .desc = ""
 
-ent-RandomSecurityCorpseSpawner = Спавнер случайного тела СБ
+ent-RandomSecurityCorpseSpawner = Спавнер случайного тела ДШ
    .desc = ""
 
 ent-RandomCommandCorpseSpawner = Спавнер случайного тела коммандного

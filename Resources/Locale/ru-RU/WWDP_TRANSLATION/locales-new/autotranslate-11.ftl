@@ -52,7 +52,7 @@ ent-EngiLootSpawner = Спавнер инженерного лута
 ent-CommonLootSpawner = Спавнер общего лута
    .desc = ""
 
-ent-SecLootSpawner = Спавнер СБ лута
+ent-SecLootSpawner = Спавнер ДШ лута
    .desc = ""
 
 ent-MedLootSpawner = Спавнер медицинского лута

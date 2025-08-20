@@ -19,7 +19,7 @@ ent-ClothingBackpackSatchelScience = научная сумка
     .suffix = { "" }
 
 ent-ClothingBackpackSatchelSecurity = сумка охраны
-    .desc = Прочная сумка для нужд службы безопасности.
+    .desc = Прочная сумка для нужд Департамента Шерифа.
     .suffix = { "" }
 
 ent-ClothingBackpackSatchelCaptain = капитанская сумка

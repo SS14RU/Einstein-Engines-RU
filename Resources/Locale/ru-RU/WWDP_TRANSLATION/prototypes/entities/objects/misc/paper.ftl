@@ -94,7 +94,7 @@ ent-RubberStampHop = печать главы персонала
     .desc = { ent-RubberStampMime.desc }
     .suffix = { "" }
 
-ent-RubberStampHos = печать главы службы безопасности
+ent-RubberStampHos = печать главы Департамента Шерифа
     .desc = { ent-RubberStampMime.desc }
     .suffix = { "" }
 

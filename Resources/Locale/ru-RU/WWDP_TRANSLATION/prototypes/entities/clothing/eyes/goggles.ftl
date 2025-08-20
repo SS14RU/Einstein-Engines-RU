@@ -1,7 +1,7 @@
 ent-ClothingEyesNightVisionGoggles = ПНВ
    .desc = Усовершенствованный дисплей, который обеспечивает видимость в полной темноте.
 
-ent-ClothingEyesNightVisionSecurityGoggles = ПНВ службы безопасности
+ent-ClothingEyesNightVisionSecurityGoggles = ПНВ Департамента Шерифа
    .desc = { ent-ClothingEyesNightVisionGoggles.desc }
 
 ent-ClothingEyesNightVisionMedicalGoggles = ПНВ медицинский

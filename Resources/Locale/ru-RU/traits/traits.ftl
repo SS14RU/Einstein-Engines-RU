@@ -407,7 +407,7 @@ trait-description-CyberEyes =
 #    Your cybereyes have been fitted with a photochromic lense that automatically darkens in response to intense stimuli.
 #    This provides immunity from most bright flashes of light, such as those from welding arcs.
 
-trait-name-CyberEyesSecurity = Киберглаза Службы Безопасности
+trait-name-CyberEyesSecurity = Киберглаза Департамента Шерифа
 trait-description-CyberEyesSecurity =
     Ваши киберглаза были модернизированы и оснащены встроенным охранным визором. Обратите внимание, что этот имплант
     считается контрабандой и может быть отключен корпорацией перед отправкой на станцию.
@@ -504,7 +504,7 @@ trait-description-BionicLeg =
 #    This provides immunity from most bright flashes of light, such as those from welding arcs, exclusive to IPCs because it only needs the module
 #    skipping the eye insertion process.
 
-trait-name-SecurityEyesModule = Глазной Модуль КПБ: Визор службы безопасности
+trait-name-SecurityEyesModule = Глазной Модуль КПБ: Визор Департамента Шерифа
 trait-description-SecurityEyesModule =
     Модуль, установленный в КПБ, работающих на службу безопасности и аналогичные службы, считается контрабандным и может быть удален, если устройство не работает на службу безопасности.
 
@@ -518,7 +518,7 @@ trait-description-DiagnosticEyesModule =
 
 trait-name-OmniEyesModule = Глазной Модуль КПБ: Омнивизор
 trait-description-OmniEyesModule =
-    Этот модуль обеспечивает комбинированные преимущества медициского, диагностического и СБ визоров, так что этот модуль считается контрабандным для тех, кто не работает в службе безопасности станции, и может быть отключен вашим работодателем перед отправкой на станцию.
+    Этот модуль обеспечивает комбинированные преимущества медициского, диагностического и ДШ визоров, так что этот модуль считается контрабандным для тех, кто не работает в службе безопасности станции, и может быть отключен вашим работодателем перед отправкой на станцию.
 
 trait-name-LightAmplificationModule = Глазной Модуль КПБ: Ночное видение
 trait-description-LightAmplificationModule =
