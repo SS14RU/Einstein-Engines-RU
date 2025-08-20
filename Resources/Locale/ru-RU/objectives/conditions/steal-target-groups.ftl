@@ -11,7 +11,7 @@ steal-target-groups-jetpack-captain-filled = джетпак капитана
 steal-target-groups-captain-weapon = антикварный лазерный пистолет
 steal-target-groups-corporate-liaison-weapon = личное оружие НТРа
 steal-target-groups-nuke-disk = диск ядерной авторизации
-steal-target-groups-weapon-head-of-security-weapon = личное оружие главы службы безопасности
+steal-target-groups-weapon-head-of-security-weapon = личное оружие шерифа
 
 # Thief Collection
 # Thief Collection

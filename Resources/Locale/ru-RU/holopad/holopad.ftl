@@ -75,7 +75,7 @@ holopad-command-cmo = Командование - ГВ
 holopad-command-qm = Командование - КМ
 holopad-command-ce = Командование - СИ
 holopad-command-rd = Командование - НР
-holopad-command-hos = Командование - ГСБ
+holopad-command-hos = Командование - Шериф
 
 # Science
 # Science

@@ -4,13 +4,13 @@
   Обеспечение порядка на станции и защита экипажа — главная задача [color=#cb0000]Службы Безопасности[/color]. От агентов Синдиката до ядерных оперативников, от нашествий тварей до пьяных учёных — именно [color=#cb0000]Служба Безопасности[/color] стоит между станцией и хаосом.
 
   ## Персонал
-  [color=#cb0000]Служба Безопасности[/color] состоит из Кадетов Службы Безопасности, Офицеров Службы Безопасности и Детектива. Отделом заведуют: Смотритель и Глава Службы Безопасности.
+  [color=#cb0000]Служба Безопасности[/color] состоит из Кадетов Службы Безопасности, Офицеров Службы Безопасности и Детектива. Отделом заведуют: Смотритель и Шериф.
 
   <Box>
     <GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Офицер СБ"/>
     <GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Детектив"/>
     <GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Смотритель"/>
-    <GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="ГСБ"/>
+    <GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="Шериф"/>
   </Box>
 
   ## Снаряжение

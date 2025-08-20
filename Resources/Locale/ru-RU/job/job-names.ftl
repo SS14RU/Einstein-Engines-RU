@@ -1,7 +1,7 @@
 job-name-warden = Смотритель
 job-name-security = Офицер СБ
 job-name-cadet = Кадет СБ
-job-name-hos = Глава Службы Безопасности
+job-name-hos = Шериф
 job-name-detective = Детектив
 job-name-brigmedic = Бригмедик
 job-name-borg = Борг
@@ -103,7 +103,7 @@ JobERTLeader = Лидер ОБР
 JobERTMedical = Медик ОБР
 JobERTSecurity = Офицер Безопасности ОБР
 JobHeadOfPersonnel = Глава Персонала
-JobHeadOfSecurity = Глава Службы Безопасности
+JobHeadOfSecurity = Шериф
 JobJanitor = Уборщик
 JobLawyer = Юрист
 JobLibrarian = Библиотекарь
