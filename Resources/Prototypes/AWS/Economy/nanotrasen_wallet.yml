@@ -165,7 +165,7 @@
     accountSetup:
       accountID: NT-Security
       allowedCurrency: Thaler
-      accountName: Служба безопасности
+      accountName: Департамента Шерифа
       balance: 1000
       accountTags:
         - Department

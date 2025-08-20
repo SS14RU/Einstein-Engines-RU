@@ -1,6 +1,6 @@
 mindshield-extenddescription-emag = Я чувствую непреодолимое желание сдать этот предмет в службу безопасности.
 mindshield-extenddescription-poster-atmosia = Обречён с самого начала. NanoTrasen нельзя победить повстанцами!
-mindshield-extenddescription-poster-funpolice = Служба безопасности здесь для нашей защиты.
+mindshield-extenddescription-poster-funpolice = Департамента Шерифа здесь для нашей защиты.
 mindshield-extenddescription-poster-syndicaterecruitment = Этот плакат — измена! Я чувствую непреодолимое желание снять его.
 mindshield-extenddescription-poster-contrabandsmoke = Только дурак выберет это вместо сигарет, рекомендованных NanoTrasen!
 mindshield-extenddescription-poster-greytide = Эти немытые массы должны восхвалять NanoTrasen за то, что им разрешено находиться на станции.
