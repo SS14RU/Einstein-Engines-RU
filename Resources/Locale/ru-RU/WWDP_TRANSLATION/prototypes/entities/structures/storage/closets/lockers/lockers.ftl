@@ -70,7 +70,7 @@ ent-LockerScientist = шкаф учёного
     .desc = { ent-LockerBase.desc }
     .suffix = { "" }
 
-ent-LockerHeadOfSecurity = шкаф главы службы безопасности
+ent-LockerHeadOfSecurity = шкаф главы Департамента Шерифа
     .desc = { ent-LockerBaseSecure.desc }
     .suffix = { "" }
 
@@ -78,7 +78,7 @@ ent-LockerWarden = шкаф смотрителя
     .desc = { ent-LockerBaseSecure.desc }
     .suffix = { "" }
 
-ent-LockerSecurity = шкаф офицера службы безопасности
+ent-LockerSecurity = шкаф офицера Департамента Шерифа
     .desc = { ent-LockerBaseSecure.desc }
     .suffix = { "" }
 

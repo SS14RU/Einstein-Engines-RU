@@ -10,7 +10,7 @@ ent-ClothingHeadHatBeretEngineering = инженерный берет
     .desc = Берет с эмблемой инженерного отдела. Для инженеров, которые предпочитают стиль безопасности.
     .suffix = { "" }
 
-ent-ClothingHeadHatBeretHoS = берет главы службы безопасности
+ent-ClothingHeadHatBeretHoS = берет главы Департамента Шерифа
     .desc = Черный берет с вышитой командирской эмблемой. Для офицеров, которые предпочитают стиль безопасности.
     .suffix = { "" }
 
@@ -54,7 +54,7 @@ ent-ClothingHeadHatHopcap = фуражка главы персонала
     .desc = Большая, стильная капитанская фуражка.
     .suffix = { "" }
 
-ent-ClothingHeadHatHoshat = фуражка главы службы безопасности
+ent-ClothingHeadHatHoshat = фуражка главы Департамента Шерифа
     .desc = На станции новый шериф.
     .suffix = { "" }
 

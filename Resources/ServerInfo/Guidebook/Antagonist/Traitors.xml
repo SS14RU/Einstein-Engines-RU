@@ -34,7 +34,7 @@
     <GuideEntityEmbed Entity="BaseUplinkRadio" Caption="Имплантированный Аплинк"/>
   </Box>
 
-  [bold]Никогда не забывай закрывать Аплинк после использования.[/bold] Если его увидит [color=#cb0000]Служба Безопасности[/color] — твоё новое имя станет “Куски на полу”.
+  [bold]Никогда не забывай закрывать Аплинк после использования.[/bold] Если его увидит [color=#cb0000]Департамент Шерифа[/color] — твоё новое имя станет “Куски на полу”.
 
   Имплант безопаснее: никто не откроет его, если только тебя не проколют пустым имплантером. Так что... не попадись.
 
@@ -52,9 +52,9 @@
     <GuideEntityEmbed Entity="HandTeleporter" Caption="Ручной Телепорт"/>
   </Box>
 
-  - Стащить у [color=#cb0000]Начальника охраны[/color] его [bold]Мультифазную Энергопушку X-01[/bold].
+  - Стащить у [color=#cb0000]Шерифа[/color] его [bold]Мультифазную Энергопушку X-01[/bold].
   <Box>
-    <GuideEntityEmbed Entity="WeaponEnergyGunMultiphase" Caption="Личная пушка ХоСа"/>
+    <GuideEntityEmbed Entity="WeaponEnergyGunMultiphase" Caption="Личная пушка Шерифа"/>
   </Box>
 
   - Умыкнуть у Инженерного Главы [color=#a4885c]Улучшенные Магоботы[/color].
@@ -62,7 +62,7 @@
     <GuideEntityEmbed Entity="ClothingShoesBootsMagAdv" Caption="Улучшенные Магоботы"/>
   </Box>
 
-  - И конечно, [color=#cb0000]энергетическое ружьё ХоСа[/color] — жирный трофей.
+  - И конечно, [color=#cb0000]энергетическое ружьё Шерифа[/color] — жирный трофей.
   <Box>
     <GuideEntityEmbed Entity="WeaponEnergyShotgun" Caption=""/>
   </Box>

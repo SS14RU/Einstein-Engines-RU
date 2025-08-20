@@ -22,7 +22,7 @@ ent-ClothingUniformJumpskirtSeniorResearcher = юбка ведущего исс�
 ent-ClothingUniformJumpskirtSeniorPhysician = юбка медицинского офицера
    .desc = Знак мастерства и престижа в медицинском отделе.
 
-ent-ClothingUniformJumpskirtSeniorOfficer = юбка ветерана СБ
+ent-ClothingUniformJumpskirtSeniorOfficer = юбка ветерана ДШ
    .desc = Признак мастерства и престижа в отделе безопасности.
 
 ent-ClothingUniformJumpskirtSeniorSalvageSpecialist = юбка охотника карго

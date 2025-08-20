@@ -58,7 +58,7 @@ ent-CrateWeb = паутинный ящик
     .suffix = { "" }
 
 
-ent-CrateSecgear = защищённый ящик службы безопасности
+ent-CrateSecgear = защищённый ящик Департамента Шерифа
     .desc = { ent-CrateBaseSecure.desc }
     .suffix = { "" }
 

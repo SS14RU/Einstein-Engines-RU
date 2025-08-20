@@ -6,7 +6,7 @@ ent-DoorRemoteCommand = пульт от дверей командования
     .desc = { ent-DoorRemoteDefault.desc }
     .suffix = { "" }
 
-ent-DoorRemoteSecurity = пульт от дверей отдела СБ
+ent-DoorRemoteSecurity = пульт от дверей отдела ДШ
     .desc = { ent-DoorRemoteDefault.desc }
     .suffix = { "" }
 

@@ -15,7 +15,7 @@ ent-PosterContrabandAtmosiaDeclarationIndependence = Декларация нез
     .suffix = { "" }
 
 ent-PosterContrabandFunPolice = Полиция юмора
-    .desc = Плакат с критикой службы безопасности станции.
+    .desc = Плакат с критикой Департамента Шерифа станции.
     .suffix = { "" }
 
 ent-PosterContrabandLustyExomorph = Похотливая Ксено дева
@@ -378,8 +378,8 @@ ent-PosterLegitJustAWeekAway = Всего неделя...
     .desc = Плакат, рекламирующий давно отложенный проект, всё ещё утверждает, что до него осталась 'всего неделя...'.
     .suffix = { "" }
 
-ent-PosterLegitSecWatch = СБ следит за тобой
-    .desc = Плакат, напоминающий вам, что служба безопасности следит за каждым вашим шагом.
+ent-PosterLegitSecWatch = ДШ следит за тобой
+    .desc = Плакат, напоминающий вам, что Департамент Шерифа следит за каждым вашим шагом.
     .suffix = { "" }
 
 ent-PosterMapBagel = карта Bagel

@@ -38,7 +38,7 @@ ent-WardrobeMixed = смешанный гардероб
     .desc = { ent-WardrobeBase.desc }
     .suffix = { "" }
 
-ent-WardrobeSecurity = гардероб службы безопасности
+ent-WardrobeSecurity = гардероб Департамента Шерифа
     .desc = { ent-WardrobeBase.desc }
     .suffix = { "" }
 

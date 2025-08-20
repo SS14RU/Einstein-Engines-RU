@@ -12,7 +12,7 @@ barsign-ui-set-label = Set Sign:
 
 ## The Harmbaton
 barsign-prototype-name-harmbaton = Хармбатон
-barsign-prototype-description-harmbaton = Отличные обеды как для сотрудников службы безопасности, так и для ассистентов.
+barsign-prototype-description-harmbaton = Отличные обеды как для сотрудников Департамента Шерифа, так и для ассистентов.
 
 ## The Singulo
 

@@ -140,7 +140,7 @@ mapping-template-engine = Двигатель
 mapping-template-supermatterroom = Комната Суперматерии
 
 
-mapping-template-securityairlocks = Шлюзы Службы Безопасности
+mapping-template-securityairlocks = Шлюзы Департамента Шерифа
 
 mapping-template-equipmentroom = Комната Снаряжения
 

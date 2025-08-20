@@ -22,7 +22,7 @@ steal-target-ntr-weapon = оружие НТРа
 
 steal-target-nuclear-authentication-disk = диск ядерной авторизации
 
-steal-target-hos-personal-weapon = личное оружие главы службы безопасности
+steal-target-hos-personal-weapon = личное оружие главы Департамента Шерифа
 
 
 steal-target-figurines = фигурки (любые)

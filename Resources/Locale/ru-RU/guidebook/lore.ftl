@@ -10,5 +10,5 @@ guide-entry-stellar-corporate-conglomerate = Звёздный Корпорати
 guide-entry-zavodskoi-interstellar = Zavodskoi Interstellar
 guide-entry-zeng-hu-pharmaceuticals = Zeng-Hu Pharmaceuticals
 
-guide-entry-loadout-info-security-weapons = Вооружение Службы Безопасности
+guide-entry-loadout-info-security-weapons = Вооружение Департамента Шерифа
 

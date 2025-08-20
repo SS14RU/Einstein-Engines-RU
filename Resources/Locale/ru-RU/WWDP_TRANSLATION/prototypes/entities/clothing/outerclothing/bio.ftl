@@ -15,7 +15,7 @@ ent-ClothingOuterBioScientist = биозащитный костюм
     .suffix = Научный
 
 ent-ClothingOuterBioSecurity = биозащитный костюм
-    .desc = Костюм, защищающий от биологического заражения, в расцветке СБ.
+    .desc = Костюм, защищающий от биологического заражения, в расцветке ДШ.
     .suffix = Охранный
 
 ent-ClothingOuterBioVirology = биозащитный костюм

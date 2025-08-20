@@ -1,7 +1,7 @@
 ﻿ent-AirlockMedicalSecurityLocked = шлюз
     .desc = { ent-AirlockMedical.desc }
-    .suffix = Медицинский/СБ, Закрыт
+    .suffix = Медицинский/ДШ, Закрыт
 
 ent-AirlockMedicalGlassSecurityLocked = стеклянный шлюз
     .desc = { ent-AirlockMedical.desc }
-    .suffix = Медицинский/СБ, Закрыт
+    .suffix = Медицинский/ДШ, Закрыт

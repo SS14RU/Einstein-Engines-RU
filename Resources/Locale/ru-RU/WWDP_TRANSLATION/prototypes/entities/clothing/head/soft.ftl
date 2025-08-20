@@ -78,11 +78,11 @@ ent-ClothingHeadHatRedsoftFlipped = перевёрнутая красная ке
     .desc = Бейсболка безвкусного красного цвета. Перевёрнутая.
     .suffix = { "" }
 
-ent-ClothingHeadHatSecsoft = кепка СБ
+ent-ClothingHeadHatSecsoft = кепка ДШ
     .desc = Это прочная бейсболка безвкусного красного цвета.
     .suffix = { "" }
 
-ent-ClothingHeadHatSecsoftFlipped = перевёрнутая кепка СБ
+ent-ClothingHeadHatSecsoftFlipped = перевёрнутая кепка ДШ
     .desc = Это прочная бейсболка безвкусного красного цвета. Перевёрнутая.
     .suffix = { "" }
 

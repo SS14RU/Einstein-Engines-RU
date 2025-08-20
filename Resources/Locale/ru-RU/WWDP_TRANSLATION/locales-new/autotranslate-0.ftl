@@ -34,7 +34,7 @@ ent-ClothingBackpackSatchelAtmospherics = атмосферная сумка
    .desc = Прочная сумка из огнеупорного волокна. Пахнет плазмой.
 
 ent-ClothingBackpackSatchelClown = клоунская сумка
-   .desc = Для быстрого бега от СБ.
+   .desc = Для быстрого бега от ДШ.
 
 ent-ClothingBackpackSatchelMime = сумка мима
    .desc = Сумка, предназначенная для бесшумного и выразительного искусства подражания.

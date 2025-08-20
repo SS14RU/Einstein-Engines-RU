@@ -15,7 +15,7 @@ ent-ComfyChairCommand = командное { ent-ComfyChair }
 
 ent-ComfyChairSecurity = охранное { ent-ComfyChair }
     .desc = { ent-ComfyChair.desc } Это красное.
-    .suffix = Служба Безопасности
+    .suffix = Департамент Шерифа
 
 
 ent-ComfyChairMedical = медицинское { ent-ComfyChair }

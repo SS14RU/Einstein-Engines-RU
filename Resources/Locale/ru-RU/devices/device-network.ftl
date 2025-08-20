@@ -16,7 +16,7 @@ device-frequency-prototype-name-turret-control = Sentry Turret Control
 ## camera frequencies
 device-frequency-prototype-name-surveillance-camera-test = Тест подсети
 device-frequency-prototype-name-surveillance-camera-engineering = Камеры (Инж)
-device-frequency-prototype-name-surveillance-camera-security = Камеры (СБ)
+device-frequency-prototype-name-surveillance-camera-security = Камеры (ДШ)
 device-frequency-prototype-name-surveillance-camera-science = Камеры (РнД)
 device-frequency-prototype-name-surveillance-camera-supply = Камеры (Карго)
 device-frequency-prototype-name-surveillance-camera-command = Камеры (Команд)

@@ -2,8 +2,8 @@ ent-ClothingMaskGas = противогаз
     .desc = Закрывающая лицо маска, которую можно подключить к дыхательному баллону.
     .suffix = { "" }
 
-ent-ClothingMaskGasSecurity = противогаз СБ
-    .desc = Стандартный противогаз Службы безопасности.
+ent-ClothingMaskGasSecurity = противогаз ДШ
+    .desc = Стандартный противогаз Департамента Шерифа.
     .suffix = { "" }
 
 ent-ClothingMaskGasSyndicate = противогаз синдиката
