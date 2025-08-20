@@ -1,7 +1,7 @@
 job-name-warden = Warden
 job-name-security = Security Officer
 job-name-cadet = Security Cadet
-job-name-hos = Head of Security
+job-name-hos = Sheriff
 job-name-detective = Detective
 job-name-brigmedic = Corpsman
 job-name-borg = Cyborg
@@ -97,7 +97,7 @@ JobERTLeader = ERT Leader
 JobERTMedical = ERT Medical
 JobERTSecurity = ERT Security
 JobHeadOfPersonnel = Head of Personnel
-JobHeadOfSecurity = Head of Security
+JobHeadOfSecurity = Sheriff
 JobJanitor = Janitor
 JobLawyer = Lawyer
 JobLibrarian = Librarian

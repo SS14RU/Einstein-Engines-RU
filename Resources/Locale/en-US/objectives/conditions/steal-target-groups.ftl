@@ -11,7 +11,7 @@ steal-target-groups-jetpack-captain-filled = captain's jetpack
 steal-target-groups-captain-weapon = captain's weapon
 steal-target-groups-corporate-liaison-weapon = corporate liaison's weapon
 steal-target-groups-nuke-disk = nuclear authentication disk
-steal-target-groups-weapon-head-of-security-weapon = head of security's weapon
+steal-target-groups-weapon-head-of-security-weapon = sheriff's weapon
 
 # Thief Collection
 steal-target-groups-figurines = figurine

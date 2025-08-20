@@ -66,7 +66,7 @@ holopad-command-cmo = Command - CMO
 holopad-command-qm = Command - QM
 holopad-command-ce = Command - CE
 holopad-command-rd = Command - RD
-holopad-command-hos = Command - HoS
+holopad-command-hos = Command - Sheriff
 
 # Science
 holopad-science-anomaly = Science - Anomaly

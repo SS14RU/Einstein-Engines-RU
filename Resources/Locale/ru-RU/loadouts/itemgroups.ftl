@@ -621,25 +621,25 @@ character-item-group-LoadoutDetectiveOuter = Detective Outerwear
 character-item-group-LoadoutDetectiveShoes = Detective Shoes
 character-item-group-LoadoutDetectiveUniforms = Detective Uniforms
 
-# Security - Head Of Security
-# Security - Head Of Security
-character-item-group-LoadoutHeadOfSecurityBackpacks = Head Of Security Backpacks
-character-item-group-LoadoutHeadOfSecurityBelt = Head Of Security Belt
-character-item-group-LoadoutHeadOfSecurityEars = Head Of Security Ears
-character-item-group-LoadoutHeadOfSecurityEquipment = Head Of Security Equipment
-character-item-group-LoadoutHeadOfSecurityWeapons = Head of Security's Antique Weapon Collection
-character-item-group-LoadoutHeadOfSecurityEyes = Head Of Security Eyewear
-character-item-group-LoadoutHeadOfSecurityGloves = Head Of Security Gloves
-character-item-group-LoadoutHeadOfSecurityHead = Head Of Security Headgear
-character-item-group-LoadoutHeadOfSecurityId = Head Of Security Id
-character-item-group-LoadoutHeadOfSecurityNeck = Head Of Security Neckwear
-character-item-group-LoadoutHeadOfSecurityMask = Head Of Security Masks
-character-item-group-LoadoutHeadOfSecurityOuter = Head Of Security Outerwear
-character-item-group-LoadoutHeadOfSecurityShoes = Head Of Security Shoes
-character-item-group-LoadoutHeadOfSecurityUniforms = Head Of Security Uniforms
+# Security - Sheriff
+# Security - Sheriff
+character-item-group-LoadoutHeadOfSecurityBackpacks = Sheriff Backpacks
+character-item-group-LoadoutHeadOfSecurityBelt = Sheriff Belt
+character-item-group-LoadoutHeadOfSecurityEars = Sheriff Ears
+character-item-group-LoadoutHeadOfSecurityEquipment = Sheriff Equipment
+character-item-group-LoadoutHeadOfSecurityWeapons = Sheriff's Antique Weapon Collection
+character-item-group-LoadoutHeadOfSecurityEyes = Sheriff Eyewear
+character-item-group-LoadoutHeadOfSecurityGloves = Sheriff Gloves
+character-item-group-LoadoutHeadOfSecurityHead = Sheriff Headgear
+character-item-group-LoadoutHeadOfSecurityId = Sheriff Id
+character-item-group-LoadoutHeadOfSecurityNeck = Sheriff Neckwear
+character-item-group-LoadoutHeadOfSecurityMask = Sheriff Masks
+character-item-group-LoadoutHeadOfSecurityOuter = Sheriff Outerwear
+character-item-group-LoadoutHeadOfSecurityShoes = Sheriff Shoes
+character-item-group-LoadoutHeadOfSecurityUniforms = Sheriff Uniforms
 
 # Security - Security Officer
-character-item-group-LoadoutHeadOfSecurityTrinkets = Head Of Security Trinkets
+character-item-group-LoadoutHeadOfSecurityTrinkets = Sheriff Trinkets
 
 # Security - Security Officer
 character-item-group-LoadoutSecurityOfficerBackpacks = Security Officer Backpacks

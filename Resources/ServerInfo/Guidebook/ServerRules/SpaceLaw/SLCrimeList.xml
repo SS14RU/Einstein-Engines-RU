@@ -1406,7 +1406,7 @@
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         This does not include theft of people's ID cards, which are likely to hold a value of more than 1000 credits.
-        It does however cover ID cards which could lead into high security areas, such as the Captain's, Head of Personnel's, or Head of Security's.
+        It does however cover ID cards which could lead into high security areas, such as the Captain's, Head of Personnel's, or Sheriff’s.
       </Box>
     </ColorBox>
     <ColorBox>
@@ -1674,7 +1674,7 @@
 
   ## Capital Punishments
   - The sentences given for Capital Offenses are permanent imprisonment or execution
-  - Charging someone under Capital Punishments needs to be authorized by Warden, Head of Security or Captain
+  - Charging someone under Capital Punishments needs to be authorized by Warden, Sheriff or Captain
   - Capital crimes are the gravest offenses that represent an existential threat to the station, its personnel, or NanoTrasen's corporate sovereignty. These acts demand the most severe penalties, including permanent imprisonment or execution.
   <Table Columns="4">
     <ColorBox>
