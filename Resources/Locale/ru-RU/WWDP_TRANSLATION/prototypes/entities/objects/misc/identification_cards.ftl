@@ -30,7 +30,7 @@ ent-SecurityIDCard = ID карта Департамента Шерифа
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
-ent-WardenIDCard = ID карта смотрителя
+ent-WardenIDCard = ID карта бейлифа
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 

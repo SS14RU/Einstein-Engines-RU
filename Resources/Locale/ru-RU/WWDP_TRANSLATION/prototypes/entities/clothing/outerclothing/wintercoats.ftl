@@ -102,8 +102,8 @@ ent-ClothingOuterWinterViro = зимнее пальто вирусолога
     .desc = { ent-ClothingOuterWinterCoat.desc }
     .suffix = { "" }
 
-ent-ClothingOuterWinterWarden = зимнее бронепальто смотрителя
-    .desc = Прочное, утилитарное зимнее пальто, предназначенное для защиты смотрителя от любых угроз, связанных с бригом, и переохлаждением.
+ent-ClothingOuterWinterWarden = зимнее бронепальто бейлифа
+    .desc = Прочное, утилитарное зимнее пальто, предназначенное для защиты бейлифа от любых угроз, связанных с бригом, и переохлаждением.
     .suffix = { "" }
 
 ent-ClothingOuterWinterMusician = зимнее пальто музыканта

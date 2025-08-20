@@ -126,7 +126,7 @@ ent-SpawnPointHeadOfSecurity = глава Департамента Шерифа
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 
-ent-SpawnPointWarden = смотритель
+ent-SpawnPointWarden = бейлиф
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 

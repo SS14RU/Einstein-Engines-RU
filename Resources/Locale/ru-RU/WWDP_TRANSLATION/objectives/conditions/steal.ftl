@@ -50,7 +50,7 @@ steal-target-lighter = detective's Flippo engraved lighter
 
 steal-target-ammo-techfab = печатная плата техфаба патронов
 
-steal-target-wardens-cap = фуражка смотрителя
+steal-target-wardens-cap = фуражка бейлифа
 
 steal-target-paramedic-hardsuit = пустотный скафандр парамедика
 

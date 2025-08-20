@@ -124,7 +124,7 @@ holopad-engineering-power = Инженерный - Питание
 # Security
 holopad-security-front = ДШ - Приёмная
 holopad-security-brig = ДШ - Бриг
-holopad-security-warden = ДШ - Смотритель
+holopad-security-warden = ДШ - Бейлиф
 holopad-security-interrogation = ДШ - Допросная
 holopad-security-breakroom = ДШ - Комната отдыха
 holopad-security-detective = ДШ - Детектив

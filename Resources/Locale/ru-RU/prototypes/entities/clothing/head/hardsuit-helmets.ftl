@@ -33,7 +33,7 @@ ent-ClothingHeadHelmetHardsuitCombatMedical = FPA-86 helmet
     Protects its wearer against ballistics and explosive ordinance, at the cost of some mobility.
 ent-ClothingHeadHelmetHardsuitCombatCorpsman = FPA-86m helmet
     .desc = { ent-ClothingHeadHelmetHardsuitCombatMedical.desc }
-ent-ClothingHeadHelmetHardsuitWarden = шлем скафандра смотрителя
+ent-ClothingHeadHelmetHardsuitWarden = шлем скафандра бейлифа
     .desc = Модифицированный шлем против бунта. Неожиданно удобный.
     .suffix = { "" }
 ent-ClothingHeadHelmetHardsuitCombatRiot = FPA-93 helmet

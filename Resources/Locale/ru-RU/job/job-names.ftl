@@ -1,4 +1,4 @@
-job-name-warden = Смотритель
+job-name-warden = Бейлиф
 job-name-security = Офицер Департамента Шерифа
 job-name-cadet = Кадет Департамента Шерифа
 job-name-hos = Шериф
@@ -132,5 +132,5 @@ JobStationAi = Станционный ИИ
 JobStationEngineer = Инженер
 JobTechnicalAssistant = Технический Ассистент
 JobVisitor = Посетитель
-JobWarden = Смотритель
+JobWarden = Бейлиф
 JobZookeeper = Зоотехник

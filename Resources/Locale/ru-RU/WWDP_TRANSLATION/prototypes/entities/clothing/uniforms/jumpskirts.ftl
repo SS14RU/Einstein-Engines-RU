@@ -98,7 +98,7 @@ ent-ClothingUniformJumpskirtSec = юбка-комбинезон Департам
     .desc = Юбка-комбинезон из прочного материала, обеспечивающая надежную защиту.
     .suffix = { "" }
 
-ent-ClothingUniformJumpskirtWarden = униформа смотрителя
+ent-ClothingUniformJumpskirtWarden = униформа бейлифа
     .desc = Формальный костюм Департамента Шерифа для офицеров в комплекте с пряжкой для ремня Nanotrasen.
     .suffix = { "" }
 

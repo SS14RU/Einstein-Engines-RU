@@ -150,7 +150,7 @@ ent-ClothingUniformJumpsuitSecGrey = серый комбинезон Депар�
     .desc = Пережиток прошлых лет, они использовались до того, как в Nanotrasen решили, что дешевле красить костюмы в красный цвет вместо того, чтобы смывать кровь.
     .suffix = { "" }
 
-ent-ClothingUniformJumpsuitWarden = униформа смотрителя
+ent-ClothingUniformJumpsuitWarden = униформа бейлифа
     .desc = Формальный костюм Департамента Шерифа для офицеров в комплекте с пряжкой для ремня Nanotrasen.
     .suffix = { "" }
 
