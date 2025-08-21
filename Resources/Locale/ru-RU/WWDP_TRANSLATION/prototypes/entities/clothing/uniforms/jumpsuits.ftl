@@ -151,7 +151,7 @@ ent-ClothingUniformJumpsuitSecGrey = серый комбинезон Депар�
     .suffix = { "" }
 
 ent-ClothingUniformJumpsuitWarden = униформа бейлифа
-    .desc = Формальный костюм Департамента Шерифа для офицеров в комплекте с пряжкой для ремня Nanotrasen.
+    .desc = Формальный костюм Департамента Шерифа для офицеров-патрульных в комплекте с пряжкой для ремня Nanotrasen.
     .suffix = { "" }
 
 ent-ClothingUniformJumpsuitColorGrey = серый комбинезон

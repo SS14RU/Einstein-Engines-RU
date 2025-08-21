@@ -130,7 +130,7 @@ ent-SpawnPointWarden = бейлиф
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 
-ent-SpawnPointSecurityOfficer = офицер ДШ
+ent-SpawnPointSecurityOfficer = офицер-патрульный
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 

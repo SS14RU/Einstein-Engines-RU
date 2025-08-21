@@ -2459,7 +2459,7 @@ ent-ClothingHeadEnvirohelmSec = шлем Департамента Шерифа (
 
 
 ent-ClothingHeadEnvirohelmSecBlue = синий шлем ДШ (плазмамен)
-    .desc = Крутой синий шлем для плазменных офицеров ДШ.
+    .desc = Крутой синий шлем для плазменных офицеров-патрульных.
 
 
 ent-ClothingHeadEnvirohelmSecGrey = серый шлем ДШ (плазмамен)
@@ -2659,7 +2659,7 @@ ent-ClothingHeadEnvirohelmEnviroslacksMNKAlt = монохромный шлем M
 
 
 ent-ClothingHeadHelmetEVA = шлем EVA
-    .desc = Старенький, но надёжный шлем для выхода в открытый космос. Делает офицеров ДШ слегка нервными.
+    .desc = Старенький, но надёжный шлем для выхода в открытый космос. Делает офицеров-патрульных слегка нервными.
 
 
 ent-ClothingHeadHelmetSyndicate = шлем EVA синдиката

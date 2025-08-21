@@ -64,7 +64,7 @@ ghost-role-information-hamlet-name = Хомяк Гамлет
 ghost-role-information-hamlet-description = Живёт на капитанском мостике, немного вспыльчив и всегда голоден.
 
 ghost-role-information-Laika-name = Лайка
-ghost-role-information-Laika-description = Постоянная обитательница Департамента Шерифа. Требуйте ласки у офицеров и кусайте за пятки нарушителей.
+ghost-role-information-Laika-description = Постоянная обитательница Департамента Шерифа. Требуйте ласки у офицеров-патрульных и кусайте за пятки нарушителей.
 
 ghost-role-information-slimes-name = Слайм
 ghost-role-information-slimes-description = Обычный слайм без особых потребностей или интересов. Он просто живет.
