@@ -34,7 +34,7 @@ ent-SpawnPointMedicalIntern = интерн
     .desc = { ent-SpawnPointAssistant.desc }
     .suffix = { "" }
 
-ent-SpawnPointSecurityCadet = кадет ДШ
+ent-SpawnPointSecurityCadet = кадет
     .desc = { ent-SpawnPointAssistant.desc }
     .suffix = { "" }
 

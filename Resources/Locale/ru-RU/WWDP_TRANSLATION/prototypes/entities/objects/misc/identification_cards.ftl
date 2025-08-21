@@ -14,7 +14,7 @@ ent-MedicalInternIDCard = ID карта врача-интерна
     .desc = { ent-PassengerIDCard.desc }
     .suffix = { "" }
 
-ent-SecurityCadetIDCard = ID карта кадета ДШ
+ent-SecurityCadetIDCard = ID карта кадета
     .desc = { ent-PassengerIDCard.desc }
     .suffix = { "" }
 

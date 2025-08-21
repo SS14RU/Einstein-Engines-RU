@@ -12165,7 +12165,7 @@ ent-ClothingUniformJumpsuitZavodAtmos = Комбинезон атмосферн�
     .desc = Форма для тех, кто держит воздух в трубах и не даёт станции задохнуться.
 
 
-ent-ClothingUniformJumpsuitZavodCadet = Комбинезон кадета охраны
+ent-ClothingUniformJumpsuitZavodCadet = Комбинезон кадета
     .desc = Форма для зелёных, но уже вооружённых.
 
 

@@ -14,7 +14,7 @@ ent-MedicalInternPDA = ПДА врача-интерна
     .desc = Почему он не белый? Имеет встроенный анализатор здоровья.
     .suffix = { "" }
 
-ent-SecurityCadetPDA = ПДА кадета ДШ
+ent-SecurityCadetPDA = ПДА кадета
     .desc = Почему он не красный?
     .suffix = { "" }
 

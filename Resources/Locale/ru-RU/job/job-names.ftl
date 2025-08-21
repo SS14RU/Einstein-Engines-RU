@@ -1,6 +1,6 @@
 job-name-warden = Бейлиф
 job-name-security = Офицер-патрульный
-job-name-cadet = Кадет Департамента Шерифа
+job-name-cadet = Кадет
 job-name-hos = Шериф
 job-name-detective = Следователь
 job-name-brigmedic = Бригмедик
@@ -121,7 +121,7 @@ JobResearchDirector = Мистагог
 JobRoboticist = Роботехник
 JobSalvageSpecialist = Утилизатор
 JobScientist = Учёный
-JobSecurityCadet = Кадет Департамента Шерифа
+JobSecurityCadet = Кадет
 JobSecurityOfficer = Офицер-патрульный
 JobSeniorEngineer = Бригадир
 JobSeniorOfficer = Лейтенант
