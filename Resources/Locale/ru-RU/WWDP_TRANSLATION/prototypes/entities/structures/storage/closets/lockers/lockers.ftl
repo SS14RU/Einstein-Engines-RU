@@ -82,7 +82,7 @@ ent-LockerSecurity = шкаф офицера-патрульного
     .desc = { ent-LockerBaseSecure.desc }
     .suffix = { "" }
 
-ent-LockerDetective = шкаф детектива
+ent-LockerDetective = шкаф следователя
     .desc = Обычно пустой и холодный... как твоё сердце.
     .suffix = { "" }
 

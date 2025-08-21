@@ -163,7 +163,7 @@ ent-VendingMachineChefDrobe = ШефШкаф
     .suffix = { "" }
 
 ent-VendingMachineDetDrobe = ДетекШкаф
-    .desc = Машина для всех ваших детективных нужд, до тех пор, пока вам нужна одежда.
+    .desc = Машина для всех ваших следовательских нужд, до тех пор, пока вам нужна одежда.
     .suffix = { "" }
 
 ent-VendingMachineJaniDrobe = УборШкаф

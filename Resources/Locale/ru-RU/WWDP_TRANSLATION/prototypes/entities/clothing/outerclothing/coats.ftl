@@ -2,7 +2,7 @@ ent-ClothingOuterCoatBomber = куртка-бомбер
     .desc = Толстая, поношенная кожаная куртка-бомбер периода Второй мировой войны.
     .suffix = { "" }
 
-ent-ClothingOuterCoatDetective = тренч детектива
+ent-ClothingOuterCoatDetective = тренч следователя
     .desc = Прочный брезентовый плащ, разработка компании TX Fabrication Corp. Плащ устойчив к внешнему воздействию - идеально подходит для вашей следующей автодефенестрации!
     .suffix = { "" }
 

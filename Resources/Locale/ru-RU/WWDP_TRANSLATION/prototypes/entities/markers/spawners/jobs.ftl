@@ -134,7 +134,7 @@ ent-SpawnPointSecurityOfficer = офицер-патрульный
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 
-ent-SpawnPointDetective = детектив
+ent-SpawnPointDetective = следователь
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 

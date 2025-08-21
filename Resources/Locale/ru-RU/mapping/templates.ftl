@@ -45,6 +45,6 @@ mapping-template-brig = Бриг
 mapping-template-wardensoffice = Кабинет Бейлифа
 mapping-template-armory = Оружейная
 mapping-template-permabrig = Перма Бриг
-mapping-template-detectiveroom = Комната Детектива
+mapping-template-detectiveroom = Комната Следователя
 mapping-template-gunnery = Стрельбище
 

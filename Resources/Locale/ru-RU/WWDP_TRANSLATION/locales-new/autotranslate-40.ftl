@@ -57,7 +57,7 @@ ent-AirlockExternalAtmosphericsLocked = { ent-AirlockExternal }
 
 ent-AirlockDetectiveLocked = { ent-Airlock }
    .desc = { ent-Airlock.desc }
-   .suffix = Детектив, Закрыт
+   .suffix = Следователь, Закрыт
 
 ent-AirlockExternalGlassCargoLocked = { ent-AirlockExternal }
    .desc = { ent-AirlockExternal.desc }

@@ -10,8 +10,8 @@ ent-ClothingOuterVestKevlar = кевларовый жилет
     .desc = Бронежилет, изготовленный из синтетических волокон.
     .suffix = { "" }
 
-ent-ClothingOuterVestDetective = жилет детектива
-    .desc = Жесткий серый плащ частного детектива.
+ent-ClothingOuterVestDetective = жилет следователя
+    .desc = Жесткий серый плащ частного следователя.
     .suffix = { "" }
 
 ent-ClothingOuterVestHazard = светоотражающий жилет

@@ -7,7 +7,7 @@ id-card-access-level-head-of-security = Шериф
 id-card-access-level-security = Департамента Шерифа
 id-card-access-level-armory = Оружейная
 id-card-access-level-brig = Бриг
-id-card-access-level-detective = Детектив
+id-card-access-level-detective = Следователь
 
 id-card-access-level-chief-engineer = Старший инженер
 id-card-access-level-engineering = Инженерный

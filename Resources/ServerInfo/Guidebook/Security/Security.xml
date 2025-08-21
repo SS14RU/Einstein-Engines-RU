@@ -4,11 +4,11 @@
   Обеспечение порядка на станции и защита экипажа — главная задача [color=#cb0000]Департамента Шерифа[/color]. От агентов Синдиката до ядерных оперативников, от нашествий тварей до пьяных учёных — именно [color=#cb0000]Департамент Шерифа[/color] стоит между станцией и хаосом.
 
   ## Персонал
-  [color=#cb0000]Департамент Шерифа[/color] состоит из Кадетов Департамента Шерифа, офицеров-патрульных и Детектива. Отделом заведуют: Бейлиф и Шериф.
+  [color=#cb0000]Департамент Шерифа[/color] состоит из Кадетов Департамента Шерифа, офицеров-патрульных и Следователя. Отделом заведуют: Бейлиф и Шериф.
 
   <Box>
     <GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Офицер-патрульный"/>
-    <GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Детектив"/>
+    <GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Следователь"/>
     <GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Бейлиф"/>
     <GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="Шериф"/>
   </Box>

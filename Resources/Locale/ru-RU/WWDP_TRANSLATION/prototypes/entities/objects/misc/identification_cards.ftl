@@ -170,7 +170,7 @@ ent-ZookeeperIDCard = ID карта зоотехника
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
-ent-DetectiveIDCard = ID карта детектива
+ent-DetectiveIDCard = ID карта следователя
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 

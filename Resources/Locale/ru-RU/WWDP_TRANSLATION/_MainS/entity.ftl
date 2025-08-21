@@ -2377,7 +2377,7 @@ ent-ClothingHeadEnvirohelmChaplain = шлем капеллана
     .desc = Только для самых верующих… или самых фанатичных.
 
 
-ent-ClothingHeadEnvirohelmDetective = шлем детектива
+ent-ClothingHeadEnvirohelmDetective = шлем следователя
     .desc = Защитит от огня, криков и вопросов "где улики?"
 
 
@@ -3801,7 +3801,7 @@ ent-ClothingUniformEnvirosuitEngineering = инженерный плазмоко
     .desc = Герметичный инженерный костюм с оранжевыми полосками вместо фиолетовых.
 
 
-ent-ClothingUniformEnvirosuitDetective = плазмокостюм детектива
+ent-ClothingUniformEnvirosuitDetective = плазмокостюм следователя
     .desc = Индивидуальный костюм, доработанный одним из слишком стильных плазмочелов. Одобрен НаноТрейзен.
 
 
@@ -7485,7 +7485,7 @@ ent-PotatoAIChip = сверхкомпактный AI-чип
     .desc = Требует ровно 1,1 В. На 1,2 В превращается в пюре.
 
 
-ent-RubberStampDetective = штамп детектива
+ent-RubberStampDetective = штамп следователя
 
 
 ent-Spaceshroom = космогриб
@@ -12149,8 +12149,8 @@ ent-CrateSANModsuitGroup = Групповой комплект модсьюто�
     .desc = Пять комплектов. Пять солдат. Много трупов.
 
 
-ent-ClothingOuterJacketZavDetective = Плащ детектива
-    .desc = Надёжный детективский плащ от Zavodskoi Interstellar. Укрывает от ветра, пуль и совести.
+ent-ClothingOuterJacketZavDetective = Плащ следователя
+    .desc = Надёжный следовательский плащ от Zavodskoi Interstellar. Укрывает от ветра, пуль и совести.
 
 
 ent-ClothingOuterJacketZavSecurity = Куртка охраны
@@ -12169,11 +12169,11 @@ ent-ClothingUniformJumpsuitZavodCadet = Комбинезон кадета охр
     .desc = Форма для зелёных, но уже вооружённых.
 
 
-ent-ClothingUniformJumpsuitZavodDetective = Комбинезон детектива
+ent-ClothingUniformJumpsuitZavodDetective = Комбинезон следователя
     .desc = Форма для тех, кто ищет правду среди тел.
 
 
-ent-ClothingUniformJumpsuitZavodDetectiveAlt = Комбинезон детектива
+ent-ClothingUniformJumpsuitZavodDetectiveAlt = Комбинезон следователя
     .desc = То же самое, только с модным воротником.
 
 

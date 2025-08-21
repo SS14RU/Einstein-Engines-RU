@@ -271,7 +271,7 @@ ent-DrinkLongIslandIcedTeaGlass = стакан лонг-айленд айс ти
     .suffix = { "" }
 
 ent-DrinkManhattanGlass = бокал манхэттена
-    .desc = Любимый напиток Детектива под прикрытием. Он никогда не переносил джин...
+    .desc = Любимый напиток Следователя под прикрытием. Он никогда не переносил джин...
     .suffix = { "" }
 
 ent-DrinkManhattanProjectGlass = бокал манхэттенского проекта
