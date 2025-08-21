@@ -22,7 +22,7 @@ ent-SeniorResearcherIDCard = ID карта ведущего исследоват
 ent-SeniorPhysicianIDCard = ID карта медицинского офицера
     .desc = { ent-IDCardStandard.desc }
 
-ent-SeniorOfficerIDCard = ID карта ветерана ДШ
+ent-SeniorOfficerIDCard = ID карта лейтенанта
     .desc = { ent-IDCardStandard.desc }
 
 ent-SeniorSalvageSpecialistIDCard = ID карта охотника карго

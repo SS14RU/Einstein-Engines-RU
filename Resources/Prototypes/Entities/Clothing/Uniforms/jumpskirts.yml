@@ -689,7 +689,7 @@
 - type: entity
   parent: [ClothingUniformSkirtBase, BaseRestrictedContraband]
   id: ClothingUniformJumpskirtSeniorOfficer
-  name: senior officer jumpskirt
+  name: lieutenant jumpskirt
   description: A sign of skill and prestige within the security department.
   components:
   - type: Sprite

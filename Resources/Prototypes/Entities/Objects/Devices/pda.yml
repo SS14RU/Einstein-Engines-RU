@@ -1693,7 +1693,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: SeniorOfficerPDA
-  name: senior officer PDA
+  name: lieutenant PDA
   description: Beaten, battered and broken, but just barely useable.
   components:
   - type: Pda

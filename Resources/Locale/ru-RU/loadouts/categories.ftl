@@ -79,7 +79,7 @@ loadout-category-JobsSecurityCorpsman = Corpsman
 loadout-category-JobsSecurityDetective = Detective
 loadout-category-JobsSecurityHeadOfSecurity = Шериф
 loadout-category-JobsSecuritySecurityOfficer = Security Officer
-loadout-category-JobsSecuritySeniorOfficer = Senior Officer
+loadout-category-JobsSecuritySeniorOfficer = Lieutenant
 loadout-category-JobsSecurityWarden = Warden
 
 # Service

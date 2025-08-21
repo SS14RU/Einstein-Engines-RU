@@ -122,7 +122,7 @@ ent-HoSIDCard = ID карта главы Департамента Шерифа
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 
-ent-CentcomIDCard = ID карта ветерана ДШ
+ent-CentcomIDCard = ID карта лейтенанта
     .desc = { ent-IDCardStandard.desc }
     .suffix = { "" }
 

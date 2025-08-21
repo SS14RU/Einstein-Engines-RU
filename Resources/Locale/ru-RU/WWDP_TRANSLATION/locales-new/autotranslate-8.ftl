@@ -25,7 +25,7 @@ ent-ClothingUniformJumpsuitSeniorResearcher = комбинезон ведуще�
 ent-ClothingUniformJumpsuitSeniorPhysician = комбинезон медицинского офицера
    .desc = Знак мастерства и престижа в медицинском отделе.
 
-ent-ClothingUniformJumpsuitSeniorOfficer = комбинезон ветерана ДШ
+ent-ClothingUniformJumpsuitSeniorOfficer = комбинезон лейтенанта
    .desc = Признак мастерства и престижа в отделе безопасности.
 
 ent-ClothingUniformJumpsuitSeniorSalvageSpecialist = комбинезон охотника карго

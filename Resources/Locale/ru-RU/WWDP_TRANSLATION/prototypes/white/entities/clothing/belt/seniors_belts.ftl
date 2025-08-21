@@ -1,4 +1,4 @@
-ent-ClothingBeltSeniorSecurityFilled = пояс ветерана ДШ
+ent-ClothingBeltSeniorSecurityFilled = пояс лейтенанта
     .desc = Прошедший многое пояс офицера станции.
     .suffix = { "" }
 

@@ -4,7 +4,7 @@ ent-SeniorResearcherPDA = ПДА ведущего исследователя
 ent-SeniorPhysicianPDA = ПДА медицинского офицера
    .desc = Слабо пахнет железом и химикатами. Имеет встроенный анализатор здоровья.
 
-ent-SeniorOfficerPDA = ПДА ветерана ДШ
+ent-SeniorOfficerPDA = ПДА лейтенанта
    .desc = Избитые, потрепанные и сломанные, но едва пригодные для использования.
 
 ent-SeniorSalvagePDA = ПДА охотника карго
