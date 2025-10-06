@@ -54,7 +54,7 @@
 
 - type: currency
   id: Thaler
-  displayName: store-currency-display-telecrystal
+  displayName: store-currency-display-thaler
   cash:
     1: Thaler
   canWithdraw: true
@@ -384,3 +384,4 @@
     - id: IDCard-NT-CentCom
   - type: AccessReader
     access: [["Command"]]
+

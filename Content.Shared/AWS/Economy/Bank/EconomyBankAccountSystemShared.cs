@@ -346,7 +346,7 @@ namespace Content.Shared.AWS.Economy.Bank
         {
             ulong totalMoney = GetEntityMoney(entityUid);
 
-            if (!_containerQuery.TryGetComponent(entityUid, out var containerManager))
+            if (!EntityManager.TryGetComponent(entityUid, out ContainerManagerComponent? containerManager) || containerManager?.Containers == null)
                 return totalMoney;
 
             var containersToProcess = new Stack<ContainerManagerComponent>();
@@ -360,27 +360,40 @@ namespace Content.Shared.AWS.Economy.Bank
 
         private void ProcessPulledEntity(EntityUid entityUid, ref ulong totalMoney, Stack<ContainerManagerComponent> containersToProcess)
         {
-            if (!TryComp<PullerComponent>(entityUid, out var puller) || puller.Pulling is not { } pulledEntity)
+            if (!EntityManager.TryGetComponent(entityUid, out PullerComponent? puller) || puller.Pulling is not { } pulledEntity)
                 return;
 
             totalMoney += GetEntityMoney(pulledEntity);
 
             if (!HasComp<MindContainerComponent>(pulledEntity)
-                && _containerQuery.TryGetComponent(pulledEntity, out var pulledContainerManager))
+                && EntityManager.TryGetComponent(pulledEntity, out ContainerManagerComponent? pulledContainerManager)
+                && pulledContainerManager?.Containers != null)
+            {
                 containersToProcess.Push(pulledContainerManager);
+            }
         }
 
         private void ProcessContainedEntities(Stack<ContainerManagerComponent> containersToProcess, ref ulong totalMoney)
         {
             while (containersToProcess.TryPop(out var currentManager))
+            {
+                if (currentManager?.Containers == null)
+                    continue;
+
                 foreach (var container in currentManager.Containers.Values)
+                {
                     foreach (var containedEntity in container.ContainedEntities)
                     {
                         totalMoney += GetEntityMoney(containedEntity);
 
-                        if (_containerQuery.TryGetComponent(containedEntity, out var containedContainerManager))
+                        if (EntityManager.TryGetComponent(containedEntity, out ContainerManagerComponent? containedContainerManager)
+                            && containedContainerManager?.Containers != null)
+                        {
                             containersToProcess.Push(containedContainerManager);
+                        }
                     }
+                }
+            }
         }
 
         private ulong GetEntityMoney(EntityUid entity)

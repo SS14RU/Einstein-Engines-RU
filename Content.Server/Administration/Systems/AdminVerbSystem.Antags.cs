@@ -4,6 +4,9 @@ using Content.Server.Antag;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.WhiteDream.BloodCult.Gamerule;
 using Content.Server.Zombies;
+//SS14RU-start
+using Content.Shared.AWS.CriminalAntag;
+//SS14RU-end
 using Content.Shared.Administration;
 using Content.Shared.Database;
 using Content.Shared.Mind.Components;
@@ -35,6 +38,11 @@ public sealed partial class AdminVerbSystem
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultThiefRule = "Thief";
+
+//SS14RU-start
+    [ValidatePrototypeId<EntityPrototype>]
+    private const string DefaultCriminalAntagRule = "CriminalAntag";
+//SS14RU-end
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultChangelingRule = "Changeling";
@@ -163,6 +171,23 @@ public sealed partial class AdminVerbSystem
             Message = Loc.GetString("admin-verb-make-thief"),
         };
         args.Verbs.Add(thief);
+
+//SS14RU-start
+        Verb criminalAntag = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-criminal-antag"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/job_icons.rsi"), "Detective"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<CriminalAntagRuleComponent>(targetPlayer, DefaultCriminalAntagRule);
+                //_antag.SendBriefing(targetPlayer, Loc.GetString("economy-criminalantag-briefing"), null, null);
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-make-criminal-antag"),
+        };
+        args.Verbs.Add(criminalAntag);
+//SS14RU-end
 
         // Goobstation - changelings
         Verb ling = new()

@@ -24,6 +24,10 @@ public sealed class SecretRuleSystem : GameRuleSystem<SecretRuleComponent>
     [Dependency] private readonly IComponentFactory _compFact = default!;
 
     private string _ruleCompName = default!;
+    //SS14RU-start
+    private const string CriminalRulePrototype = "CriminalAntag";
+    private const string CriminalModePrototype = "CriminalAntagGameRule";
+    //SS14RU-end
 
     public override void Initialize()
     {
@@ -60,6 +64,22 @@ public sealed class SecretRuleSystem : GameRuleSystem<SecretRuleComponent>
 
             component.AdditionalGameRules.Add(ruleEnt);
         }
+
+        //SS14RU-start
+        if (!preset.Rules.Contains(CriminalRulePrototype) && !preset.Rules.Contains(CriminalModePrototype))
+        {
+            EntityUid criminalRule;
+
+            if (GameTicker.RunLevel <= GameRunLevel.InRound)
+                criminalRule = GameTicker.AddGameRule(CriminalRulePrototype);
+            else
+                GameTicker.StartGameRule(CriminalRulePrototype, out criminalRule);
+
+            component.AdditionalGameRules.Add(criminalRule);
+            Log.Info($"Secret mode added additional criminals to the round.");
+            _adminLogger.Add(LogType.EventStarted, $"Secret mode added additional criminals to the round.");
+        }
+        //SS14RU-end
     }
 
     protected override void Ended(EntityUid uid, SecretRuleComponent component, GameRuleComponent gameRule, GameRuleEndedEvent args)

@@ -1,4 +1,4 @@
-- type: gamePreset
+﻿- type: gamePreset
   id: Survival
   alias:
   - survival
@@ -213,6 +213,23 @@
   - Sandbox
   - LavalandStormScheduler # Lavaland Change
 
+# //SS14RU-start
+- type: gamePreset
+  id: Criminal
+  alias:
+  - criminal
+  name: criminal-title
+  description: criminal-description
+  showInVote: true
+  rules:
+  - CriminalAntagGameRule`n  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+  - LavalandStormScheduler # Lavaland Change
+
+# //SS14RU-end
 - type: gamePreset
   id: Traitor
   alias:
@@ -331,3 +348,6 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
   - LavalandStormScheduler # Lavaland Change
+
+
+

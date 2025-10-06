@@ -1,4 +1,4 @@
-- type: entityTable
+﻿- type: entityTable
   id: BasicCalmEventsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
@@ -46,6 +46,9 @@
     - id: DragonSpawn
     - id: NinjaSpawn
     - id: SleeperAgents
+    # //SS14RU-start
+    - id: CriminalAntag
+    # //SS14RU-end
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
@@ -593,3 +596,4 @@
     weight: 10
   - type: RandomSpawnRule
     prototype: RandomSatchelSpawner
+

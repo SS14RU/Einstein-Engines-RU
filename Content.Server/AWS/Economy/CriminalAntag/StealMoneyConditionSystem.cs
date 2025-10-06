@@ -1,18 +1,20 @@
-using Content.Server.Objectives.Components;
-using Content.Server.Objectives.Components.Targets;
+using System;
+using Content.Server.Objectives;
+using Content.Server.Shuttles.Systems;
+using Content.Shared.Cuffs.Components;
 using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
 using Robust.Shared.Containers;
-using Robust.Shared.Prototypes;
+using Robust.Shared.Localization;
 using Robust.Shared.Random;
-using Content.Shared.Mind.Components;
-using Content.Shared.Mobs.Systems;
-using Content.Shared.Mobs.Components;
-using Content.Shared.Movement.Pulling.Components;
+using Robust.Shared.Utility;
 using Content.Server.AWS.Economy.Bank;
 using Content.Server.GameTicking;
-using System.Linq;
+using Content.Shared.Mind.Components;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
+using Content.Shared.Movement.Pulling.Components;
 
 namespace Content.Server.AWS.CriminalAntag;
 
@@ -22,6 +24,8 @@ public sealed class StealMoneyConditionSystem : EntitySystem
     [Dependency] private readonly EconomyBankAccountSystem _economy = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
+    [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttle = default!;
+    [Dependency] private readonly SharedMindSystem _mind = default!;
 
     private EntityQuery<StealMoneyConditionComponent> _stealMoneyQuery;
 
@@ -38,20 +42,35 @@ public sealed class StealMoneyConditionSystem : EntitySystem
 
     private void OnAssigned(Entity<StealMoneyConditionComponent> condition, ref ObjectiveAssignedEvent args)
     {
-        args.Cancelled = true;
-        return;
+        condition.Comp.Others ??= new();
+
+        if ((StealMoneyReachType) condition.Comp.ReachType == StealMoneyReachType.SingleSpecificReach &&
+            condition.Comp.SpecificMoneyCount == 0)
+        {
+            condition.Comp.SpecificMoneyCount = 500;
+        }
     }
 
     private void OnAfterAssign(Entity<StealMoneyConditionComponent> condition, ref ObjectiveAfterAssignEvent args)
     {
-        _metaData.SetEntityName(condition.Owner, "title", args.Meta);
-        _metaData.SetEntityDescription(condition.Owner, "", args.Meta);
-        _objectives.SetIcon(condition.Owner, null!, args.Objective);
+        var title = Loc.GetString("economy-criminalantag-objective-title");
+        var description = Loc.GetString("economy-criminalantag-objective-desc");
+
+        _metaData.SetEntityName(condition.Owner, title, args.Meta);
+        _metaData.SetEntityDescription(condition.Owner, description, args.Meta);
+        _objectives.SetIcon(condition.Owner, new SpriteSpecifier.Rsi(new ResPath("/Textures/AWS/economy/moneyholder.rsi"), "icon"), args.Objective);
     }
+
     private void OnGetProgress(Entity<StealMoneyConditionComponent> condition, ref ObjectiveGetProgressEvent args)
     {
-        if (args.Mind.OwnedEntity is not { } uid)
+        if (args.Mind.OwnedEntity is not { } uid || !EntityManager.EntityExists(uid))
             return;
+
+        if (!HasEscaped(args.Mind))
+        {
+            args.Progress = 0f;
+            return;
+        }
 
         var progress = condition.Comp.ReachType switch
         {
@@ -59,7 +78,7 @@ public sealed class StealMoneyConditionSystem : EntitySystem
             StealMoneyReachType.SingleSpecificReach => CalculateSingleSpecificReachProgress(uid, condition.Comp),
             StealMoneyReachType.DependsOnOthers => 0f, // TODO: Implement when needed
             _ => throw new ArgumentOutOfRangeException(nameof(condition.Comp.ReachType),
-                 $"Unsupported reach type: {condition.Comp.ReachType}")
+                $"Unsupported reach type: {condition.Comp.ReachType}")
         };
 
         args.Progress = progress;
@@ -68,6 +87,9 @@ public sealed class StealMoneyConditionSystem : EntitySystem
     private float CalculateAsPossibleProgress(EntityUid uid)
     {
         if (_gameTicker.RunLevel != GameRunLevel.PostRound)
+            return 0f;
+
+        if (!EntityManager.EntityExists(uid))
             return 0f;
 
         var issuerMoney = _economy.CountHoldMoney(uid);
@@ -105,6 +127,24 @@ public sealed class StealMoneyConditionSystem : EntitySystem
 
     private float CalculateSingleSpecificReachProgress(EntityUid uid, StealMoneyConditionComponent comp)
     {
+        if (!EntityManager.EntityExists(uid))
+            return 0f;
+
         return _economy.CountHoldMoney(uid);
+    }
+
+    private bool HasEscaped(MindComponent mind)
+    {
+
+        if (mind.OwnedEntity is not { } owned)
+            return false;
+
+        if (_mind.IsCharacterDeadIc(mind))
+            return false;
+
+        if (TryComp<CuffableComponent>(owned, out var cuffed) && cuffed.CuffedHandCount > 0)
+            return false;
+
+        return _emergencyShuttle.IsTargetEscaping(owned);
     }
 }

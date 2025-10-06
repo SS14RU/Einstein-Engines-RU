@@ -1,4 +1,4 @@
-- type: antag
+﻿- type: antag
   id: CriminalAntag
   name: economy-criminalantag-name
   antagonist: true
@@ -23,12 +23,12 @@
   components:
   - type: CriminalAntagRule
   - type: AntagSelection
-    agentName: traitor-round-end-agent-name
+    agentName: economy-criminalantag-agent-name
 
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseCriminalAntagRule
-  id: CriminalAntag
+  id: CriminalAntagGameRule
   components:
   - type: GameRule
     minPlayers: 5
@@ -49,17 +49,53 @@
         - AntagImmune
       lateJoinAdditional: true
       mindRoles:
-      - MindRoleCriminalAntag
+        - MindRoleCriminalAntag
+      briefing:
+        text: economy-criminalantag-briefing
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseCriminalAntagRule
+  id: CriminalAntag
+  components:
+  - type: StationEvent
+    earliestStart: 25
+    weight: 6
+    minimumPlayers: 15
+    reoccurrenceDelay: 30
+    startAnnouncement: false
+    duration: null
+    occursDuringRoundEnd: false
+  - type: CriminalAntagRule
+  - type: AntagObjectives
+    objectives:
+    - CriminalAntagObjective
+  - type: AntagSelection
+    selectionTime: PostPlayerSpawn
+    definitions:
+    - prefRoles: [ CriminalAntag ]
+      min: 1
+      max: 4
+      playerRatio: 12
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: false
+      mindRoles:
+        - MindRoleCriminalAntag
+      briefing:
+        text: economy-criminalantag-briefing
 
 - type: entity
   parent: BaseObjective
   id: CriminalAntagObjective
   components:
   - type: Objective
-    issuer: yourself
+    issuer: economy-criminalantag-agent-name
     difficulty: 0
   - type: StealMoneyCondition
   - type: RoleRequirement
     roles:
       mindRoles:
       - CriminalAntagRole
+
