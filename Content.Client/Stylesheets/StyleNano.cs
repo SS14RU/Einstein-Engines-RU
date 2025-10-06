@@ -15,6 +15,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Shared.Graphics;
+using Robust.Shared.Maths;
 using static Robust.Client.UserInterface.StylesheetHelpers;
 
 namespace Content.Client.Stylesheets
@@ -489,6 +490,13 @@ namespace Content.Client.Stylesheets
             var itemListItemBackground = new StyleBoxFlat { BackgroundColor = new Color(55, 55, 55) };
             itemListItemBackground.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
             itemListItemBackground.SetContentMarginOverride(StyleBox.Margin.Horizontal, 4);
+
+            var logEntryBackground = new StyleBoxFlat { BackgroundColor = new Color(0.28f, 0.28f, 0.30f) };
+            logEntryBackground.SetContentMarginOverride(StyleBox.Margin.Vertical, 4);
+            logEntryBackground.SetContentMarginOverride(StyleBox.Margin.Horizontal, 6);
+            logEntryBackground.BorderColor = new Color(0.36f, 0.36f, 0.38f);
+            logEntryBackground.BorderThickness = new Thickness(1f);
+
             var itemListItemBackgroundTransparent = new StyleBoxFlat { BackgroundColor = Color.Transparent };
             itemListItemBackgroundTransparent.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
             itemListItemBackgroundTransparent.SetContentMarginOverride(StyleBox.Margin.Horizontal, 4);
@@ -1697,6 +1705,12 @@ namespace Content.Client.Stylesheets
 
                 Element<PanelContainer>().Class("BackgroundDark")
                     .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat(Color.FromHex("#252525"))),
+
+                Element<PanelContainer>().Class("EconomyLogEntry")
+                    .Prop(PanelContainer.StylePropertyPanel, logEntryBackground),
+
+                Element<RichTextLabel>().Class("EconomyLogEntryLabel")
+                    .Prop(Control.StylePropertyModulateSelf, Color.White),
 
                 //PDA - Buttons
                 Element<PdaSettingsButton>().Pseudo(ContainerButton.StylePseudoClassNormal)

@@ -280,7 +280,7 @@ namespace Content.Server.AWS.Economy.Bank
         }
 
         [PublicAPI]
-        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, Entity<EconomyBankAccountComponent> recipientAccount, ulong amount, [NotNullWhen(false)] out string? errorMessage)
+        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, Entity<EconomyBankAccountComponent> recipientAccount, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
         {
             errorMessage = null;
 
@@ -300,11 +300,11 @@ namespace Content.Server.AWS.Economy.Bank
                 return true;
             }
 
-            return TryTransferMoney(fromHolder, recipientAccount, amount);
+            return TryTransferMoney(fromHolder, recipientAccount, amount, reason);
         }
 
         [PublicAPI]
-        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, Entity<EconomyAccountHolderComponent> recipientAccountHolder, ulong amount, [NotNullWhen(false)] out string? errorMessage)
+        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, Entity<EconomyAccountHolderComponent> recipientAccountHolder, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
         {
             errorMessage = null;
 
@@ -320,11 +320,11 @@ namespace Content.Server.AWS.Economy.Bank
                 return false;
             }
 
-            return TrySendMoney(fromHolder, recipientAccount.Value, amount, out errorMessage);
+            return TrySendMoney(fromHolder, recipientAccount.Value, amount, out errorMessage, reason);
         }
 
         [PublicAPI]
-        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, string recipientAccountId, ulong amount, [NotNullWhen(false)] out string? errorMessage)
+        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, string recipientAccountId, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
         {
             errorMessage = null;
 
@@ -334,7 +334,7 @@ namespace Content.Server.AWS.Economy.Bank
                 return false;
             }
 
-            return TrySendMoney(fromHolder, account.Value, amount, out errorMessage);
+            return TrySendMoney(fromHolder, account.Value, amount, out errorMessage, reason);
         }
 
         [PublicAPI]
@@ -693,9 +693,23 @@ namespace Content.Server.AWS.Economy.Bank
                 return;
             }
 
+            string? purchaseReason = null;
+            VendingMachineComponent? vendingMachineComponent = null;
+
+            if (TryComp<VendingMachineComponent>(uid, out var machineComponent))
+            {
+                vendingMachineComponent = machineComponent;
+                if (!TryBuildVendingPurchaseReason(uid, machineComponent, out purchaseReason, out var vendingError))
+                {
+                    var error = vendingError ?? Loc.GetString("economyBankTerminal-component-vending-error");
+                    _popupSystem.PopupEntity(error, uid, type: PopupType.MediumCaution);
+                    return;
+                }
+            }
+
             if (economyMoneyHolderComponent is not null)
             {
-                if (!TrySendMoney(economyMoneyHolderComponent, component.LinkedAccount, amount, out var err))
+                if (!TrySendMoney(economyMoneyHolderComponent, component.LinkedAccount, amount, out var err, purchaseReason))
                 {
                     _popupSystem.PopupEntity(err, uid, type: PopupType.MediumCaution);
                     return;
@@ -703,7 +717,7 @@ namespace Content.Server.AWS.Economy.Bank
             }
             else if (economyBankAccountHolderComponent is not null)
             {
-                if (!TrySendMoney(economyBankAccountHolderComponent, component.LinkedAccount, amount, null, out var err))
+                if (!TrySendMoney(economyBankAccountHolderComponent, component.LinkedAccount, amount, purchaseReason, out var err))
                 {
                     _popupSystem.PopupEntity(err, uid, type: PopupType.MediumCaution);
                     return;
@@ -712,39 +726,56 @@ namespace Content.Server.AWS.Economy.Bank
 
             UpdateTerminal((uid, component), 0, string.Empty);
 
-            // Cancel the payment if the terminal is vending machine and the further operations were not successful.
-            if (TryComp<VendingMachineComponent>(uid, out var vendingMachineComponent))
+            if (vendingMachineComponent is not null)
             {
-                string? itemName;
-                if (!TryTransactionFromVendingMachine(uid, args.User, vendingMachineComponent, out itemName))
+                if (!TryTransactionFromVendingMachine(uid, args.User, vendingMachineComponent, out _))
                 {
                     Withdraw(receiverAccount.Value.Comp.AccountID, uid, amount);
                     var error = Loc.GetString("economyBankTerminal-component-vending-error");
                     _popupSystem.PopupEntity(error, uid, type: PopupType.MediumCaution);
                     return;
                 }
-                else
-                {
-                    _prototypeManager.TryIndex(itemName, out var proto);
-
-                    if (proto is not null)
-                    {
-                        string localizedLog;
-
-                        if (TryComp<NameIdentifierComponent>(uid, out var nameIdentifierComponent))
-                            localizedLog = Loc.GetString("economybanksystem-log-vending-buying-entname",
-                                ("itemName", proto.Name), ("entName", nameIdentifierComponent.FullIdentifier));
-                        else
-                            localizedLog = Loc.GetString("economybanksystem-log-vending-buying",
-                            ("itemName", proto.Name));
-
-                        TryAddLog(component.LinkedAccount,
-                                new EconomyBankAccountLogField(_gameTiming.CurTime, localizedLog));
-                    }
-                }
             }
 
             _popupSystem.PopupEntity(Loc.GetString("economybanksystem-transaction-success", ("amount", amount), ("currencyName", receiverAccount.Value.Comp.AllowedCurrency)), uid, type: PopupType.Medium);
+        }
+
+
+        private bool TryBuildVendingPurchaseReason(EntityUid uid, VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? reason, out string? error)
+        {
+            reason = null;
+            error = null;
+
+            if (vendingMachine.SelectedItemId is not { } selectedItemId)
+            {
+                error = Loc.GetString("economyBankTerminal-component-vending-error");
+                return false;
+            }
+
+            if (!vendingMachine.Inventory.TryGetValue(selectedItemId, out var entry) || entry.Price <= 0)
+            {
+                error = Loc.GetString("economyBankTerminal-component-vending-error");
+                return false;
+            }
+
+            if (!_prototypeManager.TryIndex(selectedItemId, out var proto))
+            {
+                error = Loc.GetString("economyBankTerminal-component-vending-error");
+                return false;
+            }
+
+            if (TryComp<NameIdentifierComponent>(uid, out var nameIdentifierComponent))
+            {
+                reason = Loc.GetString("economybanksystem-log-reason-purchase-entname",
+                    ("itemName", proto.Name), ("entName", nameIdentifierComponent.FullIdentifier));
+            }
+            else
+            {
+                reason = Loc.GetString("economybanksystem-log-reason-purchase",
+                    ("itemName", proto.Name));
+            }
+
+            return true;
         }
 
         private bool TryTransactionFromVendingMachine(EntityUid uid, EntityUid user, VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? itemName)
