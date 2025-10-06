@@ -36,6 +36,8 @@ public sealed partial class EconomyLogConsoleMenu : FancyWindow
         FindLog.OnTextEntered += OnTextEnteredLog;
 
         LogDetails.OnResized += UpdateLogLabelWidths;
+
+        ShowLogMessage(Loc.GetString("economybanksystem-log-console-select-account"));
     }
 
     private void FillList()

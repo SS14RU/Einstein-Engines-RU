@@ -15,3 +15,5 @@ economybanksystem-log-console-error-no-selection = Ошибка: не выбра
 economybanksystem-log-console-no-results = Записи не найдены.
 
 economybanksystem-search-placeholder = Поиск
+
+economybanksystem-log-console-select-account = Пожалуйста, выберите счет для работы.

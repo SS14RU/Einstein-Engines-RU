@@ -15,3 +15,5 @@ economybanksystem-log-console-error-no-selection = Error: no account selected.
 economybanksystem-log-console-no-results = No matching log entries.
 
 economybanksystem-search-placeholder = Search
+
+economybanksystem-log-console-select-account = Please choose an account to view logs

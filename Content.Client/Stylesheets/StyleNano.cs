@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Numerics;
 using Content.Client.ContextMenu.UI;
 using Content.Client.Examine;
@@ -15,7 +15,10 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Shared.Graphics;
+//SS14RU-start
 using Robust.Shared.Maths;
+//SS14RU-end
+
 using static Robust.Client.UserInterface.StylesheetHelpers;
 
 namespace Content.Client.Stylesheets
@@ -491,11 +494,13 @@ namespace Content.Client.Stylesheets
             itemListItemBackground.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
             itemListItemBackground.SetContentMarginOverride(StyleBox.Margin.Horizontal, 4);
 
+            //SS14RU-start
             var logEntryBackground = new StyleBoxFlat { BackgroundColor = new Color(0.28f, 0.28f, 0.30f) };
             logEntryBackground.SetContentMarginOverride(StyleBox.Margin.Vertical, 4);
             logEntryBackground.SetContentMarginOverride(StyleBox.Margin.Horizontal, 6);
             logEntryBackground.BorderColor = new Color(0.36f, 0.36f, 0.38f);
             logEntryBackground.BorderThickness = new Thickness(1f);
+            //SS14RU-end
 
             var itemListItemBackgroundTransparent = new StyleBoxFlat { BackgroundColor = Color.Transparent };
             itemListItemBackgroundTransparent.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
@@ -1706,11 +1711,13 @@ namespace Content.Client.Stylesheets
                 Element<PanelContainer>().Class("BackgroundDark")
                     .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat(Color.FromHex("#252525"))),
 
+                //SS14RU-start
                 Element<PanelContainer>().Class("EconomyLogEntry")
                     .Prop(PanelContainer.StylePropertyPanel, logEntryBackground),
 
                 Element<RichTextLabel>().Class("EconomyLogEntryLabel")
                     .Prop(Control.StylePropertyModulateSelf, Color.White),
+                //SS14RU-end
 
                 //PDA - Buttons
                 Element<PdaSettingsButton>().Pseudo(ContainerButton.StylePseudoClassNormal)
@@ -1934,3 +1941,4 @@ namespace Content.Client.Stylesheets
         }
     }
 }
+
