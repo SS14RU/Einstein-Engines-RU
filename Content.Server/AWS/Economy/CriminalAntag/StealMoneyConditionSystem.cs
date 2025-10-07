@@ -1,6 +1,10 @@
 using Content.Server.Objectives;
+using Content.Shared.AWS.CriminalAntag;
+using Content.Shared.Mind;
+using Content.Shared.Mind.Components;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Localization;
 using Robust.Shared.Utility;
 
@@ -8,6 +12,7 @@ namespace Content.Server.AWS.CriminalAntag;
 
 public sealed class StealMoneyConditionSystem : EntitySystem
 {
+    [Dependency] private readonly CriminalAntagLeaderboardSystem _leaderboard = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
 
@@ -43,6 +48,31 @@ public sealed class StealMoneyConditionSystem : EntitySystem
 
     private void OnGetProgress(Entity<StealMoneyConditionComponent> condition, ref ObjectiveGetProgressEvent args)
     {
-        args.Progress = 1f;
+        args.Progress = GetProgress(args.MindId, args.Mind);
+    }
+
+    private float GetProgress(EntityUid mindUid, MindComponent mind)
+    {
+        if (mind.Deleted)
+            return 0f;
+
+        var entries = _leaderboard.CollectEntries();
+        if (entries.Count == 0)
+            return 0f;
+
+        var topMoney = entries[0].Money;
+        if (topMoney == 0)
+            return 0f;
+
+        foreach (var entry in entries)
+        {
+            if (entry.Money != topMoney)
+                break;
+
+            if (entry.MindId == mindUid)
+                return 1f;
+        }
+
+        return 0f;
     }
 }
