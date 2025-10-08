@@ -95,6 +95,7 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+  - type: EconomyShowInsuranceIcons # SS14-RU
   - type: Tag
     tags:
     - CannotSuicide

@@ -31,6 +31,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
+    - type: EconomyInsuranceServer # SS14-RU
 
 - type: entity
   id: NanotrasenCentralCommand

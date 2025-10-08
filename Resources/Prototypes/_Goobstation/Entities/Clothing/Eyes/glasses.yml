@@ -30,6 +30,7 @@
     - Inorganic
     - Silicon
     - SiliconUnshielded
+  - type: EconomyShowInsuranceIcons # SS14-RU
   - type: Construction # WWDP
     graph: GlassesMedSecHUD
     node: glassesMedSec

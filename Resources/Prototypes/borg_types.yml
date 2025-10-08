@@ -173,6 +173,7 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+  - type: EconomyShowInsuranceIcons # SS14-RU
   - type: FabricateActions
     actions:
     - ActionFabricateLollipop

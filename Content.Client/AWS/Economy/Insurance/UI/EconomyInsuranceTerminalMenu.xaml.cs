@@ -7,6 +7,7 @@ using Content.Shared.AWS.Economy.Insurance;
 using Content.Client.Ghost.UI;
 using System.Linq;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Localization;
 
 namespace Content.Client.AWS.Economy.Insurance.UI;
 
@@ -91,24 +92,43 @@ public sealed partial class EconomyInsuranceTerminalMenu : FancyWindow
 
         // hardcode yes
         InfoContainerEditToPayAccount.Text = "NT-Medical";
-        InfoContainerEditCost.Text = currentProto.Cost.ToString();
+        UpdateInsuranceCost(currentProto, currentInfo);
 
         InfoContainerOptionInsuranceChoose.Clear();
 
+        var hasCurrentPrototypeInList = false;
+
         foreach (var prototype in _prototypes)
         {
+            var selectable = prototype.CanBeBought
+                             || prototype.ID == currentInfo.InsuranceProto
+                             || prototype.ID == currentInfo.DefaultFreeInsuranceProto; // SS14-RU: keep non-purchasable defaults available
+
+            if (!selectable)
+                continue;
+
             InfoContainerOptionInsuranceChoose.AddItem(prototype.Name, prototype.ID.GetHashCode());
             InfoContainerOptionInsuranceChoose.OnItemSelected += args =>
             {
                 foreach (var proto in _prototypes)
                 {
                     if (proto.ID.GetHashCode() == args.Id)
+                    {
                         SelectInsurancePrototype(proto);
+                        if (_infos.TryGetValue(_currentSelectedInsuranceId, out var selectedInfo))
+                            UpdateInsuranceCost(proto, selectedInfo);
+                    }
                 }
             };
+
+            if (prototype.ID == currentInfo.InsuranceProto)
+                hasCurrentPrototypeInList = true;
         }
 
-        SelectInsurancePrototype(currentProto);
+        if (hasCurrentPrototypeInList)
+            SelectInsurancePrototype(currentProto);
+        else
+            _selectedPrototype = currentProto; // SS14-RU: keep current selection even if not present
 
         if (_insuranceRights == EconomyInsuranceTerminalRights.Full)
         {
@@ -134,5 +154,16 @@ public sealed partial class EconomyInsuranceTerminalMenu : FancyWindow
         }
 
         InfoContainerOptionInsuranceChoose.Disabled = true;
+    }
+
+    private void UpdateInsuranceCost(EconomyInsurancePrototype prototype, EconomyInsuranceInfo info)
+    {
+        var isFree = prototype.Cost <= 0
+                     || prototype.ID == info.DefaultFreeInsuranceProto
+                     || prototype.ID == "NonStatus";
+
+        InfoContainerEditCost.Text = isFree
+            ? Loc.GetString("economy-insurance-terminal-cost-free")
+            : Loc.GetString("economy-insurance-terminal-cost-value", ("cost", prototype.Cost));
     }
 }

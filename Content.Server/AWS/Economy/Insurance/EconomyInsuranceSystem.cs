@@ -116,7 +116,7 @@ public sealed class EconomyInsuranceSystem : EconomyInsuranceSystemShared
         if (!_prototype.TryIndex(receivedInsuranceInfo.InsuranceProto, out var receivedInsuranceInfoProto))
             return;
 
-        if (receivedInsuranceInfoProto.CanBeBought)
+        if (!receivedInsuranceInfoProto.CanBeBought)
             receivedInsuranceInfo.InsuranceProto = fetchedInfo.InsuranceProto;
 
         var currentInsuranceProtoId = fetchedInfo.InsuranceProto;
@@ -133,13 +133,18 @@ public sealed class EconomyInsuranceSystem : EconomyInsuranceSystemShared
         }
 
         if (fetchedInfo.InsuranceProto != currentInsuranceProtoId)
-            if (!_economy.TrySendMoney(fetchedInfo.PayerAccountId, "NT-Med", (ulong) receivedInsuranceInfoProto.Cost,
-                "NT-Med",
-                out var error))
+        {
+            var matchesDefaultInsurance = fetchedInfo.InsuranceProto == fetchedInfo.DefaultFreeInsuranceProto;
+
+            if (!matchesDefaultInsurance &&
+                !_economy.TrySendMoney(fetchedInfo.PayerAccountId, "NT-Medical", (ulong) receivedInsuranceInfoProto.Cost,
+                    "NT-Medical",
+                    out var error))
             {
                 fetchedInfo.InsuranceProto = currentInsuranceProtoId;
                 _popupSystem.PopupEntity(error, entity);
             }
+        }
 
         UpdateIconOnCardsById(fetchedInfo.Id);
         UpdateTerminalUserInterface(entity);

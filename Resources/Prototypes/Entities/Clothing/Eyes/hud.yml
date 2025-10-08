@@ -14,6 +14,7 @@
   components:
   - type: ShowHealthBars
   - type: ShowHealthIcons
+  - type: EconomyShowInsuranceIcons # SS14-RU
 
 - type: entity
   id: ShowPsionicsIcons
