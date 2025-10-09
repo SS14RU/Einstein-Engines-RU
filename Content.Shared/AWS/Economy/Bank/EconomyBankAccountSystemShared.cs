@@ -346,7 +346,7 @@ namespace Content.Shared.AWS.Economy.Bank
         {
             ulong totalMoney = GetEntityMoney(entityUid);
 
-            if (!EntityManager.TryGetComponent(entityUid, out ContainerManagerComponent? containerManager) || containerManager?.Containers == null)
+            if (!_containerQuery.TryGetComponent(entityUid, out var containerManager))
                 return totalMoney;
 
             var containersToProcess = new Stack<ContainerManagerComponent>();
@@ -360,14 +360,13 @@ namespace Content.Shared.AWS.Economy.Bank
 
         private void ProcessPulledEntity(EntityUid entityUid, ref ulong totalMoney, Stack<ContainerManagerComponent> containersToProcess)
         {
-            if (!EntityManager.TryGetComponent(entityUid, out PullerComponent? puller) || puller.Pulling is not { } pulledEntity)
+            if (!TryComp<PullerComponent>(entityUid, out var puller) || puller.Pulling is not { } pulledEntity)
                 return;
 
             totalMoney += GetEntityMoney(pulledEntity);
 
             if (!HasComp<MindContainerComponent>(pulledEntity)
-                && EntityManager.TryGetComponent(pulledEntity, out ContainerManagerComponent? pulledContainerManager)
-                && pulledContainerManager?.Containers != null)
+                && _containerQuery.TryGetComponent(pulledEntity, out var pulledContainerManager))
             {
                 containersToProcess.Push(pulledContainerManager);
             }
@@ -386,8 +385,7 @@ namespace Content.Shared.AWS.Economy.Bank
                     {
                         totalMoney += GetEntityMoney(containedEntity);
 
-                        if (EntityManager.TryGetComponent(containedEntity, out ContainerManagerComponent? containedContainerManager)
-                            && containedContainerManager?.Containers != null)
+                        if (_containerQuery.TryGetComponent(containedEntity, out var containedContainerManager))
                         {
                             containersToProcess.Push(containedContainerManager);
                         }
