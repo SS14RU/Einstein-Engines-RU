@@ -11,3 +11,5 @@ economy-insurance-terminal-cost-free = Бесплатно
 economy-insurance-terminal-cost-value = { $cost }
 economy-insurance-postsallary-payforinsurance = Причина: оплата страховки за {$name}.
 economy-insurance-component-insuranceid = Номер страхования #{$insuranceId}
+economy-insurance-terminal-change-success = Страховка изменена на «{ $insurance }».
+economy-insurance-terminal-change-success-generic = Страховка изменена.

@@ -1,0 +1,15 @@
+economy-insurance-terminal-menu-title = Insurance Control Console
+economy-insurance-terminal-menu-name = Insured name
+economy-insurance-terminal-menu-dna = Insured DNA
+economy-insurance-terminal-menu-frompayaccount = Paying account (from)
+economy-insurance-terminal-menu-topayaccount = Receiving account (to)
+economy-insurance-terminal-menu-insurancechoose = Insurance type
+economy-insurance-terminal-menu-cost = Insurance cost
+economy-insurance-terminal-menu-accept = Confirm
+economy-insurance-terminal-menu-info = Information and available insurance types; free plans are highlighted in blue
+economy-insurance-terminal-cost-free = Free
+economy-insurance-terminal-cost-value = { $cost }
+economy-insurance-postsallary-payforinsurance = Reason: insurance payment for {$name}.
+economy-insurance-component-insuranceid = Insurance record #{$insuranceId}
+economy-insurance-terminal-change-success = Insurance plan updated to "{ $insurance }".
+economy-insurance-terminal-change-success-generic = Insurance plan updated.
