@@ -13,9 +13,11 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Mind;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Mind.Components;
+using Robust.Shared.Analyzers;
 
 namespace Content.Shared.AWS.Economy.Bank
 {
+    [Virtual]
     public class EconomyBankAccountSystemShared : EntitySystem
     {
         [Dependency] protected readonly EntityManager _entManager = default!;
