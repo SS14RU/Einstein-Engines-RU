@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Content.Server.Announcements.Systems;
 using Content.Server.AWS.Economy.Bank;
 using Content.Server.GameTicking.Rules;
@@ -30,18 +29,21 @@ public sealed class PaydayRuleSystem : GameRuleSystem<PaydayRuleComponent>
     private void OnComponentShutdown(EntityUid uid, PaydayRuleComponent component, ComponentShutdown args)
     {
         component.NextPayoutAt = null;
+        component.SalaryCache.Clear();
     }
 
     protected override void Started(EntityUid uid, PaydayRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
         component.NextPayoutAt = Timing.CurTime;
+        component.SalaryCache.Clear();
     }
 
     protected override void Ended(EntityUid uid, PaydayRuleComponent component, GameRuleComponent gameRule, GameRuleEndedEvent args)
     {
         base.Ended(uid, component, gameRule, args);
         component.NextPayoutAt = null;
+        component.SalaryCache.Clear();
     }
 
     protected override void ActiveTick(EntityUid uid, PaydayRuleComponent component, GameRuleComponent gameRule, float frameTime)
@@ -66,7 +68,9 @@ public sealed class PaydayRuleSystem : GameRuleSystem<PaydayRuleComponent>
 
         var paidAnyone = false;
 
-        foreach (var accountEntity in OrderAccountsBySalary(accounts.Values))
+        var orderedAccounts = OrderAccountsBySalary(accounts.Values);
+
+        foreach (var accountEntity in orderedAccounts)
         {
             var account = accountEntity.Comp;
 
@@ -75,7 +79,7 @@ public sealed class PaydayRuleSystem : GameRuleSystem<PaydayRuleComponent>
 
             EconomySallariesJobEntry? salaryEntry = null;
             if (account.JobName is { } jobId)
-                _bank.TryGetSalaryJobEntry(jobId, component.SalaryPrototype, out salaryEntry);
+                salaryEntry = TryGetSalaryEntry(component, jobId);
 
             if (account.Salary is not { } salary || salary == 0)
             {
@@ -99,13 +103,15 @@ public sealed class PaydayRuleSystem : GameRuleSystem<PaydayRuleComponent>
 
             if (payerAccount.Comp.Balance < salary)
             {
-                NotifyInsufficientFunds(component, account.AccountID);
+                var failureMessage = Loc.GetString(component.FailurePopup);
+                NotifyAccountHolder(component, account.AccountID, failureMessage);
                 continue;
             }
 
-            if (!_bank.TrySendMoney(payerAccountId, account.AccountID, salary, reason, out _))
+            if (!_bank.TrySendMoney(payerAccountId, account.AccountID, salary, reason, out var error))
             {
-                NotifyInsufficientFunds(component, account.AccountID);
+                var failureMessage = error ?? Loc.GetString(component.FailurePopup);
+                NotifyAccountHolder(component, account.AccountID, failureMessage);
                 continue;
             }
 
@@ -118,13 +124,13 @@ public sealed class PaydayRuleSystem : GameRuleSystem<PaydayRuleComponent>
         RaiseLocalEvent(new EconomySallaryPostEvent());
     }
 
-    private void NotifyInsufficientFunds(PaydayRuleComponent component, string accountId)
+    private void NotifyAccountHolder(PaydayRuleComponent component, string accountId, string message)
     {
         var owner = FindAccountOwner(accountId);
         if (owner is null)
             return;
 
-        _popup.PopupEntity(Loc.GetString(component.FailurePopup), owner.Value, owner.Value);
+        _popup.PopupEntity(message, owner.Value, owner.Value);
     }
 
     private bool TryGetPayerAccount(string accountId, Dictionary<string, Entity<EconomyBankAccountComponent>> cache, out Entity<EconomyBankAccountComponent> account)
@@ -166,10 +172,40 @@ public sealed class PaydayRuleSystem : GameRuleSystem<PaydayRuleComponent>
         return string.IsNullOrEmpty(component.FallbackAccountId) ? null : component.FallbackAccountId;
     }
 
-    private static IEnumerable<Entity<EconomyBankAccountComponent>> OrderAccountsBySalary(IEnumerable<Entity<EconomyBankAccountComponent>> accounts)
+    private EconomySallariesJobEntry? TryGetSalaryEntry(PaydayRuleComponent component, ProtoId<JobPrototype> jobId)
     {
-        return accounts
-            .OrderByDescending(static account => account.Comp.Salary ?? 0UL)
-            .ThenByDescending(static account => account.Comp.JobName?.Id ?? string.Empty);
+        if (component.SalaryCache.TryGetValue(jobId, out var cached))
+            return cached;
+
+        if (!_bank.TryGetSalaryJobEntry(jobId, component.SalaryPrototype, out var entry))
+            return null;
+
+        component.SalaryCache[jobId] = entry.Value;
+        return entry;
+    }
+
+    private static List<Entity<EconomyBankAccountComponent>> OrderAccountsBySalary(IEnumerable<Entity<EconomyBankAccountComponent>> accounts)
+    {
+        var ordered = new List<Entity<EconomyBankAccountComponent>>();
+
+        foreach (var account in accounts)
+        {
+            ordered.Add(account);
+        }
+
+        ordered.Sort(static (a, b) =>
+        {
+            var salaryA = a.Comp.Salary ?? 0UL;
+            var salaryB = b.Comp.Salary ?? 0UL;
+            var salaryComparison = salaryB.CompareTo(salaryA);
+            if (salaryComparison != 0)
+                return salaryComparison;
+
+            var jobA = a.Comp.JobName?.Id ?? string.Empty;
+            var jobB = b.Comp.JobName?.Id ?? string.Empty;
+            return string.Compare(jobB, jobA, StringComparison.Ordinal);
+        });
+
+        return ordered;
     }
 }

@@ -60,4 +60,9 @@ public sealed partial class PaydayRuleComponent : Component
     public TimeSpan? NextPayoutAt;
 
     public TimeSpan Interval => TimeSpan.FromMinutes(Math.Max(0.01f, IntervalMinutes));
+
+    /// <summary>
+    /// Cache salary entries to avoid prototype lookups for every account.
+    /// </summary>
+    public readonly Dictionary<ProtoId<JobPrototype>, EconomySallariesJobEntry> SalaryCache = new();
 }
