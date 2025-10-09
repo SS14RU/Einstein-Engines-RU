@@ -53,26 +53,6 @@ public sealed class StealMoneyConditionSystem : EntitySystem
 
     private float GetProgress(EntityUid mindUid, MindComponent mind)
     {
-        if (mind.Deleted)
-            return 0f;
-
-        var entries = _leaderboard.CollectEntries();
-        if (entries.Count == 0)
-            return 0f;
-
-        var topMoney = entries[0].Money;
-        if (topMoney == 0)
-            return 0f;
-
-        foreach (var entry in entries)
-        {
-            if (entry.Money != topMoney)
-                break;
-
-            if (entry.MindId == mindUid)
-                return 1f;
-        }
-
-        return 0f;
+        return _leaderboard.HasTopMoney(mindUid, mind) ? 1f : 0f;
     }
 }

@@ -34,19 +34,41 @@ public sealed class CriminalAntagLeaderboardSystem : EntitySystem
         var minds = EntityQueryEnumerator<MindComponent>();
         while (minds.MoveNext(out var mindUid, out var mind))
         {
-            if (mind.Deleted || !_roles.MindHasRole<CriminalAntagRoleComponent>(mindUid))
+            if (!TryBuildEntry(mindUid, mind, out var entry))
                 continue;
 
-            var body = ResolveTrackedBody(mind);
-            var escaped = HasCompletedEscapeObjective(mindUid, mind);
-            var money = escaped && body is { } entity ? _bank.CountHoldMoney(entity) : 0UL;
-            var name = GetDisplayName(body, mind);
-
-            entries.Add(new CriminalAntagLeaderboardEntry(mindUid, mind, body, name, money, escaped));
+            entries.Add(entry);
         }
 
         entries.Sort(static (a, b) => b.Money.CompareTo(a.Money));
         return entries;
+    }
+
+    public bool HasTopMoney(EntityUid mindUid, MindComponent mind)
+    {
+        if (!TryGetCriminalFinancials(mindUid, mind, requireEscape: false, out _, out var subjectMoney, out _))
+            return false;
+
+        if (subjectMoney == 0)
+            return false;
+
+        var minds = EntityQueryEnumerator<MindComponent>();
+        while (minds.MoveNext(out var otherUid, out var otherMind))
+        {
+            if (otherUid == mindUid)
+                continue;
+
+            if (!TryGetCriminalFinancials(otherUid, otherMind, requireEscape: false, out _, out var otherMoney, out _))
+                continue;
+
+            if (otherMoney == 0)
+                continue;
+
+            if (otherMoney > subjectMoney)
+                return false;
+        }
+
+        return true;
     }
 
     private bool HasCompletedEscapeObjective(EntityUid mindUid, MindComponent mind)
@@ -91,5 +113,50 @@ public sealed class CriminalAntagLeaderboardSystem : EntitySystem
         }
 
         return null;
+    }
+
+    private bool TryBuildEntry(EntityUid mindUid, MindComponent mind, out CriminalAntagLeaderboardEntry entry)
+    {
+        entry = default;
+
+        if (!TryGetCriminalFinancials(mindUid, mind, requireEscape: true, out var body, out var money, out var escaped))
+            return false;
+
+        entry = new CriminalAntagLeaderboardEntry(
+            mindUid,
+            mind,
+            body,
+            GetDisplayName(body, mind),
+            money,
+            escaped);
+
+        return true;
+    }
+
+    private bool TryGetCriminalFinancials(EntityUid mindUid, MindComponent mind, bool requireEscape, out EntityUid? body, out ulong money, out bool escaped)
+    {
+        body = null;
+        money = 0;
+        escaped = false;
+
+        if (mind.Deleted || !_roles.MindHasRole<CriminalAntagRoleComponent>(mindUid))
+            return false;
+
+        body = ResolveTrackedBody(mind);
+
+        if (requireEscape)
+        {
+            escaped = HasCompletedEscapeObjective(mindUid, mind);
+            if (!escaped || body is not { } escapedEntity)
+                return true;
+
+            money = _bank.CountHoldMoney(escapedEntity);
+            return true;
+        }
+
+        if (body is { } entity)
+            money = _bank.CountHoldMoney(entity);
+
+        return true;
     }
 }

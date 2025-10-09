@@ -26,12 +26,14 @@ namespace Content.Shared.AWS.Economy.Bank
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         private EntityQuery<ContainerManagerComponent> _containerQuery;
+        private bool _containerQueryInitialized;
 
         public override void Initialize()
         {
             base.Initialize();
 
             _containerQuery = GetEntityQuery<ContainerManagerComponent>();
+            _containerQueryInitialized = true;
 
             SubscribeLocalEvent<EconomyBankTerminalComponent, ExaminedEvent>(OnBankTerminalExamine);
             SubscribeLocalEvent<EconomyBankTerminalComponent, EconomyTerminalMessage>(OnTerminalMessage);
@@ -344,6 +346,8 @@ namespace Content.Shared.AWS.Economy.Bank
         [PublicAPI]
         public ulong CountHoldMoney(EntityUid entityUid)
         {
+            EnsureContainerQuery();
+
             ulong totalMoney = GetEntityMoney(entityUid);
 
             if (!_containerQuery.TryGetComponent(entityUid, out var containerManager))
@@ -356,6 +360,15 @@ namespace Content.Shared.AWS.Economy.Bank
             ProcessContainedEntities(containersToProcess, ref totalMoney);
 
             return totalMoney;
+        }
+
+        private void EnsureContainerQuery()
+        {
+            if (_containerQueryInitialized)
+                return;
+
+            _containerQuery = GetEntityQuery<ContainerManagerComponent>();
+            _containerQueryInitialized = true;
         }
 
         private void ProcessPulledEntity(EntityUid entityUid, ref ulong totalMoney, Stack<ContainerManagerComponent> containersToProcess)
