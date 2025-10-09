@@ -10,152 +10,200 @@
     CargoTechnician:
       startMoney: 30
       sallary: 30
+      accountId: NT-Cargo
     Quartermaster:
       startMoney: 100
       sallary: 100
+      accountId: NT-Cargo
     SalvageSpecialist:
       startMoney: 60
       sallary: 60
+      accountId: NT-Cargo
     # CenCom
     CBURN:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     DeathSquad:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     ERTLeader:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     ERTChaplain:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     ERTEngineer:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     ERTSecurity:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     ERTMedical:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     ERTJanitor:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     CentralCommandOfficial:
       startMoney: 5000
       sallary: 10000
+      accountId: NT-CentCom
     # civilian
     Passenger:
       startMoney: 15
       sallary: 15
+      accountId: NT-Service
     Bartender:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Botanist:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Chaplain:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Chef:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Clown:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Janitor:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Lawyer:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Librarian:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Mime:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Musician:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     ServiceWorker:
       startMoney: 25
       sallary: 25
+      accountId: NT-Service
     Visitor:
       startMoney: 500
       sallary: 1000
+      accountId: NT-Service
     # command
     Captain:
       startMoney: 200
       sallary: 200
+      accountId: NT-Command
     HeadOfPersonnel:
       startMoney: 150
       sallary: 150
+      accountId: NT-Command
     # Engineering
     AtmosphericTechnician:
       startMoney: 50
       sallary: 50
+      accountId: NT-Engineering
     ChiefEngineer:
       startMoney: 100
       sallary: 100
+      accountId: NT-Engineering
     StationEngineer:
       startMoney: 50
       sallary: 50
+      accountId: NT-Engineering
     TechnicalAssistant:
       startMoney: 25
       sallary: 25
+      accountId: NT-Engineering
     # Medical
     Chemist:
       startMoney: 40
       sallary: 40
+      accountId: NT-Medical
     ChiefMedicalOfficer:
       startMoney: 100
       sallary: 100
+      accountId: NT-Medical
     MedicalDoctor:
       startMoney: 50
       sallary: 50
+      accountId: NT-Medical
     MedicalIntern:
       startMoney: 25
       sallary: 25
+      accountId: NT-Medical
     Paramedic:
       startMoney: 60
       sallary: 60
+      accountId: NT-Medical
     # Science
     ResearchAssistant:
       startMoney: 25
       sallary: 25
+      accountId: NT-Science
     ResearchDirector:
       startMoney: 100
       sallary: 100
+      accountId: NT-Science
     Scientist:
       startMoney: 50
       sallary: 50
+      accountId: NT-Science
     # Security
     Detective:
       startMoney: 50
       sallary: 50
+      accountId: NT-Security
     HeadOfSecurity:
       startMoney: 100
       sallary: 100
+      accountId: NT-Security
     SecurityCadet:
       startMoney: 25
       sallary: 25
+      accountId: NT-Security
     SecurityOfficer:
       startMoney: 40
       sallary: 40
+      accountId: NT-Security
     Warden:
       startMoney: 60
       sallary: 60
+      accountId: NT-Security
     # Widcards
     Boxer:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Psychologist:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Reporter:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service
     Zookeeper:
       startMoney: 30
       sallary: 30
+      accountId: NT-Service

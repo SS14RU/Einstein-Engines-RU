@@ -30,6 +30,10 @@
     - id: StraySupplyPod
     - id: StraySupplyPodSyndicate
     # WD EDIT END
+    # SS14-RU START
+    - id: SalaryDecreaseRule
+    - id: SalaryIncreaseRule
+    # SS14-RU END
 
 - type: entityTable
   id: BasicAntagEventsTable

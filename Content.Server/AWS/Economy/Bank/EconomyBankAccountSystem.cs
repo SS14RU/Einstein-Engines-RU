@@ -27,7 +27,6 @@ using Content.Shared.AWS.Economy.Bank;
 using System.Security.Principal;
 using Robust.Shared;
 using Content.Server.GameTicking;
-using System.Threading;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mind;
 using Content.Shared.Roles.Jobs;
@@ -53,9 +52,11 @@ namespace Content.Server.AWS.Economy.Bank
         [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
 
-        private const int SalaryDelay = 40 * 60 * 1000; // 40 minutes in milliseconds
-        private CancellationTokenSource _timerCancelToken = new();
+        private double _salaryMultiplier = 1.0;
 
+        public double SalaryMultiplier => _salaryMultiplier;
+
+#pragma warning disable RA0028
         public override void Initialize()
         {
             SubscribeLocalEvent<EconomyAccountHolderComponent, ComponentInit>(OnAccountComponentInit);
@@ -73,8 +74,33 @@ namespace Content.Server.AWS.Economy.Bank
             SubscribeLocalEvent<EconomyManagementConsoleComponent, EconomyManagementConsoleInitAccountOnHolderMessage>(OnManagementConsoleInitAccountOnHolderMessage);
             SubscribeLocalEvent<EconomyManagementConsoleComponent, EconomyManagementConsolePayBonusMessage>(OnManagementConsolePayBonusMessage);
 
-            SubscribeLocalEvent<RoundStartedEvent>(OnStartRound);
-            SubscribeLocalEvent<RoundEndedEvent>(OnEndRound);
+        }
+
+        private ulong ScaleSalary(ulong value)
+        {
+            var adjusted = Math.Round(value * _salaryMultiplier);
+            adjusted = Math.Clamp(adjusted, 0d, ulong.MaxValue);
+            return (ulong) adjusted;
+        }
+
+        public void ApplySalaryMultiplier(double multiplier)
+        {
+            if (multiplier < 0)
+                multiplier = 0;
+
+            _salaryMultiplier *= multiplier;
+
+            var query = EntityQueryEnumerator<EconomyBankAccountComponent>();
+            while (query.MoveNext(out var uid, out var comp))
+            {
+                if (comp.Salary is not { } salary)
+                    continue;
+
+                var adjusted = Math.Round(salary * multiplier);
+                adjusted = Math.Clamp(adjusted, 0d, ulong.MaxValue);
+                comp.Salary = (ulong) adjusted;
+                Dirty(uid, comp);
+            }
         }
 
         #region Account management
@@ -122,6 +148,17 @@ namespace Content.Server.AWS.Economy.Bank
             account = (accountEntity, accountComp);
             _pvsOverrideSystem.AddGlobalOverride(accountEntity);
             Dirty(account);
+
+            if (salary is { } spawnSalary && spawnSalary > 0)
+            {
+                var newBalance = accountComp.Balance + spawnSalary;
+                if (newBalance < accountComp.Balance)
+                    newBalance = ulong.MaxValue;
+
+                accountComp.Balance = newBalance;
+                Dirty(account);
+            }
+
             return true;
         }
 
@@ -138,9 +175,13 @@ namespace Content.Server.AWS.Economy.Bank
             // Setup standard starting values for account details
             var accountID = GenerateAccountId(proto.Prefix, proto.Streak, proto.NumbersPerStreak, proto.Descriptior);
             var accountName = entity.Comp.AccountName;
-            var balance = (ulong)0;
+            var balance = 0UL;
             ProtoId<JobPrototype>? jobName = null;
             ulong? salary = null;
+
+            EconomySallariesPrototype? salariesPrototype = null;
+            if (_prototypeManager.TryIndex("NanotrasenDefaultSallaries", out EconomySallariesPrototype? indexedPrototype))
+                salariesPrototype = indexedPrototype;
 
             if (TryComp<IdCardComponent>(entity, out var idCardComponent))
                 accountName = idCardComponent.FullName ?? entity.Comp.AccountName;
@@ -150,8 +191,10 @@ namespace Content.Server.AWS.Economy.Bank
                 TryGetSalaryJobEntry(job, "NanotrasenDefaultSallaries", out var jobEntry))
             {
                 jobName = job;
-                salary = jobEntry.Value.Sallary;
-                balance = (ulong)(jobEntry.Value.StartMoney * _random.NextDouble(0.5, 1.5));
+                var coefficient = salariesPrototype?.Coef.Next(_random) ?? 100;
+                var randomizedSalary = (ulong) Math.Round(jobEntry.Value.Sallary * (coefficient / 100d));
+                salary = ScaleSalary(randomizedSalary);
+                balance = (ulong) (jobEntry.Value.StartMoney * _random.NextDouble(0.5, 1.5));
             }
 
             var station = _stationSystem.GetOwningStation(entity);
@@ -235,10 +278,10 @@ namespace Content.Server.AWS.Economy.Bank
         }
 
         [PublicAPI]
-        public bool TryWithdraw(EconomyAccountHolderComponent component, EconomyBankATMComponent atm, ulong sum, [NotNullWhen(false)] out string? errorMessage)
+        public bool TryWithdraw(Entity<EconomyAccountHolderComponent> accountHolder, EntityUid atmUid, EconomyBankATMComponent atm, ulong sum, [NotNullWhen(false)] out string? errorMessage)
         {
             errorMessage = null;
-            if (!TryGetAccount(component.AccountID, out var account))
+            if (!TryGetAccount(accountHolder.Comp.AccountID, out var account))
             {
                 errorMessage = Loc.GetString("economybanksystem-transaction-error-notfoundaccout");
                 return false;
@@ -252,31 +295,23 @@ namespace Content.Server.AWS.Economy.Bank
 
             if (sum > 0 && account.Value.Comp.Balance >= sum)
             {
-                Withdraw(component, atm, sum);
+                Withdraw(accountHolder, atmUid, atm, sum);
                 return true;
             }
             errorMessage = Loc.GetString("economybanksystem-transaction-error-notenoughmoney");
             return false;
         }
 
-        [Obsolete("should be replaced by giving money holder from inventory")]
-        private Entity<EconomyMoneyHolderComponent> SpawnMoneyHolderAtPos(EntProtoId<EconomyMoneyHolderComponent> entId, MapCoordinates pos)
-        {
-            var ent = Spawn(entId, pos);
-            var moneyHolderComp = Comp<EconomyMoneyHolderComponent>(ent);
-
-            return (ent, moneyHolderComp);
-        }
-
         [PublicAPI]
         public Entity<EconomyMoneyHolderComponent> DropMoneyHolder(EntProtoId<EconomyMoneyHolderComponent> entId, ulong amount, MapCoordinates pos)
         {
-            var ent = SpawnMoneyHolderAtPos(entId, pos);
+            var entity = Spawn(entId, pos);
+            var comp = Comp<EconomyMoneyHolderComponent>(entity);
 
-            ent.Comp.Balance = amount;
+            comp.Balance = amount;
 
-            Dirty(ent);
-            return ent;
+            Dirty(entity, comp);
+            return (entity, comp);
         }
 
         [PublicAPI]
@@ -524,12 +559,14 @@ namespace Content.Server.AWS.Economy.Bank
             return true;
         }
 
-        private void Withdraw(EconomyAccountHolderComponent component, EconomyBankATMComponent atm, ulong sum)
+        private void Withdraw(Entity<EconomyAccountHolderComponent> accountHolder, EntityUid atmUid, EconomyBankATMComponent atm, ulong sum)
         {
+            ref var component = ref accountHolder.Comp;
+
             if (!TryChangeAccountBalance(component.AccountID, sum, false))
                 return;
 
-            var pos = _transformSystem.GetMapCoordinates(atm.Owner);
+            var pos = _transformSystem.GetMapCoordinates(atmUid);
             DropMoneyHolder(component.MoneyHolderEntId, sum, pos);
 
             if (TryGetAccount(component.AccountID, out var account))
@@ -540,7 +577,7 @@ namespace Content.Server.AWS.Economy.Bank
                 Dirty(account.Value);
             }
 
-            _entManager.Dirty(component);
+            Dirty(accountHolder);
         }
 
         private void Withdraw(string accountID, EntityUid ent, ulong sum)
@@ -601,7 +638,7 @@ namespace Content.Server.AWS.Economy.Bank
 
             string? error;
 
-            TryWithdraw(bankAccount, atm, args.Amount, out error);
+            TryWithdraw(bankAccount.Value, uid, atm, args.Amount, out error);
             UpdateATMUserInterface((uid, atm), error);
         }
 
@@ -847,7 +884,7 @@ namespace Content.Server.AWS.Economy.Bank
                 if (account.Salary is null)
                     continue;
 
-                var bonus = (ulong)(account.Salary * args.BonusPercent);
+                var bonus = (ulong) (account.Salary * args.BonusPercent);
                 total += bonus;
                 accountsToPay.Add(intersectedAccounts.Current.Value, bonus);
             }
@@ -945,40 +982,6 @@ namespace Content.Server.AWS.Economy.Bank
             return new(payedSum, decremedSum, affectedAccounts, unableProccess, blockedAccounts);
 
             //notify that we blocked, or we cant proccess any payment
-        }
-
-        private void OnStartRound(RoundStartedEvent args)
-        {
-            _timerCancelToken.TryReset();
-
-            var action = delegate ()
-            {
-                if (_prototypeManager.TryGetInstances<EconomySallariesPrototype>(out var prototypes))
-                    foreach (var (index, proto) in prototypes)
-                    {
-                        Log.Debug($"Start processing with paying salaries for {index}");
-
-                        var sallaryInfo = PaySalaries(proto, EconomyPayDayRuleType.Adding);
-                        if (sallaryInfo is not null)
-                            Log.Debug(
-                                $"\nAddedSum sum is: {sallaryInfo.AddedSum}\n" +
-                                $"DecremedSum is: {sallaryInfo.DecremedSum}\n" +
-                                $"AffectedAccounts: {string.Join(',', sallaryInfo.AffectedAccounts.Select(x => x.AccountID))}\n" +
-                                $"UnableProccess: {string.Join(',', sallaryInfo.UnableProccess.Select(x => x.AccountID))}\n" +
-                                $"WereBlockedInProccess: {string.Join(',', sallaryInfo.WereBlockedInProccess.Select(x => x.AccountID))}\n");
-                        else
-                            Log.Debug("Unable to proccess sallaries, nothing were added");
-
-                        RaiseLocalEvent<EconomySallaryPostEvent>(new());
-                    }
-            }; // should be rewrote
-
-            Robust.Shared.Timing.Timer.SpawnRepeating(SalaryDelay, action, _timerCancelToken.Token);
-        }
-
-        private void OnEndRound(RoundEndedEvent args)
-        {
-            _timerCancelToken.Cancel();
         }
 
         private record EconomySallaryInfo(
