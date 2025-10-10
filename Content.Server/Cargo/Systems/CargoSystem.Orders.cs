@@ -33,6 +33,11 @@ namespace Content.Server.Cargo.Systems
         /// </summary>
         private float _timer;
 
+        //SS14RU - start
+        private partial void ShouldSkipCargoPassiveIncome(EntityUid station, ref bool skip);
+        private partial void GetCargoCurrency(EntityUid? station, ref string? currencyPrototype);
+        //SS14RU - end
+
         private void InitializeConsole()
         {
             SubscribeLocalEvent<CargoOrderConsoleComponent, CargoConsoleAddOrderMessage>(OnAddOrderMessage);
@@ -101,6 +106,16 @@ namespace Content.Server.Cargo.Systems
                 var stationQuery = EntityQueryEnumerator<StationBankAccountComponent>();
                 while (stationQuery.MoveNext(out var uid, out var bank))
                 {
+                    //SS14RU - start
+                    if (bank.IncreasePerSecond == 0)
+                        continue;
+
+                    var skipIncome = false;
+                    ShouldSkipCargoPassiveIncome(uid, ref skipIncome);
+                    if (skipIncome)
+                        continue;
+                    //SS14RU - end
+
                     var balanceToAdd = bank.IncreasePerSecond * Delay;
                     UpdateBankAccount(uid, bank, balanceToAdd);
                 }
@@ -353,13 +368,19 @@ namespace Content.Server.Cargo.Systems
 
             if (_uiSystem.HasUi(consoleUid, CargoConsoleUiKey.Orders))
             {
+                //SS14RU - start
+                string? currency = null;
+                GetCargoCurrency(station, ref currency);
+                //SS14RU - end
+
                 _uiSystem.SetUiState(consoleUid, CargoConsoleUiKey.Orders, new CargoConsoleInterfaceState(
                     MetaData(station.Value).EntityName,
                     GetOutstandingOrderCount(orderDatabase),
                     orderDatabase.Capacity,
                     bankAccount.Balance,
-                    orderDatabase.Orders
-                ));
+                    orderDatabase.Orders,
+                    currency //SS14RU
+                    ));
             }
         }
 

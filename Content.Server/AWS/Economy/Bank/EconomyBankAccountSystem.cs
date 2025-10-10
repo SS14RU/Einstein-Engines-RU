@@ -138,7 +138,7 @@ namespace Content.Server.AWS.Economy.Bank
             // Setup standard starting values for account details
             var accountID = GenerateAccountId(proto.Prefix, proto.Streak, proto.NumbersPerStreak, proto.Descriptior);
             var accountName = entity.Comp.AccountName;
-            var balance = (ulong)0;
+            var balance = 0UL;
             ProtoId<JobPrototype>? jobName = null;
             ulong? salary = null;
 
@@ -151,7 +151,7 @@ namespace Content.Server.AWS.Economy.Bank
             {
                 jobName = job;
                 salary = jobEntry.Value.Sallary;
-                balance = (ulong)(jobEntry.Value.StartMoney * _random.NextDouble(0.5, 1.5));
+                balance = (ulong) (jobEntry.Value.StartMoney * _random.NextDouble(0.5, 1.5));
             }
 
             var station = _stationSystem.GetOwningStation(entity);
@@ -159,23 +159,25 @@ namespace Content.Server.AWS.Economy.Bank
 
             // Setup values are always coming first if they can
             var accountSetup = entity.Comp.AccountSetup;
-            accountID = accountSetup.GenerateAccountID || accountSetup.AccountID is null ? accountID :
-                                        accountSetup.AccountID;
+            accountID = accountSetup.GenerateAccountID || accountSetup.AccountID is null
+                ? accountID
+                : accountSetup.AccountID;
             accountName = accountSetup.AccountName ?? accountName;
             balance = accountSetup.Balance ?? balance;
 
-            TryCreateAccount(accountID,
-                            accountName,
-                            accountSetup.AllowedCurrency ?? "Thaler",
-                            balance,
-                            accountSetup.Penalty ?? 0,
-                            accountSetup.Blocked ?? false,
-                            accountSetup.CanReachPayDay ?? true,
-                            accountSetup.AccountTags ?? [],
-                            jobName,
-                            salary,
-                            cords,
-                            out var account);
+            TryCreateAccount(
+                accountID,
+                accountName,
+                accountSetup.AllowedCurrency ?? "Thaler",
+                balance,
+                accountSetup.Penalty ?? 0,
+                accountSetup.Blocked ?? false,
+                accountSetup.CanReachPayDay ?? true,
+                accountSetup.AccountTags ?? [],
+                jobName,
+                salary,
+                cords,
+                out var account);
 
             activatedAccount = account;
             entity.Comp.AccountID = accountID;
@@ -235,10 +237,10 @@ namespace Content.Server.AWS.Economy.Bank
         }
 
         [PublicAPI]
-        public bool TryWithdraw(EconomyAccountHolderComponent component, EconomyBankATMComponent atm, ulong sum, [NotNullWhen(false)] out string? errorMessage)
+        public bool TryWithdraw(Entity<EconomyAccountHolderComponent> accountHolder, Entity<EconomyBankATMComponent> atm, ulong sum, [NotNullWhen(false)] out string? errorMessage)
         {
             errorMessage = null;
-            if (!TryGetAccount(component.AccountID, out var account))
+            if (!TryGetAccount(accountHolder.Comp.AccountID, out var account))
             {
                 errorMessage = Loc.GetString("economybanksystem-transaction-error-notfoundaccout");
                 return false;
@@ -252,31 +254,21 @@ namespace Content.Server.AWS.Economy.Bank
 
             if (sum > 0 && account.Value.Comp.Balance >= sum)
             {
-                Withdraw(component, atm, sum);
+                Withdraw(accountHolder, atm, sum);
                 return true;
             }
             errorMessage = Loc.GetString("economybanksystem-transaction-error-notenoughmoney");
             return false;
         }
 
-        [Obsolete("should be replaced by giving money holder from inventory")]
-        private Entity<EconomyMoneyHolderComponent> SpawnMoneyHolderAtPos(EntProtoId<EconomyMoneyHolderComponent> entId, MapCoordinates pos)
-        {
-            var ent = Spawn(entId, pos);
-            var moneyHolderComp = Comp<EconomyMoneyHolderComponent>(ent);
-
-            return (ent, moneyHolderComp);
-        }
-
         [PublicAPI]
         public Entity<EconomyMoneyHolderComponent> DropMoneyHolder(EntProtoId<EconomyMoneyHolderComponent> entId, ulong amount, MapCoordinates pos)
         {
-            var ent = SpawnMoneyHolderAtPos(entId, pos);
-
-            ent.Comp.Balance = amount;
-
-            Dirty(ent);
-            return ent;
+            var entity = Spawn(entId, pos);
+            var moneyHolder = EnsureComp<EconomyMoneyHolderComponent>(entity);
+            moneyHolder.Balance = amount;
+            Dirty(entity, moneyHolder);
+            return (entity, moneyHolder);
         }
 
         [PublicAPI]
@@ -429,6 +421,37 @@ namespace Content.Server.AWS.Economy.Bank
         }
 
         /// <summary>
+        /// Changes the balance of the account by the provided delta.
+        /// </summary>
+        /// <param name="delta">Positive value credits the account, negative debits it.</param>
+        /// <param name="logMessage">Optional log entry that will be appended on success.</param>
+        [PublicAPI]
+        public bool TryChangeAccountBalance(string accountID, long delta, string? logMessage = null)
+        {
+            if (delta == 0)
+                return true;
+
+            if (delta == long.MinValue)
+                return false;
+
+            if (!TryGetAccount(accountID, out var account))
+                return false;
+
+            var addition = delta > 0;
+            var amount = addition ? (ulong) delta : (ulong) (-delta);
+
+            if (!TryChangeAccountBalance(accountID, amount, addition))
+                return false;
+
+            Dirty(account.Value);
+
+            if (!string.IsNullOrEmpty(logMessage))
+                TryAddLog(account.Value, new EconomyBankAccountLogField(_gameTiming.CurTime, logMessage));
+
+            return true;
+        }
+
+        /// <summary>
         /// Changes the balance of the account.
         /// </summary>
         /// <param name="addition">Whether to add or substract the given amount.</param>
@@ -524,15 +547,15 @@ namespace Content.Server.AWS.Economy.Bank
             return true;
         }
 
-        private void Withdraw(EconomyAccountHolderComponent component, EconomyBankATMComponent atm, ulong sum)
+        private void Withdraw(Entity<EconomyAccountHolderComponent> accountHolder, Entity<EconomyBankATMComponent> atm, ulong sum)
         {
-            if (!TryChangeAccountBalance(component.AccountID, sum, false))
+            if (!TryChangeAccountBalance(accountHolder.Comp.AccountID, sum, false))
                 return;
 
             var pos = _transformSystem.GetMapCoordinates(atm.Owner);
-            DropMoneyHolder(component.MoneyHolderEntId, sum, pos);
+            DropMoneyHolder(accountHolder.Comp.MoneyHolderEntId, sum, pos);
 
-            if (TryGetAccount(component.AccountID, out var account))
+            if (TryGetAccount(accountHolder.Comp.AccountID, out var account))
             {
                 var log = new EconomyBankAccountLogField(_gameTiming.CurTime, Loc.GetString("economybanksystem-log-withdraw",
                 ("amount", sum), ("currencyName", account.Value.Comp.AllowedCurrency)));
@@ -540,7 +563,7 @@ namespace Content.Server.AWS.Economy.Bank
                 Dirty(account.Value);
             }
 
-            _entManager.Dirty(component);
+            Dirty(accountHolder.Owner, accountHolder.Comp);
         }
 
         private void Withdraw(string accountID, EntityUid ent, ulong sum)
@@ -601,7 +624,7 @@ namespace Content.Server.AWS.Economy.Bank
 
             string? error;
 
-            TryWithdraw(bankAccount, atm, args.Amount, out error);
+            TryWithdraw(bankAccount.Value, (uid, atm), args.Amount, out error);
             UpdateATMUserInterface((uid, atm), error);
         }
 
@@ -847,7 +870,7 @@ namespace Content.Server.AWS.Economy.Bank
                 if (account.Salary is null)
                     continue;
 
-                var bonus = (ulong)(account.Salary * args.BonusPercent);
+                var bonus = (ulong) (account.Salary * args.BonusPercent);
                 total += bonus;
                 accountsToPay.Add(intersectedAccounts.Current.Value, bonus);
             }

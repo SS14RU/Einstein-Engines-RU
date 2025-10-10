@@ -50,3 +50,6 @@ cargo-shuttle-console-organics = На шаттле обнаружены орга
 cargo-no-shuttle = Грузовой шаттл не найден!
 
 cargo-telepad-delay-upgrade = Время телепортации
+
+cargo-console-menu-balance-label = { $currency }:{ " " }
+cargo-console-menu-currency-amount = { $amount } { $currency }

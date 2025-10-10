@@ -41,6 +41,10 @@ namespace Content.Client.Cargo.BUI
         [ViewVariables]
         private CargoProductPrototype? _product;
 
+        //SS14RU - start
+        private string? _currentCurrencyId;
+        //SS14RU - end
+
         public CargoOrderConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
         }
@@ -65,6 +69,10 @@ namespace Content.Client.Cargo.BUI
             _orderMenu = new CargoConsoleOrderMenu();
 
             _menu.OnClose += Close;
+
+            //SS14RU - start
+            _menu.SetCurrency(_currentCurrencyId);
+            //SS14RU - end
 
             _menu.OnItemSelected += (args) =>
             {
@@ -118,8 +126,12 @@ namespace Content.Client.Cargo.BUI
             OrderCapacity = cState.Capacity;
             OrderCount = cState.Count;
             BankBalance = cState.Balance;
+            _currentCurrencyId = cState.CurrencyPrototype;
 
             AccountName = cState.Name;
+
+            if (_menu != null)
+                _menu.SetCurrency(_currentCurrencyId);
 
             Populate(cState.Orders);
             _menu?.UpdateCargoCapacity(OrderCount, OrderCapacity);

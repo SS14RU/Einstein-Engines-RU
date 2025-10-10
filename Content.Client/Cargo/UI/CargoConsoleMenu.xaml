@@ -11,10 +11,13 @@
                    Text="{Loc 'cargo-console-menu-account-name-none-text'}" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'cargo-console-menu-points-label'}"
+            <!-- SS14RU - start -->
+            <Label Name="BalanceLabel"
+                   Text="{Loc 'cargo-console-menu-points-label'}"
                    StyleClasses="LabelKeyText" />
             <Label Name="PointsLabel"
                    Text="$0" />
+            <!-- SS14RU - end -->
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc 'cargo-console-menu-order-capacity-label'}"
