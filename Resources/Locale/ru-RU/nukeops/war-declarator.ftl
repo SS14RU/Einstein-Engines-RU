@@ -1,7 +1,7 @@
-war-declarator-not-working = The device makes beeping noises, but nothing happens...
+war-declarator-not-working = Устройство издает звуковые сигналы, но ничего не происходит...
 war-declarator-ui-header = Объявление Войны
 war-declarator-ui-war-button = ОБЪЯВИТЬ ВОЙНУ!
-war-declarator-ui-try-war-button = Try to declare war
+war-declarator-ui-try-war-button = Попробовать объявить войну
 war-declarator-conditions-small-crew = Менее { $min } оперативников
 war-declarator-conditions-left-outpost = Шаттл покинул аванпост Синдиката
 war-declarator-conditions-time-out = Время на объявление войны вышло

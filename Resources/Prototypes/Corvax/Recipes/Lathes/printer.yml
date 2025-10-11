@@ -160,14 +160,14 @@
   materials:
     SheetPrinter: 100
 
-- type: latheRecipe
-  id: PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
-  result: PrintedDocumentRequestCallMembersCentralCommitteeDSO
-  category: InquiriesAndAppeals
-  completetime: 2
-  applyMaterialDiscount: false
-  materials:
-    SheetPrinter: 100
+# - type: latheRecipe
+#   id: PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
+#   result: PrintedDocumentRequestCallMembersCentralCommitteeDSO
+#   category: InquiriesAndAppeals
+#   completetime: 2
+#   applyMaterialDiscount: false
+#   materials:
+#     SheetPrinter: 100
 
 - type: latheRecipe
   id: PrintedDocumentRequestRequestToEstablishThreatLevelRecipe

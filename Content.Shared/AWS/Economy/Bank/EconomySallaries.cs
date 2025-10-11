@@ -40,5 +40,8 @@ namespace Content.Shared.AWS.Economy.Bank
         public ulong StartMoney { get; set; } = 0;
         [ViewVariables(VVAccess.ReadWrite), DataField]
         public ulong Sallary { get; set; } = 0;
+
+        [ViewVariables(VVAccess.ReadWrite), DataField]
+        public string? AccountId { get; set; }
     }
 }

@@ -7,8 +7,8 @@ marking-GauzeLefteyePad = Gauze eyepad (Left)
 marking-GauzeRighteyePatch-gauze_righteye_2 = Бинт, Перевязь глаза (Правый)
 marking-GauzeRighteyePatch = Бинт, Перевязь глаза (Правый)
 
-marking-GauzeRighteyePad-gauze_righteye_1 = Gauze eyepad (Right)
-marking-GauzeRighteyePad = Gauze eyepad (Right)
+marking-GauzeRighteyePad-gauze_righteye_1 = Марлевая повязка на глаз (правая)
+marking-GauzeRighteyePad = Марлевая повязка на глаз (правая)
 
 marking-GauzeShoulder-gauze_shoulder = Бинт, Плечо
 marking-GauzeShoulder = Бинт, Плечо
@@ -49,56 +49,57 @@ marking-GauzeBlindfold = Бинт, Повязка на глаза
 marking-GauzeHead-gauze_head = Повязка на голову из марли
 marking-GauzeHead = Повязка на голову из марли
 
-marking-GauzeLizardBlindfold-gauze_lizard_blindfold = Gauze Blindfold
+marking-GauzeLizardBlindfold-gauze_lizard_blindfold = Бинтовая повязка на глаза
 marking-GauzeLizardBlindfold = Бинт, Повязка на глаза
 
-marking-GauzeLizardFootRight-gauze_lizard_foot_r = Gauze Foot Wrap (Right)
-marking-GauzeLizardFootRight = Бинт, Перевязь ступни (Правый)
+marking-GauzeLizardFootRight-gauze_lizard_foot_r = Бинтовая повязка на ступню (правая)
+marking-GauzeLizardFootRight = Бинт, Перевязь ступни (Правая)
 
-marking-GauzeLizardFootLeft-gauze_lizard_foot_l = Gauze Foot Wrap (Left)
-marking-GauzeLizardFootLeft = Бинт, Перевязь ступни (Левый)
+marking-GauzeLizardFootLeft-gauze_lizard_foot_l = Бинтовая повязка на ступню (левая)
+marking-GauzeLizardFootLeft = Бинт, Перевязь ступни (Левая)
 
-marking-GauzeLizardLefteyePatch-gauze_lizard_lefteye = Reptilian Gauze eyepatch (Left)
-marking-GauzeLizardLefteyePatch = Коррект. бинт, Перевязь глаза (Левый)
+marking-GauzeLizardLefteyePatch-gauze_lizard_lefteye = Бинтовая повязка на глаз (левая)
+marking-GauzeLizardLefteyePatch = Бинт, Перевязь глаза (Левая)
 
-marking-GauzeLizardRighteyePatch-gauze_lizard_righteye = Reptilian Gauze eyepatch (Right)
-marking-GauzeLizardRighteyePatch = Коррект. бинт, Перевязь глаза (Правый)
-marking-GauzeMothStomach-gauze_moth_abdomen = Insectoid Stomach Wrap
-marking-GauzeMothStomach = Insectoid Stomach Wrap
+marking-GauzeLizardRighteyePatch-gauze_lizard_righteye = Бинтовая повязка на глаз (правая)
+marking-GauzeLizardRighteyePatch = Бинт, Перевязь глаза (Правая)
 
-marking-GauzeMothShoulder-gauze_moth_shoulder = Insectoid Shoulder Sling
-marking-GauzeMothShoulder = Insectoid Shoulder Sling
+marking-GauzeMothStomach-gauze_moth_abdomen = Бинтовая повязка на живот
+marking-GauzeMothStomach = Бинт, Перевязь живота
 
-marking-GauzeMothBlindfold-gauze_moth_blindfold = Insectoid Blindfold
-marking-GauzeMothBlindfold = Insectoid Blindfold
+marking-GauzeMothShoulder-gauze_moth_shoulder = Бинтовая перевязь на плечо
+marking-GauzeMothShoulder = Бинт, Перевязь плеча
 
-marking-GauzeMothLeftEyePatch-gauze_moth_lefteye_2 = Insectoid Gauze eyepatch (Left)
-marking-GauzeMothLeftEyePatch = Insectoid Gauze eyepatch (Left)
+marking-GauzeMothBlindfold-gauze_moth_blindfold = Бинтовая повязка на глаза
+marking-GauzeMothBlindfold = Бинт, Повязка на глаза
 
-marking-GauzeMothLeftEyePad-gauze_moth_lefteye_1 = Insectoid Gauze eyepad (Left)
-marking-GauzeMothLeftEyePad = Insectoid Gauze eyepad (Left)
+marking-GauzeMothLeftEyePatch-gauze_moth_lefteye_2 = Бинтовая повязка на глаз (левая)
+marking-GauzeMothLeftEyePatch = Бинт, Перевязь глаза (Левая)
 
-marking-GauzeMothRightEyePatch-gauze_moth_righteye_2 = Insectoid Gauze eyepatch (Right)
-marking-GauzeMothRightEyePatch = Insectoid Gauze eyepatch (Right)
+marking-GauzeMothLeftEyePad-gauze_moth_lefteye_1 = Бинтовый компресс на глаз (левый)
+marking-GauzeMothLeftEyePad = Бинт, Компресс на глаз (Левый)
 
-marking-GauzeMothRightEyePad-gauze_moth_righteye_1 = Insectoid Gauze eyepad (Right)
-marking-GauzeMothRightEyePad = Insectoid Gauze eyepad (Right)
+marking-GauzeMothRightEyePatch-gauze_moth_righteye_2 = Бинтовая повязка на глаз (правая)
+marking-GauzeMothRightEyePatch = Бинт, Перевязь глаза (Правая)
 
-marking-GauzeMothUpperArmRight-gauze_moth_upperarm_r = Insectoid Gauze Forearm Wrap (Right)
-marking-GauzeMothUpperArmRight = Insectoid Gauze Forearm Wrap (Right)
+marking-GauzeMothRightEyePad-gauze_moth_righteye_1 = Бинтовый компресс на глаз (правый)
+marking-GauzeMothRightEyePad = Бинт, Компресс на глаз (Правый)
 
-marking-GauzeMothUpperArmLeft-gauze_moth_upperarm_l = Insectoid Gauze Forearm Wrap (Left)
-marking-GauzeMothUpperArmLeft = Insectoid Gauze Forearm Wrap (Left)
+marking-GauzeMothUpperArmRight-gauze_moth_upperarm_r = Бинтовая повязка на предплечье (правая)
+marking-GauzeMothUpperArmRight = Бинт, Перевязь предплечья (Правая)
 
-marking-GauzeMothUpperLegRight-gauze_moth_upperleg_r = Insectoid Gauze Thigh Wrap (Right)
-marking-GauzeMothUpperLegRight = Insectoid Insectoid Gauze Thigh Wrap (Right)
+marking-GauzeMothUpperArmLeft-gauze_moth_upperarm_l = Бинтовая повязка на предплечье (левая)
+marking-GauzeMothUpperArmLeft = Бинт, Перевязь предплечья (Левая)
 
-marking-GauzeMothUpperLegLeft-gauze_moth_upperleg_l = Insectoid Gauze Thigh Wrap (Left)
-marking-GauzeMothUpperLegLeft = Insectoid Gauze Thigh Wrap (Left)
+marking-GauzeMothUpperLegRight-gauze_moth_upperleg_r = Бинтовая повязка на бедро (правая)
+marking-GauzeMothUpperLegRight = Бинт, Перевязь бедра (Правая)
 
-marking-GauzeMothLowerLegRight-gauze_moth_lowerleg_r = Insectoid Gauze Shin Wrap (Right)
-marking-GauzeMothLowerLegRight = Insectoid Gauze Shin Wrap (Right)
+marking-GauzeMothUpperLegLeft-gauze_moth_upperleg_l = Бинтовая повязка на бедро (левая)
+marking-GauzeMothUpperLegLeft = Бинт, Перевязь бедра (Левая)
 
-marking-GauzeMothLowerLegLeft-gauze_moth_lowerleg_l = Insectoid Gauze Shin Wrap (Left)
-marking-GauzeMothLowerLegLeft = Insectoid Gauze Shin Wrap (Left)
+marking-GauzeMothLowerLegRight-gauze_moth_lowerleg_r = Бинтовая повязка на голень (правая)
+marking-GauzeMothLowerLegRight = Бинт, Перевязь голени (Правая)
+
+marking-GauzeMothLowerLegLeft-gauze_moth_lowerleg_l = Бинтовая повязка на голень (левая)
+marking-GauzeMothLowerLegLeft = Бинт, Перевязь голени (Левая)
 

@@ -1,14 +1,14 @@
-marking-ThavenCheekBarbels-cheek_barbels = Head
-marking-ThavenCheekBarbels = Thaven Head (Cheek Barbels)
+marking-ThavenCheekBarbels-cheek_barbels = Голова
+marking-ThavenCheekBarbels = Голова Тавена (Щечные усики)
 
-marking-ThavenEyebrowBarbels-eyebrow_barbels = Head
-marking-ThavenEyebrowBarbels = Thaven Head (Eyebrow Barbels)
+marking-ThavenEyebrowBarbels-eyebrow_barbels = Голова
+marking-ThavenEyebrowBarbels = Голова Тавена (Надбровные усики)
 
-marking-ThavenUnderbellyFace-underbelly_face = Head
-marking-ThavenUnderbellyFace = Thaven Head (Underbelly Face)
+marking-ThavenUnderbellyFace-underbelly_face = Голова
+marking-ThavenUnderbellyFace = Голова Тавена (Нижняя часть лица)
 
-marking-ThavenUnderbellyTorso-underbelly_torso = Chest
-marking-ThavenUnderbellyTorso = Thaven Chest (Underbelly Torso)
+marking-ThavenUnderbellyTorso-underbelly_torso = Грудь
+marking-ThavenUnderbellyTorso = Грудь Тавена (Нижняя часть торса)
 
-marking-ThavenCarpSpots-carp_spots = Chest
-marking-ThavenCarpSpots = Thaven Chest (Carp Spots)
+marking-ThavenCarpSpots-carp_spots = Грудь
+marking-ThavenCarpSpots = Грудь Тавена (Карповые пятна)

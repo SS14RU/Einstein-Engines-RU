@@ -7,7 +7,7 @@ objective-issuer-syndicate = [color=crimson]Синдикат[/color]
 
 # Shown at the end of a round of Traitor
 
-objective-issuer-unknown = Unknown
+objective-issuer-unknown = Неизвестный
 
 # Shown at the end of a round of Traitor
 

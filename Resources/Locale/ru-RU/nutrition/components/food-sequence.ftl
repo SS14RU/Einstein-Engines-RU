@@ -83,7 +83,7 @@ food-sequence-content-snail = улиткой
 
 # BURGERS
 
-food-sequence-content-anomaly-berry = anomaly berry
+food-sequence-content-anomaly-berry = аномальная ягода
 
 # BURGERS
 

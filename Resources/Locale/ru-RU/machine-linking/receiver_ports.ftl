@@ -70,8 +70,8 @@ signal-port-description-set-particle-epsilon = Устанавливает тип
 signal-port-name-set-particle-zeta = Установить тип частицы: зета
 signal-port-description-set-particle-zeta = Устанавливает тип частицы, испускаемой этим устройством, на зета.
 
-signal-port-name-set-particle-sigma = Set particle type: sigma
-signal-port-description-set-particle-sigma = Sets the type of particle this device emits to sigma.
+signal-port-name-set-particle-sigma = Установить тип частицы: sigma
+signal-port-description-set-particle-sigma = Устанавливает тип частицы, испускаемой этим устройством, на sigma.
 
 signal-port-name-logic-input-a = Вход А
 signal-port-description-logic-input-a = Первый вход логического элемента.
@@ -84,5 +84,5 @@ signal-port-description-logic-input = Вход в край детектора, �
 
 signal-port-name-material-silo-utilizer = Потребитель хранилища
 signal-port-description-material-silo-utilizer = Потребитель для хранилища материалов станции
-signal-port-name-fill-any-item = Fillbot Target
-signal-port-description-fill-any-item = Target port for Fillbot insertion.
+signal-port-name-fill-any-item = Целевой порт для установки Fillbot
+signal-port-description-fill-any-item = Целевой порт для установки Fillbot.

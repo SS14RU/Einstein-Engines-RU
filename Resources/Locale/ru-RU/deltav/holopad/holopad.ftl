@@ -1,70 +1,69 @@
-# Command
-holopad-command-lo = Command - LO
-holopad-command-mysta = Command - Mysta
-holopad-command-cj = Command - CJ
-holopad-command-evac = Command - Evac
+holopad-command-lo = Командование - ЛО
+holopad-command-mysta = Командование - НР
+holopad-command-cj = Командование - ГС
+holopad-command-evac = Командование - Эвакуация
 
 # Epistemics
 # Epistemics
-holopad-epistemics-anomaly = Epistemics - Anomaly
-holopad-epistemics-artifact = Epistemics - Artifact
-holopad-epistemics-robotics = Epistemics - Robotics
-holopad-epistemics-rnd = Epistemics - R&D
-holopad-epistemics-front = Epistemics - Front
-holopad-epistemics-breakroom = Epistemics - Breakroom
-holopad-epistemics-mantis = Epistemics - Mantis
-holopad-epistemics-oracle = Epistemics - Oracle
+holopad-epistemics-anomaly = Эпистемика - Аномалия
+holopad-epistemics-artifact = Эпистемика - Артефакт
+holopad-epistemics-robotics = Эпистемика - Робототехника
+holopad-epistemics-rnd = Эпистемика - РнД
+holopad-epistemics-front = Эпистемика - Приемная
+holopad-epistemics-breakroom = Эпистемика - Комната отдыха
+holopad-epistemics-mantis = Эпистемика - Мантис
+holopad-epistemics-oracle = Эпистемика - Оракул
 
 # Logistics
 # Logistics
-holopad-logistics-front = Logistics - Front
-holopad-logistics-cargo-bay = Logistics - Cargo Bay
-holodpad-logistics-mailroom = Logistics - Mailroom
-holodpad-logistics-mailfront = Logistics - Mail Front
-holopad-logistics-salvage-bay = Logistics - Salvage Bay
-holopad-logistics-breakroom  = Logistics - Breakroom
-holopad-logistics-ats = Logistics - ATS
-holopad-logistics-shuttle = Logistics - Shuttle
+holopad-logistics-front = Логистика - Приемная
+holopad-logistics-cargo-bay = Логистика - Грузовой отсек
+holodpad-logistics-mailroom = Логистика - Почтовое отделение
+holodpad-logistics-mailfront = Логистика - Почтовая приемная
+holopad-logistics-salvage-bay = Логистика - Отсек утилизации
+holopad-logistics-breakroom = Логистика - Комната отдыха
+holopad-logistics-ats = Логистика - АТМ
+holopad-logistics-shuttle = Логистика - Шаттл
 
 # Justice
 # Justice
-holopad-justice-prosecutor = Justice - Prosecutor
-holopad-justice-attorney = Justice - Attorney
-holopad-justice-clerk = Justice - Clerk
+holopad-justice-prosecutor = Правосудие - Прокурор
+holopad-justice-attorney = Правосудие - Юрист
+holopad-justice-clerk = Правосудие - Клерк
 
 # Security
 # Security
-holopad-security-corpsman = Security - Corpsman
+holopad-security-corpsman = Охрана - Санитар
 
 # General
 # General
-holopad-general-park = General - Park
-holopad-general-nitrogen-lounge = General - Nitrogen Lounge
-holopad-general-shipyard-dock = General - Shipyard Dock
+holopad-general-park = Общее - Парк
+holopad-general-nitrogen-lounge = Общее - Азотная гостиная
+holopad-general-shipyard-dock = Общее - Док верфи
 
 # Medical
 # Medical
-holopad-medical-psychologist = Medical - Psychologist
-holopad-medical-outpost = Medical - Outpost
+holopad-medical-psychologist = Медицина - Психолог
+holopad-medical-outpost = Медицина - Медпункт
 
 # Engineering
 # Engineering
-holopad-engineering-pa-control = Engineering - PA Control
+holopad-engineering-pa-control = Инженерный отдел - Управление ОГС
 
 # Service
 # Service
-holopad-service-toolroom = Service - Toolroom
-holopad-service-barber-shop = Service - Barber Shop
+holopad-service-toolroom = Обслуживание - Инструментальная
+holopad-service-barber-shop = Обслуживание - Парикмахерская
 
 # Station Specific
 # Station Specific
-holopad-security-perma-kitchen = Security - Perma Kitchen
-holopad-security-perma-botany = Security - Perma Botany
-holopad-security-perma-yard-one = Security - Perma Yard One
-holopad-security-perma-yard-two = Security - Perma Yard Two
-holopad-security-perma-workshop = Security - Perma Workshop
-holopad-security-perma-guard-complex = Security - Perma Guard Complex
-holopad-security-perma-mineshaft = Security - Perma Mineshaft
-holopad-security-perma-arena = Security - Arena
-holopad-security-perma-gladiator-lounge = Security - Gladiator Lounge
-holopad-general-spesscar-track = General - Spesscar Track
+holopad-security-perma-kitchen = Охрана - Кухня брига
+holopad-security-perma-botany = Охрана - Ботаника брига
+holopad-security-perma-yard-one = Охрана - Двор брига 1
+holopad-security-perma-yard-two = Охрана - Двор брига 2
+holopad-security-perma-workshop = Охрана - Мастерская брига
+holopad-security-perma-guard-complex = Охрана - Комплекс охраны брига
+holopad-security-perma-mineshaft = Охрана - Шахта брига
+holopad-security-perma-arena = Охрана - Арена
+holopad-security-perma-gladiator-lounge = Охрана - Комната гладиаторов
+holopad-general-spesscar-track = Общее - Гоночная трасса

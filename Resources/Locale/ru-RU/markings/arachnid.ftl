@@ -36,7 +36,7 @@ marking-ArachnidAppendagesShort = Придатки (Короткий)
 marking-ArachnidAppendagesShort-short_primary = Appendage
 marking-ArachnidAppendagesShort-short_secondary = Stripes
 
-marking-ArachnidAppendagesFreaky = Appendages (Freaky long)
+marking-ArachnidAppendagesFreaky = Придатки (невероятно длинные)
 marking-ArachnidAppendagesFreaky-freaky_primary = Appendage
 marking-ArachnidAppendagesFreaky-freaky_secondary = Stripes
 
@@ -56,31 +56,31 @@ marking-ArachnidTorsoNailAndHammer = Гвоздь и молоток
 marking-ArachnidTorsoNailAndHammer-nail-and-hammer = Дизайн
 marking-ArachnidTorsoStar = Звезда
 marking-ArachnidTorsoStar-star = Дизайн
-marking-ArachnidTorsoArrows = Arrows
-marking-ArachnidTorsoArrows-arrows = Design
+marking-ArachnidTorsoArrows = Стрелы
+marking-ArachnidTorsoArrows-arrows = Узор
 
-marking-ArachnidTorsoCore = Core
-marking-ArachnidTorsoCore-core = Design
+marking-ArachnidTorsoCore = Ядро
+marking-ArachnidTorsoCore-core = Узор
 
-marking-ArachnidTorsoFiddleback = Fiddleback
-marking-ArachnidTorsoFiddleback-fiddleback = Design
+marking-ArachnidTorsoFiddleback = Скрипичный знак
+marking-ArachnidTorsoFiddleback-fiddleback = Узор
 
-marking-ArachnidTorsoSkull = Skull
-marking-ArachnidTorsoSkull-skull = Design
+marking-ArachnidTorsoSkull = Череп
+marking-ArachnidTorsoSkull-skull = Узор
 
-marking-ArachnidTorsoTarget = Target
-marking-ArachnidTorsoTarget-target = Design
+marking-ArachnidTorsoTarget = Мишень
+marking-ArachnidTorsoTarget-target = Узор
 
-marking-ArachnidRArmStripes = Arachnid Stripes (Right)
-marking-ArachnidRArmStripes-stripes_right = Stripes
+marking-ArachnidRArmStripes = Полосы (правая рука)
+marking-ArachnidRArmStripes-stripes_right = Полосы
 
-marking-ArachnidLArmStripes = Arachnid Stripes (Left)
-marking-ArachnidLArmStripes-stripes_left = Stripes
+marking-ArachnidLArmStripes = Полосы (левая рука)
+marking-ArachnidLArmStripes-stripes_left = Полосы
 
-marking-ArachnidRLegStripes = Arachnid Stripes (Right)
-marking-ArachnidRLegStripes-stripes_right = Stripes
+marking-ArachnidRLegStripes = Полосы (правая нога)
+marking-ArachnidRLegStripes-stripes_right = Полосы
 
-marking-ArachnidLLegStripes = Arachnid Stripes (Left)
-marking-ArachnidLLegStripes-stripes_left = Stripes
+marking-ArachnidLLegStripes = Полосы (левая нога)
+marking-ArachnidLLegStripes-stripes_left = Полосы
 
-marking-ArachnidOverlayFuzzy = Fuzzy
+marking-ArachnidOverlayFuzzy = Пушистый

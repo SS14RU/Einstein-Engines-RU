@@ -16,11 +16,11 @@ reagent-desc-razorium = Странное неньютоновское химич
 reagent-name-fresium = Фрезиум
 reagent-desc-fresium = Загадочное соединение, замедляющее вибрацию атомов и молекул... каким-то образом. По-простому, от него становится холодно... ОЧЕНЬ холодно. При проглатывании может вызвать длительные проблемы с передвижением.
 
-reagent-name-laughter = laughter
-reagent-desc-laughter = Some say that this is the best medicine, but recent studies have proven that to be untrue.
+reagent-name-laughter = смех
+reagent-desc-laughter = Некоторые говорят, что это лучшее лекарство, но недавние исследования доказали, что это неправда.
 
 reagent-name-weh = Сок, заставляющий вас Weh!
 reagent-desc-weh = Чистая эссенция игрушки ящера. Заставляет вас Weh!
 
-reagent-name-hew = juice that makes you Hew
-reagent-desc-hew = Pure essence of inversed lizard plush. Makes you Hew!
+reagent-name-hew = сок, который делает вас Hew
+reagent-desc-hew = Чистая эссенция плюшевой перевернутой ящерицы. Делает вас Hew!

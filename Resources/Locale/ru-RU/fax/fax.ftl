@@ -4,8 +4,8 @@ fax-machine-popup-name-long = Слишком длинное имя факса
 fax-machine-popup-name-exist = Факс с таким же именем уже существует в сети
 fax-machine-popup-name-set = Имя факса было обновлено
 
-fax-machine-popup-error = ERROR - jam in paper feed
-fax-machine-popup-copy-error = ERROR - unable to copy!
+fax-machine-popup-error = ОШИБКА - замятие бумаги при подаче
+fax-machine-popup-copy-error = ОШИБКА - невозможно копировать!
 
 fax-machine-dialog-rename = Переименовать
 fax-machine-dialog-field-name = Имя
@@ -14,7 +14,7 @@ fax-machine-ui-window = Факс
 fax-machine-ui-file-button = Распечатать файл
 fax-machine-ui-paper-button-normal = Обычная бумага
 fax-machine-ui-paper-button-office = Офисная бумага
-fax-machine-ui-copy-button = Copy
+fax-machine-ui-copy-button = Копировать
 fax-machine-ui-send-button = Отправить
 fax-machine-ui-refresh-button = Обновить
 fax-machine-ui-no-peers = Нет получателей

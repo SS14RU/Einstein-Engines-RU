@@ -1,0 +1,71 @@
+# Nationalities introduced by SS14RU lives here to keep upstream separation.
+
+- type: nationality
+  id: Nanotrasen
+  nameKey: nationality_name_nanotrasen
+  descriptionKey: nationality_description_nanotrasen
+  sortOrder: 0
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: CentralSphere
+  nameKey: nationality_name_central-sphere
+  descriptionKey: nationality_description_central-sphere
+  sortOrder: 10
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: SecondSphere
+  nameKey: nationality_name_second-sphere
+  descriptionKey: nationality_description_second-sphere
+  sortOrder: 20
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: Thethirdsphere
+  nameKey: nationality_name_the-third-sphere
+  descriptionKey: nationality_description_the-third-sphere
+  sortOrder: 30
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: Frontier
+  nameKey: nationality_name_frontier
+  descriptionKey: nationality_description_frontier
+  sortOrder: 40
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: MiningsSation
+  nameKey: nationality_name_mining-station
+  descriptionKey: nationality_description_mining-station
+  sortOrder: 50
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: AgriculturalStation
+  nameKey: nationality_name_agricultural-station
+  descriptionKey: nationality_description_agricultural-station
+  sortOrder: 60
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: ScientificStation
+  nameKey: nationality_name_scientific-station
+  descriptionKey: nationality_description_scientific-station
+  sortOrder: 70
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: TradeHub
+  nameKey: nationality_name_trade-hub
+  descriptionKey: nationality_description_trade-hub
+  sortOrder: 80
+  passportPrototype: BieselPassport
+
+- type: nationality
+  id: MilitaryBase
+  nameKey: nationality_name_military-base
+  descriptionKey: nationality_description_military-base
+  sortOrder: 90
+  passportPrototype: BieselPassport

@@ -44,7 +44,7 @@
       - PrintedDocumentAppealRecipe
       - PrintedDocumentEvacuationShuttleRequestRecipe
       - PrintedDocumentShuttleRegistrationRequestRecipe
-      - PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
+      # - PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe #SS14RU-edit
       - PrintedDocumentRequestRequestToEstablishThreatLevelRecipe
       - PrintedDocumentRequestChangeSalaryRecipe
       - PrintedDocumentRequestForNonlistedEmploymentRecipe

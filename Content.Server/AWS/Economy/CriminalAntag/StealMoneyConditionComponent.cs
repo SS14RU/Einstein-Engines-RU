@@ -9,7 +9,7 @@ namespace Content.Server.AWS.CriminalAntag;
 public sealed partial class StealMoneyConditionComponent : Component
 {
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public Enum ReachType { get; set; } = StealMoneyReachType.AsPossible;
+    public StealMoneyReachType ReachType { get; set; } = StealMoneyReachType.AsPossible;
 
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public ProtoId<CurrencyPrototype> Currency { get; set; } = "Thaler";

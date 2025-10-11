@@ -22,6 +22,12 @@ public sealed partial class NationalityPrototype : IPrototype
     [DataField]
     public string DescriptionKey { get; } = string.Empty;
 
+    //SS14RU - Start
+    [DataField("sortOrder")]
+    [ViewVariables]
+    public int SortOrder { get; private set; }
+    //SS14RU - End
+
     [DataField, ViewVariables]
     public HashSet<ProtoId<NationalityPrototype>> Allied { get; } = new();
 

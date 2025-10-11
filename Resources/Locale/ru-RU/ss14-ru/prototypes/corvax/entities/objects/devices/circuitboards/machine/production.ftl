@@ -1,2 +1,2 @@
-ent-PrinterDocMachineCircuitboard = document printer machine board
-    .desc = A machine printed circuit board for a document printer
+ent-PrinterDocMachineCircuitboard = печатная плата принтера для документов
+    .desc = печатная плата для принтера для документов

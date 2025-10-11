@@ -1,1 +1,1 @@
-variantize-command-help-text = variantize <grid id>
+variantize-command-help-text = варьировать <grid id>

@@ -30,8 +30,9 @@ marking-TattooEyeRight = Правый глаз
 
 marking-TattooEyeLeft-tattoo_eye_l = Left Eye
 marking-TattooEyeLeft = Левый глаз
-marking-TattooEyeArachneRight-tattoo_eye_arachne_r = Right Arachne Eye
-marking-TattooEyeArachneRight = Right Arachne Eye
 
-marking-TattooEyeArachneLeft-tattoo_eye_arachne_l = Left Arachne Eye
-marking-TattooEyeArachneLeft = Left Arachne Eye
+marking-TattooEyeArachneRight-tattoo_eye_arachne_r = Тату, глаз арахнида (Правый)
+marking-TattooEyeArachneRight = Тату, глаз арахнида (Правый)
+
+marking-TattooEyeArachneLeft-tattoo_eye_arachne_l = Тату, глаз арахнида (Левый)
+marking-TattooEyeArachneLeft = Тату, глаз арахнида (Левый)

@@ -68,8 +68,11 @@ public class SharedPassportSystem : EntitySystem
             45);
     }
 
-    private void OnPlayerLoadoutApplied(PlayerLoadoutAppliedEvent ev) =>
-        SpawnPassportForPlayer(ev.Mob, ev.Profile, ev.JobId);
+    private void OnPlayerLoadoutApplied(PlayerLoadoutAppliedEvent ev)
+    // SpawnPassportForPlayer(ev.Mob, ev.Profile, ev.JobId);
+    {
+
+    }
 
     public void SpawnPassportForPlayer(EntityUid mob, HumanoidCharacterProfile profile, string? jobId)
     {
@@ -95,7 +98,7 @@ public class SharedPassportSystem : EntitySystem
         // Try to find back-mounted storage apparatus
         if (_inventory.TryGetSlotEntity(mob, "back", out var item) &&
                 EntityManager.TryGetComponent<StorageComponent>(item, out var inventory))
-            // Try inserting the entity into the storage, if it can't, it leaves the loadout item on the ground
+        // Try inserting the entity into the storage, if it can't, it leaves the loadout item on the ground
         {
             if (!EntityManager.TryGetComponent<ItemComponent>(passportEntity, out var itemComp)
                 || !_storage.CanInsert(item.Value, passportEntity, out _, inventory, itemComp)
@@ -153,7 +156,7 @@ public class SharedPassportSystem : EntitySystem
     }
 
     [ByRefEvent]
-    public sealed class PassportToggleEvent : HandledEntityEventArgs {}
+    public sealed class PassportToggleEvent : HandledEntityEventArgs { }
 
     [ByRefEvent]
     public sealed class PassportProfileUpdatedEvent(HumanoidCharacterProfile profile) : HandledEntityEventArgs

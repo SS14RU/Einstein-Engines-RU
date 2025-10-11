@@ -26,38 +26,37 @@ borg-transponder-destroying-popup = Система самоуничтожени�
 borg-transponder-emagged-disabled-popup = Огни вашего транспондера погасли!
 borg-transponder-emagged-destroyed-popup = Предохранитель вашего транспондера перегорел!
 ## Borg type selection UI.
-borg-select-type-menu-title = Select Chassis Type
-borg-select-type-menu-bottom-text = Chassis selection is irreversible
-borg-select-type-menu-available = Available types
-borg-select-type-menu-information = Information
-borg-select-type-menu-select-type = Select type to view information
-borg-select-type-menu-confirm = Confirm selection
-borg-select-type-menu-guidebook = Guidebook
+borg-select-type-menu-title = Выберите тип шасси
+borg-select-type-menu-bottom-text = Выбор шасси необратим
+borg-select-type-menu-available = Доступные типы
+borg-select-type-menu-information = Информация
+borg-select-type-menu-select-type = Выберите тип для просмотра информации
+borg-select-type-menu-confirm = Подтвердить выбор
+borg-select-type-menu-guidebook = Руководствоы
 
 ## Borg type information
 
-borg-type-generic-name = Generic
-borg-type-generic-desc = Jack of all trades, master of none. Do various random station tasks, or maybe help out the science department that built you.
-borg-type-generic-transponder = generic cyborg
+borg-type-generic-name = Общий
+borg-type-generic-desc = Мастер на все руки, но ни в чем не профи. Выполняйте различные случайные задачи на станции или помогайте научному отделу, который вас построил.
+borg-type-generic-transponder = киборг общего назначения
 
-borg-type-engineering-name = Engineering
-borg-type-engineering-desc = Assist the engineering team in station construction, repairing damage, or fixing electrical and atmospheric issues.
-borg-type-engineering-transponder = engineering cyborg
+borg-type-engineering-name = Инженерный
+borg-type-engineering-desc = Помогайте инженерной команде в строительстве станции, устранении повреждений или решении проблем с электричеством и атмосферой.
+borg-type-engineering-transponder = инженерный киборг
 
-borg-type-mining-name = Salvage
-borg-type-mining-desc = Join salvage and help them mine for materials, scavenge wrecks, and fight off hostile wildlife.
-borg-type-mining-transponder = salvage cyborg
+borg-type-mining-name = Утилизатор
+borg-type-mining-desc = Присоединяйтесь к утилизаторам и помогайте им добывать материалы, обчищать обломки и отбиваться от враждебной дикой природы.
+borg-type-mining-transponder = киборг-утилизатор
 
-borg-type-janitor-name = Janitor
-borg-type-janitor-desc = Keep the station nice and tidy, clean up spills, collect and properly dispose of trash left around by lazy crewmembers.
-borg-type-janitor-transponder = janitor cyborg
+borg-type-janitor-name = Уборщик
+borg-type-janitor-desc = Поддерживайте станцию в чистоте и порядке, убирайте разливы, собирайте и правильно утилизируйте мусор, оставленный ленивыми членами экипажа.
+borg-type-janitor-transponder = киборг-уборщик
 
-borg-type-medical-name = Medical
-borg-type-medical-desc = Provide medical attention to crew who need it, either in medbay or in hazardous areas conventional paramedics cannot reach.
-borg-type-medical-transponder = medical cyborg
+borg-type-medical-name = Медицинский
+borg-type-medical-desc = Оказывайте медицинскую помощь нуждающимся членам экипажа, как в медотсеке, так и в опасных зонах, недоступных для обычных парамедиков.
+borg-type-medical-transponder = медицинский киборг
 
-borg-type-service-name = Service
-borg-type-service-desc = Help out with a wide range of crew services, ranging from serving snacks and drinks to botany to entertainment.
-borg-type-service-transponder = service cyborg
-
+borg-type-service-name = Обслуживающий
+borg-type-service-desc = Помогайте с широким спектром услуг для экипажа, от подачи закусок и напитков до ботаники и развлечений.
+borg-type-service-transponder = обслуживающий киборг
 

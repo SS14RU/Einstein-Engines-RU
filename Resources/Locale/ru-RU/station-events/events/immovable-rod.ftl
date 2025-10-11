@@ -1,1 +1,1 @@
-station-event-immovable-rod-announcement = High velocity unidentified object is on a collision course with the station. Impact imminent.
+station-event-immovable-rod-announcement = Неопознанный объект с высокой скоростью движется по курсу столкновения со станцией. Столкновение неизбежно.

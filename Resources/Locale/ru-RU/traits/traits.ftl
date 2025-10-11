@@ -193,11 +193,11 @@ trait-description-SolCommon =
     Уходя своими корнями в мандаринский китайский, общий язык стал официальным языком Альянса Сол, а чиновники старались связать его общим языком.
     На нем говорят государственные чиновники, его преподают в школах, на нем говорят те, кто либо испытывает чувство национальной гордости за Альянс, либо иным образом привержен этой культуре.
 
-trait-name-NovuNederic = Novu-Nederic
+trait-name-NovuNederic = Ново-недерик
 trait-description-NovuNederic =
-    Once the language of seafarers and merchants, now the voice of spacers, terraformers, and pioneers.
-    Spoken in the New-Netherlands, this direct and pragmatic trade language carries the sharp consonants and clipped vowels of its old-world roots.
-    Built on centuries of seafaring, land reclamation, and commerce, it thrives among those who shape entire worlds — just as their ancestors shaped the land from the sea.
+    Когда-то язык моряков и торговцев, теперь он стал голосом космонавтов, терраформеров и первопроходцев.
+    На нём говорят в Новых Нидерландах; это прямой и прагматичный торговый язык с резкими согласными и отрывистыми гласными, унаследованными от его старомирских корней.
+    Основанный на вековых традициях мореплавания, освоения земель и торговли, он живёт среди тех, кто формирует целые миры — так же, как их предки отвоёвывали землю у моря.
 
 trait-name-Tradeband = Трейдбанд
 trait-description-Tradeband =
@@ -265,10 +265,10 @@ trait-description-WeaponsGeneralist =
     Вы мастерски владеете оружием ближнего боя, что позволяет вам быть универсальным в ближнем бою.
     Ваш урон в ближнем бою увеличивается на 25%.
 
-trait-name-Mystic = Mystic
+trait-name-Mystic = Мистик
 trait-description-Mystic =
-    You are trained in Mysticism instead of melee combat, reducing your melee capabilities but drastically increasing your psionic potential.
-    Your melee damage bonus for all Brute damage types (Blunt, Slash, Piercing) becomes 10%, but your Potentia gain is drastically increased.
+    Ты обучен мистицизму вместо рукопашного боя, что снижает твои боевые навыки, но значительно усиливает псионный потенциал.
+    Твой бонус к урону в ближнем бою для всех типов физического урона (дробящий, режущий, колющий) составляет 10%, но прирост Потенции значительно увеличен.
 
 trait-name-Singer = Певец
 trait-description-Singer = Вы от природы способны исполнять голосом простые мелодии.
@@ -357,7 +357,7 @@ trait-description-HighPotential = Ваша связь с ноосферой вы
 
 trait-name-LowAmplification = Дефицит kα
 trait-description-LowAmplification =
-    Your psionic abilities are noticeably weaker than ones used by other psions.
+    Ваши псионические способности заметно слабее тех, что используют другие псионы.
 
 trait-name-HighAmplification = Избыток kα
 trait-description-HighAmplification = Ваши псионические способности заметно сильнее, чем у других псиоников.
@@ -438,10 +438,10 @@ trait-description-MetapsionicPower =
     чтобы определить, находятся ли псионики поблизости. Эта способность обладает широкой областью действия и не может точно
     сканировать отдельные объекты. И все же это лучше, чем быть слепым.
 
-trait-name-HealingWordPower = Healing Word
+trait-name-HealingWordPower = Исцеляющее слово
 trait-description-HealingWordPower =
-    Your Mentalic abilities includes the power to heal the wounded.
-    This power, commonly known as "Healing Word", allows the user to heal themselves or others with their mind.
+    Твои ментальные способности включают силу исцеления раненых.
+    Эта сила, известная как «Исцеляющее слово», позволяет лечить себя или других силой разума.
 
 trait-name-XenoglossyPower = Ксеноглоссия
 trait-description-XenoglossyPower =
@@ -579,14 +579,15 @@ trait-name-IPCBrittleBoneDisease = Дефектный Корпус
 trait-description-IPCBrittleBoneDisease =
     Хрупкие компоненты вашего корпуса снижают порог уничтожения на 60 очков здоровья.
 
-trait-name-Manic = Manic
-trait-description-Manic = Your perception of the world is subject to varying intensities. Anything that affects your mood will have its effects multiplied by between 0.7 and 1.3.
+trait-name-Manic = Маниакальный
+trait-description-Manic = Ваше восприятие мира подвержено изменениям интенсивности. Всё, что влияет на ваше настроение, будет иметь эффект, умноженный на 0,7–1,3.
 
-trait-name-Mercurial = Mercurial
-trait-description-Mercurial = Your mood fluctuates regularly, causing you to have a random modifier to your mood that is always somewhere between -10 and +10.
 
-trait-name-DeadEmotions = Dead Emotions
-trait-description-DeadEmotions = You feel nothing, and are completely unaffected by all positive or negative mood modifiers.
+trait-name-Mercurial = Меркуриальный
+trait-description-Mercurial = Ваше настроение регулярно колеблется, в результате чего у вас есть случайный модификатор настроения, который всегда находится где-то между -10 и +10.
+
+trait-name-DeadEmotions = Мертвые эмоции
+trait-description-DeadEmotions = Вы ничего не чувствуете и на вас совершенно не влияют никакие позитивные или негативные модификаторы настроения.
 
 trait-name-IPCFaultyWaterproofing = Негерметичный Корпус
 trait-description-IPCFaultyWaterproofing =
@@ -597,45 +598,48 @@ trait-name-IPCFragileCircuits = Хрупкие Микросхемы
 trait-description-IPCFragileCircuits =
     Ваша система не переносит электрических перегрузок. Любой [color=orange]шоковый[/color] урон моментально отключает вас.
 fragileCircuits-kill-popup = {$name} отключился из-за короткого замыкания!
-trait-name-SuperiorRadiationShielding = Superior Radiation Shielding
+
+trait-name-SuperiorRadiationShielding = Усиленная защита от радиации
 trait-description-SuperiorRadiationShielding =
-    Your chassis has been outfitted with superior radiation shielding, protecting your circuitry from all but the most extreme radiation sources.
-    Your innate flat damage reduction to [color=yellow]Radiation[/color] is increased from [color=green]1[/color] to [color=blue]5[/color].
+    Твоё шасси оснащено улучшенной радиационной защитой, оберегающей цепи почти от любых источников излучения.
+    Твоё врождённое снижение урона от [color=yellow]радиации[/color] увеличено с [color=green]1[/color] до [color=blue]5[/color].
 
-trait-name-G2Chassis = G2 Chassis
+trait-name-G2Chassis = Шасси G2
 trait-description-G2Chassis =
-    Your chassis has been manufactured to military specifications.
-    You have an innate [color=blue]7%[/color] chance for incoming projectiles to deflect off of your armored hull.
+    Твоё шасси выполнено по военным стандартам.
+    У тебя есть врождённый [color=blue]7%[/color] шанс, что снаряд рикошетит от бронированного корпуса.
 
-trait-name-HardenedCircuits = Hardened Circuits
+trait-name-HardenedCircuits = Укреплённые цепи
 trait-description-HardenedCircuits =
-    Your internal components have been reinforced with shock absorbing metal-foam.
-    You gain a [color=blue]20%[/color] resistance to explosive damage.
-    Your [color=red]weakness[/color] to [color=yellow]Shock[/color] has been inverted to a [color=green]resistance[/color]
+    Твои внутренние компоненты усилены амортизирующим металлопеном.
+    Ты получаешь [color=blue]20%[/color] сопротивления урону от взрывов.
+    Твоя [color=red]слабость[/color] к [color=yellow]электричеству[/color] превращена в [color=green]сопротивление[/color].
 
-trait-name-CyberneticLeftLeg = Cybernetic Left Leg
+trait-name-CyberneticLeftLeg = Кибернетическая левая нога
 trait-description-CyberneticLeftLeg =
-    Your left leg has been replaced with a baseline cybernetic leg.
-    This does not cost any trait slot selections.
+    Ваша левая нога заменена на базовую кибернетическую.
+    Это не требует выбора слота характеристик.
 
-trait-name-CyberneticRightLeg = Cybernetic Right Leg
+trait-name-CyberneticRightLeg = Кибернетическая правая нога
 trait-description-CyberneticRightLeg =
-    Your right leg has been replaced with a baseline cybernetic leg.
-    This does not cost any trait slot selections.
-trait-name-Dwarf = Dwarf
+    Ваша правая нога заменена на базовую кибернетическую.
+    Это не требует выбора слота характеристик.
+
+trait-name-Dwarf = Дворф
 trait-description-Dwarf =
-    You are not just short and stout... You are a dwarf.
-    You get alcohol healing, you are resistant to poison, you also do not vomit when drunk.
+    Ты не просто низкий и коренастый… Ты дворф.
+    Алкоголь лечит тебя, ты устойчив к яду и не страдаешь от тошноты в пьяном виде.
 
-trait-name-Kobold = Kobold
+trait-name-Kobold = Кобольд
 trait-description-Kobold =
-    You are not just short and stout... You are a kobold.
-    You get alcohol healing, you are resistant to poison, you also do not vomit when drunk.
+    Ты не просто низкий и толстый... Ты кобольд.
+    Алкоголь лечит тебя, ты устойчив к ядам, и тебя не рвёт, когда ты пьян.
 
-trait-name-ForkedTongue = Forked Tongue
+trait-name-ForkedTongue = Раздвоенный язык
 trait-description-ForkedTongue =
-    You have a more developed forked tongue that allows you to track and distinguish objects by their scent.
+    У тебя развитый раздвоенный язык, позволяющий улавливать и различать объекты по их запаху.
 
-trait-name-StuntedSnout = Stunted Snout
+trait-name-StuntedSnout = Укороченная морда
 trait-description-StuntedSnout =
-    Your sense of smell is stunted for one reason or another. You lack the ability to pick up scents.
+    По тем или иным причинам твой нюх ослаблен. Ты не способен улавливать запахи.
+

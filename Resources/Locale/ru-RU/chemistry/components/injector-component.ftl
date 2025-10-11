@@ -16,7 +16,7 @@ onetime-injector-simple-volume-label = Объем: [color=white]{ $currentVolume
 
 injector-component-drawing-text = Содержимое набирается
 injector-component-injecting-text = Содержимое вводится
-injector-component-injecting-locked-text = Locked to inject
+injector-component-injecting-locked-text = Заблокировано для инъекций
 injector-component-cannot-transfer-message = Вы не можете ничего переместить в { $target }!
 injector-component-cannot-draw-message = Вы не можете ничего набрать из { $target }!
 injector-component-cannot-inject-message = Вы не можете ничего ввести в { $target }!

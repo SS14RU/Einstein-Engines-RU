@@ -102,7 +102,7 @@ ent-SpawnPointAtmos = атмосферный техник
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 
-ent-SpawnPointChiefMedicalOfficer = старший медицинский офицер
+ent-SpawnPointChiefMedicalOfficer = главный врач
     .desc = { ent-SpawnPointJobBase.desc }
     .suffix = { "" }
 

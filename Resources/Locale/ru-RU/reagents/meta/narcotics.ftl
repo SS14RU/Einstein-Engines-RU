@@ -28,12 +28,12 @@ reagent-desc-tear-gas = Химическое вещество, вызывающ�
 reagent-name-happiness = счастье
 reagent-desc-happiness = Наполняет экстатическим оцепенением и вызывает незначительные травмы мозга. Вызывает привыкание крайне быстро. Передозировка вызывает резкие перепады настроения.
 
-reagent-name-cryanobalamin = cryanobalamin
-reagent-desc-cryanobalamin = A formerly popular additive to energy drinks to restore stamina, now banned from commercial use due to its carcinogenic properties.
+reagent-name-cryanobalamin = крианобаламин
+reagent-desc-cryanobalamin = Ранее популярная добавка к энергетическим напиткам для восстановления сил, теперь запрещенная к коммерческому использованию из-за её канцерогенных свойств.
 
-reagent-name-liftloversspecial = lift lovers special
-reagent-desc-liftloversspecial = A chemical cocktail that quickly restores stamina. Despite being officially banned, it remains a popular black-market drink among fitness junkies. Carcinogenic in high doses.
+reagent-name-liftloversspecial = Специальный напиток для любителей подъёма
+reagent-desc-liftloversspecial = Химический коктейль, быстро восстанавливающий силы. Несмотря на официальный запрет, он остаётся популярным напитком на чёрном рынке среди любителей фитнеса. В высоких дозах канцерогенен.
 
-reagent-name-morphine = morphine
-reagent-desc-morphine = A potent analgesic that allows a patient to painlessly undergo surgery even while awake. Highly addictive if overused. Overdose can cause difficulty breathing.
+reagent-name-morphine = Морфин
+reagent-desc-morphine = Мощный анальгетик, позволяющий пациенту безболезненно перенести операцию даже в состоянии бодрствования. Вызывает сильную зависимость при чрезмерном употреблении. Передозировка может вызвать затруднение дыхания.
 

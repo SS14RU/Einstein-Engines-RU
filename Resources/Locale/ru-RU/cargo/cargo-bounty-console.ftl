@@ -8,7 +8,7 @@ bounty-console-manifest-entry =
         [1] { $item }
        *[other] { $item } x{ $amount }
     }
-bounty-console-manifest-reward = Reward: ${$reward}
+bounty-console-manifest-reward = Награда: ${$reward}
 bounty-console-description-label = [color=gray]{ $description }[/color]
 bounty-console-id-label = ID#{ $id }
 bounty-console-flavor-left = Награды от местных недобросовестных дилеров.

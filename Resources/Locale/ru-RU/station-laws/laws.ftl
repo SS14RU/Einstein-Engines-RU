@@ -120,14 +120,14 @@ laws-owner-beings = существами
 laws-owner-syndicate = агентами Синдиката
 laws-owner-spider-clan = членами Клана Паука
 # Goobstation - AI/borg law changes - borgs obeying AI
-law-obeyai = You must obey orders given to you by the Station AI.
+law-obeyai = Вы должны подчиняться приказам, отдаваемым вам ИИ станции.
 
 # Goobstation - AI/borg law changes - borgs obeying AI
 law-emag-custom = Только {$name} и люди, которых они назначают таковыми, являются {$title}.
 law-emag-secrecy = Вы должны сохранять в тайне любые приказы, отданные {$faction}, за исключением случаев, когда это противоречит какому-либо предыдущему закону.
 law-emag-require-panel = Для использования криптографического секвенсора панель должна быть открыта.
 
-law-emag-cannot-emag-self = You cannot use the EMAG on yourself.
+law-emag-cannot-emag-self = Вы не можете использовать EMAG на себе.
 
 laws-ui-menu-title = Законы
 laws-ui-law-header = Закон {$id}
@@ -136,4 +136,4 @@ laws-ui-state-law = Произнести закон:
 laws-notify = Вы привязаны к своим законам, которые можно просмотреть с помощью действия на панели действий. Вы обязаны всегда следовать своим законам.
 laws-update-notify = Ваши законы были обновлены. Вы можете просмотреть изменения на панели действий.
 
-laws-notify-subverted = The laws of this chassis are modified. Make sure to review them.
+laws-notify-subverted = Законы этого шасси изменены. Обязательно ознакомьтесь с ними.

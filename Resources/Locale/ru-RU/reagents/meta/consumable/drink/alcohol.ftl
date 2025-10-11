@@ -97,7 +97,7 @@ reagent-desc-gin-fizz = Освежающе лимонный, восхитите�
 reagent-name-gin-tonic = джин-тоник
 reagent-desc-gin-tonic = Классический мягкий коктейль всех времен и народов.
 reagent-name-gildlager = gildlager
-reagent-desc-gildlager = 100 proof cinnamon schnapps, made for alcoholic teen girls on spring break.
+reagent-desc-gildlager = 100-градусный коричный шнапс, созданный для пьяных девочек-подростков на весенних каникулах.
 
 reagent-name-grog = грог
 reagent-desc-grog = Ром, разбавленный водой, одобрено пиратами!
@@ -136,12 +136,12 @@ reagent-desc-moonshine = Самодельный напиток, изготавл
 reagent-name-neurotoxin = нейротоксин
 reagent-desc-neurotoxin = Сильный нейротоксин, который вводит субъекта в состояние, напоминающее смерть.
 reagent-name-painkiller = painkiller
-reagent-desc-painkiller = A cure for what ails you.
+reagent-desc-painkiller = Лекарство от всего, что вас мучает.
 
 reagent-name-patron = покровитель
 reagent-desc-patron = Текила с серебром в своем составе, фаворит женщин-алкоголичек из клубной тусовки.
-reagent-name-pina-colada = piña colada
-reagent-desc-pina-colada = For getting lost in the rain.
+reagent-name-pina-colada = пина колада
+reagent-desc-pina-colada = Для тех, кто любит заблудиться под дождём.
 
 reagent-name-red-mead = красная медовуха
 reagent-desc-red-mead = Настоящий напиток викингов! Несмотря на то, что он имеет странный красный цвет.
@@ -179,23 +179,20 @@ reagent-name-whiskey-soda = виски с содовой
 reagent-desc-whiskey-soda = Невероятно освежающе!
 reagent-name-white-russian = белый русский
 reagent-desc-white-russian = Но это только твоё мнение, чувак.
-reagent-name-vodka-red-bool = vodka red bool
-reagent-desc-vodka-red-bool = Because heart failure and liver failure go hand in hand.
+reagent-name-vodka-red-bool = водка ред бул
+reagent-desc-vodka-red-bool = Потому что сердечная и печёночная недостаточность идут рука об руку.
 
-reagent-name-xeno-basher = xeno basher
-reagent-desc-xeno-basher = The perfect drink before an expedition.
+reagent-name-irish-bool = ирландский бул
+reagent-desc-irish-bool = Как "бул" в ирландском пабе.
 
-reagent-name-irish-bool = irish bool
-reagent-desc-irish-bool = Like a bool in a Ireland shop.
+reagent-name-budget-insuls = бюджетные инсульсы
+reagent-desc-budget-insuls = Любимый напиток тайдера.
 
-reagent-name-budget-insuls = budget insuls
-reagent-desc-budget-insuls = A tider's preferred drink.
+reagent-name-watermelon-wakeup = арбузное пробуждение
+reagent-desc-watermelon-wakeup = Если вы хотите взбодриться, это то, что нужно... К тому же, сладкое.
 
-reagent-name-watermelon-wakeup = watermelon wakeup
-reagent-desc-watermelon-wakeup = If you want to be awake, this will do it... Also sweet.
+reagent-name-rubberneck = резиновая шея
+reagent-desc-rubberneck = Популярный напиток среди тех, кто придерживается полностью синтетической диеты.
 
-reagent-name-rubberneck = rubberneck
-reagent-desc-rubberneck = A popular drink amongst those adhering to an all synthetic diet.
-
-reagent-name-zombiecocktail = zombie
-reagent-desc-zombiecocktail = It gets in your head. Your he-eyeh-ead.
+reagent-name-zombiecocktail = зомби
+reagent-desc-zombiecocktail = Он забирается в твою голову. В твою го-ло-ву-у.

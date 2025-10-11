@@ -8,6 +8,7 @@ using Content.Shared.Players;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Robust.Shared.Configuration;
+using Robust.Shared.Log;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Utility;
@@ -51,12 +52,32 @@ public sealed class NationalitySystem : EntitySystem
 
         var jobPrototypeToUse = _prototype.Index(jobId.Value);
 
-        ProtoId<NationalityPrototype> nationality = profile.Nationality != string.Empty ? profile.Nationality : SharedHumanoidAppearanceSystem.DefaultNationality;
+        var nationalityId = profile.Nationality != string.Empty
+            ? profile.Nationality
+            : SharedHumanoidAppearanceSystem.DefaultNationality;
+        var nationality = (ProtoId<NationalityPrototype>) nationalityId;
 
         if (!_prototype.TryIndex(nationality, out var nationalityPrototype))
         {
-            DebugTools.Assert($"Nationality '{nationality}' not found!");
-            return;
+            //SS14RU - Start
+            var fallbackId = SharedHumanoidAppearanceSystem.DefaultNationality;
+            var fallbackNationality = (ProtoId<NationalityPrototype>) fallbackId;
+
+            if (!_prototype.TryIndex(fallbackNationality, out nationalityPrototype))
+            {
+                DebugTools.Assert($"Default nationality '{fallbackId}' not found!");
+                return;
+            }
+
+            Log.Warning(
+                $"Profile '{profile.Name}' tried to use missing nationality '{nationalityId}'. Falling back to '{fallbackId}'.");
+
+            nationality = fallbackNationality;
+            nationalityId = fallbackId;
+
+            if (profile.Nationality != fallbackId)
+                profile.Nationality = fallbackId;
+            //SS14RU - End
         }
 
         if (!_characterRequirements.CheckRequirementsValid(

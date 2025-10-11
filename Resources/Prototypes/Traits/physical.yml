@@ -718,6 +718,7 @@
         - type: ShowHealthIcons
           damageContainers:
           - Biological
+        - type: EconomyShowInsuranceIcons # SS14-RU
 
 - type: trait
   id: CyberEyesDiagnostic
@@ -781,6 +782,7 @@
         - type: ShowHealthIcons
           damageContainers:
           - Biological
+        - type: EconomyShowInsuranceIcons # SS14-RU
         - type: ShowHealthBars
           damageContainers:
           - Biological
@@ -1057,6 +1059,7 @@
         - type: ShowHealthIcons
           damageContainers:
           - Biological
+        - type: EconomyShowInsuranceIcons # SS14-RU
 
 - type: trait
   id: DiagnosticEyesModule
@@ -1126,6 +1129,7 @@
         - type: ShowHealthIcons
           damageContainers:
           - Biological
+        - type: EconomyShowInsuranceIcons # SS14-RU
         - type: ShowHealthBars
           damageContainers:
           - Biological

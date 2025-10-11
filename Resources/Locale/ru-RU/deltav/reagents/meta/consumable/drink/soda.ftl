@@ -1,2 +1,2 @@
-reagent-name-dr-gibb-blood-red = Dr. Gibb Blood Red
-reagent-desc-dr-gibb-blood-red = A drink to quench YOUR blood thirst.
+reagent-name-dr-gibb-blood-red = Кроваво-красный Доктор Гибб
+reagent-desc-dr-gibb-blood-red = Напиток, чтобы утолить ВАШУ жажду крови.

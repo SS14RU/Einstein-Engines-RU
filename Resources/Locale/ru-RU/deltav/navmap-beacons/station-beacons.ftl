@@ -1,37 +1,38 @@
-station-beacon-epistemics = Epistemics
-station-beacon-mystagogue = Mystagogue
+station-beacon-epistemics = Эпистемика
+station-beacon-mystagogue = Научный руководитель
 
-station-beacon-logistics = Logistics
-station-beacon-logistics-reception = Logistics
-station-beacon-lo = LO
+station-beacon-logistics = Логистика
+station-beacon-logistics-reception = Логистика
+station-beacon-lo = ЛО
 
-station-beacon-conference-room = Conference Room
+station-beacon-conference-room = Конференц-зал
 
-station-beacon-virology = Virology
-station-beacon-metempsychosis = Metempsychosis
-station-beacon-exam = Exam
-station-beacon-med-outpost = Med Outpost
-station-beacon-psych = Psych
+station-beacon-virology = Вирусология
 
-station-beacon-glimmer-prober = Prober
-station-beacon-forensic-mantis = Mantis
+station-beacon-metempsychosis = Метемпсихоз
+station-beacon-exam = Смотровая
+station-beacon-med-outpost = Медпункт
+station-beacon-psych = Психиатр
 
-station-beacon-mailroom = Mail
+station-beacon-glimmer-prober = Зонд
+station-beacon-forensic-mantis = Мантис
 
-station-beacon-engi-outpost = Engi Outpost
+station-beacon-mailroom = Почта
 
-station-beacon-janitor-office = Jani Office
-station-beacon-janitor-closet = Jani Closet
-station-beacon-reporter = Reporter
+station-beacon-engi-outpost = Инженерный аванпост
 
-station-beacon-camera-servers = Cameras
+station-beacon-janitor-office = Офис уборщика
+station-beacon-janitor-closet = Кладовка уборщика
+station-beacon-reporter = Репортер
 
-station-beacon-boxing-ring = Boxing
-station-beacon-park = Park
+station-beacon-camera-servers = Камеры
 
-station-beacon-corpsman = Corpsman
+station-beacon-boxing-ring = Бокс
+station-beacon-park = Парк
 
-station-beacon-justice = Justice
-station-beacon-chiefjustice = Chief Justice
-station-beacon-prosecutor = Prosecutor
-station-beacon-clerk = Clerk
+station-beacon-corpsman = Санитар
+
+station-beacon-justice = Судья
+station-beacon-chiefjustice = Верховный судья
+station-beacon-prosecutor = Прокурор
+station-beacon-clerk = Клерк

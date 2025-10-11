@@ -1,1 +1,1 @@
-objective-issuer-geometer-of-blood = The Geometer of Blood
+objective-issuer-geometer-of-blood = Геометр Крови

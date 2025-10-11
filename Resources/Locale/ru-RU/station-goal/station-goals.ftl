@@ -155,20 +155,20 @@ station-goal-solarpanels =
     2. Выделить зону под отсек для резервных батарей. В отсеке должно размещаться не менее трёх полностью заряженных SMES-блоков, которые не должны быть подключены к основной энергосети станции до особого распоряжения.
 
 station-goal-artifacts=
-    Dear station Command, the purpose of your shift is to provide new information about alien artifacts to NanoTrasen.
+    Уважаемое командование станции, цель вашей смены — предоставить NanoTrasen новую информацию об инопланетных артефактах.
 
-    It is required to organize the work of salvagers to search for and deliver artifacts from the wreckage around the station or expeditions.
-    After the delivery of the artifacts, they must be transferred to a special container to the research department.
-    It is necessary to deliver at least 2 fully studied and documented artifacts on the evacuation shuttle in special containment units.
+    Необходимо организовать работу спасателей по поиску и доставке артефактов из обломков вокруг станции или экспедиций.
+    После доставки артефактов их необходимо перенести в специальный контейнер в исследовательский отдел.
+    Необходимо доставить не менее 2 полностью изученных и задокументированных артефактов на эвакуационном шаттле в специальных контейнерах.
 
-    Recommended information for the document:
-    1. Name of the artifact.
-    2. Physical description.
-    3. Properties of the object.
-    4. Location of where the artifact was found.
-    5. Additional notes.
+    Рекомендуемая информация для документа:
+    1. Название артефакта.
+    2. Физическое описание.
+    3. Характеристики объекта.
+    4. Место обнаружения артефакта.
+    5. Дополнительные примечания.
 
-    The document must be certified by the stamp of the supervisor.
+    Документ должен быть заверен печатью руководителя.
 
 station-goal-storage =
     Уважаемое командование станции, цель вашей смены — построить орбитальное хранилище с запасами и технологиями.

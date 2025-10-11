@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._EE.Contractors.Prototypes;
 using Content.Shared._White.Bark;
 using Content.Shared._White.Bark.Systems;
 using Content.Shared._White.TTS;
@@ -567,6 +568,16 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     {
         var configManager = collection.Resolve<IConfigurationManager>();
         var prototypeManager = collection.Resolve<IPrototypeManager>();
+
+        //SS14RU - Start
+        var defaultNationality = SharedHumanoidAppearanceSystem.DefaultNationality;
+        if (string.IsNullOrWhiteSpace(Nationality) ||
+            !prototypeManager.HasIndex<NationalityPrototype>(Nationality))
+        {
+            if (prototypeManager.HasIndex<NationalityPrototype>(defaultNationality))
+                Nationality = defaultNationality;
+        }
+        //SS14RU - End
 
         if (!prototypeManager.TryIndex(Species, out var speciesPrototype) || speciesPrototype.RoundStart == false)
         {

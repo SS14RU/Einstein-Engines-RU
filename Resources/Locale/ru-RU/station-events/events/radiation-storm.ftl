@@ -1,4 +1,4 @@
 ## RadiationStorm
 
-station-event-radiation-storm-announcement = High levels of radiation detected near the station. Evacuate any areas containing abnormal green energy fields.
-station-event-radiation-storm-complete-announcement = The radiation threat has passed. Please return to your workplaces.
+station-event-radiation-storm-announcement = Высокий уровень радиации обнаружен вблизи станции. Эвакуируйтесь из всех зон с аномальными зелёными энергетическими полями.
+station-event-radiation-storm-complete-announcement = Угроза радиации миновала. Пожалуйста, вернитесь на свои рабочие места.

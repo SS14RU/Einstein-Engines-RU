@@ -13,9 +13,11 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Mind;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Mind.Components;
+using Robust.Shared.Analyzers;
 
 namespace Content.Shared.AWS.Economy.Bank
 {
+    [Virtual]
     public class EconomyBankAccountSystemShared : EntitySystem
     {
         [Dependency] protected readonly EntityManager _entManager = default!;
@@ -26,12 +28,14 @@ namespace Content.Shared.AWS.Economy.Bank
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         private EntityQuery<ContainerManagerComponent> _containerQuery;
+        private bool _containerQueryInitialized;
 
         public override void Initialize()
         {
             base.Initialize();
 
             _containerQuery = GetEntityQuery<ContainerManagerComponent>();
+            _containerQueryInitialized = true;
 
             SubscribeLocalEvent<EconomyBankTerminalComponent, ExaminedEvent>(OnBankTerminalExamine);
             SubscribeLocalEvent<EconomyBankTerminalComponent, EconomyTerminalMessage>(OnTerminalMessage);
@@ -344,6 +348,8 @@ namespace Content.Shared.AWS.Economy.Bank
         [PublicAPI]
         public ulong CountHoldMoney(EntityUid entityUid)
         {
+            EnsureContainerQuery();
+
             ulong totalMoney = GetEntityMoney(entityUid);
 
             if (!_containerQuery.TryGetComponent(entityUid, out var containerManager))
@@ -358,6 +364,15 @@ namespace Content.Shared.AWS.Economy.Bank
             return totalMoney;
         }
 
+        private void EnsureContainerQuery()
+        {
+            if (_containerQueryInitialized)
+                return;
+
+            _containerQuery = GetEntityQuery<ContainerManagerComponent>();
+            _containerQueryInitialized = true;
+        }
+
         private void ProcessPulledEntity(EntityUid entityUid, ref ulong totalMoney, Stack<ContainerManagerComponent> containersToProcess)
         {
             if (!TryComp<PullerComponent>(entityUid, out var puller) || puller.Pulling is not { } pulledEntity)
@@ -367,20 +382,31 @@ namespace Content.Shared.AWS.Economy.Bank
 
             if (!HasComp<MindContainerComponent>(pulledEntity)
                 && _containerQuery.TryGetComponent(pulledEntity, out var pulledContainerManager))
+            {
                 containersToProcess.Push(pulledContainerManager);
+            }
         }
 
         private void ProcessContainedEntities(Stack<ContainerManagerComponent> containersToProcess, ref ulong totalMoney)
         {
             while (containersToProcess.TryPop(out var currentManager))
+            {
+                if (currentManager?.Containers == null)
+                    continue;
+
                 foreach (var container in currentManager.Containers.Values)
+                {
                     foreach (var containedEntity in container.ContainedEntities)
                     {
                         totalMoney += GetEntityMoney(containedEntity);
 
                         if (_containerQuery.TryGetComponent(containedEntity, out var containedContainerManager))
+                        {
                             containersToProcess.Push(containedContainerManager);
+                        }
                     }
+                }
+            }
         }
 
         private ulong GetEntityMoney(EntityUid entity)

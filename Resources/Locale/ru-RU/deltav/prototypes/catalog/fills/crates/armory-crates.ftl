@@ -1,14 +1,14 @@
-ent-CrateArmoryGrand = Rifles crate
-    .desc = Contains two Mark 1 Rifles and a box of speed-loaders. Requires Armory access to open.
+ent-CrateArmoryGrand = Ящик с винтовками
+    .desc = Содержит две винтовки Mark 1 и коробку ускорителей заряжания. Для открытия требуется доступ в оружейную.
 
-ent-CrateArmoryUniversal = Universal crate
-    .desc = Contains two Mk32 Universal handguns with four mags. Requires Armory access to open.
+ent-CrateArmoryUniversal = Универсальный ящик
+    .desc = Содержит два универсальных пистолета Mk32 с четырьмя магазинами. Для открытия требуется доступ в оружейную.
 
-ent-CrateArmoryAdjutant = Adjutant crate
-    .desc = Contains two Adjutant shotguns with 3 ammo boxes. Requires Armory access to open.
+ent-CrateArmoryAdjutant = Ящик с "Адъютантами"
+    .desc = Содержит два дробовика "Адъютант" и 3 коробки патронов. Для открытия требуется доступ в оружейную.
 
-ent-CrateArmoryEnergyGun = Energy Gun Crate
-    .desc = Contains three Energy Guns. Requires Armory access to open.
+ent-CrateArmoryEnergyGun = Ящик с энергетическим оружием
+    .desc = Содержит три энергетических пистолета. Для открытия требуется доступ в оружейную.
 
-ent-CrateArmoryEnergyGunMini = Miniature Energy Gun Crate
-    .desc = Contains three Miniature Energy Guns. Requires Armory access to open.
+ent-CrateArmoryEnergyGunMini = Ящик с миниатюрным энергетическим оружием
+    .desc = Содержит три миниатюрных энергетических пистолета. Для открытия требуется доступ в оружейную.

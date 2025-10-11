@@ -237,5 +237,5 @@ anomaly-flora-feedback = Музыкальные ноты вьются в воз�
 anomaly-liquid-feedback = Мир из зыбких течений. Его спокойствие — лишь маска. Внутренние глаза голодно наблюдают.
 anomaly-shadow-feedback = В конце времён, когда погаснут все солнца, среди пустоты встанет памятник грехам прошлого.
 
-anomaly-tech-feedback = A symphony of circuits, humming with unheard melodies. Within its core, a thousand futures flicker and fade, a digital oracle whispers prophecies of chrome.
-anomaly-santa-feedback = A cascade of shimmering starlight, the scent of cinnamon and pine hangs heavy in the air. Joyful laughter echoes from within, promising gifts and forgotten dreams.
+anomaly-tech-feedback = Симфония схем, гудящих неслышимыми мелодиями. Внутри неё мерцают и гаснут тысячи будущих, цифровой оракул шепчет пророчества хрома.
+anomaly-santa-feedback = Каскад мерцающего звёздного света, в воздухе витает тяжёлый аромат корицы и сосны. Радостный смех раздаётся изнутри, обещая дары и забытые мечты.

@@ -1,18 +1,18 @@
 book-text-demonomicon1 =
     Как вызвать демона
     - Дж.Дж. Уизджеральд
-    
+
     1. Задача - закончить написание руководства по вызову демона
 book-text-demonomicon2 =
     Как вызвать лемона
     - Дж.Дж. Уизджеральд
-    
+
     1. Завершить написание руководства по призыву демона
     2. Подождите. Опечатка. О черт. Извините, ребята
 book-text-demonomicon3 =
     Классные имена Демонов, которые я нашел
     - мисс Моссрок
-    
+
     Максолох
     Скитухер
     Пандон
@@ -61,36 +61,36 @@ book-text-fishops = FISHOPS ADVANCED USER MANUAL FIRST EDITION
 
      -----------------------------------------------------------------------------
 
-     fishops (v.)
-       Summoning many carp on someone.
-       "I got fishopsed!" (said post revival as the subject died)
-     fishops (n.)
-       The act of war in which the majority of a nuclear task force's budget is put towards fishopsing the station.
-       Alternatively it can be used to refer to the operatives doing fishops.
-       "We are doing fishops."
-       "It's the dreaded fishops!"
+     fishops (гл.)
+       Насылать множество карпов на кого-либо.
+       "Меня наказали fishhops!" (произносится после воскрешения после смерти объекта).
+     fishops (сущ.)
+       Военный акт, при котором большая часть бюджета ядерной оперативной группы направляется на наказывание станции.
+       Также это может использоваться для обозначения оперативников, занимающихся fishhops.
+       "Мы занимаемся fishops."
+       "Это ужасные fishops!"
 
-     This manual will teach you the mechanics of both kinds of fishops.
+     Это руководство научит вас механике обоих видов фишопа.
 
-     CHAPTER 1: The Old Man and the Fish
-     What is a carp? A carp is a space creature that only has one desire: to attack the enemy. Once it finds a suitable target, it will home in and viciously attack. The manner in which it attacks is fairly simple: it will move in, bite the target, then move back out. This is referred to as kiting.
-     This makes a single fish challenging to fight, let alone a group of them. A carp does not need food or water, it attacks for pleasure alone. Unfortunately it will not attack past critical condition, a single carp will refuse to finish off a target. Many carp however will, around 20 will instantly kill just about anything.
+     ГЛАВА 1: Старик и Рыба
+     Что такое карп? Карп — это космическое существо с единственным желанием: атаковать врага. Как только он находит подходящую цель, он наводится на неё и яростно атакует. Манера его атаки довольно проста: он подплывает, кусает цель, а затем отплывает. Это называется кайтингом.
+     Это делает бой даже с одной рыбой сложным, не говоря уже о целой группе. Карпу не нужна еда или вода, он атакует исключительно ради удовольствия. К сожалению, он не будет атаковать цель в критическом состоянии; один карп откажется добивать цель. Однако большое количество карпов сделает это; около 20 особей мгновенно убьют практически всё что угодно.
 
-     CHAPTER 2: Under the Sea
-     Knowing what a carp is good and all, but how does one summon a carp on command? The dehydrated space carp, found rarely on wreckages in space or supplied by the syndicate to its agents and operatives. It is a simple thing: once water is sprayed or poured on it, it will turn into a real space carp. Slipping in a puddle of water will instantly hydrate all the dehydrated carp in your inventory, which can be lucrative for instant "fishbombing".
+     ГЛАВА 2: Под водой
+     Знать, что такое карп — это хорошо, но как призвать его по команде? С помощью дегидрированного космического карпа, которых редко можно найти на обломках в космосе или которые поставляются Синдикатом своим агентам и оперативникам. Всё просто: как только на него попадёт вода (распылённая или пролитая), он превратится в настоящего космического карпа. Если поскользнуться в луже воды, это мгновенно гидрирует всех дегидрированных карпов в вашем инвентаре, что может быть выгодно для мгновенной "рыбомбардировки".
 
-     CHAPTER 3: Best Friends Forever
-     Summoning a carp that attacks you is rarely useful, so there is a way to make them friendly to you. Before hydration, you stroke the dehydrated carp's head like petting a cat. Once hydrated, it will never attack you. This applies to any number of people that do it, so you can have a whole group of people that the carps are friendly towards. Before this was a thing operatives would remotely detonate literal carp bombs: a locker containing carp, a c4 to blow the locker open and a water foam grenade to hydrate the carp. Once at a safe distance, the c4 and grenade are triggered to unleash the carp.
+     ГЛАВА 3: Лучшие друзья навсегда
+     Призыв карпа, который атакует вас, редко бывает полезен, поэтому есть способ сделать их дружелюбными к вам. Перед гидратацией вы гладите голову дегидрированного карпа, словно кошку. После гидратации он никогда не нападёт на вас. Это распространяется на любое количество людей, которые это сделают, так что вы можете собрать целую группу людей, к которым карпы будут дружелюбны. До того, как это появилось, оперативники дистанционно взрывали буквальные карповые бомбы: шкафчик с карпами, C4 для его вскрытия и граната с водяной пеной для гидратации карпов. Находясь на безопасном расстоянии, C4 и граната активируются, чтобы высвободить карпов.
 
-     CHAPTER 4: Fish Petting Pipeline
-     Without an optimal pipeline, not everyone on a team will pet all the fish perfectly. This is where a fish petting pipeline comes in. Each member of the team is only allowed to pet fish in their own pipeline. After everyone has purchased carp, they are put in one large pile. The first member starts petting, putting the petted fish in a second pile. This repeats until there is a pile at the end which everyone has pet at some point. This pile can then be bagged for use.
+     ГЛАВА 4: Конвейер по поглаживанию рыб
+     Без оптимального конвейера не каждый член команды сможет идеально погладить всех рыб. Именно для этого и нужен конвейер по поглаживанию. Каждому члену команды разрешено гладить рыб только в своём собственном потоке конвейера. После того, как все закупили карпов, их складывают в одну большую кучу. Первый член команды начинает гладить, перекладывая поглаженных рыб во вторую кучу. Это повторяется до тех пор, пока в конце не останется куча, которую в какой-то момент погладил каждый. Эту кучу затем можно упаковать в мешки для использования.
 
-     CHAPTER 5: Deployment
-     Fishbombs, slipping and other methods are powerful but require large setup. A much easier way to hydrate them is to have a bottle of water. Any bottle stores 100u of liquids so simply empty it and fill it from a sink. Once you see someone that should be attacked, or are in an area that should be secured from the enemy, simply pour a single unit of water onto each carp. A single bottle will have enough for 100 carp, so you can even take a drink if you get thirsty.
-     Each member in a fishops squad should carry a bottle and some fish, as there will be far more than just one member can carry.
+     ГЛАВА 5: Развёртывание
+     Рыбомбардировки, поскальзывания и другие методы мощны, но требуют длительной подготовки. Гораздо более простой способ их гидратации — иметь при себе бутылку воды. Любая бутылка вмещает 100 единиц жидкости, так что просто опорожните её и наполните из раковины. Как только вы увидите кого-то, кого следует атаковать, или окажетесь в зоне, которую нужно защитить от врага, просто вылейте по одной единице воды на каждого карпа. Одной бутылки хватит на 100 карпов, так что вы даже сможете отхлебнуть, если почувствуете жажду.
+     Каждый член отряда рыбоперации должен нести бутылку и несколько рыб, так как их будет гораздо больше, чем сможет унести один человек.
 
-     CHAPTER 6: Fish War
-     In the event of fish war there will be double the fish, more than could possibly be carried. A reinforcement or two will be required to carry the surplus fish. A fish war has never happened in recorded history, so it is currently purely theoretical. Its destructive power would rival several neutronium bombs.
+     ГЛАВА 6: Рыбья война
+     В случае рыбьей войны рыб будет вдвое больше — столько, сколько невозможно унести. Потребуется одно или два подкрепления, чтобы унести излишки рыб. Рыбья война ни разу не случалась за всю писаную историю, так что в настоящее время она чисто теоретическая. Её разрушительная мощь могла бы соперничать с несколькими нейтрониевыми бомбами.
 
 
 book-text-detective =

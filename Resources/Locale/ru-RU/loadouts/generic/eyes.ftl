@@ -1,19 +1,19 @@
-loadout-description-LoadoutEyesEyepatch = Eyewear, for the fashionista without an eye.
-loadout-name-LoadoutEyesEyepatchColor = eyepatch (colorable)
-loadout-name-LoadoutEyesEyepatchColorFlipped = eyepatch, flipped (colorable)
-loadout-name-LoadoutEyesGlassesHipster = hipster glasses (colorable)
-loadout-name-LoadoutEyesGlassesMonocle = monocle (colorable)
-loadout-name-LoadoutEyesGlassesPanto = panto glasses (colorable)
-loadout-description-LoadoutEyesBlindfold = Why would you want this?
-loadout-name-LoadoutEyesBlindfoldColor = blindfold (colorable)
-loadout-description-LoadoutEyesBlindfoldColor = Why would you want this? At least it comes in a wide assortment of colors.
+loadout-description-LoadoutEyesEyepatch = Аксессуар для модника, оставшегося без глаза.
+loadout-name-LoadoutEyesEyepatchColor = повязка на глаз (окрашиваемая)
+loadout-name-LoadoutEyesEyepatchColorFlipped = повязка на глаз, перевёрнутая (окрашиваемая)
+loadout-name-LoadoutEyesGlassesHipster = хипстерские очки (окрашиваемые)
+loadout-name-LoadoutEyesGlassesMonocle = монокль (окрашиваемый)
+loadout-name-LoadoutEyesGlassesPanto = очки-панто (окрашиваемые)
+loadout-description-LoadoutEyesBlindfold = Зачем вам это?
+loadout-name-LoadoutEyesBlindfoldColor = повязка на глаза (окрашиваемая)
+loadout-description-LoadoutEyesBlindfoldColor = Зачем вам это? По крайней мере, она бывает разных цветов.
 
-loadout-name-LoadoutEyesGlassesCheapSunglassesAviator = cheap aviators (colorable)
-loadout-name-LoadoutEyesGlassesSunglassesAviator = aviators (colorable)
+loadout-name-LoadoutEyesGlassesCheapSunglassesAviator = дешёвые авиаторы (окрашиваемые)
+loadout-name-LoadoutEyesGlassesSunglassesAviator = авиаторы (окрашиваемые)
 
-loadout-name-LoadoutItemBlindfoldFake = "blind"fold
-loadout-description-LoadoutItemBlindfoldFake = This product may not work as advertised.
-loadout-name-LoadoutEyesBlindfoldFakeColor = "blind"fold (colorable)
-loadout-description-LoadoutEyesBlindfoldFakeColor = This product may not work as advertised.
+loadout-name-LoadoutItemBlindfoldFake = "слепая" повязка
+loadout-description-LoadoutItemBlindfoldFake = Этот товар может работать не так, как заявлено.
+loadout-name-LoadoutEyesBlindfoldFakeColor = "слепая" повязка (окрашиваемая)
+loadout-description-LoadoutEyesBlindfoldFakeColor = Этот товар может работать не так, как заявлено.
 
-loadout-name-LoadoutEyesGlasses = glasses (colorable)
+loadout-name-LoadoutEyesGlasses = очки (окрашиваемые)

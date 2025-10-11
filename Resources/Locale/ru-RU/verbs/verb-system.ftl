@@ -27,10 +27,10 @@ verb-categories-set-sensor = Датчики
 verb-categories-timer = Установить задержку
 verb-categories-lever = Рычаг
 verb-categories-select-type = Выбрать режим
-verb-categories-select-faction = Select Faction
+verb-categories-select-faction = Выберите фракцию
 verb-categories-rename = Rename
 verb-categories-fax = Задать место назначения
-verb-categories-power-level = Power Level
+verb-categories-power-level = Уровень мощности
 verb-categories-interaction = Взаимодействовать
 
 verb-categories-blood-cult = Культ Крови

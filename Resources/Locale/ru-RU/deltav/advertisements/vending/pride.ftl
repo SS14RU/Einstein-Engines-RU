@@ -1,5 +1,5 @@
-advertisement-pride-1 = Be gay do crime!
-advertisement-pride-2 = Full of colors!
-advertisement-pride-3 = You are valid!
-thankyou-pride-1 = Go, do some crime!
-thankyou-pride-2 = Have a colorful day!
+advertisement-pride-1 = Будь собой, твори беззаконие!
+advertisement-pride-2 = Полон красок!
+advertisement-pride-3 = С тобой всё так!
+thankyou-pride-1 = Вперёд, нарушать закон!
+thankyou-pride-2 = Красочного дня!

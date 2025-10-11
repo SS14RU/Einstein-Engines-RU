@@ -1,33 +1,34 @@
-cmd-panicbunker-desc = Toggles the panic bunker, which enables stricter restrictions on who's allowed to join the server.
-cmd-panicbunker-help = Usage: panicbunker
-panicbunker-command-enabled = Режим "Сталин" был включён.
-panicbunker-command-disabled = Режим "Сталин" был выключен.
-cmd-panicbunker_disable_with_admins-desc = Toggles whether or not the panic bunker will disable when an admin connects.
-cmd-panicbunker_disable_with_admins-help = Usage: panicbunker_disable_with_admins
-panicbunker-command-disable-with-admins-enabled = The panic bunker will automatically disable with admins online.
-panicbunker-command-disable-with-admins-disabled = The panic bunker will not automatically disable with admins online.
+cmd-panicbunker-desc = Переключает режим "Сталин", который включает более строгие ограничения на подключение к серверу.
+cmd-panicbunker-help = Использование: panicbunker
+panicbunker-command-enabled = Режим "Сталин" включён.
+panicbunker-command-disabled = Режим "Сталин" выключен.
 
-cmd-panicbunker_enable_without_admins-desc = Toggles whether or not the panic bunker will enable when the last admin disconnects.
-cmd-panicbunker_enable_without_admins-help = Usage: panicbunker_enable_without_admins
-panicbunker-command-enable-without-admins-enabled = The panic bunker will automatically enable without admins online.
-panicbunker-command-enable-without-admins-disabled = The panic bunker will not automatically enable without admins online.
+cmd-panicbunker_disable_with_admins-desc = Переключает, будет ли режим "Сталин" автоматически отключаться при подключении администратора.
+cmd-panicbunker_disable_with_admins-help = Использование: panicbunker_disable_with_admins
+panicbunker-command-disable-with-admins-enabled = Режим "Сталин" будет автоматически отключаться при наличии администраторов в сети.
+panicbunker-command-disable-with-admins-disabled = Режим "Сталин" не будет автоматически отключаться при наличии администраторов в сети.
 
-cmd-panicbunker_count_deadminned_admins-desc = Toggles whether or not to count deadminned admins when automatically enabling and disabling the panic bunker.
-cmd-panicbunker_count_deadminned_admins-help = Usage: panicbunker_count_deadminned_admins
-panicbunker-command-count-deadminned-admins-enabled = The panic bunker will count deadminned admins when made to automatically enable and disable.
-panicbunker-command-count-deadminned-admins-disabled = The panic bunker will not count deadminned admins when made to automatically enable and disable.
+cmd-panicbunker_enable_without_admins-desc = Переключает, будет ли режим "Сталин" автоматически включаться при выходе последнего администратора.
+cmd-panicbunker_enable_without_admins-help = Использование: panicbunker_enable_without_admins
+panicbunker-command-enable-without-admins-enabled = Режим "Сталин" будет автоматически включаться без администраторов в сети.
+panicbunker-command-enable-without-admins-disabled = Режим "Сталин" не будет автоматически включаться без администраторов в сети.
 
-cmd-panicbunker_show_reason-desc = Toggles whether or not to show connecting clients the reason why the panic bunker blocked them from joining.
-cmd-panicbunker_show_reason-help = Usage: panicbunker_show_reason
-panicbunker-command-show-reason-enabled = The panic bunker will now show a reason to users it blocks from connecting.
-panicbunker-command-show-reason-disabled = The panic bunker will no longer show a reason to users it blocks from connecting.
+cmd-panicbunker_count_deadminned_admins-desc = Переключает, будут ли учитываться деадминенные администраторы при автоматическом включении или отключении режима "Сталин".
+cmd-panicbunker_count_deadminned_admins-help = Использование: panicbunker_count_deadminned_admins
+panicbunker-command-count-deadminned-admins-enabled = Режим "Сталин" будет учитывать деадминенных администраторов.
+panicbunker-command-count-deadminned-admins-disabled = Режим "Сталин" не будет учитывать деадминенных администраторов.
 
-cmd-panicbunker_min_account_age-desc = Gets or sets the minimum account age in minutes that an account must have to be allowed to connect with the panic bunker enabled.
-cmd-panicbunker_min_account_age-help = Usage: panicbunker_min_account_age <minutes>
-panicbunker-command-min-account-age-is = The minimum account age for the panic bunker is {$minutes} minutes.
-panicbunker-command-min-account-age-set = Set the minimum account age for the panic bunker to {$minutes} minutes.
+cmd-panicbunker_show_reason-desc = Переключает, будет ли показываться игрокам причина блокировки подключения режимом "Сталин".
+cmd-panicbunker_show_reason-help = Использование: panicbunker_show_reason
+panicbunker-command-show-reason-enabled = Режим "Сталин" теперь будет показывать причину игрокам, которых он блокирует.
+panicbunker-command-show-reason-disabled = Режим "Сталин" больше не будет показывать причину игрокам, которых он блокирует.
 
-cmd-panicbunker_min_overall_minutes-desc = Gets or sets the minimum overall playtime in minutes that an account must have to be allowed to connect with the panic bunker enabled.
-cmd-panicbunker_min_overall_minutes-help = Usage: panicbunker_min_overall_minutes <minutes>
-panicbunker-command-min-overall-minutes-is = The minimum overall playtime for the panic bunker is {$minutes} minutes.
-panicbunker-command-min-overall-minutes-set = Set the minimum overall playtime for the panic bunker to {$minutes} minutes.
+cmd-panicbunker_min_account_age-desc = Получить или задать минимальный возраст аккаунта в минутах для подключения при активном режиме "Сталин".
+cmd-panicbunker_min_account_age-help = Использование: panicbunker_min_account_age <minutes>
+panicbunker-command-min-account-age-is = Минимальный возраст аккаунта для режима "Сталин" — {$minutes} минут.
+panicbunker-command-min-account-age-set = Минимальный возраст аккаунта для режима "Сталин" установлен в {$minutes} минут.
+
+cmd-panicbunker_min_overall_minutes-desc = Получить или задать минимальное общее время игры в минутах для подключения при активном режиме "Сталин".
+cmd-panicbunker_min_overall_minutes-help = Использование: panicbunker_min_overall_minutes <минminutesуты>
+panicbunker-command-min-overall-minutes-is = Минимальное общее время игры для режима "Сталин" — {$minutes} минут.
+panicbunker-command-min-overall-minutes-set = Минимальное общее время игры для режима "Сталин" установлено в {$minutes} минут.

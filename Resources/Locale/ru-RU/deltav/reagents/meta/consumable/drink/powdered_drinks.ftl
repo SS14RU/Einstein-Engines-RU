@@ -1,41 +1,41 @@
-reagent-name-powdered-milk = powdered milk
-reagent-desc-powdered-milk = A powder-based milk substitute that can be reconstituted with water.
+reagent-name-powdered-milk = сухое молоко
+reagent-desc-powdered-milk = Заменитель молока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-milk-soy = powdered soy milk
-reagent-desc-powdered-milk-soy = A powder-based dairy-free milk substitute that can be reconstituted with water.
+reagent-name-powdered-milk-soy = сухое соевое молоко
+reagent-desc-powdered-milk-soy = Безмолочный заменитель молока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-orange = powdered orange juice
-reagent-desc-powdered-juice-orange = A powder-based orange juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-orange = сухой апельсиновый сок
+reagent-desc-powdered-juice-orange = Заменитель апельсинового сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-lime = powdered lime juice
-reagent-desc-powdered-juice-lime = A powder-based lime juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-lime = сухой лаймовый сок
+reagent-desc-powdered-juice-lime = Заменитель лаймового сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-lemon = powdered lemon juice
-reagent-desc-powdered-juice-lemon = A powder-based lemon juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-lemon = сухой лимонный сок
+reagent-desc-powdered-juice-lemon = Заменитель лимонного сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-pineapple = powdered pineapple juice
-reagent-desc-powdered-juice-pineapple = A powder-based pineapple juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-pineapple = сухой ананасовый сок
+reagent-desc-powdered-juice-pineapple = Заменитель ананасового сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-banana = powdered banana juice
-reagent-desc-powdered-juice-banana = A powder-based banana juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-banana = сухой банановый сок
+reagent-desc-powdered-juice-banana = Заменитель бананового сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-berry = powdered berry juice
-reagent-desc-powdered-juice-berry = A powder-based berry juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-berry = сухой ягодный сок
+reagent-desc-powdered-juice-berry = Заменитель ягодного сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-watermelon = powdered melon juice
-reagent-desc-powdered-juice-watermelon = A powder-based watermelon juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-watermelon = сухой арбузный сок
+reagent-desc-powdered-juice-watermelon = Заменитель арбузного сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-grape = powdered grape juice
-reagent-desc-powdered-juice-grape = A powder-based grape juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-grape = сухой виноградный сок
+reagent-desc-powdered-juice-grape = Заменитель виноградного сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-apple = powdered apple juice
-reagent-desc-powdered-juice-apple = A powder-based apple juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-apple = сухой яблочный сок
+reagent-desc-powdered-juice-apple = Заменитель яблочного сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-cherry = powdered cherry juice
-reagent-desc-powdered-juice-cherry = A powder-based cherry juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-cherry = сухой вишневый сок
+reagent-desc-powdered-juice-cherry = Заменитель вишневого сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-carrot = powdered carrot juice
-reagent-desc-powdered-juice-carrot = A powder-based carrot juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-carrot = сухой морковный сок
+reagent-desc-powdered-juice-carrot = Заменитель морковного сока в виде порошка, который можно развести водой.
 
-reagent-name-powdered-juice-tomato = powdered tomato juice
-reagent-desc-powdered-juice-tomato = A powder-based tomato juice substitute that can be reconstituted with water.
+reagent-name-powdered-juice-tomato = сухой томатный сок
+reagent-desc-powdered-juice-tomato = Заменитель томатного сока в виде порошка, который можно развести водой.

@@ -1,8 +1,8 @@
 language-Universal-name = Универсальный
 language-Universal-description = Что ты такое?
 
-language-Psychomantic-name = Psychomantic
-language-Psychomantic-description = Pure meaning, free from the tyranny of primative words and gestures.
+language-Psychomantic-name = Психомантический
+language-Psychomantic-description = Чистый смысл, свободный от тирании примитивных слов и жестов.
 
 language-Bubblish-name = Пузырчатый
 language-Bubblish-description = Язык слаймов. Поскольку он представляет собой смесь булькающих звуков и хлопков, людям очень трудно говорить на нем без использования механических приспособлений.
@@ -90,8 +90,8 @@ language-Chittin-description =
 
 language-Xeeplian-name = Xeeplian
 language-Xeeplian-description =
-    Our language is highly advanced, efficient and to the point.
-    We have taken a liking to mimic some of the inferior lifeforms' babbling in the further pursuit of Our goals.
+    Наш язык высокоразвит, эффективен и точен.
+    Мы полюбили подражать болтовне некоторых низших форм жизни, стремясь к достижению Наших целей.
 
 # Animal Languages
 
@@ -147,5 +147,5 @@ language-Eldritch-description =
 
 language-Penguin-name = Пингвиний
 language-Penguin-description = Бвап!
-language-DroneTalk-name = Drone
-language-DroneTalk-description = Incomprehensible to most non-drones!
+language-DroneTalk-name = Дрон
+language-DroneTalk-description = Непонятно большинству не-дронолюбов!

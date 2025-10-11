@@ -1,11 +1,11 @@
-department-Logistics = Logistics
+department-Logistics = Отдел снабжение
 department-Civilian = Сервисный отдел
 department-Command = Командование
-department-CentralCommand = Central Command
+department-CentralCommand = Центральное командование
 department-Engineering = Инженерный отдел
 department-Medical = Медицинский отдел
 department-Security = Департамента Шерифа
-department-Epistemics = Epistemics
+department-Epistemics = Научный отдел
 department-Silicon = Синтетики
 department-Specific = На определённых станциях
 department-Dignitary = Высокопоставленные

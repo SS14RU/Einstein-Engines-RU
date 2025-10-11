@@ -735,7 +735,8 @@ namespace Content.Client.Lobby.UI
             NationalityButton.Clear();
             _nationalies.Clear();
 
-            _nationalies.AddRange(_prototypeManager.EnumeratePrototypes<NationalityPrototype>()
+            //SS14RU - Start
+            var validNationalities = _prototypeManager.EnumeratePrototypes<NationalityPrototype>()
                 .Where(o => _characterRequirementsSystem.CheckRequirementsValid(o.Requirements,
                     _controller.GetPreferredJob(Profile ?? HumanoidCharacterProfile.DefaultWithSpecies()),
                     Profile ?? HumanoidCharacterProfile.DefaultWithSpecies(),
@@ -744,7 +745,13 @@ namespace Content.Client.Lobby.UI
                     o,
                     _entManager,
                     _prototypeManager,
-                    _cfgManager, out _)));
+                    _cfgManager, out _))
+                .OrderBy(o => o.SortOrder)
+                .ThenBy(o => o.NameKey)
+                .ToList();
+            //SS14RU - End
+
+            _nationalies.AddRange(validNationalities);
 
             var nationalityIds = _nationalies.Select(o => o.ID).ToList();
 

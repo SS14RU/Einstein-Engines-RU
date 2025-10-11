@@ -14,7 +14,7 @@ pda-bound-user-interface-show-uplink-description = Получить доступ
 pda-bound-user-interface-lock-uplink-title = Заблокировать аплинк
 pda-bound-user-interface-lock-uplink-description = Запретите кому-либо получать доступ к вашему аплинку без кода
 comp-pda-ui-menu-title = ПДА
-comp-pda-ui-footer = Personal Digital Assistant
+comp-pda-ui-footer = Персональный цифровой помощник
 
 comp-pda-ui-station = Станция: [color=white]{ $station }[/color]
 comp-pda-ui-station-alert-level = Уровень тревоги: [color={ $color }]{ $level }[/color]

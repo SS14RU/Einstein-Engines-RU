@@ -11,10 +11,12 @@
       inverted: true
       species:
         - Tajaran
-    - !type:CharacterNationalityRequirement
-      inverted: true
-      nationalities:
-        - Adhomai
+    #AWS-start
+    # - !type:CharacterNationalityRequirement
+    #   inverted: true
+    #   nationalities:
+    #     - Adhomai
+    #AWS-end
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:

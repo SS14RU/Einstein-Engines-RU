@@ -145,10 +145,10 @@ reagent-desc-psicodine = Подавляет тревогу и прочие фо�
 reagent-name-potassium-iodide = йодистый калий
 reagent-desc-potassium-iodide = Снижает поражающее действие от радиации на 90%. Только профилактическое применение.
 
-reagent-name-haloperidol = галоперидол 
+reagent-name-haloperidol = галоперидол
 reagent-desc-haloperidol = Выводит из организма большую часть стимулирующих или галлюцигенных химикатов. Вызывает сонливость.
 reagent-name-artiplates = artiplates
-reagent-desc-artiplates = A highly advanced form of artificial blood that expands rapidly when introduced to the bloodstream. Due to its expansive properties, it can cause severe internal hemorrhaging in large doses.
+reagent-desc-artiplates = Высокотехнологичная форма искусственной крови, которая быстро расширяется при введении в кровоток. Из-за своих расширяющихся свойств в больших дозах может вызвать сильное внутреннее кровотечение.
 
 reagent-name-enunciase = enunciase
-reagent-desc-enunciase = An enzyme that helps stimulate the language centers of the brain, relieving stuttering due to other drugs and temporarily forcing 'perfect' speech. Causes nausea in high doses.
+reagent-desc-enunciase = Фермент, который помогает стимулировать речевые центры мозга, облегчая заикание, вызванное другими препаратами, и временно обеспечивая «идеальную» речь. В больших дозах вызывает тошноту.

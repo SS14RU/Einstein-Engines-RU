@@ -11,8 +11,8 @@ cmd-whitelistremove-removed = Пользователь { $username } удалё�
 cmd-whitelistremove-not-found = Пользователь '{ $username }' не найден
 cmd-whitelistremove-arg-player = [player]
 
-cmd-kicknonwhitelisted-desc = Kicks all non-whitelisted players from the server.
-cmd-kicknonwhitelisted-help = Usage: kicknonwhitelisted
+cmd-kicknonwhitelisted-desc = Исключает с сервера всех игроков, не внесенных в белый список.
+cmd-kicknonwhitelisted-help = Использование: kicknonwhitelisted
 
 ban-banned-permanent = Этот бан можно только обжаловать.
 ban-banned-permanent-appeal = Этот бан можно только обжаловать. Для этого посетите наш форум: { $link }

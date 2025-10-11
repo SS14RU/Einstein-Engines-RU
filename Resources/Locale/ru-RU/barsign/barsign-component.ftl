@@ -5,8 +5,8 @@ barsign-component-name = вывеска бара
 
 ## The Harmbaton
 
-barsign-ui-menu = Bar Sign Configuration
-barsign-ui-set-label = Set Sign:
+barsign-ui-menu = Настройка барной вывески
+barsign-ui-set-label = Установить вывеску:
 
 # Bar signs prototypes
 
@@ -146,8 +146,8 @@ barsign-prototype-description-emprah = Нравится и фанатикам, �
 barsign-prototype-name-spacebucks = Космобаксы
 barsign-prototype-description-spacebucks = Вы не сможете убежать от них, даже в космосе.
 ## Maltroach
-barsign-prototype-name-maltroach = Maltroach
-barsign-prototype-description-maltroach = Squeak!
+barsign-prototype-name-maltroach = Солодовый таракан
+barsign-prototype-description-maltroach = Писк
 
 ## EmpBarSign
 barsign-prototype-description-empbarsign = Что-то пошло совсем не так.

@@ -1,1 +1,1 @@
-﻿disarm-malus-examined = This makes you {$malus}% harder to disarm.
+﻿disarm-malus-examined = Обезоружить вас теперь на {$malus}% сложнее.

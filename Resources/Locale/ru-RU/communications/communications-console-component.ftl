@@ -10,8 +10,8 @@ comms-console-menu-time-remaining = Оставшееся время: { $time }
 # Popup
 # Popup
 comms-console-permission-denied = В доступе отказано
-comms-console-shuttle-unavailable = Shuttle is currently unavailable
-comms-console-message-too-long = Message is too long
+comms-console-shuttle-unavailable = Shuttle в настоящее время недоступен
+comms-console-message-too-long = Сообщение слишком длинное
 
 # Placeholder values
 comms-console-announcement-sent-by = Отправитель

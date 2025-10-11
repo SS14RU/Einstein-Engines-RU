@@ -1,871 +1,871 @@
 # This list is sorted Mixed Alphabetically with Generic always being placed first, Departments alphabetically, Items Groups Alphabetically, and Jobs Alphabetically after all Department items
 # Generic - Clothing
-character-item-group-LoadoutBackpacks = Civilian Backpacks
-character-item-group-LoadoutEyes = Civilian Eyewear
-character-item-group-LoadoutGloves = Civilian Gloves
-character-item-group-LoadoutHead = Civilian Headgear
-character-item-group-LoadoutMasks = Civilian Masks
-character-item-group-LoadoutNeck = Civilian Neckwear
-character-item-group-LoadoutOuter = Civilian Outerwear
-character-item-group-LoadoutBelt = Civilian Belts
-character-item-group-LoadoutShoes = Civilian Shoes
-character-item-group-LoadoutUniformsCivilian = Civilian Uniforms
+character-item-group-LoadoutBackpacks = Гражданские рюкзаки
+character-item-group-LoadoutEyes = Гражданские очки и аксессуары
+character-item-group-LoadoutGloves = Гражданские перчатки
+character-item-group-LoadoutHead = Гражданские головные уборы
+character-item-group-LoadoutMasks = Гражданские маски
+character-item-group-LoadoutNeck = Гражданские шейные аксессуары
+character-item-group-LoadoutOuter = Гражданская верхняя одежда
+character-item-group-LoadoutBelt = Гражданские пояса
+character-item-group-LoadoutShoes = Гражданская обувь
+character-item-group-LoadoutUniformsCivilian = Гражданская униформа
 
 # Generic - Items
 # Generic - Items
-character-item-group-LoadoutAirTank = Emergency Air Tanks
-character-item-group-LoadoutLighters = Lighters
-character-item-group-LoadoutInstrumentsAny = Musical Instruments (Non-Musician)
-character-item-group-LoadoutSmokes = Smokeables
-character-item-group-LoadoutBoxKits = Survival Kits
-character-item-group-LoadoutWritables = Writing Tools
-character-item-group-LoadoutPets = Pets
+character-item-group-LoadoutAirTank = Аварийные кислородные баллоны
+character-item-group-LoadoutLighters = Зажигалки
+character-item-group-LoadoutInstrumentsAny = Музыкальные инструменты (не для музыканта)
+character-item-group-LoadoutSmokes = Курительные принадлежности
+character-item-group-LoadoutBoxKits = Наборы для выживания
+character-item-group-LoadoutWritables = Письменные принадлежности
+character-item-group-LoadoutPets = Питомцы
 
 # Job Specific Template
-character-item-group-LoadoutCards = Playing Cards
-character-item-group-LoadoutPlushie = Plushies
+character-item-group-LoadoutCards = Игральные карты
+character-item-group-LoadoutPlushie = Плюшевые игрушки
 
 # Job Specific Template
-character-item-group-LoadoutJOBBackpacks = JOB Backpacks
-character-item-group-LoadoutJOBBelt = JOB Belt
-character-item-group-LoadoutJOBEars = JOB Ears
-character-item-group-LoadoutJOBEquipment = JOB Equipment
-character-item-group-LoadoutJOBEyes = JOB Eyewear
-character-item-group-LoadoutJOBloves = JOB Gloves
-character-item-group-LoadoutJOBHead = JOB Headgear
-character-item-group-LoadoutJOBId = JOB Id
-character-item-group-LoadoutJOBNeck = JOB Neckwear
-character-item-group-LoadoutJOBMask = JOB Masks
-character-item-group-LoadoutJOBOuter = JOB Outerwear
-character-item-group-LoadoutJOBShoes = JOB Shoes
-character-item-group-LoadoutJOBUniforms = JOB Uniforms
+character-item-group-LoadoutJOBBackpacks = Рюкзаки (Должность)
+character-item-group-LoadoutJOBBelt = Пояс (Должность)
+character-item-group-LoadoutJOBEars = Уши (Должность)
+character-item-group-LoadoutJOBEquipment = Снаряжение (Должность)
+character-item-group-LoadoutJOBEyes = Очки (Должность)
+character-item-group-LoadoutJOBloves = Перчатки (Должность)
+character-item-group-LoadoutJOBHead = Головной убор (Должность)
+character-item-group-LoadoutJOBId = ID-карта (Должность)
+character-item-group-LoadoutJOBNeck = Шея (Должность)
+character-item-group-LoadoutJOBMask = Маски (Должность)
+character-item-group-LoadoutJOBOuter = Верхняя одежда (Должность)
+character-item-group-LoadoutJOBShoes = Обувь (Должность)
+character-item-group-LoadoutJOBUniforms = Униформа (Должность)
 
 # Command
 # Command
-character-item-group-LoadoutCommandBackpacks = Command Backpacks
-character-item-group-LoadoutCommandBelt = Command Belt
-character-item-group-LoadoutCommandEars = Command Ears
-character-item-group-LoadoutCommandEquipment = Command Equipment
-character-item-group-LoadoutCommandEyes = Command Eyewear
-character-item-group-LoadoutCommandloves = Command Gloves
-character-item-group-LoadoutCommandHead = Command Headgear
-character-item-group-LoadoutCommandId = Command Id
-character-item-group-LoadoutCommandNeck = Command Neckwear
-character-item-group-LoadoutCommandMask = Command Masks
-character-item-group-LoadoutCommandOuter = Command Outerwear
-character-item-group-LoadoutCommandShoes = Command Shoes
-character-item-group-LoadoutCommandUniforms = Command Uniforms
+character-item-group-LoadoutCommandBackpacks = Рюкзаки командования
+character-item-group-LoadoutCommandBelt = Пояс командования
+character-item-group-LoadoutCommandEars = Уши командования
+character-item-group-LoadoutCommandEquipment = Снаряжение командования
+character-item-group-LoadoutCommandEyes = Очки командования
+character-item-group-LoadoutCommandloves = Перчатки командования
+character-item-group-LoadoutCommandHead = Головной убор командования
+character-item-group-LoadoutCommandId = ID-карта командования
+character-item-group-LoadoutCommandNeck = Шея командования
+character-item-group-LoadoutCommandMask = Маски командования
+character-item-group-LoadoutCommandOuter = Верхняя одежда командования
+character-item-group-LoadoutCommandShoes = Обувь командования
+character-item-group-LoadoutCommandUniforms = Униформа командования
 
 # Command - Captain
 # Command - Captain
-character-item-group-LoadoutCaptainBackpacks = Captain Backpacks
-character-item-group-LoadoutCaptainBelt = Captain's Belt
-character-item-group-LoadoutCaptainEars = Captain Ears
-character-item-group-LoadoutCaptainEquipment = Captain Equipment
-character-item-group-LoadoutCaptainTrinkets = Captain's Trinkets
-character-item-group-LoadoutCaptainWeapon = Captain's Personal Weapon
-character-item-group-LoadoutCaptainEyes = Captain's Eyewear
-character-item-group-LoadoutCaptainGloves = Captain's Gloves
-character-item-group-LoadoutCaptainHead = Captain's Headgear
-character-item-group-LoadoutCaptainId = Captain's Id
-character-item-group-LoadoutCaptainNeck = Captain's Neckwear
-character-item-group-LoadoutCaptainMask = Captain's Masks
-character-item-group-LoadoutCaptainOuter = Captain's Outerwear
-character-item-group-LoadoutCaptainShoes = Captain's Shoes
-character-item-group-LoadoutCaptainUniforms = Captain's Uniforms
+character-item-group-LoadoutCaptainBackpacks = Рюкзаки капитана
+character-item-group-LoadoutCaptainBelt = Пояс капитана
+character-item-group-LoadoutCaptainEars = Уши капитана
+character-item-group-LoadoutCaptainEquipment = Снаряжение капитана
+character-item-group-LoadoutCaptainTrinkets = Брелоки капитана
+character-item-group-LoadoutCaptainWeapon = Личное оружие капитана
+character-item-group-LoadoutCaptainEyes = Очки капитана
+character-item-group-LoadoutCaptainGloves = Перчатки капитана
+character-item-group-LoadoutCaptainHead = Головной убор капитана
+character-item-group-LoadoutCaptainId = ID-карта капитана
+character-item-group-LoadoutCaptainNeck = Шея капитана
+character-item-group-LoadoutCaptainMask = Маски капитана
+character-item-group-LoadoutCaptainOuter = Верхняя одежда капитана
+character-item-group-LoadoutCaptainShoes = Обувь капитана
+character-item-group-LoadoutCaptainUniforms = Униформа капитана
 
 # Command - Head Of Personnel
 # Command - Head Of Personnel
-character-item-group-LoadoutHeadOfPersonnelBackpacks = Head of Personnel Backpacks
-character-item-group-LoadoutHeadOfPersonnelBelt = Head of Personnel Belt
-character-item-group-LoadoutHeadOfPersonnelEars = Head of Personnel Ears
-character-item-group-LoadoutHeadOfPersonnelEquipment = Head of Personnel Equipment
-character-item-group-LoadoutHeadOfPersonnelTrinkets = Head of Personnel Trinkets
-character-item-group-LoadoutHeadOfPersonnelEyes = Head of Personnel Eyewear
-character-item-group-LoadoutHeadOfPersonnelGloves = Head of Personnel Gloves
-character-item-group-LoadoutHeadOfPersonnelHead = Head of Personnel Headgear
-character-item-group-LoadoutHeadOfPersonnelId = Head of Personnel Id
-character-item-group-LoadoutHeadOfPersonnelNeck = Head of Personnel Neckwear
-character-item-group-LoadoutHeadOfPersonnelOuter = Head of Personnel Outerwear
-character-item-group-LoadoutHeadOfPersonnelShoes = Head of Personnel Shoes
-character-item-group-LoadoutHeadOfPersonnelUniforms = Head of Personnel Uniforms
+character-item-group-LoadoutHeadOfPersonnelBackpacks = Рюкзаки главы персонала
+character-item-group-LoadoutHeadOfPersonnelBelt = Пояс главы персонала
+character-item-group-LoadoutHeadOfPersonnelEars = Уши главы персонала
+character-item-group-LoadoutHeadOfPersonnelEquipment = Снаряжение главы персонала
+character-item-group-LoadoutHeadOfPersonnelTrinkets = Брелоки главы персонала
+character-item-group-LoadoutHeadOfPersonnelEyes = Очки главы персонала
+character-item-group-LoadoutHeadOfPersonnelGloves = Перчатки главы персонала
+character-item-group-LoadoutHeadOfPersonnelHead = Головной убор главы персонала
+character-item-group-LoadoutHeadOfPersonnelId = ID-карта главы персонала
+character-item-group-LoadoutHeadOfPersonnelNeck = Шея главы персонала
+character-item-group-LoadoutHeadOfPersonnelOuter = Верхняя одежда главы персонала
+character-item-group-LoadoutHeadOfPersonnelShoes = Обувь главы персонала
+character-item-group-LoadoutHeadOfPersonnelUniforms = Униформа главы персонала
 
 # Engineering
 # Dignitary - BlueshieldOfficer
-character-item-group-LoadoutBlueshieldOfficerBackpacks = Blueshield Officer Backpacks
-character-item-group-LoadoutBlueshieldOfficerVests = Blueshield Officer Vests
-character-item-group-LoadoutBlueshieldOfficerUniforms = Blueshield Officer Uniforms
-character-item-group-LoadoutBlueshieldOfficerPrimary = Blueshield Officer Primary Weapon
+character-item-group-LoadoutBlueshieldOfficerBackpacks = Рюкзаки офицера "Синий Щит"
+character-item-group-LoadoutBlueshieldOfficerVests = Жилеты офицера "Синий Щит"
+character-item-group-LoadoutBlueshieldOfficerUniforms = Униформа офицера "Синий Щит"
+character-item-group-LoadoutBlueshieldOfficerPrimary = Основное оружие офицера "Синий Щит"
 
 # Dignitary - Magistrate
-character-item-group-LoadoutMagistrateHead = Magistrate Headgear
-character-item-group-LoadoutMagistrateNeck = Magistrate Neckwear
-character-item-group-LoadoutMagistrateOuter = Magistrate Outerwear
-character-item-group-LoadoutMagistrateUniforms = Magistrate Uniforms
+character-item-group-LoadoutMagistrateHead = Головной убор магистрата
+character-item-group-LoadoutMagistrateNeck = Шея магистрата
+character-item-group-LoadoutMagistrateOuter = Верхняя одежда магистрата
+character-item-group-LoadoutMagistrateUniforms = Униформа магистрата
 
 # Dignitary - Corporate Liaison
-character-item-group-LoadoutNanorepBackpacks = Corporate Liaison Backpacks
-character-item-group-LoadoutNanorepUniforms = Corporate Liaison Uniforms
-character-item-group-LoadoutNanotrasenRepresentativeWeapon = Corporate Liaison Weapons
+character-item-group-LoadoutNanorepBackpacks = Рюкзаки корпоративного представителя
+character-item-group-LoadoutNanorepUniforms = Униформа корпоративного представителя
+character-item-group-LoadoutNanotrasenRepresentativeWeapon = Оружие корпоративного представителя
 
 # Engineering
-character-item-group-LoadoutEngineeringBackpacks = Engineering Backpacks
-character-item-group-LoadoutEngineeringBelt = Engineering Belt
-character-item-group-LoadoutEngineeringEars = Engineering Ears
-character-item-group-LoadoutEngineeringEquipment = Engineering Equipment
-character-item-group-LoadoutEngineeringEyes = Engineering Eyewear
-character-item-group-LoadoutEngineeringGloves = Engineering Gloves
-character-item-group-LoadoutEngineeringHead = Engineering Headgear
-character-item-group-LoadoutEngineeringId = Engineering Id
-character-item-group-LoadoutEngineeringNeck = Engineering Neckwear
-character-item-group-LoadoutEngineeringMask = Engineering Masks
-character-item-group-LoadoutEngineeringOuter = Engineering Outerwear
-character-item-group-LoadoutEngineeringShoes = Engineering Shoes
-character-item-group-LoadoutEngineeringUniforms = Engineering Uniforms
+character-item-group-LoadoutEngineeringBackpacks = Рюкзаки инженеров
+character-item-group-LoadoutEngineeringBelt = Пояс инженеров
+character-item-group-LoadoutEngineeringEars = Уши инженеров
+character-item-group-LoadoutEngineeringEquipment = Снаряжение инженеров
+character-item-group-LoadoutEngineeringEyes = Очки инженеров
+character-item-group-LoadoutEngineeringGloves = Перчатки инженеров
+character-item-group-LoadoutEngineeringHead = Головной убор инженеров
+character-item-group-LoadoutEngineeringId = ID-карта инженеров
+character-item-group-LoadoutEngineeringNeck = Шея инженеров
+character-item-group-LoadoutEngineeringMask = Маски инженеров
+character-item-group-LoadoutEngineeringOuter = Верхняя одежда инженеров
+character-item-group-LoadoutEngineeringShoes = Обувь инженеров
+character-item-group-LoadoutEngineeringUniforms = Униформа инженеров
 
 # Engineering - Atmospheric Technician
 # Engineering - Atmospheric Technician
-character-item-group-LoadoutAtmosphericTechnicianBackpacks = Atmospheric Technician Backpacks
-character-item-group-LoadoutAtmosphericTechnicianBelt = Atmospheric Technician Belt
-character-item-group-LoadoutAtmosphericTechnicianEars = Atmospheric Technician Ears
-character-item-group-LoadoutAtmosphericTechnicianEquipment = Atmospheric Technician Equipment
-character-item-group-LoadoutAtmosphericTechnicianEyes = Atmospheric Technician Eyewear
-character-item-group-LoadoutAtmosphericTechniciangloves = Atmospheric Technician Gloves
-character-item-group-LoadoutAtmosphericTechnicianHead = Atmospheric Technician Headgear
-character-item-group-LoadoutAtmosphericTechnicianId = Atmospheric Technician Id
-character-item-group-LoadoutAtmosphericTechnicianNeck = Atmospheric Technician Neckwear
-character-item-group-LoadoutAtmosphericTechnicianMask = Atmospheric Technician Masks
-character-item-group-LoadoutAtmosphericTechnicianOuter = Atmospheric Technician Outerwear
-character-item-group-LoadoutAtmosphericTechnicianShoes = Atmospheric Technician Shoes
-character-item-group-LoadoutAtmosphericTechnicianUniforms = Atmospheric Technician Uniforms
+character-item-group-LoadoutAtmosphericTechnicianBackpacks = Рюкзаки атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianBelt = Пояс атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianEars = Уши атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianEquipment = Снаряжение атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianEyes = Очки атмосферного техника
+character-item-group-LoadoutAtmosphericTechniciangloves = Перчатки атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianHead = Головной убор атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianId = ID-карта атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianNeck = Шея атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianMask = Маски атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianOuter = Верхняя одежда атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianShoes = Обувь атмосферного техника
+character-item-group-LoadoutAtmosphericTechnicianUniforms = Униформа атмосферного техника
 
 # Engineering - Chief Engineer
 # Engineering - Chief Engineer
-character-item-group-LoadoutChiefEngineerBackpacks = Chief Engineer Backpacks
-character-item-group-LoadoutChiefEngineerBelt = Chief Engineer Belt
-character-item-group-LoadoutChiefEngineerEars = Chief Engineer Ears
-character-item-group-LoadoutChiefEngineerEquipment = Chief Engineer Equipment
-character-item-group-LoadoutChiefEngineerEyes = Chief Engineer Eyewear
-character-item-group-LoadoutChiefEngineerGloves = Chief Engineer Gloves
-character-item-group-LoadoutChiefEngineerHead = Chief Engineer Headgear
-character-item-group-LoadoutChiefEngineerId = Chief Engineer Id
-character-item-group-LoadoutChiefEngineerNeck = Chief Engineer Neckwear
-character-item-group-LoadoutChiefEngineerMask = Chief Engineer Masks
-character-item-group-LoadoutChiefEngineerOuter = Chief Engineer Outerwear
-character-item-group-LoadoutChiefEngineerShoes = Chief Engineer Shoes
-character-item-group-LoadoutChiefEngineerUniforms = Chief Engineer Uniforms
+character-item-group-LoadoutChiefEngineerBackpacks = Рюкзаки главного инженера
+character-item-group-LoadoutChiefEngineerBelt = Пояс главного инженера
+character-item-group-LoadoutChiefEngineerEars = Уши главного инженера
+character-item-group-LoadoutChiefEngineerEquipment = Снаряжение главного инженера
+character-item-group-LoadoutChiefEngineerEyes = Очки главного инженера
+character-item-group-LoadoutChiefEngineerGloves = Перчатки главного инженера
+character-item-group-LoadoutChiefEngineerHead = Головной убор главного инженера
+character-item-group-LoadoutChiefEngineerId = ID-карта главного инженера
+character-item-group-LoadoutChiefEngineerNeck = Шея главного инженера
+character-item-group-LoadoutChiefEngineerMask = Маски главного инженера
+character-item-group-LoadoutChiefEngineerOuter = Верхняя одежда главного инженера
+character-item-group-LoadoutChiefEngineerShoes = Обувь главного инженера
+character-item-group-LoadoutChiefEngineerUniforms = Униформа главного инженера
 
 # Engineering - Senior Engineer
 # Engineering - Senior Engineer
-character-item-group-LoadoutSeniorEngineerBackpacks = Senior Engineer Backpacks
-character-item-group-LoadoutSeniorEngineerBelt = Senior Engineer Belt
-character-item-group-LoadoutSeniorEngineerEars = Senior Engineer Ears
-character-item-group-LoadoutSeniorEngineerEquipment = Senior Engineer Equipment
-character-item-group-LoadoutSeniorEngineerEyes = Senior Engineer Eyewear
-character-item-group-LoadoutSeniorEngineerGloves = Senior Engineer Gloves
-character-item-group-LoadoutSeniorEngineerHead = Senior Engineer Headgear
-character-item-group-LoadoutSeniorEngineerId = Senior Engineer Id
-character-item-group-LoadoutSeniorEngineerNeck = Senior Engineer Neckwear
-character-item-group-LoadoutSeniorEngineerMask = Senior Engineer Masks
-character-item-group-LoadoutSeniorEngineerOuter = Senior Engineer Outerwear
-character-item-group-LoadoutSeniorEngineerShoes = Senior Engineer Shoes
-character-item-group-LoadoutSeniorEngineerUniforms = Senior Engineer Uniforms
+character-item-group-LoadoutSeniorEngineerBackpacks = Рюкзаки старшего инженера
+character-item-group-LoadoutSeniorEngineerBelt = Пояс старшего инженера
+character-item-group-LoadoutSeniorEngineerEars = Уши старшего инженера
+character-item-group-LoadoutSeniorEngineerEquipment = Снаряжение старшего инженера
+character-item-group-LoadoutSeniorEngineerEyes = Очки старшего инженера
+character-item-group-LoadoutSeniorEngineerGloves = Перчатки старшего инженера
+character-item-group-LoadoutSeniorEngineerHead = Головной убор старшего инженера
+character-item-group-LoadoutSeniorEngineerId = ID-карта старшего инженера
+character-item-group-LoadoutSeniorEngineerNeck = Шея старшего инженера
+character-item-group-LoadoutSeniorEngineerMask = Маски старшего инженера
+character-item-group-LoadoutSeniorEngineerOuter = Верхняя одежда старшего инженера
+character-item-group-LoadoutSeniorEngineerShoes = Обувь старшего инженера
+character-item-group-LoadoutSeniorEngineerUniforms = Униформа старшего инженера
 
 # Engineering - Station Engineer
 # Engineering - Station Engineer
-character-item-group-LoadoutStationEngineerBackpacks = Station Engineer Backpacks
-character-item-group-LoadoutStationEngineerBelt = Station Engineer Belt
-character-item-group-LoadoutStationEngineerEars = Station Engineer Ears
-character-item-group-LoadoutStationEngineerEquipment = Station Engineer Equipment
-character-item-group-LoadoutStationEngineerEyes = Station Engineer Eyewear
-character-item-group-LoadoutStationEngineerGloves = Station Engineer Gloves
-character-item-group-LoadoutStationEngineerHead = Station Engineer Headgear
-character-item-group-LoadoutStationEngineerId = Station Engineer Id
-character-item-group-LoadoutStationEngineerNeck = Station Engineer Neckwear
-character-item-group-LoadoutStationEngineerMask = Station Engineer Masks
-character-item-group-LoadoutStationEngineerOuter = Station Engineer Outerwear
-character-item-group-LoadoutStationEngineerShoes = Station Engineer Shoes
-character-item-group-LoadoutStationEngineerUniforms = Station Engineer Uniforms
+character-item-group-LoadoutStationEngineerBackpacks = Рюкзаки станционного инженера
+character-item-group-LoadoutStationEngineerBelt = Пояс станционного инженера
+character-item-group-LoadoutStationEngineerEars = Уши станционного инженера
+character-item-group-LoadoutStationEngineerEquipment = Снаряжение станционного инженера
+character-item-group-LoadoutStationEngineerEyes = Очки станционного инженера
+character-item-group-LoadoutStationEngineerGloves = Перчатки станционного инженера
+character-item-group-LoadoutStationEngineerHead = Головной убор станционного инженера
+character-item-group-LoadoutStationEngineerId = ID-карта станционного инженера
+character-item-group-LoadoutStationEngineerNeck = Шея станционного инженера
+character-item-group-LoadoutStationEngineerMask = Маски станционного инженера
+character-item-group-LoadoutStationEngineerOuter = Верхняя одежда станционного инженера
+character-item-group-LoadoutStationEngineerShoes = Обувь станционного инженера
+character-item-group-LoadoutStationEngineerUniforms = Униформа станционного инженера
 
 # Engineering - Technical Assistant
 # Engineering - Technical Assistant
-character-item-group-LoadoutTechnicalAssistantBackpacks = Technical Assistant Backpacks
-character-item-group-LoadoutTechnicalAssistantBelt = Technical Assistant Belt
-character-item-group-LoadoutTechnicalAssistantEars = Technical Assistant Ears
-character-item-group-LoadoutTechnicalAssistantEquipment = Technical Assistant Equipment
-character-item-group-LoadoutTechnicalAssistantEyes = Technical Assistant Eyewear
-character-item-group-LoadoutTechnicalAssistantGloves = Technical Assistant Gloves
-character-item-group-LoadoutTechnicalAssistantHead = Technical Assistant Headgear
-character-item-group-LoadoutTechnicalAssistantId = Technical Assistant Id
-character-item-group-LoadoutTechnicalAssistantNeck = Technical Assistant Neckwear
-character-item-group-LoadoutTechnicalAssistantMask = Technical Assistant Masks
-character-item-group-LoadoutTechnicalAssistantOuter = Technical Assistant Outerwear
-character-item-group-LoadoutTechnicalAssistantShoes = Technical Assistant Shoes
-character-item-group-LoadoutTechnicalAssistantUniforms = Technical Assistant Uniforms
+character-item-group-LoadoutTechnicalAssistantBackpacks = Рюкзаки технического ассистента
+character-item-group-LoadoutTechnicalAssistantBelt = Пояс технического ассистента
+character-item-group-LoadoutTechnicalAssistantEars = Уши технического ассистента
+character-item-group-LoadoutTechnicalAssistantEquipment = Снаряжение технического ассистента
+character-item-group-LoadoutTechnicalAssistantEyes = Очки технического ассистента
+character-item-group-LoadoutTechnicalAssistantGloves = Перчатки технического ассистента
+character-item-group-LoadoutTechnicalAssistantHead = Головной убор технического ассистента
+character-item-group-LoadoutTechnicalAssistantId = ID-карта технического ассистента
+character-item-group-LoadoutTechnicalAssistantNeck = Шея технического ассистента
+character-item-group-LoadoutTechnicalAssistantMask = Маски технического ассистента
+character-item-group-LoadoutTechnicalAssistantOuter = Верхняя одежда технического ассистента
+character-item-group-LoadoutTechnicalAssistantShoes = Обувь технического ассистента
+character-item-group-LoadoutTechnicalAssistantUniforms = Униформа технического ассистента
 
 # Epistemics
 # Epistemics
-character-item-group-LoadoutEpistemicsBackpacks = Epistemics Backpacks
-character-item-group-LoadoutEpistemicsBelt = Epistemics Belt
-character-item-group-LoadoutEpistemicsEars = Epistemics Ears
-character-item-group-LoadoutEpistemicsEquipment = Epistemics Equipment
-character-item-group-LoadoutEpistemicsEyes = Epistemics Eyewear
-character-item-group-LoadoutEpistemicsGloves = Epistemics Gloves
-character-item-group-LoadoutEpistemicsHead = Epistemics Headgear
-character-item-group-LoadoutEpistemicsId = Epistemics Id
-character-item-group-LoadoutEpistemicsNeck = Epistemics Neckwear
-character-item-group-LoadoutEpistemicsMask = Epistemics Masks
-character-item-group-LoadoutEpistemicsOuter = Epistemics Outerwear
-character-item-group-LoadoutEpistemicsShoes = Epistemics Shoes
-character-item-group-LoadoutEpistemicsUniforms = Epistemics Uniforms
+character-item-group-LoadoutEpistemicsBackpacks = Рюкзаки эпистемики
+character-item-group-LoadoutEpistemicsBelt = Пояс эпистемики
+character-item-group-LoadoutEpistemicsEars = Уши эпистемики
+character-item-group-LoadoutEpistemicsEquipment = Снаряжение эпистемики
+character-item-group-LoadoutEpistemicsEyes = Очки эпистемики
+character-item-group-LoadoutEpistemicsGloves = Перчатки эпистемики
+character-item-group-LoadoutEpistemicsHead = Головной убор эпистемики
+character-item-group-LoadoutEpistemicsId = ID-карта эпистемики
+character-item-group-LoadoutEpistemicsNeck = Шея эпистемики
+character-item-group-LoadoutEpistemicsMask = Маски эпистемики
+character-item-group-LoadoutEpistemicsOuter = Верхняя одежда эпистемики
+character-item-group-LoadoutEpistemicsShoes = Обувь эпистемики
+character-item-group-LoadoutEpistemicsUniforms = Униформа эпистемики
 
 # Epistemics - Acolyte
 # Epistemics - Acolyte
-character-item-group-LoadoutAcolyteBackpacks = Acolyte Backpacks
-character-item-group-LoadoutAcolyteBelt = Acolyte Belt
-character-item-group-LoadoutAcolyteEars = Acolyte Ears
-character-item-group-LoadoutAcolyteEquipment = Acolyte Equipment
-character-item-group-LoadoutAcolyteEyes = Acolyte Eyewear
-character-item-group-LoadoutAcolyteGloves = Acolyte Gloves
-character-item-group-LoadoutAcolyteHead = Acolyte Headgear
-character-item-group-LoadoutAcolyteId = Acolyte Id
-character-item-group-LoadoutAcolyteNeck = Acolyte Neckwear
-character-item-group-LoadoutAcolyteMask = Acolyte Masks
-character-item-group-LoadoutAcolyteOuter = Acolyte Outerwear
-character-item-group-LoadoutAcolyteShoes = Acolyte Shoes
-character-item-group-LoadoutAcolyteUniforms = Acolyte Uniforms
+character-item-group-LoadoutAcolyteBackpacks = Рюкзаки аколита
+character-item-group-LoadoutAcolyteBelt = Пояс аколита
+character-item-group-LoadoutAcolyteEars = Уши аколита
+character-item-group-LoadoutAcolyteEquipment = Снаряжение аколита
+character-item-group-LoadoutAcolyteEyes = Очки аколита
+character-item-group-LoadoutAcolyteGloves = Перчатки аколита
+character-item-group-LoadoutAcolyteHead = Головной убор аколита
+character-item-group-LoadoutAcolyteId = ID-карта аколита
+character-item-group-LoadoutAcolyteNeck = Шея аколита
+character-item-group-LoadoutAcolyteMask = Маски аколита
+character-item-group-LoadoutAcolyteOuter = Верхняя одежда аколита
+character-item-group-LoadoutAcolyteShoes = Обувь аколита
+character-item-group-LoadoutAcolyteUniforms = Униформа аколита
 
 # Epistemics - Cataloger
 # Epistemics - Cataloger
-character-item-group-LoadoutCatalogerBackpacks = Cataloger Backpacks
-character-item-group-LoadoutCatalogerBelt = Cataloger Belt
-character-item-group-LoadoutCatalogerEars = Cataloger Ears
-character-item-group-LoadoutCatalogerEquipment = Cataloger Equipment
-character-item-group-LoadoutCatalogerEyes = Cataloger Eyewear
-character-item-group-LoadoutCatalogerGloves = Cataloger Gloves
-character-item-group-LoadoutCatalogerHead = Cataloger Headgear
-character-item-group-LoadoutCatalogerId = Cataloger Id
-character-item-group-LoadoutCatalogerNeck = Cataloger Neckwear
-character-item-group-LoadoutCatalogerMask = Cataloger Masks
-character-item-group-LoadoutCatalogerOuter = Cataloger Outerwear
-character-item-group-LoadoutCatalogerShoes = Cataloger Shoes
-character-item-group-LoadoutCatalogerUniforms = Cataloger Uniforms
+character-item-group-LoadoutCatalogerBackpacks = Рюкзаки каталогизатора
+character-item-group-LoadoutCatalogerBelt = Пояс каталогизатора
+character-item-group-LoadoutCatalogerEars = Уши каталогизатора
+character-item-group-LoadoutCatalogerEquipment = Снаряжение каталогизатора
+character-item-group-LoadoutCatalogerEyes = Очки каталогизатора
+character-item-group-LoadoutCatalogerGloves = Перчатки каталогизатора
+character-item-group-LoadoutCatalogerHead = Головной убор каталогизатора
+character-item-group-LoadoutCatalogerId = ID-карта каталогизатора
+character-item-group-LoadoutCatalogerNeck = Шея каталогизатора
+character-item-group-LoadoutCatalogerMask = Маски каталогизатора
+character-item-group-LoadoutCatalogerOuter = Верхняя одежда каталогизатора
+character-item-group-LoadoutCatalogerShoes = Обувь каталогизатора
+character-item-group-LoadoutCatalogerUniforms = Униформа каталогизатора
 
 # Epistemics - Chaplain
 # Epistemics - Chaplain
-character-item-group-LoadoutChaplainBackpacks = Chaplain Backpacks
-character-item-group-LoadoutChaplainBelt = Chaplain Belt
-character-item-group-LoadoutChaplainEars = Chaplain Ears
-character-item-group-LoadoutChaplainEquipment = Chaplain Equipment
-character-item-group-LoadoutChaplainEyes = Chaplain Eyewear
-character-item-group-LoadoutChaplainGloves = Chaplain Gloves
-character-item-group-LoadoutChaplainHead = Chaplain Headgear
-character-item-group-LoadoutChaplainId = Chaplain Id
-character-item-group-LoadoutChaplainNeck = Chaplain Neckwear
-character-item-group-LoadoutChaplainMask = Chaplain Masks
-character-item-group-LoadoutChaplainOuter = Chaplain Outerwear
-character-item-group-LoadoutChaplainShoes = Chaplain Shoes
-character-item-group-LoadoutChaplainUniforms = Chaplain Uniforms
+character-item-group-LoadoutChaplainBackpacks = Рюкзаки капеллана
+character-item-group-LoadoutChaplainBelt = Пояс капеллана
+character-item-group-LoadoutChaplainEars = Уши капеллана
+character-item-group-LoadoutChaplainEquipment = Снаряжение капеллана
+character-item-group-LoadoutChaplainEyes = Очки капеллана
+character-item-group-LoadoutChaplainGloves = Перчатки капеллана
+character-item-group-LoadoutChaplainHead = Головной убор капеллана
+character-item-group-LoadoutChaplainId = ID-карта капеллана
+character-item-group-LoadoutChaplainNeck = Шея капеллана
+character-item-group-LoadoutChaplainMask = Маски капеллана
+character-item-group-LoadoutChaplainOuter = Верхняя одежда капеллана
+character-item-group-LoadoutChaplainShoes = Обувь капеллана
+character-item-group-LoadoutChaplainUniforms = Униформа капеллана
 
 # Epistemics - Golemancer
 # Epistemics - Golemancer
-character-item-group-LoadoutGolemancerBackpacks = Golemancer Backpacks
-character-item-group-LoadoutGolemancerBelt = Golemancer Belt
-character-item-group-LoadoutGolemancerEars = Golemancer Ears
-character-item-group-LoadoutGolemancerEquipment = Golemancer Equipment
-character-item-group-LoadoutGolemancerEyes = Golemancer Eyewear
-character-item-group-LoadoutGolemancerGloves = Golemancer Gloves
-character-item-group-LoadoutGolemancerHead = Golemancer Headgear
-character-item-group-LoadoutGolemancerId = Golemancer Id
-character-item-group-LoadoutGolemancerNeck = Golemancer Neckwear
-character-item-group-LoadoutGolemancerMask = Golemancer Masks
-character-item-group-LoadoutGolemancerOuter = Golemancer Outerwear
-character-item-group-LoadoutGolemancerShoes = Golemancer Shoes
-character-item-group-LoadoutGolemancerUniforms = Golemancer Uniforms
+character-item-group-LoadoutGolemancerBackpacks = Рюкзаки големанта
+character-item-group-LoadoutGolemancerBelt = Пояс големанта
+character-item-group-LoadoutGolemancerEars = Уши големанта
+character-item-group-LoadoutGolemancerEquipment = Снаряжение големанта
+character-item-group-LoadoutGolemancerEyes = Очки големанта
+character-item-group-LoadoutGolemancerGloves = Перчатки големанта
+character-item-group-LoadoutGolemancerHead = Головной убор големанта
+character-item-group-LoadoutGolemancerId = ID-карта големанта
+character-item-group-LoadoutGolemancerNeck = Шея големанта
+character-item-group-LoadoutGolemancerMask = Маски големанта
+character-item-group-LoadoutGolemancerOuter = Верхняя одежда големанта
+character-item-group-LoadoutGolemancerShoes = Обувь големанта
+character-item-group-LoadoutGolemancerUniforms = Униформа големанта
 
 # Epistemics - Mystagogue
 # Epistemics - Mystagogue
-character-item-group-LoadoutMystagogueBackpacks = Mystagogue Backpacks
-character-item-group-LoadoutMystagogueBelt = Mystagogue Belt
-character-item-group-LoadoutMystagogueEars = Mystagogue Ears
-character-item-group-LoadoutMystagogueEquipment = Mystagogue Equipment
-character-item-group-LoadoutMystagogueEyes = Mystagogue Eyewear
-character-item-group-LoadoutMystagogueGloves = Mystagogue Gloves
-character-item-group-LoadoutMystagogueHead = Mystagogue Headgear
-character-item-group-LoadoutMystagogueId = Mystagogue Id
-character-item-group-LoadoutMystagogueNeck = Mystagogue Neckwear
-character-item-group-LoadoutMystagogueMask = Mystagogue Masks
-character-item-group-LoadoutMystagogueOuter = Mystagogue Outerwear
-character-item-group-LoadoutMystagogueShoes = Mystagogue Shoes
-character-item-group-LoadoutMystagogueUniforms = Mystagogue Uniforms
+character-item-group-LoadoutMystagogueBackpacks = Рюкзаки Научного руководителя
+character-item-group-LoadoutMystagogueBelt = Пояс Научного руководителя
+character-item-group-LoadoutMystagogueEars = Уши Научного руководителя
+character-item-group-LoadoutMystagogueEquipment = Снаряжение Научного руководителя
+character-item-group-LoadoutMystagogueEyes = Очки Научного руководителя
+character-item-group-LoadoutMystagogueGloves = Перчатки Научного руководителя
+character-item-group-LoadoutMystagogueHead = Головной убор Научного руководителя
+character-item-group-LoadoutMystagogueId = ID-карта Научного руководителя
+character-item-group-LoadoutMystagogueNeck = Шея Научного руководителя
+character-item-group-LoadoutMystagogueMask = Маски Научного руководителя
+character-item-group-LoadoutMystagogueOuter = Верхняя одежда Научного руководителя
+character-item-group-LoadoutMystagogueShoes = Обувь Научного руководителя
+character-item-group-LoadoutMystagogueUniforms = Униформа Научного руководителя
 
 # Epistemics - Mystic
 # Epistemics - Mystic
-character-item-group-LoadoutMysticBackpacks = Mystic Backpacks
-character-item-group-LoadoutMysticBelt = Mystic Belt
-character-item-group-LoadoutMysticEars = Mystic Ears
-character-item-group-LoadoutMysticEquipment = Mystic Equipment
-character-item-group-LoadoutMysticEyes = Mystic Eyewear
-character-item-group-LoadoutMysticGloves = Mystic Gloves
-character-item-group-LoadoutMysticHead = Mystic Headgear
-character-item-group-LoadoutMysticId = Mystic Id
-character-item-group-LoadoutMysticNeck = Mystic Neckwear
-character-item-group-LoadoutMysticMask = Mystic Masks
-character-item-group-LoadoutMysticOuter = Mystic Outerwear
-character-item-group-LoadoutMysticShoes = Mystic Shoes
-character-item-group-LoadoutMysticUniforms = Mystic Uniforms
+character-item-group-LoadoutMysticBackpacks = Рюкзаки мистика
+character-item-group-LoadoutMysticBelt = Пояс мистика
+character-item-group-LoadoutMysticEars = Уши мистика
+character-item-group-LoadoutMysticEquipment = Снаряжение мистика
+character-item-group-LoadoutMysticEyes = Очки мистика
+character-item-group-LoadoutMysticGloves = Перчатки мистика
+character-item-group-LoadoutMysticHead = Головной убор мистика
+character-item-group-LoadoutMysticId = ID-карта мистика
+character-item-group-LoadoutMysticNeck = Шея мистика
+character-item-group-LoadoutMysticMask = Маски мистика
+character-item-group-LoadoutMysticOuter = Верхняя одежда мистика
+character-item-group-LoadoutMysticShoes = Обувь мистика
+character-item-group-LoadoutMysticUniforms = Униформа мистика
 
 # Epistemics - Noviciate
 # Epistemics - Noviciate
-character-item-group-LoadoutNoviciateBackpacks = Noviciate Backpacks
-character-item-group-LoadoutNoviciateBelt = Noviciate Belt
-character-item-group-LoadoutNoviciateEars = Noviciate Ears
-character-item-group-LoadoutNoviciateEquipment = Noviciate Equipment
-character-item-group-LoadoutNoviciateEyes = Noviciate Eyewear
-character-item-group-LoadoutNoviciateGloves = Noviciate Gloves
-character-item-group-LoadoutNoviciateHead = Noviciate Headgear
-character-item-group-LoadoutNoviciateId = Noviciate Id
-character-item-group-LoadoutNoviciateNeck = Noviciate Neckwear
-character-item-group-LoadoutNoviciateMask = Noviciate Masks
-character-item-group-LoadoutNoviciateOuter = Noviciate Outerwear
-character-item-group-LoadoutNoviciateShoes = Noviciate Shoes
-character-item-group-LoadoutNoviciateUniforms = Noviciate Uniforms
+character-item-group-LoadoutNoviciateBackpacks = Рюкзаки новициата
+character-item-group-LoadoutNoviciateBelt = Пояс новициата
+character-item-group-LoadoutNoviciateEars = Уши новициата
+character-item-group-LoadoutNoviciateEquipment = Снаряжение новициата
+character-item-group-LoadoutNoviciateEyes = Очки новициата
+character-item-group-LoadoutNoviciateGloves = Перчатки новициата
+character-item-group-LoadoutNoviciateHead = Головной убор новициата
+character-item-group-LoadoutNoviciateId = ID-карта новициата
+character-item-group-LoadoutNoviciateNeck = Шея новициата
+character-item-group-LoadoutNoviciateMask = Маски новициата
+character-item-group-LoadoutNoviciateOuter = Верхняя одежда новициата
+character-item-group-LoadoutNoviciateShoes = Обувь новициата
+character-item-group-LoadoutNoviciateUniforms = Униформа новициата
 
 # Epistemics - Psionic Mantis
 # Epistemics - Psionic Mantis
-character-item-group-LoadoutPsionicMantisBackpacks = Psionic Mantis Backpacks
-character-item-group-LoadoutPsionicMantisBelt = Psionic Mantis Belt
-character-item-group-LoadoutPsionicMantisEars = Psionic Mantis Ears
-character-item-group-LoadoutPsionicMantisEquipment = Psionic Mantis Equipment
-character-item-group-LoadoutPsionicMantisEyes = Psionic Mantis Eyewear
-character-item-group-LoadoutPsionicMantisGloves = Psionic Mantis Gloves
-character-item-group-LoadoutPsionicMantisHead = Psionic Mantis Headgear
-character-item-group-LoadoutPsionicMantisId = Psionic Mantis Id
-character-item-group-LoadoutPsionicMantisNeck = Psionic Mantis Neckwear
-character-item-group-LoadoutPsionicMantisMask = Psionic Mantis Masks
-character-item-group-LoadoutPsionicMantisOuter = Psionic Mantis Outerwear
-character-item-group-LoadoutPsionicMantisShoes = Psionic Mantis Shoes
-character-item-group-LoadoutPsionicMantisUniforms = Psionic Mantis Uniforms
+character-item-group-LoadoutPsionicMantisBackpacks = Рюкзаки псионного Мантиса
+character-item-group-LoadoutPsionicMantisBelt = Пояс псионного Мантиса
+character-item-group-LoadoutPsionicMantisEars = Уши псионного Мантиса
+character-item-group-LoadoutPsionicMantisEquipment = Снаряжение псионного Мантиса
+character-item-group-LoadoutPsionicMantisEyes = Очки псионного Мантиса
+character-item-group-LoadoutPsionicMantisGloves = Перчатки псионного Мантиса
+character-item-group-LoadoutPsionicMantisHead = Головной убор псионного Мантиса
+character-item-group-LoadoutPsionicMantisId = ID-карта псионного Мантиса
+character-item-group-LoadoutPsionicMantisNeck = Шея псионного Мантиса
+character-item-group-LoadoutPsionicMantisMask = Маски псионного Мантиса
+character-item-group-LoadoutPsionicMantisOuter = Верхняя одежда псионного Мантиса
+character-item-group-LoadoutPsionicMantisShoes = Обувь псионного Мантиса
+character-item-group-LoadoutPsionicMantisUniforms = Униформа псионного Мантиса
 
 # Logistics
 # Logistics
-character-item-group-LoadoutLogisticsBackpacks = Logistics Backpacks
-character-item-group-LoadoutLogisticsBelt = Logistics Belt
-character-item-group-LoadoutLogisticsEars = Logistics Ears
-character-item-group-LoadoutLogisticsEquipment = Logistics Equipment
-character-item-group-LoadoutLogisticsEyes = Logistics Eyewear
-character-item-group-LoadoutLogisticsGloves = Logistics Gloves
-character-item-group-LoadoutLogisticsHead = Logistics Headgear
-character-item-group-LoadoutLogisticsId = Logistics Id
-character-item-group-LoadoutLogisticsNeck = Logistics Neckwear
-character-item-group-LoadoutLogisticsMask = Logistics Masks
-character-item-group-LoadoutLogisticsOuter = Logistics Outerwear
-character-item-group-LoadoutLogisticsShoes = Logistics Shoes
-character-item-group-LoadoutLogisticsUniforms = Logistics Uniforms
+character-item-group-LoadoutLogisticsBackpacks = Рюкзаки логистики
+character-item-group-LoadoutLogisticsBelt = Пояс логистики
+character-item-group-LoadoutLogisticsEars = Уши логистики
+character-item-group-LoadoutLogisticsEquipment = Снаряжение логистики
+character-item-group-LoadoutLogisticsEyes = Очки логистики
+character-item-group-LoadoutLogisticsGloves = Перчатки логистики
+character-item-group-LoadoutLogisticsHead = Головной убор логистики
+character-item-group-LoadoutLogisticsId = ID-карта логистики
+character-item-group-LoadoutLogisticsNeck = Шея логистики
+character-item-group-LoadoutLogisticsMask = Маски логистики
+character-item-group-LoadoutLogisticsOuter = Верхняя одежда логистики
+character-item-group-LoadoutLogisticsShoes = Обувь логистики
+character-item-group-LoadoutLogisticsUniforms = Униформа логистики
 
 # Logistics - Cargo Technician
 # Logistics - Cargo Technician
-character-item-group-LoadoutCargoTechnicianBackpacks = Cargo Technician Backpacks
-character-item-group-LoadoutCargoTechnicianBelt = Cargo Technician Belt
-character-item-group-LoadoutCargoTechnicianEars = Cargo Technician Ears
-character-item-group-LoadoutCargoTechnicianEquipment = Cargo Technician Equipment
-character-item-group-LoadoutCargoTechnicianEyes = Cargo Technician Eyewear
-character-item-group-LoadoutCargoTechnicianGloves = Cargo Technician Gloves
-character-item-group-LoadoutCargoTechnicianHead = Cargo Technician Headgear
-character-item-group-LoadoutCargoTechnicianId = Cargo Technician Id
-character-item-group-LoadoutCargoTechnicianNeck = Cargo Technician Neckwear
-character-item-group-LoadoutCargoTechnicianMask = Cargo Technician Masks
-character-item-group-LoadoutCargoTechnicianOuter = Cargo Technician Outerwear
-character-item-group-LoadoutCargoTechnicianShoes = Cargo Technician Shoes
-character-item-group-LoadoutCargoTechnicianUniforms = Cargo Technician Uniforms
+character-item-group-LoadoutCargoTechnicianBackpacks = Рюкзаки грузового техника
+character-item-group-LoadoutCargoTechnicianBelt = Пояс грузового техника
+character-item-group-LoadoutCargoTechnicianEars = Уши грузового техника
+character-item-group-LoadoutCargoTechnicianEquipment = Снаряжение грузового техника
+character-item-group-LoadoutCargoTechnicianEyes = Очки грузового техника
+character-item-group-LoadoutCargoTechnicianGloves = Перчатки грузового техника
+character-item-group-LoadoutCargoTechnicianHead = Головной убор грузового техника
+character-item-group-LoadoutCargoTechnicianId = ID-карта грузового техника
+character-item-group-LoadoutCargoTechnicianNeck = Шея грузового техника
+character-item-group-LoadoutCargoTechnicianMask = Маски грузового техника
+character-item-group-LoadoutCargoTechnicianOuter = Верхняя одежда грузового техника
+character-item-group-LoadoutCargoTechnicianShoes = Обувь грузового техника
+character-item-group-LoadoutCargoTechnicianUniforms = Униформа грузового техника
 
 # Logistics - Courier
 # Logistics - Courier
-character-item-group-LoadoutCourierBackpacks = Courier Backpacks
-character-item-group-LoadoutCourierBelt = Courier Belt
-character-item-group-LoadoutCourierEars = Courier Ears
-character-item-group-LoadoutCourierEquipment = Courier Equipment
-character-item-group-LoadoutCourierEyes = Courier Eyewear
-character-item-group-LoadoutCourierGloves = Courier Gloves
-character-item-group-LoadoutCourierHead = Courier Headgear
-character-item-group-LoadoutCourierId = Courier Id
-character-item-group-LoadoutCourierNeck = Courier Neckwear
-character-item-group-LoadoutCourierMask = Courier Masks
-character-item-group-LoadoutCourierOuter = Courier Outerwear
-character-item-group-LoadoutCourierShoes = Courier Shoes
-character-item-group-LoadoutCourierUniforms = Courier Uniforms
+character-item-group-LoadoutCourierBackpacks = Рюкзаки курьера
+character-item-group-LoadoutCourierBelt = Пояс курьера
+character-item-group-LoadoutCourierEars = Уши курьера
+character-item-group-LoadoutCourierEquipment = Снаряжение курьера
+character-item-group-LoadoutCourierEyes = Очки курьера
+character-item-group-LoadoutCourierGloves = Перчатки курьера
+character-item-group-LoadoutCourierHead = Головной убор курьера
+character-item-group-LoadoutCourierId = ID-карта курьера
+character-item-group-LoadoutCourierNeck = Шея курьера
+character-item-group-LoadoutCourierMask = Маски курьера
+character-item-group-LoadoutCourierOuter = Верхняя одежда курьера
+character-item-group-LoadoutCourierShoes = Обувь курьера
+character-item-group-LoadoutCourierUniforms = Униформа курьера
 
 # Logistics - Logistics Officer
 # Logistics - Logistics Officer
-character-item-group-LoadoutLogisticsOfficerBackpacks = Logistics Officer Backpacks
-character-item-group-LoadoutLogisticsOfficerBelt = Logistics Officer Belt
-character-item-group-LoadoutLogisticsOfficerEars = Logistics Officer Ears
-character-item-group-LoadoutLogisticsOfficerEquipment = Logistics Officer Equipment
-character-item-group-LoadoutLogisticsOfficerEyes = Logistics Officer Eyewear
-character-item-group-LoadoutLogisticsOfficerGloves = Logistics Officer Gloves
-character-item-group-LoadoutLogisticsOfficerHead = Logistics Officer Headgear
-character-item-group-LoadoutLogisticsOfficerId = Logistics Officer Id
-character-item-group-LoadoutLogisticsOfficerNeck = Logistics Officer Neckwear
-character-item-group-LoadoutLogisticsOfficerMask = Logistics Officer Masks
-character-item-group-LoadoutLogisticsOfficerOuter = Logistics Officer Outerwear
-character-item-group-LoadoutLogisticsOfficerShoes = Logistics Officer Shoes
-character-item-group-LoadoutLogisticsOfficerUniforms = Logistics Officer Uniforms
+character-item-group-LoadoutLogisticsOfficerBackpacks = Рюкзаки квартирмейстер
+character-item-group-LoadoutLogisticsOfficerBelt = Пояс квартирмейстер
+character-item-group-LoadoutLogisticsOfficerEars = Уши квартирмейстер
+character-item-group-LoadoutLogisticsOfficerEquipment = Снаряжение квартирмейстер
+character-item-group-LoadoutLogisticsOfficerEyes = Очки квартирмейстер
+character-item-group-LoadoutLogisticsOfficerGloves = Перчатки квартирмейстер
+character-item-group-LoadoutLogisticsOfficerHead = Головной убор квартирмейстер
+character-item-group-LoadoutLogisticsOfficerId = ID-карта квартирмейстер
+character-item-group-LoadoutLogisticsOfficerNeck = Шея квартирмейстер
+character-item-group-LoadoutLogisticsOfficerMask = Маски квартирмейстер
+character-item-group-LoadoutLogisticsOfficerOuter = Верхняя одежда квартирмейстер
+character-item-group-LoadoutLogisticsOfficerShoes = Обувь квартирмейстер
+character-item-group-LoadoutLogisticsOfficerUniforms = Униформа квартирмейстер
 
 # Logistics - Salvage Specialist
 # Logistics - Salvage Specialist
-character-item-group-LoadoutSalvageSpecialistBackpacks = Salvage Specialist Backpacks
-character-item-group-LoadoutSalvageSpecialistBelt = Salvage Specialist Belt
-character-item-group-LoadoutSalvageSpecialistEars = Salvage Specialist Ears
-character-item-group-LoadoutSalvageSpecialistEquipment = Salvage Specialist Equipment
-character-item-group-LoadoutSalvageSpecialistEyes = Salvage Specialist Eyewear
-character-item-group-LoadoutSalvageSpecialistGloves = Salvage Specialist Gloves
-character-item-group-LoadoutSalvageSpecialistHead = Salvage Specialist Headgear
-character-item-group-LoadoutSalvageSpecialistId = Salvage Specialist Id
-character-item-group-LoadoutSalvageSpecialistNeck = Salvage Specialist Neckwear
-character-item-group-LoadoutSalvageSpecialistMask = Salvage Specialist Masks
-character-item-group-LoadoutSalvageSpecialistOuter = Salvage Specialist Outerwear
-character-item-group-LoadoutSalvageSpecialistShoes = Salvage Specialist Shoes
-character-item-group-LoadoutSalvageSpecialistUniforms = Salvage Specialist Uniforms
-character-item-group-LoadoutSalvageSpecialistWeapons = Salvage Specialist Weapons
+character-item-group-LoadoutSalvageSpecialistBackpacks = Рюкзаки специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistBelt = Пояс специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistEars = Уши специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistEquipment = Снаряжение специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistEyes = Очки специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistGloves = Перчатки специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistHead = Головной убор специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistId = ID-карта специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistNeck = Шея специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistMask = Маски специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistOuter = Верхняя одежда специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistShoes = Обувь специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistUniforms = Униформа специалиста по утилизации
+character-item-group-LoadoutSalvageSpecialistWeapons = Оружие специалиста по утилизации
 
 # Medical
 # Medical
-character-item-group-LoadoutMedicalBackpacks = Medical Backpacks
-character-item-group-LoadoutMedicalBelt = Medical Belt
-character-item-group-LoadoutMedicalEars = Medical Ears
-character-item-group-LoadoutMedicalEquipment = Medical Equipment
-character-item-group-LoadoutMedicalEyes = Medical Eyewear
-character-item-group-LoadoutMedicalGloves = Medical Gloves
-character-item-group-LoadoutMedicalHead = Medical Headgear
-character-item-group-LoadoutMedicalId = Medical Id
-character-item-group-LoadoutMedicalNeck = Medical Neckwear
-character-item-group-LoadoutMedicalMask = Medical Masks
-character-item-group-LoadoutMedicalOuter = Medical Outerwear
-character-item-group-LoadoutMedicalShoes = Medical Shoes
-character-item-group-LoadoutMedicalUniforms = Medical Uniforms
+character-item-group-LoadoutMedicalBackpacks = Рюкзаки медперсонала
+character-item-group-LoadoutMedicalBelt = Пояс медперсонала
+character-item-group-LoadoutMedicalEars = Уши медперсонала
+character-item-group-LoadoutMedicalEquipment = Снаряжение медперсонала
+character-item-group-LoadoutMedicalEyes = Очки медперсонала
+character-item-group-LoadoutMedicalGloves = Перчатки медперсонала
+character-item-group-LoadoutMedicalHead = Головной убор медперсонала
+character-item-group-LoadoutMedicalId = ID-карта медперсонала
+character-item-group-LoadoutMedicalNeck = Шея медперсонала
+character-item-group-LoadoutMedicalMask = Маски медперсонала
+character-item-group-LoadoutMedicalOuter = Верхняя одежда медперсонала
+character-item-group-LoadoutMedicalShoes = Обувь медперсонала
+character-item-group-LoadoutMedicalUniforms = Униформа медперсонала
 
 # Medical - Chemist
 # Medical - Chemist
-character-item-group-LoadoutChemistBackpacks = Chemist Backpacks
-character-item-group-LoadoutChemistBelt = Chemist Belt
-character-item-group-LoadoutChemistEars = Chemist Ears
-character-item-group-LoadoutChemistEquipment = Chemist Equipment
-character-item-group-LoadoutChemistEyes = Chemist Eyewear
-character-item-group-LoadoutChemistGloves = Chemist Gloves
-character-item-group-LoadoutChemistHead = Chemist Headgear
-character-item-group-LoadoutChemistId = Chemist Id
-character-item-group-LoadoutChemistNeck = Chemist Neckwear
-character-item-group-LoadoutChemistMask = Chemist Masks
-character-item-group-LoadoutChemistOuter = Chemist Outerwear
-character-item-group-LoadoutChemistShoes = Chemist Shoes
-character-item-group-LoadoutChemistUniforms = Chemist Uniforms
+character-item-group-LoadoutChemistBackpacks = Рюкзаки химика
+character-item-group-LoadoutChemistBelt = Пояс химика
+character-item-group-LoadoutChemistEars = Уши химика
+character-item-group-LoadoutChemistEquipment = Снаряжение химика
+character-item-group-LoadoutChemistEyes = Очки химика
+character-item-group-LoadoutChemistGloves = Перчатки химика
+character-item-group-LoadoutChemistHead = Головной убор химика
+character-item-group-LoadoutChemistId = ID-карта химика
+character-item-group-LoadoutChemistNeck = Шея химика
+character-item-group-LoadoutChemistMask = Маски химика
+character-item-group-LoadoutChemistOuter = Верхняя одежда химика
+character-item-group-LoadoutChemistShoes = Обувь химика
+character-item-group-LoadoutChemistUniforms = Униформа химика
 
 # Medical - Chief Medical Officer
 # Medical - Chief Medical Officer
-character-item-group-LoadoutChiefMedicalOfficerBackpacks = Chief Medical Officer Backpacks
-character-item-group-LoadoutChiefMedicalOfficerBelt = Chief Medical Officer Belt
-character-item-group-LoadoutChiefMedicalOfficerEars = Chief Medical Officer Ears
-character-item-group-LoadoutChiefMedicalOfficerEquipment = Chief Medical Officer Equipment
-character-item-group-LoadoutChiefMedicalOfficerEyes = Chief Medical Officer Eyewear
-character-item-group-LoadoutChiefMedicalOfficerGloves = Chief Medical Officer Gloves
-character-item-group-LoadoutChiefMedicalOfficerHead = Chief Medical Officer Headgear
-character-item-group-LoadoutChiefMedicalOfficerId = Chief Medical Officer Id
-character-item-group-LoadoutChiefMedicalOfficerNeck = Chief Medical Officer Neckwear
-character-item-group-LoadoutChiefMedicalOfficerMask = Chief Medical Officer Masks
-character-item-group-LoadoutChiefMedicalOfficerOuter = Chief Medical Officer Outerwear
-character-item-group-LoadoutChiefMedicalOfficerShoes = Chief Medical Officer Shoes
-character-item-group-LoadoutChiefMedicalOfficerUniforms = Chief Medical Officer Uniforms
+character-item-group-LoadoutChiefMedicalOfficerBackpacks = Рюкзаки главного врача
+character-item-group-LoadoutChiefMedicalOfficerBelt = Пояс главного врача
+character-item-group-LoadoutChiefMedicalOfficerEars = Уши главного врача
+character-item-group-LoadoutChiefMedicalOfficerEquipment = Снаряжение главного врача
+character-item-group-LoadoutChiefMedicalOfficerEyes = Очки главного врача
+character-item-group-LoadoutChiefMedicalOfficerGloves = Перчатки главного врача
+character-item-group-LoadoutChiefMedicalOfficerHead = Головной убор главного врача
+character-item-group-LoadoutChiefMedicalOfficerId = ID-карта главного врача
+character-item-group-LoadoutChiefMedicalOfficerNeck = Шея главного врача
+character-item-group-LoadoutChiefMedicalOfficerMask = Маски главного врача
+character-item-group-LoadoutChiefMedicalOfficerOuter = Верхняя одежда главного врача
+character-item-group-LoadoutChiefMedicalOfficerShoes = Обувь главного врача
+character-item-group-LoadoutChiefMedicalOfficerUniforms = Униформа главного врача
 
 # Medical - Medical Doctor
 # Medical - Medical Doctor
-character-item-group-LoadoutMedicalDoctorBackpacks = Medical Doctor Backpacks
-character-item-group-LoadoutMedicalDoctorBelt = Medical Doctor Belt
-character-item-group-LoadoutMedicalDoctorEars = Medical Doctor Ears
-character-item-group-LoadoutMedicalDoctorEquipment = Medical Doctor Equipment
-character-item-group-LoadoutMedicalDoctorEyes = Medical Doctor Eyewear
-character-item-group-LoadoutMedicalDoctorGloves = Medical Doctor Gloves
-character-item-group-LoadoutMedicalDoctorHead = Medical Doctor Headgear
-character-item-group-LoadoutMedicalDoctorId = Medical Doctor Id
-character-item-group-LoadoutMedicalDoctorNeck = Medical Doctor Neckwear
-character-item-group-LoadoutMedicalDoctorMask = Medical Doctor Masks
-character-item-group-LoadoutMedicalDoctorOuter = Medical Doctor Outerwear
-character-item-group-LoadoutMedicalDoctorShoes = Medical Doctor Shoes
-character-item-group-LoadoutMedicalDoctorUniforms = Medical Doctor Uniforms
+character-item-group-LoadoutMedicalDoctorBackpacks = Рюкзаки врача
+character-item-group-LoadoutMedicalDoctorBelt = Пояс врача
+character-item-group-LoadoutMedicalDoctorEars = Уши врача
+character-item-group-LoadoutMedicalDoctorEquipment = Снаряжение врача
+character-item-group-LoadoutMedicalDoctorEyes = Очки врача
+character-item-group-LoadoutMedicalDoctorGloves = Перчатки врача
+character-item-group-LoadoutMedicalDoctorHead = Головной убор врача
+character-item-group-LoadoutMedicalDoctorId = ID-карта врача
+character-item-group-LoadoutMedicalDoctorNeck = Шея врача
+character-item-group-LoadoutMedicalDoctorMask = Маски врача
+character-item-group-LoadoutMedicalDoctorOuter = Верхняя одежда врача
+character-item-group-LoadoutMedicalDoctorShoes = Обувь врача
+character-item-group-LoadoutMedicalDoctorUniforms = Униформа врача
 
 # Medical - Medical Intern
 # Medical - Medical Intern
-character-item-group-LoadoutMedicalInternBackpacks = Medical Intern Backpacks
-character-item-group-LoadoutMedicalInternBelt = Medical Intern Belt
-character-item-group-LoadoutMedicalInternEars = Medical Intern Ears
-character-item-group-LoadoutMedicalInternEquipment = Medical Intern Equipment
-character-item-group-LoadoutMedicalInternEyes = Medical Intern Eyewear
-character-item-group-LoadoutMedicalInternGloves = Medical Intern Gloves
-character-item-group-LoadoutMedicalInternHead = Medical Intern Headgear
-character-item-group-LoadoutMedicalInternId = Medical Intern Id
-character-item-group-LoadoutMedicalInternNeck = Medical Intern Neckwear
-character-item-group-LoadoutMedicalInternMask = Medical Intern Masks
-character-item-group-LoadoutMedicalInternOuter = Medical Intern Outerwear
-character-item-group-LoadoutMedicalInternShoes = Medical Intern Shoes
-character-item-group-LoadoutMedicalInternUniforms = Medical Intern Uniforms
+character-item-group-LoadoutMedicalInternBackpacks = Рюкзаки интерна
+character-item-group-LoadoutMedicalInternBelt = Пояс интерна
+character-item-group-LoadoutMedicalInternEars = Уши интерна
+character-item-group-LoadoutMedicalInternEquipment = Снаряжение интерна
+character-item-group-LoadoutMedicalInternEyes = Очки интерна
+character-item-group-LoadoutMedicalInternGloves = Перчатки интерна
+character-item-group-LoadoutMedicalInternHead = Головной убор интерна
+character-item-group-LoadoutMedicalInternId = ID-карта интерна
+character-item-group-LoadoutMedicalInternNeck = Шея интерна
+character-item-group-LoadoutMedicalInternMask = Маски интерна
+character-item-group-LoadoutMedicalInternOuter = Верхняя одежда интерна
+character-item-group-LoadoutMedicalInternShoes = Обувь интерна
+character-item-group-LoadoutMedicalInternUniforms = Униформа интерна
 
 # Medical - Paramedic
 # Medical - Paramedic
-character-item-group-LoadoutParamedicBackpacks = Paramedic Backpacks
-character-item-group-LoadoutParamedicBelt = Paramedic Belt
-character-item-group-LoadoutParamedicEars = Paramedic Ears
-character-item-group-LoadoutParamedicEquipment = Paramedic Equipment
-character-item-group-LoadoutParamedicEyes = Paramedic Eyewear
-character-item-group-LoadoutParamedicGloves = Paramedic Gloves
-character-item-group-LoadoutParamedicHead = Paramedic Headgear
-character-item-group-LoadoutParamedicId = Paramedic Id
-character-item-group-LoadoutParamedicNeck = Paramedic Neckwear
-character-item-group-LoadoutParamedicMask = Paramedic Masks
-character-item-group-LoadoutParamedicOuter = Paramedic Outerwear
-character-item-group-LoadoutParamedicShoes = Paramedic Shoes
-character-item-group-LoadoutParamedicUniforms = Paramedic Uniforms
+character-item-group-LoadoutParamedicBackpacks = Рюкзаки парамедика
+character-item-group-LoadoutParamedicBelt = Пояс парамедика
+character-item-group-LoadoutParamedicEars = Уши парамедика
+character-item-group-LoadoutParamedicEquipment = Снаряжение парамедика
+character-item-group-LoadoutParamedicEyes = Очки парамедика
+character-item-group-LoadoutParamedicGloves = Перчатки парамедика
+character-item-group-LoadoutParamedicHead = Головной убор парамедика
+character-item-group-LoadoutParamedicId = ID-карта парамедика
+character-item-group-LoadoutParamedicNeck = Шея парамедика
+character-item-group-LoadoutParamedicMask = Маски парамедика
+character-item-group-LoadoutParamedicOuter = Верхняя одежда парамедика
+character-item-group-LoadoutParamedicShoes = Обувь парамедика
+character-item-group-LoadoutParamedicUniforms = Униформа парамедика
 
 # Medical - Psychologist
 # Medical - Psychologist
-character-item-group-LoadoutPsychologistBackpacks = Psychologist Backpacks
-character-item-group-LoadoutPsychologistBelt = Psychologist Belt
-character-item-group-LoadoutPsychologistEars = Psychologist Ears
-character-item-group-LoadoutPsychologistEquipment = Psychologist Equipment
-character-item-group-LoadoutPsychologistEyes = Psychologist Eyewear
-character-item-group-LoadoutPsychologistGloves = Psychologist Gloves
-character-item-group-LoadoutPsychologistHead = Psychologist Headgear
-character-item-group-LoadoutPsychologistId = Psychologist Id
-character-item-group-LoadoutPsychologistNeck = Psychologist Neckwear
-character-item-group-LoadoutPsychologistMask = Psychologist Masks
-character-item-group-LoadoutPsychologistOuter = Psychologist Outerwear
-character-item-group-LoadoutPsychologistShoes = Psychologist Shoes
-character-item-group-LoadoutPsychologistUniforms = Psychologist Uniforms
+character-item-group-LoadoutPsychologistBackpacks = Рюкзаки психолога
+character-item-group-LoadoutPsychologistBelt = Пояс психолога
+character-item-group-LoadoutPsychologistEars = Уши психолога
+character-item-group-LoadoutPsychologistEquipment = Снаряжение психолога
+character-item-group-LoadoutPsychologistEyes = Очки психолога
+character-item-group-LoadoutPsychologistGloves = Перчатки психолога
+character-item-group-LoadoutPsychologistHead = Головной убор психолога
+character-item-group-LoadoutPsychologistId = ID-карта психолога
+character-item-group-LoadoutPsychologistNeck = Шея психолога
+character-item-group-LoadoutPsychologistMask = Маски психолога
+character-item-group-LoadoutPsychologistOuter = Верхняя одежда психолога
+character-item-group-LoadoutPsychologistShoes = Обувь психолога
+character-item-group-LoadoutPsychologistUniforms = Униформа психолога
 
 # Medical - Senior Physician
 # Medical - Senior Physician
-character-item-group-LoadoutSeniorPhysicianBackpacks = Senior Physician Backpacks
-character-item-group-LoadoutSeniorPhysicianBelt = Senior Physician Belt
-character-item-group-LoadoutSeniorPhysicianEars = Senior Physician Ears
-character-item-group-LoadoutSeniorPhysicianEquipment = Senior Physician Equipment
-character-item-group-LoadoutSeniorPhysicianEyes = Senior Physician Eyewear
-character-item-group-LoadoutSeniorPhysicianGloves = Senior Physician Gloves
-character-item-group-LoadoutSeniorPhysicianHead = Senior Physician Headgear
-character-item-group-LoadoutSeniorPhysicianId = Senior Physician Id
-character-item-group-LoadoutSeniorPhysicianNeck = Senior Physician Neckwear
-character-item-group-LoadoutSeniorPhysicianMask = Senior Physician Masks
-character-item-group-LoadoutSeniorPhysicianOuter = Senior Physician Outerwear
-character-item-group-LoadoutSeniorPhysicianShoes = Senior Physician Shoes
-character-item-group-LoadoutSeniorPhysicianUniforms = Senior Physician Uniforms
+character-item-group-LoadoutSeniorPhysicianBackpacks = Рюкзаки старшего врача
+character-item-group-LoadoutSeniorPhysicianBelt = Пояс старшего врача
+character-item-group-LoadoutSeniorPhysicianEars = Уши старшего врача
+character-item-group-LoadoutSeniorPhysicianEquipment = Снаряжение старшего врача
+character-item-group-LoadoutSeniorPhysicianEyes = Очки старшего врача
+character-item-group-LoadoutSeniorPhysicianGloves = Перчатки старшего врача
+character-item-group-LoadoutSeniorPhysicianHead = Головной убор старшего врача
+character-item-group-LoadoutSeniorPhysicianId = ID-карта старшего врача
+character-item-group-LoadoutSeniorPhysicianNeck = Шея старшего врача
+character-item-group-LoadoutSeniorPhysicianMask = Маски старшего врача
+character-item-group-LoadoutSeniorPhysicianOuter = Верхняя одежда старшего врача
+character-item-group-LoadoutSeniorPhysicianShoes = Обувь старшего врача
+character-item-group-LoadoutSeniorPhysicianUniforms = Униформа старшего врача
 
 # Security
 # Security
-character-item-group-LoadoutSecurityBackpacks = Security Backpacks
-character-item-group-LoadoutSecurityBelt = Security Belt
-character-item-group-LoadoutSecurityEars = Security Ears
-character-item-group-LoadoutSecurityEquipment = Security Equipment
-character-item-group-LoadoutSecurityWeapons = Security Duty Weapon
-character-item-group-LoadoutSecurityEyes = Security Eyewear
-character-item-group-LoadoutSecurityGloves = Security Gloves
-character-item-group-LoadoutSecurityHead = Security Headgear
-character-item-group-LoadoutSecurityId = Security Id
-character-item-group-LoadoutSecurityNeck = Security Neckwear
-character-item-group-LoadoutSecurityMask = Security Masks
-character-item-group-LoadoutSecurityOuter = Security Outerwear
-character-item-group-LoadoutSecurityShoes = Security Shoes
-character-item-group-LoadoutSecurityUniforms = Security Uniforms
+character-item-group-LoadoutSecurityBackpacks = Рюкзаки охраны
+character-item-group-LoadoutSecurityBelt = Пояс охраны
+character-item-group-LoadoutSecurityEars = Уши охраны
+character-item-group-LoadoutSecurityEquipment = Снаряжение охраны
+character-item-group-LoadoutSecurityWeapons = Табельное оружие охраны
+character-item-group-LoadoutSecurityEyes = Очки охраны
+character-item-group-LoadoutSecurityGloves = Перчатки охраны
+character-item-group-LoadoutSecurityHead = Головной убор охраны
+character-item-group-LoadoutSecurityId = ID-карта охраны
+character-item-group-LoadoutSecurityNeck = Шея охраны
+character-item-group-LoadoutSecurityMask = Маски охраны
+character-item-group-LoadoutSecurityOuter = Верхняя одежда охраны
+character-item-group-LoadoutSecurityShoes = Обувь охраны
+character-item-group-LoadoutSecurityUniforms = Униформа охраны
 
 # Security - Cadet
 # Security - Cadet
-character-item-group-LoadoutCadetBackpacks = Cadet Backpacks
-character-item-group-LoadoutCadetBelt = Cadet Belt
-character-item-group-LoadoutCadetEars = Cadet Ears
-character-item-group-LoadoutCadetEquipment = Cadet Equipment
-character-item-group-LoadoutCadetEyes = Cadet Eyewear
-character-item-group-LoadoutCadetGloves = Cadet Gloves
-character-item-group-LoadoutCadetHead = Cadet Headgear
-character-item-group-LoadoutCadetId = Cadet Id
-character-item-group-LoadoutCadetNeck = Cadet Neckwear
-character-item-group-LoadoutCadetMask = Cadet Masks
-character-item-group-LoadoutCadetOuter = Cadet Outerwear
-character-item-group-LoadoutCadetShoes = Cadet Shoes
-character-item-group-LoadoutCadetUniforms = Cadet Uniforms
+character-item-group-LoadoutCadetBackpacks = Рюкзаки кадета
+character-item-group-LoadoutCadetBelt = Пояс кадета
+character-item-group-LoadoutCadetEars = Уши кадета
+character-item-group-LoadoutCadetEquipment = Снаряжение кадета
+character-item-group-LoadoutCadetEyes = Очки кадета
+character-item-group-LoadoutCadetGloves = Перчатки кадета
+character-item-group-LoadoutCadetHead = Головной убор кадета
+character-item-group-LoadoutCadetId = ID-карта кадета
+character-item-group-LoadoutCadetNeck = Шея кадета
+character-item-group-LoadoutCadetMask = Маски кадета
+character-item-group-LoadoutCadetOuter = Верхняя одежда кадета
+character-item-group-LoadoutCadetShoes = Обувь кадета
+character-item-group-LoadoutCadetUniforms = Униформа кадета
 
 # Security - Corpsman
 # Security - Corpsman
-character-item-group-LoadoutCorpsmanBackpacks = Corpsman Backpacks
-character-item-group-LoadoutCorpsmanBelt = Corpsman Belt
-character-item-group-LoadoutCorpsmanEars = Corpsman Ears
-character-item-group-LoadoutCorpsmanEquipment = Corpsman Equipment
-character-item-group-LoadoutCorpsmanEyes = Corpsman Eyewear
-character-item-group-LoadoutCorpsmanGloves = Corpsman Gloves
-character-item-group-LoadoutCorpsmanHead = Corpsman Headgear
-character-item-group-LoadoutCorpsmanId = Corpsman Id
-character-item-group-LoadoutCorpsmanNeck = Corpsman Neckwear
-character-item-group-LoadoutCorpsmanMask = Corpsman Masks
-character-item-group-LoadoutCorpsmanOuter = Corpsman Outerwear
-character-item-group-LoadoutCorpsmanShoes = Corpsman Shoes
-character-item-group-LoadoutCorpsmanUniforms = Corpsman Uniforms
+character-item-group-LoadoutCorpsmanBackpacks = Рюкзаки санитара
+character-item-group-LoadoutCorpsmanBelt = Пояс санитара
+character-item-group-LoadoutCorpsmanEars = Уши санитара
+character-item-group-LoadoutCorpsmanEquipment = Снаряжение санитара
+character-item-group-LoadoutCorpsmanEyes = Очки санитара
+character-item-group-LoadoutCorpsmanGloves = Перчатки санитара
+character-item-group-LoadoutCorpsmanHead = Головной убор санитара
+character-item-group-LoadoutCorpsmanId = ID-карта санитара
+character-item-group-LoadoutCorpsmanNeck = Шея санитара
+character-item-group-LoadoutCorpsmanMask = Маски санитара
+character-item-group-LoadoutCorpsmanOuter = Верхняя одежда санитара
+character-item-group-LoadoutCorpsmanShoes = Обувь санитара
+character-item-group-LoadoutCorpsmanUniforms = Униформа санитара
 
 # Security - Detective
 # Security - Detective
-character-item-group-LoadoutDetectiveBackpacks = Detective Backpacks
-character-item-group-LoadoutDetectiveBelt = Detective Belt
-character-item-group-LoadoutDetectiveEars = Detective Ears
-character-item-group-LoadoutDetectiveEquipment = Detective Equipment
-character-item-group-LoadoutDetectiveEyes = Detective Eyewear
-character-item-group-LoadoutDetectiveGloves = Detective Gloves
-character-item-group-LoadoutDetectiveHead = Detective Headgear
-character-item-group-LoadoutDetectiveId = Detective Id
-character-item-group-LoadoutDetectiveNeck = Detective Neckwear
-character-item-group-LoadoutDetectiveMask = Detective Masks
-character-item-group-LoadoutDetectiveOuter = Detective Outerwear
-character-item-group-LoadoutDetectiveShoes = Detective Shoes
-character-item-group-LoadoutDetectiveUniforms = Detective Uniforms
+character-item-group-LoadoutDetectiveBackpacks = Рюкзаки следователя
+character-item-group-LoadoutDetectiveBelt = Пояс следователя
+character-item-group-LoadoutDetectiveEars = Уши следователя
+character-item-group-LoadoutDetectiveEquipment = Снаряжение следователя
+character-item-group-LoadoutDetectiveEyes = Очки следователя
+character-item-group-LoadoutDetectiveGloves = Перчатки следователя
+character-item-group-LoadoutDetectiveHead = Головной убор следователя
+character-item-group-LoadoutDetectiveId = ID-карта следователя
+character-item-group-LoadoutDetectiveNeck = Шея следователя
+character-item-group-LoadoutDetectiveMask = Маски следователя
+character-item-group-LoadoutDetectiveOuter = Верхняя одежда следователя
+character-item-group-LoadoutDetectiveShoes = Обувь следователя
+character-item-group-LoadoutDetectiveUniforms = Униформа следователя
 
 # Security - Sheriff
 # Security - Sheriff
-character-item-group-LoadoutHeadOfSecurityBackpacks = Sheriff Backpacks
-character-item-group-LoadoutHeadOfSecurityBelt = Sheriff Belt
-character-item-group-LoadoutHeadOfSecurityEars = Sheriff Ears
-character-item-group-LoadoutHeadOfSecurityEquipment = Sheriff Equipment
-character-item-group-LoadoutHeadOfSecurityWeapons = Sheriff's Antique Weapon Collection
-character-item-group-LoadoutHeadOfSecurityEyes = Sheriff Eyewear
-character-item-group-LoadoutHeadOfSecurityGloves = Sheriff Gloves
-character-item-group-LoadoutHeadOfSecurityHead = Sheriff Headgear
-character-item-group-LoadoutHeadOfSecurityId = Sheriff Id
-character-item-group-LoadoutHeadOfSecurityNeck = Sheriff Neckwear
-character-item-group-LoadoutHeadOfSecurityMask = Sheriff Masks
-character-item-group-LoadoutHeadOfSecurityOuter = Sheriff Outerwear
-character-item-group-LoadoutHeadOfSecurityShoes = Sheriff Shoes
-character-item-group-LoadoutHeadOfSecurityUniforms = Sheriff Uniforms
+character-item-group-LoadoutHeadOfSecurityBackpacks = Рюкзаки шерифа
+character-item-group-LoadoutHeadOfSecurityBelt = Пояс шерифа
+character-item-group-LoadoutHeadOfSecurityEars = Уши шерифа
+character-item-group-LoadoutHeadOfSecurityEquipment = Снаряжение шерифа
+character-item-group-LoadoutHeadOfSecurityWeapons = Коллекция старинного оружия шерифа
+character-item-group-LoadoutHeadOfSecurityEyes = Очки шерифа
+character-item-group-LoadoutHeadOfSecurityGloves = Перчатки шерифа
+character-item-group-LoadoutHeadOfSecurityHead = Головной убор шерифа
+character-item-group-LoadoutHeadOfSecurityId = ID-карта шерифа
+character-item-group-LoadoutHeadOfSecurityNeck = Шея шерифа
+character-item-group-LoadoutHeadOfSecurityMask = Маски шерифа
+character-item-group-LoadoutHeadOfSecurityOuter = Верхняя одежда шерифа
+character-item-group-LoadoutHeadOfSecurityShoes = Обувь шерифа
+character-item-group-LoadoutHeadOfSecurityUniforms = Униформа шерифа
 
 # Security - Security Officer
-character-item-group-LoadoutHeadOfSecurityTrinkets = Sheriff Trinkets
+character-item-group-LoadoutHeadOfSecurityTrinkets = Брелоки шерифа
 
 # Security - Security Officer
-character-item-group-LoadoutSecurityOfficerBackpacks = Security Officer Backpacks
-character-item-group-LoadoutSecurityOfficerBelt = Security Officer Belt
-character-item-group-LoadoutSecurityOfficerEars = Security Officer Ears
-character-item-group-LoadoutSecurityOfficerEquipment = Security Officer Equipment
-character-item-group-LoadoutSecurityOfficerEyes = Security Officer Eyewear
-character-item-group-LoadoutSecurityOfficerGloves = Security Officer Gloves
-character-item-group-LoadoutSecurityOfficerHead = Security Officer Headgear
-character-item-group-LoadoutSecurityOfficerId = Security Officer Id
-character-item-group-LoadoutSecurityOfficerNeck = Security Officer Neckwear
-character-item-group-LoadoutSecurityOfficerMask = Security Officer Masks
-character-item-group-LoadoutSecurityOfficerOuter = Security Officer Outerwear
-character-item-group-LoadoutSecurityOfficerShoes = Security Officer Shoes
-character-item-group-LoadoutSecurityOfficerUniforms = Security Officer Uniforms
+character-item-group-LoadoutSecurityOfficerBackpacks = Рюкзаки офицера охраны
+character-item-group-LoadoutSecurityOfficerBelt = Пояс офицера охраны
+character-item-group-LoadoutSecurityOfficerEars = Уши офицера охраны
+character-item-group-LoadoutSecurityOfficerEquipment = Снаряжение офицера охраны
+character-item-group-LoadoutSecurityOfficerEyes = Очки офицера охраны
+character-item-group-LoadoutSecurityOfficerGloves = Перчатки офицера охраны
+character-item-group-LoadoutSecurityOfficerHead = Головной убор офицера охраны
+character-item-group-LoadoutSecurityOfficerId = ID-карта офицера охраны
+character-item-group-LoadoutSecurityOfficerNeck = Шея офицера охраны
+character-item-group-LoadoutSecurityOfficerMask = Маски офицера охраны
+character-item-group-LoadoutSecurityOfficerOuter = Верхняя одежда офицера охраны
+character-item-group-LoadoutSecurityOfficerShoes = Обувь офицера охраны
+character-item-group-LoadoutSecurityOfficerUniforms = Униформа офицера охраны
 
 # Security - Lieutenant
 # Security - Lieutenant
-character-item-group-LoadoutSeniorOfficerBackpacks = Lieutenant Backpacks
-character-item-group-LoadoutSeniorOfficerBelt = Lieutenant Belt
-character-item-group-LoadoutSeniorOfficerEars = Lieutenant Ears
-character-item-group-LoadoutSeniorOfficerEquipment = Lieutenant Equipment
-character-item-group-LoadoutSeniorOfficerEyes = Lieutenant Eyewear
-character-item-group-LoadoutSeniorOfficerGloves = Lieutenant Gloves
-character-item-group-LoadoutSeniorOfficerHead = Lieutenant Headgear
-character-item-group-LoadoutSeniorOfficerId = Lieutenant Id
-character-item-group-LoadoutSeniorOfficerNeck = Lieutenant Neckwear
-character-item-group-LoadoutSeniorOfficerMask = Lieutenant Masks
-character-item-group-LoadoutSeniorOfficerOuter = Lieutenant Outerwear
-character-item-group-LoadoutSeniorOfficerShoes = Lieutenant Shoes
-character-item-group-LoadoutSeniorOfficerUniforms = Lieutenant Uniforms
+character-item-group-LoadoutSeniorOfficerBackpacks = Рюкзаки лейтенанта
+character-item-group-LoadoutSeniorOfficerBelt = Пояс лейтенанта
+character-item-group-LoadoutSeniorOfficerEars = Уши лейтенанта
+character-item-group-LoadoutSeniorOfficerEquipment = Снаряжение лейтенанта
+character-item-group-LoadoutSeniorOfficerEyes = Очки лейтенанта
+character-item-group-LoadoutSeniorOfficerGloves = Перчатки лейтенанта
+character-item-group-LoadoutSeniorOfficerHead = Головной убор лейтенанта
+character-item-group-LoadoutSeniorOfficerId = ID-карта лейтенанта
+character-item-group-LoadoutSeniorOfficerNeck = Шея лейтенанта
+character-item-group-LoadoutSeniorOfficerMask = Маски лейтенанта
+character-item-group-LoadoutSeniorOfficerOuter = Верхняя одежда лейтенанта
+character-item-group-LoadoutSeniorOfficerShoes = Обувь лейтенанта
+character-item-group-LoadoutSeniorOfficerUniforms = Униформа лейтенанта
 
 # Security - Warden
 # Security - Warden
-character-item-group-LoadoutWardenBackpacks = Warden Backpacks
-character-item-group-LoadoutWardenBelt = Warden Belt
-character-item-group-LoadoutWardenEars = Warden Ears
-character-item-group-LoadoutWardenEquipment = Warden Equipment
-character-item-group-LoadoutWardenEyes = Warden Eyewear
-character-item-group-LoadoutWardenGloves = Warden Gloves
-character-item-group-LoadoutWardenHead = Warden Headgear
-character-item-group-LoadoutWardenId = Warden Id
-character-item-group-LoadoutWardenNeck = Warden Neckwear
-character-item-group-LoadoutWardenMask = Warden Masks
-character-item-group-LoadoutWardenOuter = Warden Outerwear
-character-item-group-LoadoutWardenShoes = Warden Shoes
-character-item-group-LoadoutWardenUniforms = Warden Uniforms
+character-item-group-LoadoutWardenBackpacks = Рюкзаки Бейлиф
+character-item-group-LoadoutWardenBelt = Пояс Бейлиф
+character-item-group-LoadoutWardenEars = Уши Бейлиф
+character-item-group-LoadoutWardenEquipment = Снаряжение Бейлиф
+character-item-group-LoadoutWardenEyes = Очки Бейлиф
+character-item-group-LoadoutWardenGloves = Перчатки Бейлиф
+character-item-group-LoadoutWardenHead = Головной убор Бейлиф
+character-item-group-LoadoutWardenId = ID-карта Бейлиф
+character-item-group-LoadoutWardenNeck = Шея Бейлиф
+character-item-group-LoadoutWardenMask = Маски Бейлиф
+character-item-group-LoadoutWardenOuter = Верхняя одежда Бейлиф
+character-item-group-LoadoutWardenShoes = Обувь Бейлиф
+character-item-group-LoadoutWardenUniforms = Униформа Бейлиф
 
 # Service
 # Service
-character-item-group-LoadoutServiceBackpacks = Service Backpacks
-character-item-group-LoadoutServiceBelt = Service Belt
-character-item-group-LoadoutServiceEars = Service Ears
-character-item-group-LoadoutServiceEquipment = Service Equipment
-character-item-group-LoadoutServiceEyes = Service Eyewear
-character-item-group-LoadoutServiceGloves = Service Gloves
-character-item-group-LoadoutServiceHead = Service Headgear
-character-item-group-LoadoutServiceId = Service Id
-character-item-group-LoadoutServiceNeck = Service Neckwear
-character-item-group-LoadoutServiceMask = Service Masks
-character-item-group-LoadoutServiceOuter = Service Outerwear
-character-item-group-LoadoutServiceShoes = Service Shoes
-character-item-group-LoadoutServiceUniforms = Service Uniforms
+character-item-group-LoadoutServiceBackpacks = Рюкзаки сервис
+character-item-group-LoadoutServiceBelt = Пояс сервис
+character-item-group-LoadoutServiceEars = Уши сервис
+character-item-group-LoadoutServiceEquipment = Снаряжение сервис
+character-item-group-LoadoutServiceEyes = Очки сервис
+character-item-group-LoadoutServiceGloves = Перчатки сервис
+character-item-group-LoadoutServiceHead = Головной убор сервис
+character-item-group-LoadoutServiceId = ID-карта сервис
+character-item-group-LoadoutServiceNeck = Шея сервис
+character-item-group-LoadoutServiceMask = Маски сервис
+character-item-group-LoadoutServiceOuter = Верхняя одежда сервис
+character-item-group-LoadoutServiceShoes = Обувь сервис
+character-item-group-LoadoutServiceUniforms = Униформа сервис
 
 # Service - Bartender
 # Service - Bartender
-character-item-group-LoadoutBartenderBackpacks = Bartender Backpacks
-character-item-group-LoadoutBartenderBelt = Bartender Belt
-character-item-group-LoadoutBartenderEars = Bartender Ears
-character-item-group-LoadoutBartenderEquipment = Bartender Equipment
-character-item-group-LoadoutBartenderAmmo = Bartender Ammo
-character-item-group-LoadoutBartenderWeapon = Bartender Weapon
-character-item-group-LoadoutBartenderEyes = Bartender Eyewear
-character-item-group-LoadoutBartenderGloves = Bartender Gloves
-character-item-group-LoadoutBartenderHead = Bartender Headgear
-character-item-group-LoadoutBartenderId = Bartender Id
-character-item-group-LoadoutBartenderNeck = Bartender Neckwear
-character-item-group-LoadoutBartenderMask = Bartender Masks
-character-item-group-LoadoutBartenderOuter = Bartender Outerwear
-character-item-group-LoadoutBartenderShoes = Bartender Shoes
-character-item-group-LoadoutBartenderUniforms = Bartender Uniforms
+character-item-group-LoadoutBartenderBackpacks = Рюкзаки бармена
+character-item-group-LoadoutBartenderBelt = Пояс бармена
+character-item-group-LoadoutBartenderEars = Уши бармена
+character-item-group-LoadoutBartenderEquipment = Снаряжение бармена
+character-item-group-LoadoutBartenderAmmo = Боеприпасы бармена
+character-item-group-LoadoutBartenderWeapon = Оружие бармена
+character-item-group-LoadoutBartenderEyes = Очки бармена
+character-item-group-LoadoutBartenderGloves = Перчатки бармена
+character-item-group-LoadoutBartenderHead = Головной убор бармена
+character-item-group-LoadoutBartenderId = ID-карта бармена
+character-item-group-LoadoutBartenderNeck = Шея бармена
+character-item-group-LoadoutBartenderMask = Маски бармена
+character-item-group-LoadoutBartenderOuter = Верхняя одежда бармена
+character-item-group-LoadoutBartenderShoes = Обувь бармена
+character-item-group-LoadoutBartenderUniforms = Униформа бармена
 
 # Service - Botanist
 # Service - Botanist
-character-item-group-LoadoutBotanistBackpacks = Botanist Backpacks
-character-item-group-LoadoutBotanistBelt = Botanist Belt
-character-item-group-LoadoutBotanistEars = Botanist Ears
-character-item-group-LoadoutBotanistEquipment = Botanist Equipment
-character-item-group-LoadoutBotanistEyes = Botanist Eyewear
-character-item-group-LoadoutBotanistGloves = Botanist Gloves
-character-item-group-LoadoutBotanistHead = Botanist Headgear
-character-item-group-LoadoutBotanistId = Botanist Id
-character-item-group-LoadoutBotanistNeck = Botanist Neckwear
-character-item-group-LoadoutBotanistMask = Botanist Masks
-character-item-group-LoadoutBotanistOuter = Botanist Outerwear
-character-item-group-LoadoutBotanistShoes = Botanist Shoes
-character-item-group-LoadoutBotanistUniforms = Botanist Uniforms
+character-item-group-LoadoutBotanistBackpacks = Рюкзаки ботаника
+character-item-group-LoadoutBotanistBelt = Пояс ботаника
+character-item-group-LoadoutBotanistEars = Уши ботаника
+character-item-group-LoadoutBotanistEquipment = Снаряжение ботаника
+character-item-group-LoadoutBotanistEyes = Очки ботаника
+character-item-group-LoadoutBotanistGloves = Перчатки ботаника
+character-item-group-LoadoutBotanistHead = Головной убор ботаника
+character-item-group-LoadoutBotanistId = ID-карта ботаника
+character-item-group-LoadoutBotanistNeck = Шея ботаника
+character-item-group-LoadoutBotanistMask = Маски ботаника
+character-item-group-LoadoutBotanistOuter = Верхняя одежда ботаника
+character-item-group-LoadoutBotanistShoes = Обувь ботаника
+character-item-group-LoadoutBotanistUniforms = Униформа ботаника
 
 # Service - Chef
 # Service - Chef
-character-item-group-LoadoutChefBackpacks = Chef Backpacks
-character-item-group-LoadoutChefBelt = Chef Belt
-character-item-group-LoadoutChefEars = Chef Ears
-character-item-group-LoadoutChefEquipment = Chef Equipment
-character-item-group-LoadoutChefEyes = Chef Eyewear
-character-item-group-LoadoutChefGloves = Chef Gloves
-character-item-group-LoadoutChefHead = Chef Headgear
-character-item-group-LoadoutChefId = Chef Id
-character-item-group-LoadoutChefNeck = Chef Neckwear
-character-item-group-LoadoutChefMask = Chef Masks
-character-item-group-LoadoutChefOuter = Chef Outerwear
-character-item-group-LoadoutChefShoes = Chef Shoes
-character-item-group-LoadoutChefUniforms = Chef Uniforms
+character-item-group-LoadoutChefBackpacks = Рюкзаки шеф-повара
+character-item-group-LoadoutChefBelt = Пояс шеф-повара
+character-item-group-LoadoutChefEars = Уши шеф-повара
+character-item-group-LoadoutChefEquipment = Снаряжение шеф-повара
+character-item-group-LoadoutChefEyes = Очки шеф-повара
+character-item-group-LoadoutChefGloves = Перчатки шеф-повара
+character-item-group-LoadoutChefHead = Головной убор шеф-повара
+character-item-group-LoadoutChefId = ID-карта шеф-повара
+character-item-group-LoadoutChefNeck = Шея шеф-повара
+character-item-group-LoadoutChefMask = Маски шеф-повара
+character-item-group-LoadoutChefOuter = Верхняя одежда шеф-повара
+character-item-group-LoadoutChefShoes = Обувь шеф-повара
+character-item-group-LoadoutChefUniforms = Униформа шеф-повара
 
 # Service - Clown
 # Service - Clown
-character-item-group-LoadoutClownBackpacks = Clown Backpacks
-character-item-group-LoadoutClownBelt = Clown Belt
-character-item-group-LoadoutClownEars = Clown Ears
-character-item-group-LoadoutClownEquipment = Clown Equipment
-character-item-group-LoadoutClownEyes = Clown Eyewear
-character-item-group-LoadoutClownGloves = Clown Gloves
-character-item-group-LoadoutClownHead = Clown Headgear
-character-item-group-LoadoutClownId = Clown Id
-character-item-group-LoadoutClownNeck = Clown Neckwear
-character-item-group-LoadoutClownMask = Clown Masks
-character-item-group-LoadoutClownOuter = Clown Outerwear
-character-item-group-LoadoutClownShoes = Clown Shoes
-character-item-group-LoadoutClownUniforms = Clown Uniforms
+character-item-group-LoadoutClownBackpacks = Рюкзаки клоуна
+character-item-group-LoadoutClownBelt = Пояс клоуна
+character-item-group-LoadoutClownEars = Уши клоуна
+character-item-group-LoadoutClownEquipment = Снаряжение клоуна
+character-item-group-LoadoutClownEyes = Очки клоуна
+character-item-group-LoadoutClownGloves = Перчатки клоуна
+character-item-group-LoadoutClownHead = Головной убор клоуна
+character-item-group-LoadoutClownId = ID-карта клоуна
+character-item-group-LoadoutClownNeck = Шея клоуна
+character-item-group-LoadoutClownMask = Маски клоуна
+character-item-group-LoadoutClownOuter = Верхняя одежда клоуна
+character-item-group-LoadoutClownShoes = Обувь клоуна
+character-item-group-LoadoutClownUniforms = Униформа клоуна
 
 # Service - Janitor
 # Service - Janitor
-character-item-group-LoadoutJanitorBackpacks = Janitor Backpacks
-character-item-group-LoadoutJanitorBelt = Janitor Belt
-character-item-group-LoadoutJanitorEars = Janitor Ears
-character-item-group-LoadoutJanitorEquipment = Janitor Equipment
-character-item-group-LoadoutJanitorEyes = Janitor Eyewear
-character-item-group-LoadoutJanitorGloves = Janitor Gloves
-character-item-group-LoadoutJanitorHead = Janitor Headgear
-character-item-group-LoadoutJanitorId = Janitor Id
-character-item-group-LoadoutJanitorNeck = Janitor Neckwear
-character-item-group-LoadoutJanitorMask = Janitor Masks
-character-item-group-LoadoutJanitorOuter = Janitor Outerwear
-character-item-group-LoadoutJanitorShoes = Janitor Shoes
-character-item-group-LoadoutJanitorUniforms = Janitor Uniforms
+character-item-group-LoadoutJanitorBackpacks = Рюкзаки уборщика
+character-item-group-LoadoutJanitorBelt = Пояс уборщика
+character-item-group-LoadoutJanitorEars = Уши уборщика
+character-item-group-LoadoutJanitorEquipment = Снаряжение уборщика
+character-item-group-LoadoutJanitorEyes = Очки уборщика
+character-item-group-LoadoutJanitorGloves = Перчатки уборщика
+character-item-group-LoadoutJanitorHead = Головной убор уборщика
+character-item-group-LoadoutJanitorId = ID-карта уборщика
+character-item-group-LoadoutJanitorNeck = Шея уборщика
+character-item-group-LoadoutJanitorMask = Маски уборщика
+character-item-group-LoadoutJanitorOuter = Верхняя одежда уборщика
+character-item-group-LoadoutJanitorShoes = Обувь уборщика
+character-item-group-LoadoutJanitorUniforms = Униформа уборщика
 
 # Service - Lawyer
 # Service - Lawyer
-character-item-group-LoadoutLawyerBackpacks = Lawyer Backpacks
-character-item-group-LoadoutLawyerBelt = Lawyer Belt
-character-item-group-LoadoutLawyerEars = Lawyer Ears
-character-item-group-LoadoutLawyerEquipment = Lawyer Equipment
-character-item-group-LoadoutLawyerEyes = Lawyer Eyewear
-character-item-group-LoadoutLawyerGloves = Lawyer Gloves
-character-item-group-LoadoutLawyerHead = Lawyer Headgear
-character-item-group-LoadoutLawyerId = Lawyer Id
-character-item-group-LoadoutLawyerNeck = Lawyer Neckwear
-character-item-group-LoadoutLawyerMask = Lawyer Masks
-character-item-group-LoadoutLawyerOuter = Lawyer Outerwear
-character-item-group-LoadoutLawyerShoes = Lawyer Shoes
-character-item-group-LoadoutLawyerUniforms = Lawyer Uniforms
+character-item-group-LoadoutLawyerBackpacks = Рюкзаки юриста
+character-item-group-LoadoutLawyerBelt = Пояс юриста
+character-item-group-LoadoutLawyerEars = Уши юриста
+character-item-group-LoadoutLawyerEquipment = Снаряжение юриста
+character-item-group-LoadoutLawyerEyes = Очки юриста
+character-item-group-LoadoutLawyerGloves = Перчатки юриста
+character-item-group-LoadoutLawyerHead = Головной убор юриста
+character-item-group-LoadoutLawyerId = ID-карта юриста
+character-item-group-LoadoutLawyerNeck = Шея юриста
+character-item-group-LoadoutLawyerMask = Маски юриста
+character-item-group-LoadoutLawyerOuter = Верхняя одежда юриста
+character-item-group-LoadoutLawyerShoes = Обувь юриста
+character-item-group-LoadoutLawyerUniforms = Униформа юриста
 
 # Service - Mime
 # Service - Mime
-character-item-group-LoadoutMimeBackpacks = Mime Backpacks
-character-item-group-LoadoutMimeBelt = Mime Belt
-character-item-group-LoadoutMimeEars = Mime Ears
-character-item-group-LoadoutMimeEquipment = Mime Equipment
-character-item-group-LoadoutMimeEyes = Mime Eyewear
-character-item-group-LoadoutMimeGloves = Mime Gloves
-character-item-group-LoadoutMimeHead = Mime Headgear
-character-item-group-LoadoutMimeId = Mime Id
-character-item-group-LoadoutMimeNeck = Mime Neckwear
-character-item-group-LoadoutMimeMask = Mime Masks
-character-item-group-LoadoutMimeOuter = Mime Outerwear
-character-item-group-LoadoutMimeShoes = Mime Shoes
-character-item-group-LoadoutMimeUniforms = Mime Uniforms
+character-item-group-LoadoutMimeBackpacks = Рюкзаки мима
+character-item-group-LoadoutMimeBelt = Пояс мима
+character-item-group-LoadoutMimeEars = Уши мима
+character-item-group-LoadoutMimeEquipment = Снаряжение мима
+character-item-group-LoadoutMimeEyes = Очки мима
+character-item-group-LoadoutMimeGloves = Перчатки мима
+character-item-group-LoadoutMimeHead = Головной убор мима
+character-item-group-LoadoutMimeId = ID-карта мима
+character-item-group-LoadoutMimeNeck = Шея мима
+character-item-group-LoadoutMimeMask = Маски мима
+character-item-group-LoadoutMimeOuter = Верхняя одежда мима
+character-item-group-LoadoutMimeShoes = Обувь мима
+character-item-group-LoadoutMimeUniforms = Униформа мима
 
 # Service - Musician
 # Service - Musician
-character-item-group-LoadoutMusicianBackpacks = Musician Backpacks
-character-item-group-LoadoutMusicianBelt = Musician Belt
-character-item-group-LoadoutMusicianEars = Musician Ears
-character-item-group-LoadoutMusicianEquipment = Musician Equipment
-character-item-group-LoadoutMusicianEyes = Musician Eyewear
-character-item-group-LoadoutMusicianGloves = Musician Gloves
-character-item-group-LoadoutMusicianHead = Musician Headgear
-character-item-group-LoadoutMusicianId = Musician Id
-character-item-group-LoadoutMusicianNeck = Musician Neckwear
-character-item-group-LoadoutMusicianMask = Musician Masks
-character-item-group-LoadoutMusicianOuter = Musician Outerwear
-character-item-group-LoadoutMusicianShoes = Musician Shoes
-character-item-group-LoadoutMusicianUniforms = Musician Uniforms
+character-item-group-LoadoutMusicianBackpacks = Рюкзаки музыканта
+character-item-group-LoadoutMusicianBelt = Пояс музыканта
+character-item-group-LoadoutMusicianEars = Уши музыканта
+character-item-group-LoadoutMusicianEquipment = Снаряжение музыканта
+character-item-group-LoadoutMusicianEyes = Очки музыканта
+character-item-group-LoadoutMusicianGloves = Перчатки музыканта
+character-item-group-LoadoutMusicianHead = Головной убор музыканта
+character-item-group-LoadoutMusicianId = ID-карта музыканта
+character-item-group-LoadoutMusicianNeck = Шея музыканта
+character-item-group-LoadoutMusicianMask = Маски музыканта
+character-item-group-LoadoutMusicianOuter = Верхняя одежда музыканта
+character-item-group-LoadoutMusicianShoes = Обувь музыканта
+character-item-group-LoadoutMusicianUniforms = Униформа музыканта
 
 # Service - Reporter
 # Service - Reporter
-character-item-group-LoadoutReporterBackpacks = Reporter Backpacks
-character-item-group-LoadoutReporterBelt = Reporter Belt
-character-item-group-LoadoutReporterEars = Reporter Ears
-character-item-group-LoadoutReporterEquipment = Reporter Equipment
-character-item-group-LoadoutReporterEyes = Reporter Eyewear
-character-item-group-LoadoutReporterGloves = Reporter Gloves
-character-item-group-LoadoutReporterHead = Reporter Headgear
-character-item-group-LoadoutReporterId = Reporter Id
-character-item-group-LoadoutReporterNeck = Reporter Neckwear
-character-item-group-LoadoutReporterMask = Reporter Masks
-character-item-group-LoadoutReporterOuter = Reporter Outerwear
-character-item-group-LoadoutReporterShoes = Reporter Shoes
-character-item-group-LoadoutReporterUniforms = Reporter Uniforms
+character-item-group-LoadoutReporterBackpacks = Рюкзаки репортёра
+character-item-group-LoadoutReporterBelt = Пояс репортёра
+character-item-group-LoadoutReporterEars = Уши репортёра
+character-item-group-LoadoutReporterEquipment = Снаряжение репортёра
+character-item-group-LoadoutReporterEyes = Очки репортёра
+character-item-group-LoadoutReporterGloves = Перчатки репортёра
+character-item-group-LoadoutReporterHead = Головной убор репортёра
+character-item-group-LoadoutReporterId = ID-карта репортёра
+character-item-group-LoadoutReporterNeck = Шея репортёра
+character-item-group-LoadoutReporterMask = Маски репортёра
+character-item-group-LoadoutReporterOuter = Верхняя одежда репортёра
+character-item-group-LoadoutReporterShoes = Обувь репортёра
+character-item-group-LoadoutReporterUniforms = Униформа репортёра
 
 # Traits - Languages
 # Misc - Prisoner
-character-item-group-LoadoutPrisonerBackpacks = Prisoner Backpacks
-character-item-group-LoadoutPrisonerBelt = Prisoner Belt
-character-item-group-LoadoutPrisonerEars = Prisoner Ears
-character-item-group-LoadoutPrisonerEquipment = Prisoner Equipment
-character-item-group-LoadoutPrisonerEyes = Prisoner Eyewear
-character-item-group-LoadoutPrisonerloves = Prisoner Gloves
-character-item-group-LoadoutPrisonerHead = Prisoner Headgear
-character-item-group-LoadoutPrisonerId = Prisoner Id
-character-item-group-LoadoutPrisonerNeck = Prisoner Neckwear
-character-item-group-LoadoutPrisonerMask = Prisoner Masks
-character-item-group-LoadoutPrisonerOuter = Prisoner Outerwear
-character-item-group-LoadoutPrisonerShoes = Prisoner Shoes
-character-item-group-LoadoutPrisonerUniforms = Prisoner Uniforms
+character-item-group-LoadoutPrisonerBackpacks = Рюкзаки заключённого
+character-item-group-LoadoutPrisonerBelt = Пояс заключённого
+character-item-group-LoadoutPrisonerEars = Уши заключённого
+character-item-group-LoadoutPrisonerEquipment = Снаряжение заключённого
+character-item-group-LoadoutPrisonerEyes = Очки заключённого
+character-item-group-LoadoutPrisonerloves = Перчатки заключённого
+character-item-group-LoadoutPrisonerHead = Головной убор заключённого
+character-item-group-LoadoutPrisonerId = ID-карта заключённого
+character-item-group-LoadoutPrisonerNeck = Шея заключённого
+character-item-group-LoadoutPrisonerMask = Маски заключённого
+character-item-group-LoadoutPrisonerOuter = Верхняя одежда заключённого
+character-item-group-LoadoutPrisonerShoes = Обувь заключённого
+character-item-group-LoadoutPrisonerUniforms = Униформа заключённого
 
 # Traits - Languages
-character-item-group-TraitsLanguagesBasic = Basic Languages
-character-item-group-TraitsAccents = Accents
+character-item-group-TraitsLanguagesBasic = Базовые языки
+character-item-group-TraitsAccents = Акценты

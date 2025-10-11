@@ -24,7 +24,7 @@ using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
 using Content.Shared._EE.GenderChange;
 using Content.Shared._White.Bark.Systems;
- 
+
  namespace Content.Shared.Humanoid;
 
 /// <summary>
@@ -54,7 +54,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     public const string DefaultEmployer = "NanoTrasen";
 
     [ValidatePrototypeId<NationalityPrototype>]
-    public const string DefaultNationality = "Bieselite";
+    public const string DefaultNationality = "Nanotrasen";
 
     [ValidatePrototypeId<LifepathPrototype>]
     public const string DefaultLifepath = "Spacer";

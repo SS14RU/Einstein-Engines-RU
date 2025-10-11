@@ -35,18 +35,18 @@
         fontSize: 12
         color: "#77ff77"
         requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Bieselite
+        # requirements:
+        # - !type:CharacterNationalityRequirement
+        #   nationalities:
+        #   - Bieselite
       - description: "solarian_view_biesel_passport"
         fontSize: 12
         color: "#ff7777"
         requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Solarian
+        # requirements:
+        # - !type:CharacterNationalityRequirement
+        #   nationalities:
+        #   - Solarian
 
 - type: entity
   name: Solarian Alliance passport
@@ -64,18 +64,18 @@
         fontSize: 12
         color: "#ff7777"
         requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Bieselite
+        # requirements:
+        # - !type:CharacterNationalityRequirement
+        #   nationalities:
+        #   - Bieselite
       - description: "solarian_view_sol_passport"
         fontSize: 12
         color: "#77ff77"
         requireDetailRange: true
-        requirements:
-        - !type:CharacterNationalityRequirement
-          nationalities:
-          - Solarian
+        # requirements:
+        # - !type:CharacterNationalityRequirement
+        #   nationalities:
+        #   - Solarian
 
 - type: entity
   name: Republic of Elyra passport

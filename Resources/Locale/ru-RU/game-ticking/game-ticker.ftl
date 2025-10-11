@@ -2,7 +2,7 @@ game-ticker-restart-round = Перезапуск раунда...
 game-ticker-start-round = Раунд начинается...
 game-ticker-start-round-cannot-start-game-mode-fallback = Не удалось запустить режим { $failedGameMode }! Запускаем { $fallbackMode }...
 game-ticker-start-round-cannot-start-game-mode-restart = Не удалось запустить режим { $failedGameMode }! Перезапуск раунда...
-game-ticker-start-round-invalid-map = Selected map {$map} is inelligible for gamemode {$mode}. Gamemode may not function as intended...
+game-ticker-start-round-invalid-map = Выбранная карта {$map} не подходит для игрового режима {$mode}. Игровой режим может работать некорректно...
 game-ticker-unknown-role = Неизвестный
 game-ticker-delay-start = Начало раунда было отложено на { $seconds } секунд.
 game-ticker-pause-start = Начало раунда было приостановлено.
@@ -27,7 +27,7 @@ game-ticker-no-map-selected = [color=red]Карта ещё не выбрана![
 game-ticker-player-no-jobs-available-when-joining = При попытке присоединиться к игре ни одной роли не было доступно.
 
 # Displayed in chat to admins when a player joins
-game-ticker-welcome-to-the-station = Welcome to the station crew, enjoy your stay!
+game-ticker-welcome-to-the-station = Добро пожаловать в команду станции, приятного вам пребывания!
 
 # Displayed in chat to admins when a player joins
 player-join-message = Игрок { $name } зашёл!
@@ -43,7 +43,7 @@ latejoin-arrival-announcement =
         [female] прибыла
        *[other] прибыл
     } на станцию!
-latejoin-arrival-announcement-special = {$job} {$character} on deck!
+latejoin-arrival-announcement-special = {$job} {$character} на борту!
 latejoin-arrival-sender = Станция
 latejoin-arrivals-direction = Вскоре прибудет шаттл, который доставит вас на вашу станцию.
 latejoin-arrivals-direction-time = Шаттл, который доставит вас на станцию, прибудет через { $time }.
@@ -52,6 +52,6 @@ latejoin-arrivals-teleport-to-spawn = Таинственная сила теле
 
 preset-not-enough-ready-players = Не удалось запустить пресет { $presetName }. Требуется { $minimumPlayers } игроков, но готовы только { $readyPlayersCount }.
 preset-no-one-ready = Не удалось запустить режим { $presetName }. Нет готовых игроков.
-game-run-level-PreRoundLobby = Pre-round lobby
-game-run-level-InRound = In round
-game-run-level-PostRound = Post round
+game-run-level-PreRoundLobby = Лобби перед раундом
+game-run-level-InRound = В раунде
+game-run-level-PostRound = После раунда

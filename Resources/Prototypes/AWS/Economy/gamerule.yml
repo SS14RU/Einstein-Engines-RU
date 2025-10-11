@@ -1,16 +1,40 @@
 - type: entity
-  id: EconomyPayDayNanotraseAddingAll
+  id: PaydayRule
+  parent: BaseGameRule
+  components:
+  - type: PaydayRule
+    intervalMinutes: 40
+    salaryPrototype: NanotrasenDefaultSallaries
+    fallbackAccountId: NT-CentCom
+    announcementId: PaydayRuleAnnouncement
+    announcementMessage: payday-rule-announcement
+    failurePopup: payday-rule-popup-insufficient
+
+- type: entity
+  id: SalaryIncreaseRule
   parent: BaseGameRule
   components:
   - type: StationEvent
-    weight: 8
-    duration: 1
-    maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
-  - type: EconomyPayDayRule
-    payerAccountId: "NT-CentCom"
-    proccessOnlyPrefixedAccounts: "NT-"
-    payType: enum.EconomyPayDayRuleType.Adding
-    sallaryProto: NanotrasenDefaultSallaries
-    coef: # default 100
-      min: 70
-      max: 140
+    weight: 5
+    reoccurrenceDelay: 30
+  - type: SalaryIncreaseRule
+    minPercent: 10
+    maxPercent: 60
+    step: 5
+    announcementId: PaydayRuleAnnouncement
+    announcementMessage: salary-increase-announcement
+
+- type: entity
+  id: SalaryDecreaseRule
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    weight: 7
+    reoccurrenceDelay: 30
+  - type: SalaryDecreaseRule
+    minPercent: 10
+    maxPercent: 60
+    step: 5
+    announcementId: PaydayRuleAnnouncement
+    announcementMessage: salary-decrease-announcement
+

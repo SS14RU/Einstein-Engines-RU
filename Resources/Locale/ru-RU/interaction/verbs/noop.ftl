@@ -17,7 +17,7 @@ interaction-Pet-success-target-popup = {$user} погладил вас по {POS
 interaction-Pet-success-others-popup = {$user} поглаживает {$target}.
 
 interaction-PetAnimal-name = {interaction-Pet-name}
-interaction-PetAnimal-description = Pet an animal.
+interaction-PetAnimal-description = Погладить животное.
 interaction-PetAnimal-success-self-popup = {interaction-Pet-success-self-popup}
 interaction-PetAnimal-success-target-popup = {interaction-Pet-success-target-popup}
 interaction-PetAnimal-success-others-popup = {interaction-Pet-success-others-popup}

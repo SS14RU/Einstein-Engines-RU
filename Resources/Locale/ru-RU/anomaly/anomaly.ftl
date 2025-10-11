@@ -11,11 +11,11 @@ anomaly-particles-epsilon = Эпсилон-частицы
 anomaly-particles-zeta = Зета-частицы
 anomaly-particles-omega = Омега-частицы
 
-anomaly-particles-sigma = Sigma particles
+anomaly-particles-sigma = Сигма-частицы
 
 anomaly-scanner-component-scan-complete = Сканирование завершено!
 
-anomaly-scanner-scan-copied = Copied anomaly scan data!
+anomaly-scanner-scan-copied = Данные сканирования аномалии скопированы!
 
 anomaly-scanner-ui-title = сканер аномалий
 anomaly-scanner-no-anomaly = Нет просканированной аномалии.
@@ -84,22 +84,22 @@ anomaly-command-supercritical = Доводит аномалию до супер�
 # Flavor text on the footer
 anomaly-generator-flavor-left = Аномалия может возникнуть внутри пользователя.
 anomaly-generator-flavor-right = v1.1
-anomaly-behavior-unknown = [color=red]ERROR. Cannot be read.[/color]
+anomaly-behavior-unknown = [color=red]ОШИБКА. Не удаётся считать данные.[/color]
 
-anomaly-behavior-title = behavior deviation analysis:
-anomaly-behavior-point =[color=gold]Anomaly produces {$mod}% of the points[/color]
+anomaly-behavior-title = анализ отклонений поведения:
+anomaly-behavior-point = [color=gold]Аномалия создаёт {$mod}% от общего количества точек[/color]
 
-anomaly-behavior-safe = [color=forestgreen]The anomaly is extremely stable. Extremely rare pulsations.[/color]
-anomaly-behavior-slow = [color=forestgreen]The frequency of pulsations is much less frequent.[/color]
-anomaly-behavior-light = [color=forestgreen]Pulsation power is significantly reduced.[/color]
-anomaly-behavior-balanced = No behavior deviations detected.
-anomaly-behavior-delayed-force = The frequency of pulsations is greatly reduced, but their power is increased.
-anomaly-behavior-rapid = The frequency of the pulsation is much higher, but its strength is attenuated.
-anomaly-behavior-reflect = A protective coating was detected.
-anomaly-behavior-nonsensivity = A weak reaction to particles was detected.
-anomaly-behavior-sensivity = Amplified reaction to particles was detected.
-anomaly-behavior-secret = Interference detected. Some data cannot be read
-anomaly-behavior-inconstancy = [color=crimson]Impermanence has been detected. Particle types can change over time.[/color]
-anomaly-behavior-fast = [color=crimson]The pulsation frequency is strongly increased.[/color]
-anomaly-behavior-strenght = [color=crimson]The pulsation power is significantly increased.[/color]
-anomaly-behavior-moving = [color=crimson]Coordinate instability was detected.[/color]
+anomaly-behavior-safe = [color=forestgreen]Аномалия чрезвычайно стабильна. Пульсации крайне редки.[/color]
+anomaly-behavior-slow = [color=forestgreen]Частота пульсаций значительно ниже обычной.[/color]
+anomaly-behavior-light = [color=forestgreen]Сила пульсаций значительно снижена.[/color]
+anomaly-behavior-balanced = Отклонений в поведении не обнаружено.
+anomaly-behavior-delayed-force = Частота пульсаций сильно снижена, но их сила увеличена.
+anomaly-behavior-rapid = Частота пульсаций значительно выше, но их сила ослаблена.
+anomaly-behavior-reflect = Обнаружено защитное покрытие.
+anomaly-behavior-nonsensivity = Обнаружена слабая реакция на частицы.
+anomaly-behavior-sensivity = Обнаружена усиленная реакция на частицы.
+anomaly-behavior-secret = Обнаружены помехи. Часть данных не удаётся считать.
+anomaly-behavior-inconstancy = [color=crimson]Обнаружена непостоянность. Типы частиц могут изменяться со временем.[/color]
+anomaly-behavior-fast = [color=crimson]Частота пульсаций сильно увеличена.[/color]
+anomaly-behavior-strenght = [color=crimson]Сила пульсаций значительно увеличена.[/color]
+anomaly-behavior-moving = [color=crimson]Обнаружена нестабильность координат.[/color]

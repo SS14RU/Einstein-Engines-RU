@@ -8,10 +8,10 @@ device-frequency-prototype-name-pdas = ПДА
 # prefixes for randomly generated device addresses
 device-frequency-prototype-name-fax = Fax
 device-frequency-prototype-name-basic-device = Простые устройства
-device-frequency-prototype-name-cyborg-control = Cyborg Control
-device-frequency-prototype-name-robotics-console = Robotics Console
-device-frequency-prototype-name-turret = Sentry Turret
-device-frequency-prototype-name-turret-control = Sentry Turret Control
+device-frequency-prototype-name-cyborg-control = Управление киборгами
+device-frequency-prototype-name-robotics-console = Консоль робототехники
+device-frequency-prototype-name-turret = Сторожевая турель
+device-frequency-prototype-name-turret-control = Управление сторожевой турелью
 
 ## camera frequencies
 device-frequency-prototype-name-surveillance-camera-test = Тест подсети
@@ -29,12 +29,12 @@ device-address-prefix-vent = Вент-
 device-address-prefix-scrubber = Скр-
 device-address-prefix-sensor = Сенс-
 # Damn bet you couldn't see this one coming.
-device-address-prefix-teg = TEG-
-device-address-prefix-heater = HTR-
-device-address-prefix-freezer = FZR-
-device-address-prefix-volume-pump = VPP-
-device-address-prefix-smes = SMS-
-device-address-prefix-turret = TRT-
+device-address-prefix-teg = ТЭГ-
+device-address-prefix-heater = НГР-
+device-address-prefix-freezer = МРЗ-
+device-address-prefix-volume-pump = НАС-
+device-address-prefix-smes = SMES-
+device-address-prefix-turret = ТУР-
 
 # PDAs and terminals
 device-address-prefix-console = Конс-

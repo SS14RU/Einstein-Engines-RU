@@ -31,10 +31,12 @@
       inverted: true
       species:
         - Human
-    - !type:CharacterNationalityRequirement
-      inverted: true
-      nationalities:
-        - Solarian
+    #AWS-start
+    # - !type:CharacterNationalityRequirement
+    #   inverted: true
+    #   nationalities:
+    #     - Solarian
+    #AWS-end
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
@@ -87,10 +89,12 @@
   requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
-    - !type:CharacterNationalityRequirement
-      inverted: true
-      nationalities:
-        - Elyran
+    #AWS-start
+    # - !type:CharacterNationalityRequirement
+    #   inverted: true
+    #   nationalities:
+    #     - Elyran
+    #AWS-end
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
@@ -107,10 +111,12 @@
   requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
-    - !type:CharacterNationalityRequirement
-      inverted: true
-      nationalities:
-        - Valyrian
+    #AWS-start
+    # - !type:CharacterNationalityRequirement
+    #   inverted: true
+    #   nationalities:
+    #     - Valyrian
+    #AWS-end
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
@@ -131,10 +137,12 @@
   requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
-    - !type:CharacterNationalityRequirement
-      inverted: true
-      nationalities:
-        - Nederlandic
+    #AWS-start
+    # - !type:CharacterNationalityRequirement
+    #   inverted: true
+    #   nationalities:
+    #     - Nederlandic
+    #AWS-end
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:

@@ -116,7 +116,9 @@ public sealed class EconomyInsuranceSystem : EconomyInsuranceSystemShared
         if (!_prototype.TryIndex(receivedInsuranceInfo.InsuranceProto, out var receivedInsuranceInfoProto))
             return;
 
-        if (receivedInsuranceInfoProto.CanBeBought)
+        var matchesDefaultInsurance = receivedInsuranceInfo.InsuranceProto == fetchedInfo.DefaultFreeInsuranceProto;
+
+        if (!receivedInsuranceInfoProto.CanBeBought && !matchesDefaultInsurance)
             receivedInsuranceInfo.InsuranceProto = fetchedInfo.InsuranceProto;
 
         var currentInsuranceProtoId = fetchedInfo.InsuranceProto;
@@ -132,14 +134,51 @@ public sealed class EconomyInsuranceSystem : EconomyInsuranceSystemShared
             fetchedInfo.PayerAccountId = receivedInsuranceInfo.PayerAccountId;
         }
 
-        if (fetchedInfo.InsuranceProto != currentInsuranceProtoId)
-            if (!_economy.TrySendMoney(fetchedInfo.PayerAccountId, "NT-Med", (ulong) receivedInsuranceInfoProto.Cost,
-                "NT-Med",
-                out var error))
+        var insuranceChanged = fetchedInfo.InsuranceProto != currentInsuranceProtoId;
+
+        if (insuranceChanged)
+        {
+            var updatedMatchesDefaultInsurance = fetchedInfo.InsuranceProto == fetchedInfo.DefaultFreeInsuranceProto;
+
+            if (!updatedMatchesDefaultInsurance)
             {
-                fetchedInfo.InsuranceProto = currentInsuranceProtoId;
-                _popupSystem.PopupEntity(error, entity);
+                if (!_prototype.TryIndex(fetchedInfo.InsuranceProto, out var updatedInsuranceProto))
+                {
+                    fetchedInfo.InsuranceProto = currentInsuranceProtoId;
+                    UpdateTerminalUserInterface(entity);
+                    return;
+                }
+
+                var currentCost = 0;
+                if (currentInsuranceProtoId == fetchedInfo.DefaultFreeInsuranceProto)
+                    currentCost = 0;
+                else if (_prototype.TryIndex(currentInsuranceProtoId, out var currentInsuranceProto))
+                    currentCost = System.Math.Max(0, currentInsuranceProto.Cost);
+
+                var newCost = System.Math.Max(0, updatedInsuranceProto.Cost);
+
+                if (newCost > currentCost)
+                {
+                    var difference = (ulong) (newCost - currentCost);
+                    if (!_economy.TrySendMoney(fetchedInfo.PayerAccountId, "NT-Medical", difference, "NT-Medical",
+                            out var error))
+                    {
+                        fetchedInfo.InsuranceProto = currentInsuranceProtoId;
+                        _popupSystem.PopupEntity(error, entity);
+                        insuranceChanged = false;
+                    }
+                }
             }
+        }
+
+        if (insuranceChanged)
+        {
+            if (_prototype.TryIndex(fetchedInfo.InsuranceProto, out var newInsuranceProto))
+                _popupSystem.PopupEntity(Loc.GetString("economy-insurance-terminal-change-success",
+                    ("insurance", newInsuranceProto.Name)), entity);
+            else
+                _popupSystem.PopupEntity(Loc.GetString("economy-insurance-terminal-change-success-generic"), entity);
+        }
 
         UpdateIconOnCardsById(fetchedInfo.Id);
         UpdateTerminalUserInterface(entity);

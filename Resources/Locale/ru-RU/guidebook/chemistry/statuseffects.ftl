@@ -13,5 +13,5 @@ reagent-effect-status-effect-StaminaModifier = измененнае выносл
 reagent-effect-status-effect-RadiationProtection = защиту от радиации
 reagent-effect-status-effect-Drowsiness = сонливость
 reagent-effect-status-effect-Adrenaline = adrenaline
-reagent-effect-status-effect-NoScream = pain immunity
-reagent-effect-status-effect-DisableAccent = disabling of accents
+reagent-effect-status-effect-NoScream = иммунитет к боли
+reagent-effect-status-effect-DisableAccent = отключение акцентов

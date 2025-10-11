@@ -150,13 +150,13 @@
     - type: Paper
       content: doc-text-printer-shuttle-registration-request
 
-- type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestCallMembersCentralCommitteeDSO
-  name: Request to call members of CC, DSO
-  components:
-    - type: Paper
-      content: doc-text-printer-request-call-members-central-committee-dso
+# - type: entity
+#   parent: PrintedDocument
+#   id: PrintedDocumentRequestCallMembersCentralCommitteeDSO
+#   name: Request to call members of CC, DSO
+#   components:
+#     - type: Paper
+#       content: doc-text-printer-request-call-members-central-committee-dso
 
 - type: entity
   parent: PrintedDocument
