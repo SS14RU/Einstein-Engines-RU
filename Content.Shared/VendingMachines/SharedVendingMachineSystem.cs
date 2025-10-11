@@ -34,11 +34,11 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
     protected virtual void OnMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
     {
         RestockInventoryFromPrototype(uid, component, component.InitialStockQuality);
-        ReCalculateEntriesPrice(uid, component); //SS14-RU
+        RecalculateEntriesPrice(uid, component); //SS14-RU
     }
 
     //SS14-RU
-    public void ReCalculateEntriesPrice(EntityUid uid, VendingMachineComponent component)
+    protected virtual void RecalculateEntriesPrice(EntityUid uid, VendingMachineComponent component)
     {
         if (!PrototypeManager.TryIndex<VendingMachineInventoryPricingPrototype>("AllEntsPricing", out var prototype))
             return;

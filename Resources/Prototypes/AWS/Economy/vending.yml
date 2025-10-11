@@ -296,7 +296,6 @@
     ClothingHeadsetMedical: 60
     ClothingOuterWinterChem: 20
 # id: ChemVendInventory
-    Jug: 5
     JugAluminium: 10
     JugCarbon: 10
     JugChlorine: 10
@@ -481,8 +480,6 @@
     FoodPlateSmall: 5
     FoodPlateTin: 10
     FoodKebabSkewer: 5
-    Beaker: 5
-    LargeBeaker: 5
     DrinkMug: 5
     DrinkMugBlack: 5
     DrinkMugBlue: 5
@@ -521,12 +518,9 @@
 # id: EngiVendInventory
     ClothingEyesGlassesMeson: 10
     ClothingHeadHatWelding: 5
-    Multitool: 15
-    NetworkConfigurator: 5
     PowerCellMedium: 5
     ClothingHandsGlovesColorYellow: 60
     BoxInflatable: 5
-    ClothingHeadHatCone: 5
 # id: GoodCleanFunInventory
     DiceBag: 5
     d6Dice: 5
@@ -596,9 +590,6 @@
     ClothingShoesWizard: 5
 # id: NanoMedPlusInventory
     HandheldHealthAnalyzer: 10
-    Brutepack: 5
-    Ointment: 5
-    Bloodpack: 10
     EpinephrineChemistryBottle: 5
     Syringe: 5
     ClothingEyesHudMedical: 20
@@ -627,9 +618,7 @@
     HydroponicsToolSpade: 5
     HydroponicsToolMiniHoe: 5
     HydroponicsToolClippers: 5
-    HydroponicsToolScythe: 5
     HydroponicsToolHatchet: 5
-    Dropper: 5
     PlantBag: 15
     PlantBGoneSpray: 10
     WeedSpray: 10
@@ -652,28 +641,22 @@
 # id: RoboticsInventory
     CableApcStack: 5
     SciFlash: 10
-    ProximitySensor: 5
     ClothingEyesHudDiagnostic: 20
     ClothingEyesEyepatchHudDiag: 20
-    RemoteSignaller: 5
     Igniter: 5
     Scalpel: 10
     SawElectric: 10
     NitrousOxideTankFilled: 5
     ClothingMaskBreathMedical: 5
     ClothingHeadHatWeldingMaskFlame: 5
-    Welder: 5
-    Screwdriver: 5
     Crowbar: 5
 # id: SalvageEquipmentInventory
     Pickaxe: 10
     OreBag: 15
     Flare: 5
-    FlashlightLantern: 5
     HandheldGPSBasic: 5
     RadioHandheld: 10
     WeaponGrapplingGun: 10
-    WeaponProtoKineticAccelerator: 20
 # id: SciDrobeInventory
     ClothingBackpackScience: 10
     ClothingBackpackSatchelScience: 10
@@ -701,7 +684,6 @@
     ClothingBeltSecurityWebbing: 40
     CombatKnife: 15
     Zipties: 5
-    RiotShield: 20
     RiotLaserShield: 20
     RiotBulletShield: 20
     RadioHandheldSecurity: 5
@@ -843,7 +825,6 @@
     ClothingMaskSexyMime: 0
     ClothingHeadHatCowboyBountyHunter: 0
 # id: VendomatInventory
-    Wirecutter: 5
     PowerCellSmallPrinted: 3
     MatterBinStockPart: 5
     CapacitorStockPart: 5
@@ -868,7 +849,6 @@
     ClothingNeckScarfStripedOrange: 5
     ClothingNeckScarfStripedPurple: 5
     ClothingOuterCoatTrench: 10
-    ClothingOuterWinterCoat: 10
     ClothingShoesBootsWinter: 20
     ClothingOuterFlannelRed: 5
     ClothingOuterFlannelBlue: 5
@@ -879,8 +859,5 @@
     ClothingNeckScarfStripedSyndieRed: 0
     ClothingNeckScarfStripedCentcom: 0
 # id: YouToolInventory
-    Wrench: 5
-    trayScanner: 5
     GasAnalyzer: 5
     ClothingHandsGlovesColorYellowBudget: 10
-    SprayPainter: 5

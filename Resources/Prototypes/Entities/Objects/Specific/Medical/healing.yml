@@ -44,7 +44,7 @@
     stackType: Ointment
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 10 #Was 5, Buffed due to surgery changes
+    price: 1 # Economy rebalance
   - type: RequiredSkill
     container:
       skills:
@@ -152,7 +152,7 @@
     stackType: Brutepack
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 10 #Was 5, Buffed due to limb damage changes
+    price: 1 # Economy rebalance
   - type: RequiredSkill
     container:
       skills:
@@ -260,7 +260,7 @@
     stackType: Bloodpack
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 20 #Was 10, Buffed due to limb damage changes
+    price: 2 # Economy rebalance
   - type: RequiredSkill
     container:
       skills:
@@ -340,7 +340,7 @@
     stackType: Gauze
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 20 #Was 10, Buffed due to limb damage changes
+    price: 1 # Economy rebalance
   - type: RequiredSkill
     container:
       skills:

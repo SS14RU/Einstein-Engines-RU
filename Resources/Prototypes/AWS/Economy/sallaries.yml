@@ -3,13 +3,13 @@
   payerAccountId: "NT-CentCom"
   proccessOnlyPrefixedAccounts: "NT-"
   coef: # default 100
-      min: 70
-      max: 140
+      min: 80
+      max: 120
   jobs:
     # cargo
     CargoTechnician:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Quartermaster:
       startMoney: 100
       sallary: 100
@@ -46,44 +46,44 @@
       sallary: 10000
     # civilian
     Passenger:
-      startMoney: 15
-      sallary: 15
+      startMoney: 20
+      sallary: 20
     Bartender:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Botanist:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Chaplain:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Chef:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Clown:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Janitor:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Lawyer:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Librarian:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Mime:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Musician:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     ServiceWorker:
-      startMoney: 25
-      sallary: 25
+      startMoney: 20
+      sallary: 20
     Visitor:
-      startMoney: 500
-      sallary: 1000
+      startMoney: 20
+      sallary: 20
     # command
     Captain:
       startMoney: 200
@@ -93,69 +93,69 @@
       sallary: 150
     # Engineering
     AtmosphericTechnician:
-      startMoney: 50
-      sallary: 50
+      startMoney: 60
+      sallary: 60
     ChiefEngineer:
       startMoney: 100
       sallary: 100
     StationEngineer:
-      startMoney: 50
-      sallary: 50
+      startMoney: 60
+      sallary: 60
     TechnicalAssistant:
-      startMoney: 25
-      sallary: 25
+      startMoney: 20
+      sallary: 20
     # Medical
     Chemist:
-      startMoney: 40
-      sallary: 40
+      startMoney: 60
+      sallary: 60
     ChiefMedicalOfficer:
       startMoney: 100
       sallary: 100
     MedicalDoctor:
-      startMoney: 50
-      sallary: 50
+      startMoney: 60
+      sallary: 60
     MedicalIntern:
-      startMoney: 25
-      sallary: 25
+      startMoney: 20
+      sallary: 20
     Paramedic:
       startMoney: 60
       sallary: 60
     # Science
     ResearchAssistant:
-      startMoney: 25
-      sallary: 25
+      startMoney: 20
+      sallary: 20
     ResearchDirector:
       startMoney: 100
       sallary: 100
     Scientist:
-      startMoney: 50
-      sallary: 50
+      startMoney: 60
+      sallary: 60
     # Security
     Detective:
-      startMoney: 50
-      sallary: 50
+      startMoney: 60
+      sallary: 60
     HeadOfSecurity:
       startMoney: 100
       sallary: 100
     SecurityCadet:
-      startMoney: 25
-      sallary: 25
+      startMoney: 20
+      sallary: 20
     SecurityOfficer:
-      startMoney: 40
-      sallary: 40
-    Warden:
       startMoney: 60
       sallary: 60
+    Warden:
+      startMoney: 80
+      sallary: 80
     # Widcards
     Boxer:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Psychologist:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Reporter:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
     Zookeeper:
-      startMoney: 30
-      sallary: 30
+      startMoney: 40
+      sallary: 40
