@@ -6,6 +6,8 @@ using Content.Shared.Administration;
 using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.Reagent;
+using Content.Server.Power.Components;
+using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Materials;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
@@ -15,6 +17,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System.Collections.Generic;
 using System.Linq;
 using Content.Shared.Research.Prototypes;
 
@@ -179,11 +182,16 @@ public sealed class PricingSystem : EntitySystem
         return price;
     }
 
-    /// <summary>
-    /// Get a rough price for an entityprototype. Does not consider contained entities.
-    /// </summary>
     public double GetEstimatedPrice(EntityPrototype prototype)
     {
+        return GetEstimatedPrice(prototype, new HashSet<string>());
+    }
+
+    private double GetEstimatedPrice(EntityPrototype prototype, HashSet<string> visitedPrototypes)
+    {
+        if (!visitedPrototypes.Add(prototype.ID))
+            return 0;
+
         var ev = new EstimatedPriceCalculationEvent()
         {
             Prototype = prototype,
@@ -192,11 +200,15 @@ public sealed class PricingSystem : EntitySystem
         RaiseLocalEvent(ref ev);
 
         if (ev.Handled)
+        {
+            visitedPrototypes.Remove(prototype.ID);
             return ev.Price;
+        }
 
         var price = ev.Price;
         price += GetMaterialsPrice(prototype);
         price += GetSolutionsPrice(prototype);
+        price += GetBatteryPrice(prototype);
         // Can't use static price with stackprice
         var oldPrice = price;
         price += GetStackPrice(prototype);
@@ -206,7 +218,48 @@ public sealed class PricingSystem : EntitySystem
             price += GetStaticPrice(prototype);
         }
 
-        // TODO: Proper container support.
+        price += GetItemSlotStartingItemPrice(prototype, visitedPrototypes);
+
+        visitedPrototypes.Remove(prototype.ID);
+        return price;
+    }
+
+    private double GetBatteryPrice(EntityPrototype prototype)
+    {
+        var price = 0.0;
+
+        if (prototype.Components.TryGetValue(_factory.GetComponentName(typeof(BatteryComponent)), out var batteryEntry))
+        {
+            if (batteryEntry.Component is BatteryComponent battery)
+            {
+                price += battery.CurrentCharge * battery.PricePerJoule;
+            }
+        }
+
+        return price;
+    }
+
+    private double GetItemSlotStartingItemPrice(EntityPrototype prototype, HashSet<string> visitedPrototypes)
+    {
+        var price = 0.0;
+
+        var componentName = _factory.GetComponentName(typeof(ItemSlotsComponent));
+        if (!prototype.Components.TryGetValue(componentName, out var componentEntry))
+            return price;
+
+        if (componentEntry.Component is not ItemSlotsComponent itemSlots)
+            return price;
+
+        foreach (var slot in itemSlots.Slots.Values)
+        {
+            if (slot.StartingItem is not { } startingItem)
+                continue;
+
+            if (!_prototypeManager.TryIndex<EntityPrototype>(startingItem, out var itemPrototype))
+                continue;
+
+            price += GetEstimatedPrice(itemPrototype, visitedPrototypes);
+        }
 
         return price;
     }
