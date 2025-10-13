@@ -120,6 +120,8 @@
     - state: box12
       map: ["box12"]
       visible: false
+  - type: StaticPrice
+    price: 6
   - type: Storage
     grid:
     - 0,0,5,1

@@ -74,6 +74,8 @@
   description: A metal flask often given out by the bartender on loan. Don't forget to return it!
   components:
     - type: Sprite
+    - type: StaticPrice
+      price: 6
       sprite: Objects/Consumable/Drinks/barflask.rsi
 
 - type: entity
@@ -101,6 +103,8 @@
   description: Keeping your drinks at the perfect temperature since 1892.
   components:
   - type: Sprite
+  - type: StaticPrice
+    price: 6
     sprite: Objects/Consumable/Drinks/vacuumflask.rsi
 
 - type: entity

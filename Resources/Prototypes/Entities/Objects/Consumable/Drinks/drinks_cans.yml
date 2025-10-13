@@ -270,6 +270,8 @@
           Quantity: 30
   - type: Drink
   - type: Sprite
+  - type: StaticPrice
+    price: 4
     sprite: Objects/Consumable/Drinks/sodawater.rsi
 
 - type: entity
@@ -324,6 +326,8 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/sol_dry.rsi
   - type: Item
+  - type: StaticPrice
+    price: 4
     sprite: Objects/Consumable/Drinks/sol_dry.rsi
 
 - type: entity
@@ -359,6 +363,8 @@
           Quantity: 30
   - type: Drink
   - type: Sprite
+  - type: StaticPrice
+    price: 4
     sprite: Objects/Consumable/Drinks/tonic.rsi
 
 - type: entity
@@ -460,6 +466,8 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/energy_drink.rsi
   - type: Item
+  - type: StaticPrice
+    price: 7
     sprite: Objects/Consumable/Drinks/energy_drink.rsi
 
 - type: entity
@@ -574,6 +582,8 @@
   - type: Tag
     tags:
     - Beer
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: DrinkCanBaseFull
@@ -596,3 +606,5 @@
   - type: Tag
     tags:
     - Wine
+  - type: StaticPrice
+    price: 8

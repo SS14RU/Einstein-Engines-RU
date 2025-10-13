@@ -98,6 +98,8 @@
         reagents:
         - ReagentId: Flour
           Quantity: 50
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: [ReagentPacketBase, ItemHeftyBase]
@@ -129,6 +131,8 @@
         reagents:
         - ReagentId: Cornmeal
           Quantity: 50
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: ReagentPacketBase
@@ -160,6 +164,8 @@
         reagents:
         - ReagentId: Rice
           Quantity: 50
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: ReagentPacketBase
@@ -191,6 +197,8 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 50
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: ReagentPacketBase
@@ -225,6 +233,8 @@
         reagents:
         - ReagentId: OilOlive
           Quantity: 20
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   parent: ReagentPacketBase
@@ -241,6 +251,8 @@
         reagents:
         - ReagentId: Mayo
           Quantity: 50
+  - type: StaticPrice
+    price: 5
   - type: Tag
     tags:
       - Mayo
@@ -607,6 +619,8 @@
     enabled: false
   - type: Physics
     bodyType: Dynamic
+  - type: StaticPrice
+    price: 4
   - type: Fixtures
     fixtures:
       slips:
@@ -690,6 +704,8 @@
   - type: SliceableFood
     count: 4
     slice: FoodCheeseSlice
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   name: cheese wedge
@@ -709,6 +725,8 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 3.75
+  - type: StaticPrice
+    price: 1.5
   - type: Tag
     tags:
     - Slice

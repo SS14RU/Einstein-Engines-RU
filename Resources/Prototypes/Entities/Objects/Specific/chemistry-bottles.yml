@@ -178,6 +178,8 @@
         maxVol: 30
         reagents:
         - ReagentId: RobustHarvest
+  - type: StaticPrice
+    price: 10
           Quantity: 30
 
 - type: entity
@@ -193,6 +195,8 @@
         maxVol: 30
         reagents:
         - ReagentId: EZNutrient
+  - type: StaticPrice
+    price: 8
           Quantity: 30
 
 - type: entity

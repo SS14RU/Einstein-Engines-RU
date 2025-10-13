@@ -16,8 +16,6 @@
   - type: TrashOnSolutionEmpty
     solution: food
   - type: SpaceGarbage
-  - type: StaticPrice
-    price: 0
 
 # Packets
 
@@ -38,6 +36,8 @@
   # Since this one is closed, the only way to insert liquid is with a syringe.
   - type: InjectableSolution
     solution: food
+  - type: StaticPrice
+    price: 1
   # Note NOT refillable.
   # It be a shame if it turned out ALL drinks were ALWAYS refillable.... ffs.
   # Well its fixed now, but I want to share my pain.
@@ -349,6 +349,8 @@
     canChangeTransferAmount: true
     minTransferAmount: 5
     maxTransferAmount: 30
+  - type: StaticPrice
+    price: 3
   - type: Sprite
     state: bottle-empty
   - type: Appearance
@@ -403,6 +405,8 @@
         reagents:
         - ReagentId: Enzyme
           Quantity: 30
+  - type: StaticPrice
+    price: 6
   - type: Sprite
     layers:
     - state: bottle-empty
@@ -438,6 +442,8 @@
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: true
   - type: Icon
+  - type: StaticPrice
+    price: 3
     state: bottle-vinegar
 
 - type: entity
@@ -465,6 +471,8 @@
   - type: Tag
     tags:
       - Hotsauce
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: BaseFoodCondimentBottle
@@ -491,6 +499,8 @@
   - type: Tag
     tags:
       - Ketchup
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: BaseFoodCondimentBottle
@@ -518,6 +528,8 @@
   - type: Tag
     tags:
       - BBQsauce
+  - type: StaticPrice
+    price: 3
 
 # Shakers
 

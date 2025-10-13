@@ -106,6 +106,8 @@
     graph: MeatSteak
     node: start
     defaultTarget: meat steak
+  - type: StaticPrice
+    price: 9
   - type: Tag
     tags:
     - Meat

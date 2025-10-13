@@ -43,6 +43,8 @@
   name: pre-packed lunchbox
   description: Packed with love.
   components:
+  - type: StaticPrice
+    price: 6
   - type: StorageFill
     contents:
     #Main

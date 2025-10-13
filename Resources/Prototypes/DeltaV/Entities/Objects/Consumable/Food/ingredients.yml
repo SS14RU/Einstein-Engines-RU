@@ -14,6 +14,8 @@
         reagents:
         - ReagentId: TableSalt
           Quantity: 50
+  - type: StaticPrice
+    price: 2
   - type: Drink
     solution: food
     useSound:
@@ -35,6 +37,8 @@
         reagents:
         - ReagentId: Blackpepper
           Quantity: 50
+  - type: StaticPrice
+    price: 2
 
 - type: entity
   parent: ReagentPacketBase
@@ -51,3 +55,5 @@
         reagents:
         - ReagentId: CocoaPowder
           Quantity: 50
+  - type: StaticPrice
+    price: 4

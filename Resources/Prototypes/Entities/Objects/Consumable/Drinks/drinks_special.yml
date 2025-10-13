@@ -45,6 +45,8 @@
     mixOnInteract: false
     reactionTypes:
     - Shake
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: DrinkGlassBase
@@ -72,6 +74,8 @@
         map: [ "enum.SolutionContainerLayers.Overlay" ]
   - type: Appearance
   - type: SolutionContainerVisuals
+  - type: StaticPrice
+    price: 2
     maxFillLevels: 2
     fillBaseName: fill
 
@@ -154,6 +158,8 @@
     sprite: Objects/Consumable/Drinks/jigger.rsi
     state: icon
   - type: PhysicalComposition
+  - type: StaticPrice
+    price: 4
     materialComposition:
       Steel: 20
 
@@ -173,5 +179,7 @@
     sprite: Objects/Consumable/Drinks/icebucket.rsi
     state: icon
   - type: PhysicalComposition
+  - type: StaticPrice
+    price: 8
     materialComposition:
       Steel: 75

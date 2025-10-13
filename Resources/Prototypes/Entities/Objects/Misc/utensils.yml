@@ -191,4 +191,6 @@
   - type: ThrowingAngle
     angle: 180
   - type: Shovel
+  - type: StaticPrice
+    price: 3
     speedModifier: 0.05 # nah

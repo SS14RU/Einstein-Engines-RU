@@ -154,6 +154,8 @@
       sprite: Objects/Consumable/Drinks/glass_clear.rsi
       state: icon
   - type: TransformableContainer
+  - type: StaticPrice
+    price: 2
 
 - type: entity
   name: coupe glass
@@ -177,6 +179,8 @@
         drink:
           maxVol: 30
     - type: SolutionContainerVisuals
+    - type: StaticPrice
+      price: 2
       maxFillLevels: 5
       fillBaseName: fill
 

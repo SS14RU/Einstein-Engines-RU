@@ -67,3 +67,5 @@
     materialComposition:
       Plastic: 50
   - type: DnaSubstanceTrace
+  - type: StaticPrice
+    price: 5
