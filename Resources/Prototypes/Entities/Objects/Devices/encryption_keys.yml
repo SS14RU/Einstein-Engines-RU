@@ -186,6 +186,8 @@
     layers:
     - state: crypt_gray
     - state: sec_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseCivilianContraband ]

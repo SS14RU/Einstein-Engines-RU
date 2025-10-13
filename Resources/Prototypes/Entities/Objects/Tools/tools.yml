@@ -65,7 +65,7 @@
     materialComposition:
       Steel: 100
   - type: StaticPrice
-    price: 30
+    price: 5
   # Shitmed Change
   - type: Retractor
     speed: 0.35
@@ -163,7 +163,7 @@
     materialComposition:
       Steel: 100
   - type: StaticPrice
-    price: 30
+    price: 5
   # Shitmed Change
   - type: Retractor
     speed: 0.45
@@ -246,7 +246,7 @@
     materialComposition:
       Steel: 100
   - type: StaticPrice
-    price: 22
+    price: 5
   - type: Fixtures
     fixtures:
       fix1:
@@ -328,7 +328,7 @@
       Plastic: 50
       Circuitry: 25
   - type: StaticPrice
-    price: 56
+    price: 15
   - type: Fixtures
     fixtures:
       fix1:
@@ -397,7 +397,7 @@
       enum.NetworkConfiguratorUiKey.Link:
         type: NetworkConfiguratorBoundUserInterface
   - type: StaticPrice
-    price: 56
+    price: 12
   - type: GuideHelp
     guides:
     - Networking

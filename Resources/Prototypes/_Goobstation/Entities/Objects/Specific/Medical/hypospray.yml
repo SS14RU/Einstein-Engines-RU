@@ -63,6 +63,8 @@
       - state: cartridge1
         map: ["enum.SolutionContainerLayers.Fill"]
         visible: false
+  - type: StaticPrice
+    price: 25
 
 # Autoinjector Cartridges
 

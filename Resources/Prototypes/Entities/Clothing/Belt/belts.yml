@@ -275,6 +275,8 @@
     sprite: Clothing/Belt/medical.rsi
   - type: Clothing
     sprite: Clothing/Belt/medical.rsi
+  - type: StaticPrice
+    price: 12
   # WD EDIT START
   # - type: Storage
   #   whitelist:
@@ -676,6 +678,8 @@
   #   whitelist:
   #     components:
   #     - Gun
+  - type: StaticPrice
+    price: 40
   #     - BallisticAmmoProvider
   #     - CartridgeAmmo
   # - type: EmitsSoundOnMove
@@ -713,6 +717,8 @@
     sprite: Clothing/Belt/securitywebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/securitywebbing.rsi
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: [ClothingBaseWebbing, BaseSecurityCargoContraband, ClothingBeltStorageBase] # WWDP

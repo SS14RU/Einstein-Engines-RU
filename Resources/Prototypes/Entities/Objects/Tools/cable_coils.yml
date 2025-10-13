@@ -280,6 +280,8 @@
     entries:
     - prototype: makeshifthandcuffs
     - prototype: CableTerminal
+  - type: StackPrice
+    price: 0.4
 
 - type: entity
   parent: CableApcStack

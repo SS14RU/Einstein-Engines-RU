@@ -87,6 +87,8 @@
     sprite: DeltaV/Clothing/Shoes/Boots/winterbootsgen.rsi
   - type: Clothing
     sprite: DeltaV/Clothing/Shoes/Boots/winterbootsgen.rsi
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: ClothingShoesBaseWinterBoots
@@ -187,6 +189,8 @@
     sprite: DeltaV/Clothing/Shoes/Boots/winterbootsrobo.rsi
   - type: Clothing
     sprite: DeltaV/Clothing/Shoes/Boots/winterbootsrobo.rsi
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: ClothingShoesBaseWinterBoots

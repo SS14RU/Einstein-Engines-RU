@@ -162,6 +162,8 @@
         reagents:
         - ReagentId: Epinephrine
           Quantity: 30
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   id: RobustHarvestChemistryBottle

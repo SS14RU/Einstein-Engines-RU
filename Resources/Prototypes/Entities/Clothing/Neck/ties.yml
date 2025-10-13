@@ -24,6 +24,8 @@
     sprite: Clothing/Neck/Ties/dettie.rsi
   - type: Clothing
     sprite: Clothing/Neck/Ties/dettie.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingNeckBase
@@ -35,6 +37,8 @@
     sprite: Clothing/Neck/Ties/scitie.rsi
   - type: Clothing
     sprite: Clothing/Neck/Ties/scitie.rsi
+  - type: StaticPrice
+    price: 6
   - type: Tag
     tags:
     - ClothMade

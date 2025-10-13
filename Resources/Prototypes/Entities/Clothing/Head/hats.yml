@@ -368,6 +368,8 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase
@@ -379,6 +381,8 @@
     sprite: Clothing/Head/Hats/greyfedora.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/greyfedora.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase
@@ -543,6 +547,8 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase
@@ -554,6 +560,8 @@
     sprite: Clothing/Head/Hats/surgcap_green.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/surgcap_green.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase
@@ -565,6 +573,8 @@
     sprite: Clothing/Head/Hats/surgcap_purple.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/surgcap_purple.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase
@@ -802,6 +812,8 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase
@@ -1235,6 +1247,8 @@
     sprite: Clothing/Head/Hats/beret_medic.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/beret_medic.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHeadBase

@@ -49,7 +49,7 @@
     inHandsMaxFillLevels: 5
     inHandsFillBaseName: -fill-
   - type: StaticPrice
-    price: 60
+    price: 5
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -92,6 +92,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-carbon
+  - type: StaticPrice
+    price: 45
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -107,6 +109,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-iodine
+  - type: StaticPrice
+    price: 30
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -122,6 +126,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-fluorine
+  - type: StaticPrice
+    price: 35
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -137,6 +143,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-chlorine
+  - type: StaticPrice
+    price: 35
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -152,6 +160,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-aluminium
+  - type: StaticPrice
+    price: 25
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -167,6 +177,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-phosphorus
+  - type: StaticPrice
+    price: 40
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -182,6 +194,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-sulfur
+  - type: StaticPrice
+    price: 35
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -197,6 +211,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-silicon
+  - type: StaticPrice
+    price: 25
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -212,6 +228,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-hydrogen
+  - type: StaticPrice
+    price: 35
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -227,6 +245,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-lithium
+  - type: StaticPrice
+    price: 15
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -242,6 +262,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-sodium
+  - type: StaticPrice
+    price: 10
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -257,6 +279,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-potassium
+  - type: StaticPrice
+    price: 25
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -272,6 +296,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-radium
+  - type: StaticPrice
+    price: 50
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -287,6 +313,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-iron
+  - type: StaticPrice
+    price: 35
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -302,6 +330,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-copper
+  - type: StaticPrice
+    price: 30
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -332,6 +362,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-mercury
+  - type: StaticPrice
+    price: 15
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -362,6 +394,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-ethanol
+  - type: StaticPrice
+    price: 10
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -377,6 +411,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-sugar
+  - type: StaticPrice
+    price: 10
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -392,6 +428,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-nitrogen
+  - type: StaticPrice
+    price: 20
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -407,6 +445,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-oxygen
+  - type: StaticPrice
+    price: 40
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -437,6 +477,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-welding-fuel
+  - type: StaticPrice
+    price: 15
   - type: SolutionContainerManager
     solutions:
       beaker:

@@ -40,6 +40,8 @@
     equippedPrefix: sec
   - type: Whistle
     distance: 5
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   parent: BaseWhistle

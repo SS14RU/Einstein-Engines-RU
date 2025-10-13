@@ -273,6 +273,8 @@
         Blunt: 8.5
   - type: DamageOtherOnHit
     staminaCost: 7.5
+  - type: StaticPrice
+    price: 80
 
 - type: entity
   name: double-barreled shotgun

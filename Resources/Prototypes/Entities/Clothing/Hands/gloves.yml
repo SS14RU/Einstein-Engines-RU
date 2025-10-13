@@ -142,6 +142,8 @@
   - type: Fiber
     fiberMaterial: fibers-latex
   - type: FingerprintMask
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHandsButcherable
@@ -156,6 +158,8 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
+  - type: StaticPrice
+    price: 8
 ####
 - type: entity
   parent: ClothingHandsButcherable
@@ -196,6 +200,8 @@
     sprite: Clothing/Hands/Gloves/robohands.rsi
   - type: Clothing
     sprite: Clothing/Hands/Gloves/robohands.rsi
+  - type: StaticPrice
+    price: 12
   - type: Fiber
     fiberMaterial: fibers-leather
     fiberColor: fibers-black
@@ -336,6 +342,8 @@
     damageProtection:
       flatReductions:
         Heat: 0 # no protection
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHandsButcherable
@@ -354,6 +362,8 @@
     damageProtection:
       flatReductions:
         Heat: 0 # no protection
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingHandsBase

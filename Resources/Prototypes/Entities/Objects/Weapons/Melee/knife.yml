@@ -139,6 +139,8 @@
     sprite: Objects/Weapons/Melee/combat_knife.rsi
   - type: DisarmMalus
     malus: 0.5 # WWDP
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   name: survival knife

@@ -62,12 +62,16 @@
     sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/meson.rsi
+  - type: StaticPrice
+    price: 25
   - type: EyeProtection
   - type: IdentityBlocker
     coverage: EYES
   - type: Tag
     tags:
     - SecDogWearable
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: ClothingEyesBase
@@ -89,6 +93,8 @@
   - type: Construction
     graph: PrescriptionHud
     node: start
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingEyesBase
@@ -166,6 +172,8 @@
     - Sunglasses
     - HamsterWearable
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 8
   # WWDP quick crafts
   - type: Construction
     graph: GlassesMedSecHUD
@@ -195,6 +203,8 @@
     - HamsterWearable
     - WhitelistChameleon
     - SecDogWearable
+  - type: StaticPrice
+    price: 18
   - type: GuideHelp
     guides:
     - Security

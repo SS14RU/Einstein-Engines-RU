@@ -16,6 +16,8 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 15
   - type: HideLayerClothing
     slots:
     - Snout
@@ -647,6 +649,8 @@
     sprite: Clothing/Mask/neckgaiterred.rsi
   - type: Clothing
     sprite: Clothing/Mask/neckgaiterred.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingMaskClownBase

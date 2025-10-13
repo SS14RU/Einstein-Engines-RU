@@ -47,6 +47,8 @@
     container:
       skills:
         medicine: enum.SkillLevel.Basic
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   id: HandheldHealthAnalyzer

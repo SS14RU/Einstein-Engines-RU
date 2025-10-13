@@ -44,7 +44,7 @@
     stackType: Ointment
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 1 # Economy rebalance
+    price: 0.533333 # 8 credits for full stack
   - type: RequiredSkill
     container:
       skills:
@@ -152,7 +152,7 @@
     stackType: Brutepack
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 1 # Economy rebalance
+    price: 0.533333 # 8 credits for full stack
   - type: RequiredSkill
     container:
       skills:
@@ -260,7 +260,7 @@
     stackType: Bloodpack
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
-    price: 2 # Economy rebalance
+    price: 1.2 # 18 credits for full stack
   - type: RequiredSkill
     container:
       skills:
@@ -290,6 +290,8 @@
     - SecBeltEquip
   - type: Sprite
     state: tourniquet
+  - type: StaticPrice
+    price: 5
   - type: Healing
     damageContainers:
     - Biological
@@ -308,6 +310,8 @@
     container:
       skills:
         medicine: enum.SkillLevel.NonSkilled
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   name: roll of gauze

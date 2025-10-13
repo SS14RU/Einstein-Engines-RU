@@ -142,3 +142,5 @@
   - type: Ammo
   - type: OnShotTimerTrigger
     delayReduction: 5
+  - type: StaticPrice
+    price: 20

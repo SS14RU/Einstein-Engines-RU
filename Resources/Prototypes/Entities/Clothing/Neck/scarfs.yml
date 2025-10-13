@@ -85,6 +85,8 @@
       sprite: Clothing/Neck/Scarfs/purple.rsi
     - type: Clothing
       sprite: Clothing/Neck/Scarfs/purple.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: [ ClothingScarfBase, BaseSyndicateContraband ]

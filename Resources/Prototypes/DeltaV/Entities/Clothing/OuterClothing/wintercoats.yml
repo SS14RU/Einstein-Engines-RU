@@ -57,3 +57,5 @@
         Piercing: 0.85
         Heat: 0.75
   - type: AllowSuitStorage
+  - type: StaticPrice
+    price: 18

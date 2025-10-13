@@ -68,6 +68,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/medical.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingBackpackSatchel
@@ -77,6 +79,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/chemistry.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingBackpackSatchel
@@ -95,6 +99,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/genetics.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingBackpackSatchel
@@ -104,6 +110,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/science.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingBackpackSatchel
@@ -113,6 +121,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/robotics.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingBackpackSatchel, BaseRestrictedContraband]
@@ -122,6 +132,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/security.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingBackpackSatchel, BaseRestrictedContraband]

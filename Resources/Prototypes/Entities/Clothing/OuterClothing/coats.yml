@@ -35,6 +35,8 @@
         Heat: 0.80
   - type: ExplosionResistance
     damageCoefficient: 1 #its a coat. it doesnt do shit
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: [ClothingOuterCoatDetectiveLoadout]
@@ -184,6 +186,10 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: StaticPrice
+    price: 20
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLab]
@@ -204,6 +210,10 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: StaticPrice
+    price: 20
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabChem]
@@ -224,6 +234,8 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabViro]

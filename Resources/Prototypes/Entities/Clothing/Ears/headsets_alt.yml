@@ -172,4 +172,6 @@
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/security.rsi
+  - type: StaticPrice
+    price: 12
 # Goobstation end

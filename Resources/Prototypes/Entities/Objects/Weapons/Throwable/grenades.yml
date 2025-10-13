@@ -96,6 +96,8 @@
     - Security
     - Antagonists
   - type: Flashbang # Goobstation
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   id: GrenadeFlashEffect
@@ -455,6 +457,8 @@
       reagents:
       - ReagentId: TearGas
         Quantity: 50
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: [ BaseEngineeringContraband, SmokeGrenade ]

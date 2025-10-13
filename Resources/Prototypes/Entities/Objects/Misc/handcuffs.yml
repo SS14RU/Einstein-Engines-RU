@@ -13,6 +13,8 @@
   - type: Sprite
     sprite: Objects/Misc/handcuffs.rsi
     state: handcuff
+  - type: StaticPrice
+    price: 3
   - type: Tag
     tags:
     - Handcuffs

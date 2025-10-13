@@ -116,6 +116,8 @@
   - type: MachinePart
     partType: PowerCell
     rating: 2
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   id: PowerCellMediumPrinted

@@ -57,6 +57,8 @@
     interfaces:
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: [ClothingEyesNightVisionGogglesSyndie, ShowSecurityIcons]
