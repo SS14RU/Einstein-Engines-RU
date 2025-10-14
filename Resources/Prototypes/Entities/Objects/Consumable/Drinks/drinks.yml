@@ -2427,6 +2427,8 @@
     timeToMix: 1
   - type: FitsInDispenser
     solution: drink
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: DrinkFitnessShakerBlack

@@ -153,7 +153,7 @@
     sprite: Objects/Consumable/Drinks/absinthebottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 32
+    price: 40
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -177,7 +177,7 @@
         visible: false
   - type: SolutionContainerVisuals
   - type: StaticPrice
-    price: 18
+    price: 30
     maxFillLevels: 6
     fillBaseName: fill-
 
@@ -213,7 +213,7 @@
     sprite: Objects/Consumable/Drinks/champagnebottle.rsi
   - type: Openable
   - type: StaticPrice
-    price: 35
+    price: 38
     closeable: false # Champagne corks are fat. Not worth the effort.
 
 - type: entity
@@ -234,7 +234,7 @@
     sprite: Objects/Consumable/Drinks/cognacbottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 28
+    price: 32
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -296,7 +296,7 @@
     sprite: Objects/Consumable/Drinks/ginbottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 24
+    price: 28
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -314,7 +314,7 @@
     sprite: Objects/Consumable/Drinks/gildlagerbottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 30
+    price: 33
 
 - type: entity
   parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
@@ -334,7 +334,7 @@
     sprite: Objects/Consumable/Drinks/coffeeliqueurbottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 18
+    price: 30
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -358,7 +358,7 @@
         visible: false
   - type: SolutionContainerVisuals
   - type: StaticPrice
-    price: 18
+    price: 30
     maxFillLevels: 6
     fillBaseName: fill-
 
@@ -376,7 +376,7 @@
           Quantity: 100
   - type: Sprite
   - type: StaticPrice
-    price: 32
+    price: 40
     sprite: Objects/Consumable/Drinks/patronbottle.rsi
 
 - type: entity
@@ -417,7 +417,7 @@
     sprite: Objects/Consumable/Drinks/rumbottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 24
+    price: 28
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -438,7 +438,7 @@
     sprite: Objects/Consumable/Drinks/space_mountain_wind_bottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 6
+    price: 30
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -479,7 +479,7 @@
     sprite: Objects/Consumable/Drinks/tequillabottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 24
+    price: 28
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -499,7 +499,7 @@
     sprite: Objects/Consumable/Drinks/vermouthbottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 16
+    price: 26
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -519,7 +519,7 @@
     sprite: Objects/Consumable/Drinks/vodkabottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 20
+    price: 26
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -539,7 +539,7 @@
     sprite: Objects/Consumable/Drinks/whiskeybottle.rsi
   - type: Sealable
   - type: StaticPrice
-    price: 24
+    price: 30
 
 - type: entity
   parent: DrinkWhiskeyBottleFull
@@ -572,7 +572,7 @@
     - Wine
     - DrinkBottle
   - type: StaticPrice
-    price: 22
+    price: 26
 
 # Small Bottles
 
@@ -600,7 +600,7 @@
     - Beer
     - DrinkBottle
   - type: StaticPrice
-    price: 10
+    price: 12
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -645,7 +645,7 @@
     sprite: Objects/Consumable/Drinks/alebottle.rsi
   - type: Openable
   - type: StaticPrice
-    price: 10
+    price: 12
     closeable: false
 
 - type: entity
@@ -699,6 +699,8 @@
     inHandsMaxFillLevels: 2
     inHandsFillBaseName: -fill-
   - type: Sealable
+  - type: StaticPrice
+    price: 2
 
 - type: entity
   parent: DrinkWaterBottleFull

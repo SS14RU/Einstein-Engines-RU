@@ -28,6 +28,8 @@
         reagents:
           - ReagentId: THC
             Quantity: 20
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   id: JointRainbow

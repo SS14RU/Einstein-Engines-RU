@@ -39,6 +39,8 @@
           Quantity: 50
   - type: TrashOnSolutionEmpty
     solution: drink
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: FlaskBase
@@ -128,3 +130,5 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: fill-
+  - type: StaticPrice
+    price: 5

@@ -904,6 +904,8 @@
   - type: Tag
     tags:
     - RollingPin
+  - type: StaticPrice
+    price: 6
   - type: Construction
     graph: WoodenRollingPin
     node: rollingpin

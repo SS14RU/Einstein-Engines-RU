@@ -40,6 +40,8 @@
         path: /Audio/Weapons/Guns/Empty/empty.ogg
       ejectSound:
         path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: StaticPrice
+    price: 25
 
 - type: entity
   id: SmokingPipeFilledCannabis

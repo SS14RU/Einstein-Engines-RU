@@ -13,6 +13,8 @@
     - Dice
   - type: Item
     size: Tiny
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   parent: BaseDice

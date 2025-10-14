@@ -103,6 +103,8 @@
   - type: Sprite
     sprite: Objects/Misc/zipties.rsi
     state: cuff
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   id: BaseHandcuffsBroken

@@ -13,6 +13,8 @@
       - id: d12Dice
       - id: d20Dice
       - id: PercentileDie
+  - type: StaticPrice
+    price: 10
   - type: Sprite
     sprite: Objects/Fun/dice.rsi
     state: dicebag

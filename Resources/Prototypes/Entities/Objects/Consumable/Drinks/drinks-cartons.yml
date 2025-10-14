@@ -174,7 +174,7 @@
         - ReagentId: Milk
           Quantity: 100
   - type: StaticPrice
-    price: 5
+    price: 6
   - type: Sprite
     sprite: Objects/Consumable/Drinks/milk.rsi
 
@@ -253,6 +253,8 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/milkmini.rsi
     state: icon
+  - type: StaticPrice
+    price: 4
 
 - type: entity
   parent: [DrinkCartonVisualsOpenable, DrinkCartonBaseFull]
@@ -270,3 +272,5 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/milkminichoco.rsi
     state: icon
+  - type: StaticPrice
+    price: 5

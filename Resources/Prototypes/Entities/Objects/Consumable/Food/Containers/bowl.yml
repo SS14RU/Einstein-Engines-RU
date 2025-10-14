@@ -63,6 +63,8 @@
   - type: Construction # WWDP
     graph: OusianaDustBowl
     node: bowl
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   name: broken bowl

@@ -27,6 +27,8 @@
     maxFillLevels: 4
     fillBaseName: fill-
   - type: Sealable
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: DrinkSportsYellowBottleFull
@@ -49,6 +51,8 @@
         reagents:
         - ReagentId: SportsDrinkBlue
           Quantity: 30
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: DrinkSportsYellowBottleFull
@@ -71,3 +75,5 @@
         reagents:
         - ReagentId: SportsDrinkRed
           Quantity: 30
+  - type: StaticPrice
+    price: 8

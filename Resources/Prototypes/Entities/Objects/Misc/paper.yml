@@ -89,6 +89,8 @@
   - type: Construction # WWDP
     graph: PaperGraph
     node: start
+  - type: StaticPrice
+    price: 1
 
 - type: entity
   name: paper scrap
@@ -273,6 +275,8 @@
     backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
     contentImagePath: "/Textures/Interface/Paper/paper_content_lined.svg.96dpi.png"
     backgroundModulate: "#cccccc"
+  - type: StaticPrice
+    price: 2
     contentImageModulate: "#cccccc"
     backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
     contentMargin: 16.0, 16.0, 16.0, 16.0
@@ -682,6 +686,8 @@
         type: PaperBoundUserInterface
   - type: Item
     size: Tiny
+  - type: StaticPrice
+    price: 2
   - type: Tag
     tags:
     - Trash

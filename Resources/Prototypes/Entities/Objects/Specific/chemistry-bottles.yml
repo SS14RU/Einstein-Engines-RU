@@ -178,9 +178,9 @@
         maxVol: 30
         reagents:
         - ReagentId: RobustHarvest
+          Quantity: 30
   - type: StaticPrice
     price: 10
-          Quantity: 30
 
 - type: entity
   id: EZNutrientChemistryBottle
@@ -195,9 +195,9 @@
         maxVol: 30
         reagents:
         - ReagentId: EZNutrient
+          Quantity: 30
   - type: StaticPrice
     price: 8
-          Quantity: 30
 
 - type: entity
   id: Left4ZedChemistryBottle
@@ -228,6 +228,8 @@
         reagents:
         - ReagentId: UnstableMutagen
           Quantity: 30
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   id: PotassiumChemistryBottle

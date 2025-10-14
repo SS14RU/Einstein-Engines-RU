@@ -224,7 +224,7 @@
     materialComposition:
       Glass: 100
   - type: StaticPrice
-    price: 20
+    price: 18
 
 - type: entity
   name: cryostasis beaker

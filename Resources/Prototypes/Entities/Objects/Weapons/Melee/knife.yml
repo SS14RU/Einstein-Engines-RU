@@ -65,6 +65,8 @@
     angle: 225
   - type: Item
     sprite: Objects/Weapons/Melee/kitchen_knife.rsi
+  - type: StaticPrice
+    price: 10
   - type: GuideHelp
     guides:
     - Chef
@@ -97,6 +99,8 @@
   - type: Item
     size: Normal
     sprite: Objects/Weapons/Melee/cleaver.rsi
+  - type: StaticPrice
+    price: 18
   - type: GuideHelp
     guides:
     - Chef

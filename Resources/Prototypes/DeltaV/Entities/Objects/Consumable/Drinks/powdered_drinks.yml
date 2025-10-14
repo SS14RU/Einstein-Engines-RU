@@ -42,7 +42,7 @@
   - type: Damageable
     damageContainer: Inorganic
   - type: StaticPrice
-    price: 50
+    price: 5
 
 - type: entity
   parent: ReagentTinBase
@@ -85,6 +85,8 @@
         reagents:
         - ReagentId: PowderedMilk
           Quantity: 50
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ReagentTinBase
@@ -106,6 +108,8 @@
         reagents:
         - ReagentId: PowderedMilkSoy
           Quantity: 50
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ReagentTinBase

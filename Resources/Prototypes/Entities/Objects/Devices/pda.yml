@@ -136,6 +136,8 @@
     proto: robot
   - type: Speech
     speechVerb: Robotic
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: BasePDA
@@ -150,6 +152,8 @@
     - CrimeAssistCartridge # DeltaV
     - SecWatchCartridge # DeltaV
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -164,6 +168,8 @@
     - NewsReaderCartridge
     - MedTekCartridge
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -222,6 +228,8 @@
   - type: GuideHelp
     guides:
     - Medical Doctor
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: BaseSecurityPDA
@@ -241,6 +249,8 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-interncadet
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: BasePDA
@@ -298,6 +308,8 @@
   - type: Icon
     state: pda-cook
   - type: ReplacementAccent # for random sentience event
+  - type: StaticPrice
+    price: 20
     accent: italian
 
 - type: entity
@@ -318,6 +330,8 @@
     accentVColor: "#00cc35"
   - type: Icon
     state: pda-hydro
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -525,6 +539,8 @@
     - NewsReaderCartridge
     - StockTradingCartridge # DeltaV - StockTrading
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -552,6 +568,8 @@
     - NewsReaderCartridge
     - AstroNavCartridge
     - NanoChatCartridge
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -570,6 +588,8 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-bartender
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -643,6 +663,8 @@
     - NotekeeperCartridge
     - NewsReaderCartridge
     - CrimeAssistCartridge
+  - type: StaticPrice
+    price: 20
     - SecWatchCartridge
     - NanoChatCartridge
 
@@ -674,6 +696,8 @@
     borderColor: "#5D2D56"
   - type: Icon
     state: pda-janitor
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -836,6 +860,8 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-engineer
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1033,6 +1059,8 @@
     - GlimmerMonitorCartridge
     - NanoChatCartridge
     - PsiWatchCartridge
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -1059,6 +1087,8 @@
     - NewsReaderCartridge
     - GlimmerMonitorCartridge
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: SciencePDA
@@ -1498,6 +1528,8 @@
     - NewsReaderCartridge
     - StockTradingCartridge # DeltaV - StockTrading
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -1516,6 +1548,8 @@
     borderColor: "#ffe685"
   - type: Icon
     state: pda-zookeeper
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -1535,6 +1569,8 @@
     accentVColor: "#390504"
   - type: Icon
     state: pda-boxer
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BaseSecurityPDA

@@ -12,7 +12,7 @@
           Quantity: 100
   - type: Sprite
   - type: StaticPrice
-    price: 16
+    price: 26
     sprite: Nyanotrasen/Objects/Consumable/Drinks/sojubottle.rsi
 
 - type: entity
