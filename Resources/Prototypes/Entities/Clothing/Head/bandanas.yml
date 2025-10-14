@@ -80,3 +80,6 @@
   parent: [ClothingHeadBandBase, ClothingMaskBandBrown]
   id: ClothingHeadBandBrown
   name: brown bandana
+  components:
+  - type: StaticPrice
+    price: 4

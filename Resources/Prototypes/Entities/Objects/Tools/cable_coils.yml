@@ -236,6 +236,8 @@
     cablePrototypeID: CableApcExtension
     blockingWireType: Apc
   - type: Appearance
+  - type: StaticPrice
+    price: 12
   - type: Extractable
     grindableSolutionName: lvcable
   - type: SolutionContainerManager

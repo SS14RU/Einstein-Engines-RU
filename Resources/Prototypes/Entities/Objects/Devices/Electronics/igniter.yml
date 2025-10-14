@@ -23,6 +23,8 @@
   - type: Tag
     tags:
     - Igniter
+  - type: StaticPrice
+    price: 4
   # WWDP quick crafts
   - type: Construction
     graph: FireBomb

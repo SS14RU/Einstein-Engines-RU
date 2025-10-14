@@ -343,7 +343,7 @@
       flatReductions:
         Heat: 0 # no protection
   - type: StaticPrice
-    price: 6
+    price: 4
 
 - type: entity
   parent: ClothingHandsButcherable

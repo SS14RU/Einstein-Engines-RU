@@ -1,4 +1,4 @@
-# Implanters
+﻿# Implanters
 
 - type: entity
   name: implanter
@@ -138,6 +138,8 @@
   components:
     - type: Implanter
       implant: SadTromboneImplant
+    - type: StaticPrice
+      price: 20
 
 - type: entity
   id: LightImplanter
@@ -295,3 +297,4 @@
   components:
   - type: Implanter
     implant: ComponentImplant
+

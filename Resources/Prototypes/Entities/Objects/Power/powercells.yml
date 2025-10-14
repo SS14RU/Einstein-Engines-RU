@@ -95,6 +95,8 @@
   - type: Battery
     maxCharge: 360
     startingCharge: 0
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   name: medium-capacity power cell
@@ -117,7 +119,7 @@
     partType: PowerCell
     rating: 2
   - type: StaticPrice
-    price: 10
+    price: 6
 
 - type: entity
   id: PowerCellMediumPrinted

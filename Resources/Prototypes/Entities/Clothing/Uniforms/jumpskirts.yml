@@ -41,6 +41,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/cargotech.rsi
+  - type: StaticPrice
+    price: 6
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/cargotech.rsi
 

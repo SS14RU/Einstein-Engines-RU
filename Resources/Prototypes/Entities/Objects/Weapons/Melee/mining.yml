@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   name: pickaxe
   parent: BaseItem
   id: Pickaxe
@@ -45,6 +45,8 @@
     sprite: Objects/Weapons/Melee/pickaxe.rsi
     storedRotation: -45
   - type: UseDelay
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   name: mining drill
@@ -242,3 +244,4 @@
   - type: Tag
     tags:
       - Pickaxe
+

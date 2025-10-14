@@ -289,6 +289,8 @@
     accentVColor: "#00cc35"
   - type: Icon
     state: pda-internservice
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -308,9 +310,9 @@
   - type: Icon
     state: pda-cook
   - type: ReplacementAccent # for random sentience event
-  - type: StaticPrice
-    price: 20
     accent: italian
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -331,7 +333,7 @@
   - type: Icon
     state: pda-hydro
   - type: StaticPrice
-    price: 20
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -359,6 +361,8 @@
     borderColor: "#C18199"
   - type: Icon
     state: pda-clown
+  - type: StaticPrice
+    price: 18
   - type: Slippery
     paralyzeTime: 4
     launchForwardsMultiplier: 1.5
@@ -421,6 +425,8 @@
     accentHColor: "#333333"
   - type: Icon
     state: pda-mime
+  - type: StaticPrice
+    price: 18
   - type: Muted # for random sentience event
 
 - type: entity
@@ -540,7 +546,7 @@
     - StockTradingCartridge # DeltaV - StockTrading
     - NanoChatCartridge # DeltaV
   - type: StaticPrice
-    price: 20
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -589,7 +595,7 @@
   - type: Icon
     state: pda-bartender
   - type: StaticPrice
-    price: 20
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -614,6 +620,8 @@
     borderColor: "#858585"
   - type: Icon
     state: pda-library
+  - type: StaticPrice
+    price: 18
   - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge
@@ -663,10 +671,10 @@
     - NotekeeperCartridge
     - NewsReaderCartridge
     - CrimeAssistCartridge
-  - type: StaticPrice
-    price: 20
     - SecWatchCartridge
     - NanoChatCartridge
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: LawyerPDA
@@ -697,7 +705,7 @@
   - type: Icon
     state: pda-janitor
   - type: StaticPrice
-    price: 20
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -1288,6 +1296,8 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-musician
+  - type: StaticPrice
+    price: 18
   - type: Instrument
     allowPercussion: false
     handheld: true
@@ -1369,6 +1379,8 @@
     borderColor: "#891417"
   - type: Icon
     state: pda-syndi
+  - type: StaticPrice
+    price: 60
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -1823,3 +1835,5 @@
         type: HealthAnalyzerBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+
+

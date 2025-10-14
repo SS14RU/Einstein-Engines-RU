@@ -111,6 +111,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/cargotech.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]

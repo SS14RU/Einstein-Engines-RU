@@ -59,6 +59,8 @@
               max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: StaticPrice
+    price: 1
   - type: Food
     solution: food
     delay: 7
@@ -687,7 +689,7 @@
   - type: Item
     size: Tiny
   - type: StaticPrice
-    price: 2
+    price: 1
   - type: Tag
     tags:
     - Trash

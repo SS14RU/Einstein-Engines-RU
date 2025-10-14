@@ -147,6 +147,8 @@
     clothingVisuals:
       outerClothing:
       - state: CARGO-equipped-OUTERCLOTHING
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterCargo
 
@@ -545,6 +547,8 @@
     clothingVisuals:
       outerClothing:
       - state: MINER-equipped-OUTERCLOTHING
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterMiner
 

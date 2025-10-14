@@ -168,6 +168,8 @@
   components:
     - type: Sprite
       sprite: Clothing/Back/Duffels/cargo.rsi
+    - type: StaticPrice
+      price: 8
 
 - type: entity
   parent: ClothingBackpackDuffel

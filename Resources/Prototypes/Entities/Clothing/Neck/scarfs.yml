@@ -52,6 +52,8 @@
       sprite: Clothing/Neck/Scarfs/brown.rsi
     - type: Clothing
       sprite: Clothing/Neck/Scarfs/brown.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: ClothingScarfBase
