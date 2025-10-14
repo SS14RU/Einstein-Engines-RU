@@ -12,6 +12,16 @@
             <Label Name="AccountBalanceLabel" HorizontalExpand="True" />
         </GridContainer>
         <PanelContainer StyleClasses="LowDivider" />
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 0 0 5">
+            <Label Text="{Loc 'economy-bank-atm-menu-history-label'}" VerticalAlignment="Center" Margin="0 0 6 0" />
+            <LineEdit Name="HistorySearchField" HorizontalExpand="True" PlaceHolder="{Loc 'economy-bank-atm-menu-history-search-placeholder'}" />
+        </BoxContainer>
+        <PanelContainer MinSize="0 140" VerticalExpand="True" SizeFlagsStretchRatio="2">
+            <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
+                <BoxContainer Name="HistoryContainer" Orientation="Vertical" HorizontalExpand="True" />
+            </ScrollContainer>
+        </PanelContainer>
+        <PanelContainer StyleClasses="LowDivider" />
         <Label Text="{Loc 'economy-bank-atm-menu-withdraw-label'}" />
         <SpinBox Name="WithdrawAmountBox" HorizontalExpand="True" Value="0" />
         <Button Name="WithdrawButton" Text="{Loc 'economy-bank-atm-menu-withdraw-button'}" HorizontalAlignment="Right" />

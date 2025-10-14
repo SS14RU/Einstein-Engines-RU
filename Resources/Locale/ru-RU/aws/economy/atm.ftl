@@ -1,4 +1,4 @@
-economy-bank-atm-menu-title = Банкомат
+﻿economy-bank-atm-menu-title = Банкомат
 economy-bank-atm-menu-account-id = Номер счёта
 economy-bank-atm-menu-account-owner = Владелец
 economy-bank-atm-menu-account-balance = Баланс
@@ -7,3 +7,8 @@ economy-bank-atm-menu-withdraw-button = Снять
 economy-bank-atm-menu-transfer-label = Перевод на счёт
 economy-bank-atm-menu-transfer-recipient-label = Номер счёта-получателя
 economy-bank-atm-menu-transfer-button = Перевести
+economy-bank-atm-menu-history-label = История операций
+economy-bank-atm-menu-history-search-placeholder = Фильтр по операциям...
+economy-bank-atm-menu-history-empty = Нет операций по этому счёту.
+economy-bank-atm-menu-history-empty-filtered = Нет операций, подходящих под поиск.
+economy-bank-atm-menu-history-entry = { $time } - { $message }

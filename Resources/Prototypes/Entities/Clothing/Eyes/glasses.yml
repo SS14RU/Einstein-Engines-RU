@@ -62,8 +62,6 @@
     sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/meson.rsi
-  - type: StaticPrice
-    price: 25
   - type: EyeProtection
   - type: IdentityBlocker
     coverage: EYES

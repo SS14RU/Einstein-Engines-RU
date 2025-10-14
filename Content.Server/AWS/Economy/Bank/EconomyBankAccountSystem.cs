@@ -721,27 +721,38 @@ namespace Content.Server.AWS.Economy.Bank
             if (!TryComp<EconomyMoneyHolderComponent>(usedEnt, out var economyMoneyHolderComponent))
                 return;
 
+            args.Handled = true;
+
             var amount = economyMoneyHolderComponent.Balance;
-            if (TryGetATMInsertedAccount(component, out var insertedAccountHolder))
+            if (!TryGetATMInsertedAccount(component, out var insertedAccountHolder))
+                return;
+
+            string? error = null;
+
+            if (TrySendMoney(economyMoneyHolderComponent, insertedAccountHolder.Value, amount, out error))
             {
-                if (TrySendMoney(economyMoneyHolderComponent, insertedAccountHolder.Value, amount, out var error))
+                if (insertedAccountHolder is not null &&
+                    TryGetAccount(insertedAccountHolder.Value.Comp.AccountID, out var account))
                 {
-                    if (insertedAccountHolder is not null && TryGetAccount(insertedAccountHolder.Value.Comp.AccountID, out var account))
-                        TryAddLog(account.Value,
-                               new EconomyBankAccountLogField(_gameTiming.CurTime,
-                               Loc.GetString("economybanksystem-log-insert",
-                               ("amount", amount), ("currencyName", account.Value.Comp.AllowedCurrency))));
-
-                    if (_netManager.IsServer)
-                        _popupSystem.PopupEntity(Loc.GetString("economybanksystem-atm-moneyentering"), uid, type: PopupType.Medium);
-
-                    QueueDel(usedEnt);
+                    TryAddLog(account.Value,
+                        new EconomyBankAccountLogField(
+                            _gameTiming.CurTime,
+                            Loc.GetString("economybanksystem-log-insert",
+                                ("amount", amount),
+                                ("currencyName", account.Value.Comp.AllowedCurrency))));
                 }
-                if (_netManager.IsServer)
-                    _popupSystem.PopupEntity(error, uid, type: PopupType.Medium);
 
-                UpdateATMUserInterface((uid, component), error);
+                if (_netManager.IsServer)
+                    _popupSystem.PopupEntity(Loc.GetString("economybanksystem-atm-moneyentering"), uid, type: PopupType.Medium);
+
+                QueueDel(usedEnt);
             }
+            else if (_netManager.IsServer && !string.IsNullOrEmpty(error))
+            {
+                _popupSystem.PopupEntity(error, uid, type: PopupType.Medium);
+            }
+
+            UpdateATMUserInterface((uid, component), error);
         }
 
         private void OnTerminalInteracted(EntityUid uid, EconomyBankTerminalComponent component, InteractUsingEvent args)

@@ -188,8 +188,6 @@
         Caustic: 0.75
   - type: StaticPrice
     price: 20
-  - type: StaticPrice
-    price: 20
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLab]
@@ -210,8 +208,6 @@
     modifiers:
       coefficients:
         Caustic: 0.75
-  - type: StaticPrice
-    price: 20
   - type: StaticPrice
     price: 20
 

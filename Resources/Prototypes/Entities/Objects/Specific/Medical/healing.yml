@@ -290,8 +290,6 @@
     - SecBeltEquip
   - type: Sprite
     state: tourniquet
-  - type: StaticPrice
-    price: 5
   - type: Healing
     damageContainers:
     - Biological

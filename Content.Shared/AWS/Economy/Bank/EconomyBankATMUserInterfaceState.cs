@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.AWS.Economy.Bank;
@@ -16,6 +17,7 @@ public sealed class EconomyBankATMAccountInfo
     public string AccountId = "";
     public string AccountName = "";
     public bool Blocked;
+    public List<EconomyBankAccountLogField> Logs = new();
 }
 
 [Serializable, NetSerializable]

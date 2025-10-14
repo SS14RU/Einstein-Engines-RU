@@ -92,8 +92,6 @@
   - type: Ammo
   - type: StaticPrice
     price: 10
-  - type: StaticPrice
-    price: 10
 
 - type: entity
   parent: [BaseItem, BaseSyndicateContraband]
