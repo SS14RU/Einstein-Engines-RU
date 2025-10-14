@@ -91,11 +91,11 @@ character-item-group-LoadoutHeadOfPersonnelShoes = Обувь главы пер�
 character-item-group-LoadoutHeadOfPersonnelUniforms = Униформа главы персонала
 
 # Engineering
-# Dignitary - BlueshieldOfficer
-character-item-group-LoadoutBlueshieldOfficerBackpacks = Рюкзаки офицера "Синий Щит"
-character-item-group-LoadoutBlueshieldOfficerVests = Жилеты офицера "Синий Щит"
-character-item-group-LoadoutBlueshieldOfficerUniforms = Униформа офицера "Синий Щит"
-character-item-group-LoadoutBlueshieldOfficerPrimary = Основное оружие офицера "Синий Щит"
+#Dignitary - Corporate Supervision Service Officer SS14RU-edit
+character-item-group-LoadoutBlueshieldOfficerBackpacks = Рюкзаки офицеров корпораций
+character-item-group-LoadoutBlueshieldOfficerVests = Жилеты офицеров корпораций
+character-item-group-LoadoutBlueshieldOfficerUniforms = Униформа офицеров корпораций
+character-item-group-LoadoutBlueshieldOfficerPrimary = Основное оружие офицера корпораций
 
 # Dignitary - Magistrate
 character-item-group-LoadoutMagistrateHead = Головной убор магистрата

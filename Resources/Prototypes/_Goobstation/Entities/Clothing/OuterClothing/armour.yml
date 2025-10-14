@@ -12,12 +12,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.60
-        Slash: 0.60
-        Piercing: 0.65
-        Heat: 0.70
+        Blunt: 0.50 #SS14RU-edit 0.6 > 0.50
+        Slash: 0.50 #SS14RU-edit 0.6 > 0.50
+        Piercing: 0.40 #SS14RU-edit 0.65 > 0.40
+        Heat: 0.60 #SS14RU-edit 0.7 > 0.60
   - type: ExplosionResistance
-    damageCoefficient: 0.8
+    damageCoefficient: 0.65 #SS14RU-edit 0.8 > 0.65
 
 - type: entity
   parent: ClothingBlueshieldArmourVest
@@ -60,10 +60,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.60
-        Slash: 0.60
-        Piercing: 0.65
-        Heat: 0.70
+        Blunt: 0.50 #SS14RU-edit 0.6 > 0.50
+        Slash: 0.50 #SS14RU-edit 0.6 > 0.50
+        Piercing: 0.40 #SS14RU-edit 0.65 > 0.40
+        Heat: 0.60 #SS14RU-edit 0.7 > 0.60
+  - type: ExplosionResistance
+    damageCoefficient: 0.8 #SS14RU-edit
   - type: TemperatureProtection
     heatingCoefficient: 0.5 # WD EDIT: 0.1 -> 0.5
     coolingCoefficient: 0.5 # WD EDIT: 0.1 -> 0.5

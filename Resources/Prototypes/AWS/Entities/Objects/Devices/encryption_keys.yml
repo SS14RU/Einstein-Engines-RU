@@ -1,0 +1,14 @@
+- type: entity
+  parent: [ EncryptionKey, BaseCentcommContraband ]
+  id: EncryptionKeyCorporations
+  name: encryption-key-corporations
+  description: Encryption Key Corporations
+  components:
+  - type: EncryptionKey
+    channels:
+    - CorpSupervisionService
+    defaultChannel: CorpSupervisionService
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: nano_label

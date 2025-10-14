@@ -1,0 +1,35 @@
+- type: entity
+  id: SpawnPointCnsCommander
+  parent: SpawnPointJobBase
+  name: Cns Commander
+  components:
+  - type: SpawnPoint
+    job_id: CnsCommander
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ertleader
+
+- type: entity
+  id: SpawnPointCnsOfficer
+  parent: SpawnPointJobBase
+  name: Cns Officer
+  components:
+  - type: SpawnPoint
+    job_id: CnsOfficer
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ertleader
+
+- type: entity
+  id: SpawnPointCnsRepresentative
+  parent: SpawnPointJobBase
+  name: CnsRepresentative
+  components:
+  - type: SpawnPoint
+    job_id: CnsRepresentative
+  - type: Sprite
+    layers:
+      - state: green
+      - state: centcom

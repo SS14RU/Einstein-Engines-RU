@@ -118,6 +118,19 @@
       startMoney: 150
       sallary: 150
       accountId: NT-Command
+    # corporations
+    CnsRepresentative:
+      startMoney: 150
+      sallary: 150
+      accountId: NT-CentCom
+    CnsCommander:
+      startMoney: 125
+      sallary: 125
+      accountId: NT-CentCom
+    CnsOfficer:
+      startMoney: 75
+      sallary: 75
+      accountId: NT-CentCom
     # Engineering
     AtmosphericTechnician:
       startMoney: 50

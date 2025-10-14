@@ -1,0 +1,66 @@
+# Corporations
+- type: entity
+  parent: ERTLeaderPDA
+  id: CorporationsPDA
+  name: corporations PDA
+  description: The silver shield of the Blueshield is engraved on the front.
+  components:
+  - type: Pda
+    id: CorporationsIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-blueshield
+  - type: Icon
+    sprite: _Goobstation/Objects/Devices/pda.rsi
+    state: pda-blueshield
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/pda.rsi
+    state: pda-blueshield
+  - type: PdaBorderColor
+    borderColor: "#3c94c5"
+
+- type: entity
+  parent: CorporationsPDA
+  id: CorporationsComPDA
+  name: Command corporations PDA
+  description: The silver shield of the Blueshield is engraved on the front.
+  components:
+  - type: Pda
+    id: CorporationsComIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-blueshield
+  - type: Icon
+    sprite: _Goobstation/Objects/Devices/pda.rsi
+    state: pda-blueshield
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/pda.rsi
+    state: pda-blueshield
+  - type: PdaBorderColor
+    borderColor: "#3c94c5"
+
+- type: entity
+  parent: BasePDA
+  id: NanotrasenRepresentativePDA
+  name: Nanotrasen Representative PDA
+  description: The silver shield of the Blueshield is engraved on the front.
+  components:
+  - type: Pda
+    id: NanotrasenRepresentativeIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-blueshield
+  - type: Icon
+    sprite: _Goobstation/Objects/Devices/pda.rsi
+    state: pda-blueshield
+  - type: Sprite
+    sprite: _Goobstation/Objects/Devices/pda.rsi
+    state: pda-blueshield
+  - type: PdaBorderColor
+    borderColor: "#3c94c5"

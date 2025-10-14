@@ -1,0 +1,54 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetCorporations
+  name: corporate-supervision-service-headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCorporations
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: DeltaV/Clothing/Ears/Headsets/adminassistant.rsi
+  - type: Clothing
+    sprite: DeltaV/Clothing/Ears/Headsets/adminassistant.rsi
+
+- type: entity
+  parent: ClothingHeadsetCorporations
+  id: ClothingHeadsetAlrCorporations
+  components:
+  - type: Sprite
+    state: icon_alt
+  - type: Clothing
+    equippedPrefix: alt
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetNtr
+  name: Nanotrasen Representative headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCorporations
+      - EncryptionKeyCargo
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
+      - EncryptionKeyEngineering
+      - EncryptionKeyMedical
+      - EncryptionKeyScience
+      - EncryptionKeyService
+      - EncryptionKeyPrison
+  - type: Sprite
+    sprite: DeltaV/Clothing/Ears/Headsets/adminassistant.rsi
+  - type: Clothing
+    sprite: DeltaV/Clothing/Ears/Headsets/adminassistant.rsi
+
+- type: entity
+  parent: ClothingHeadsetNtr
+  id: ClothingHeadsetAltNtr
+  components:
+  - type: Sprite
+    state: icon_alt
+  - type: Clothing
+    equippedPrefix: alt

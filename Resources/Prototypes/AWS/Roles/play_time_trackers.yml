@@ -1,0 +1,8 @@
+- type: playTimeTracker
+  id: JobCnsRepresentative
+
+- type: playTimeTracker
+  id: JobCnsCommander
+
+- type: playTimeTracker
+  id: JobCnsOfficer

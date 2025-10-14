@@ -1,0 +1,11 @@
+- type: department
+  id: Corporations
+  name: department-Corporations
+  description: department-corporations-description
+  color: "#33FE6D"
+  roles:
+  - CnsRepresentative
+  - CnsCommander
+  - CnsOfficer
+  primary: false
+  weight: 99

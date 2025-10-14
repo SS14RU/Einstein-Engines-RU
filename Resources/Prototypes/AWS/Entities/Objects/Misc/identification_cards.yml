@@ -1,0 +1,72 @@
+# Corporations
+- type: entity
+  parent: IDCardStandard
+  id: CorporationsIDCard
+  name: Corporations officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix:
+  - type: PresetIdCard
+    job: CnsOfficer
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
+  - type: Access
+    tags:
+    - CentralCommand
+    - BlueshieldOfficer
+
+- type: entity
+  parent: IDCardStandard
+  id: CorporationsComIDCard
+  name: Corporations command ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix:
+  - type: PresetIdCard
+    job: CnsCommander
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
+  - type: Access
+    tags:
+    - CentralCommand
+    - BlueshieldOfficer
+
+- type: entity
+  parent: IDCardStandard
+  id: NanotrasenRepresentativeIDCard
+  name: nanotrasen representative ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix:
+  - type: PresetIdCard
+    job: CnsRepresentative
+  - type: EconomyAccountHolder
+    accountIdByProto: Nanotrasen
+    moneyHolderEntId: ThalerHolder
+    accountSetup:
+      allowedCurrency: Thaler
+      accountTags:
+        - Personal
+  - type: Access
+    tags:
+    - CentralCommand
+    - BlueshieldOfficer

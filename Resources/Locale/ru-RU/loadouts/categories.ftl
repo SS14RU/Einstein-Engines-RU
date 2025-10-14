@@ -20,7 +20,7 @@ loadout-category-JobsCommandAUncategorized = Всё командование
 loadout-category-JobsCommandCaptain = Капитан
 loadout-category-JobsCommandHeadOfPersonnel = Глава персонала
 loadout-category-JobsCommandAdminAssistant = Административный ассистент
-loadout-category-JobsCommandBlueshieldOfficer = Офицер "Синий Щит"
+loadout-category-JobsCommandBlueshieldOfficer = Офицер "СКН"
 loadout-category-JobsCommandNanorep = Представитель Nanotrasen
 
 # Engineering

@@ -1,0 +1,9 @@
+- type: radioChannel
+  id: CorpSupervisionService
+  name: chat-radio-corporations
+  keycodes:
+    - 'h'
+    - 'р'
+  frequency: 1390
+  color: "#4b63ec"
+  longRange: true

@@ -86,7 +86,7 @@
   points: 0
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
+  # requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
     #AWS-start
@@ -108,7 +108,7 @@
   points: -1
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
+  # requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
     #AWS-start
@@ -134,7 +134,7 @@
   points: 0
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
+  # requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
     #AWS-start

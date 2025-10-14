@@ -88,6 +88,7 @@
   - type: ContainerFill
     containers:
       key_slots:
+      - EncryptionKeyCorporations #SS14RU-add
       - EncryptionKeyCentCom
       - EncryptionKeyStationMaster
   - type: Sprite

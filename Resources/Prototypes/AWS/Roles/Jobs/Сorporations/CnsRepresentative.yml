@@ -1,0 +1,81 @@
+- type: job
+  id: CnsRepresentative
+  name: job-name-cns-representative
+  description: job-description-cns-representative
+  playTimeTracker: JobCnsRepresentative
+  setPreference: true
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Command
+      min: 54000 # 15 hours
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - ForeignerLight
+        - Muted
+    - !type:CharacterEmployerRequirement
+      inverted: true
+      employers:
+      - Unemployed
+    - !type:CharacterOverallTimeRequirement
+      min: 7200
+  weight: 30
+  startingGear: CnsRepresentativeGear
+  icon: "JobIconNanotrasenRepresentative"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - External
+  - Cryogenics
+  - Maintenance
+  - Engineering
+  - Medical
+  - Research
+  - Lawyer
+  - Cargo
+  - Command
+  - NanotrasenRepresentative
+  - CentralCommand
+  - BlueshieldOfficer
+  - Lawyer
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  afterLoadoutSpecial:
+  - !type:ModifyEnvirosuitSpecial
+    charges: 8
+  - !type:ModifyEnvirohelmSpecial
+    powerCell: PowerCellHigh
+
+- type: startingGear
+  id: CnsRepresentativeGear
+  subGear:
+  - CnsRepresentativePlasmamanGear
+  equipment:
+    back: ClothingBackpackSatchelNanorep
+    shoes: ClothingShoesColorBlack
+    id: NanotrasenRepresentativePDA
+    jumpsuit: ClothingUniformJumpsuitNanotrasenRepresentative
+    ears: ClothingHeadsetNtr
+    # pocket1: UniqueNanorepLockerTeleporter
+  storage:
+    back:
+    - RubberStampNanorep
+    - Paper
+    - Paper
+
+- type: startingGear
+  id: CnsRepresentativePlasmamanGear
+  parent: BasePlasmamanMaskGear
+  equipment:
+    jumpsuit: ClothingUniformEnvirosuitNanotrasenRepresentative
+    head: ClothingHeadEnvirohelmNanotrasenRepresentative
+    gloves: ClothingHandsGlovesEnviroglovesBlack
