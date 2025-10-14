@@ -103,6 +103,8 @@
     sprite: Objects/Consumable/Drinks/cola.rsi
   - type: Item
     sprite: Objects/Consumable/Drinks/cola.rsi
+  - type: StaticPrice
+    price: 6
 
 # created when taking apart an ied
 - type: entity

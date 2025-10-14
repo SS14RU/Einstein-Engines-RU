@@ -501,6 +501,8 @@
     sprite: Clothing/Head/Hats/redwizard.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/redwizard.rsi
+  - type: StaticPrice
+    price: 60
   - type: PressureProtection # DeltaV - Make real wizard clothes space proof
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
@@ -628,6 +630,8 @@
     sprite: Clothing/Head/Hats/violetwizard.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/violetwizard.rsi
+  - type: StaticPrice
+    price: 60
   - type: PressureProtection # DeltaV - Make real wizard clothes space proof
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
@@ -677,6 +681,8 @@
     sprite: Clothing/Head/Hats/wizard_fake.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/wizard_fake.rsi
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   abstract: true
@@ -695,6 +701,8 @@
     sprite: Clothing/Head/Hats/wizardhat.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/wizardhat.rsi
+  - type: StaticPrice
+    price: 60
   - type: Tag
     tags:
     - ClothMade

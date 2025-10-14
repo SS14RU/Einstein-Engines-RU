@@ -224,6 +224,8 @@
     sprite: Clothing/OuterClothing/Misc/violetwizard.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/violetwizard.rsi
+  - type: StaticPrice
+    price: 75
 
 - type: entity
   parent: ClothingOuterWizardBase
@@ -235,6 +237,8 @@
     sprite: Clothing/OuterClothing/Misc/wizard.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/wizard.rsi
+  - type: StaticPrice
+    price: 75
 
 - type: entity
   parent: ClothingOuterWizardBase
@@ -246,6 +250,8 @@
     sprite: Clothing/OuterClothing/Misc/redwizard.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/redwizard.rsi
+  - type: StaticPrice
+    price: 75
 
 - type: entity
   parent: ClothingOuterBaseButcherable # WWDP

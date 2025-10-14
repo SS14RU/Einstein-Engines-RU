@@ -163,6 +163,8 @@
     sprite: Clothing/Shoes/Specific/wizard.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Specific/wizard.rsi
+  - type: StaticPrice
+    price: 35
 
 - type: entity
   parent: ClothingShoesBase

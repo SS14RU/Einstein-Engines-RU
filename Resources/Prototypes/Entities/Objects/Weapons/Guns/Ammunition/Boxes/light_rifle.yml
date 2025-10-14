@@ -45,7 +45,7 @@
     zeroVisible: false
   - type: Appearance
   - type: StaticPrice
-    price: 20
+    price: 40
 
 - type: entity
   parent: MagazineBoxLightRifleBig
@@ -108,7 +108,7 @@
       map: ["enum.GunVisualLayers.Mag"]
     - state: practice
   - type: StaticPrice
-    price: 5
+    price: 15
 
 - type: entity
   id: MagazineBoxLightRifleIncendiary

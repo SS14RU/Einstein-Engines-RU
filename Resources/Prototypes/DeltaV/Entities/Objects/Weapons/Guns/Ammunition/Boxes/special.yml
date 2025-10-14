@@ -38,7 +38,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: StaticPrice
-    price: 20
+    price: 42
 
 - type: entity
   parent: BaseMagazineBoxSpecial
@@ -55,7 +55,7 @@
       map: ["enum.GunVisualLayers.Mag"]
     - state: practice
   - type: StaticPrice
-    price: 5
+    price: 16
 
 - type: entity
   parent: BaseMagazineBoxSpecial
