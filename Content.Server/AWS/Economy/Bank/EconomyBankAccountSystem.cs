@@ -330,11 +330,18 @@ namespace Content.Server.AWS.Economy.Bank
             // if this is a fake money holder
             if (fromHolder.Emagged)
             {
-                TryAddLog(recipientAccount,
-                   new EconomyBankAccountLogField(_gameTiming.CurTime,
-                   Loc.GetString("economybanksystem-log-terminal-error")));
+                var holderId = GetMoneyHolderIdentifier(fromHolder.Owner, fromHolder);
+                var deducted = Math.Min(fromHolder.Balance, amount);
+                if (deducted > 0)
+                    fromHolder.Balance -= deducted;
 
-                return true;
+                errorMessage = Loc.GetString("economybanksystem-log-terminal-error", ("holderId", holderId));
+
+                TryAddLog(recipientAccount,
+                   new EconomyBankAccountLogField(_gameTiming.CurTime, errorMessage));
+
+                Dirty(fromHolder.Owner, fromHolder);
+                return false;
             }
 
             return TryTransferMoney(fromHolder, recipientAccount, amount, reason);
@@ -547,8 +554,9 @@ namespace Content.Server.AWS.Economy.Bank
             moneyHolder.Balance -= amount;
             receiver.Balance += amount;
 
-            var receiverLog = Loc.GetString("economybanksystem-log-send-from",
-                        ("amount", amount), ("currencyName", receiver.AllowedCurrency), ("accountId", "thaler holder"));
+            var holderId = GetMoneyHolderIdentifier(moneyHolder.Owner, moneyHolder);
+            var receiverLog = Loc.GetString("economybanksystem-log-insert-holder",
+                ("amount", amount), ("currencyName", receiver.AllowedCurrency), ("holderId", holderId));
             if (reason != null)
                 receiverLog += $" {reason}";
 
@@ -714,6 +722,14 @@ namespace Content.Server.AWS.Economy.Bank
             args.Handled = true;
         }
 
+        private string GetMoneyHolderIdentifier(EntityUid uid, EconomyMoneyHolderComponent component)
+        {
+            if (TryComp<NameIdentifierComponent>(uid, out var nameIdentifier))
+                return $"Th-{nameIdentifier.Identifier:0000}";
+
+            return "Th-????";
+        }
+
         private void OnATMInteracted(EntityUid uid, EconomyBankATMComponent component, InteractUsingEvent args)
         {
             var usedEnt = args.Used;
@@ -728,8 +744,9 @@ namespace Content.Server.AWS.Economy.Bank
                 return;
 
             string? error = null;
+            var success = TrySendMoney(economyMoneyHolderComponent, insertedAccountHolder.Value, amount, out error);
 
-            if (TrySendMoney(economyMoneyHolderComponent, insertedAccountHolder.Value, amount, out error))
+            if (success)
             {
                 if (insertedAccountHolder is not null &&
                     TryGetAccount(insertedAccountHolder.Value.Comp.AccountID, out var account))
@@ -747,9 +764,13 @@ namespace Content.Server.AWS.Economy.Bank
 
                 QueueDel(usedEnt);
             }
-            else if (_netManager.IsServer && !string.IsNullOrEmpty(error))
+            else
             {
-                _popupSystem.PopupEntity(error, uid, type: PopupType.Medium);
+                if (_netManager.IsServer && !string.IsNullOrEmpty(error))
+                    _popupSystem.PopupEntity(error, uid, type: PopupType.Medium);
+
+                if (economyMoneyHolderComponent.Emagged)
+                    QueueDel(usedEnt);
             }
 
             UpdateATMUserInterface((uid, component), error);

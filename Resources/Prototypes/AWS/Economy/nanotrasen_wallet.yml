@@ -16,6 +16,8 @@
     sprite: AWS/economy/moneyholder.rsi
     layers:
     - state: icon
+  - type: NameIdentifier
+    group: ThalerHolder
   - type: Item
     size: Small
     heldPrefix: default
