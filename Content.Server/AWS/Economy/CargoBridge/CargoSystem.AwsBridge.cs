@@ -125,4 +125,3 @@ public sealed partial class CargoSystem
             account.Currency.Id);
     }
 }
-

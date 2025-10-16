@@ -11,6 +11,8 @@
         - ReagentId: Soju
           Quantity: 100
   - type: Sprite
+  - type: StaticPrice
+    price: 26
     sprite: Nyanotrasen/Objects/Consumable/Drinks/sojubottle.rsi
 
 - type: entity

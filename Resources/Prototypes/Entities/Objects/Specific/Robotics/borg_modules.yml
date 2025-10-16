@@ -695,6 +695,8 @@
     layers:
     - state: syndicateborgbomb
     - state: icon-bomb
+  - type: StaticPrice
+    price: 80
   - type: ItemBorgModule
     items:
     - SelfDestructSeq

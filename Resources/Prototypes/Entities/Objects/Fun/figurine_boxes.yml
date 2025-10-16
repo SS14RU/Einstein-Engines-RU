@@ -25,6 +25,8 @@
     sprite: Objects/Fun/figurines.rsi
     layers:
       - state: fig_box
+  - type: StaticPrice
+    price: 5
   - type: SpawnItemsOnUse
     items:
       - id: MysteryFigureBoxTrash

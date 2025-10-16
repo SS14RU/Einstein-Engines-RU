@@ -38,6 +38,8 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 30
 
 - type: entity
   parent: BaseMagazineBoxPistol
@@ -53,6 +55,8 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: practice
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   id: MagazineBoxPistolIncendiary

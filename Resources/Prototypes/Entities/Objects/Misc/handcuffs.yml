@@ -13,6 +13,8 @@
   - type: Sprite
     sprite: Objects/Misc/handcuffs.rsi
     state: handcuff
+  - type: StaticPrice
+    price: 3
   - type: Tag
     tags:
     - Handcuffs
@@ -101,6 +103,8 @@
   - type: Sprite
     sprite: Objects/Misc/zipties.rsi
     state: cuff
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   id: BaseHandcuffsBroken

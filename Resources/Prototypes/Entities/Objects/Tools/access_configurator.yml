@@ -84,6 +84,8 @@
       requiresComplex: true
       requireActiveHand: false
       singleUser: true
+    - type: StaticPrice
+      price: 25
     - type: ItemSlots
     - type: ContainerContainer
       containers:

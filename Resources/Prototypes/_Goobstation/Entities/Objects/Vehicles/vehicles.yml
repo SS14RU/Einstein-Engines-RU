@@ -225,7 +225,7 @@
     baseSprintSpeed: 3.5
     baseWalkSpeed: 2.5
   - type: StaticPrice
-    price: 75
+    price: 20
 
 - type: entity
   parent: VehicleWheelchair

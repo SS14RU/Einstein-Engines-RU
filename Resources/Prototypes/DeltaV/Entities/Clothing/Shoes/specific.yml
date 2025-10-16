@@ -12,3 +12,5 @@
     modifiers:
       coefficients:
         Caustic: 0.95
+  - type: StaticPrice
+    price: 6

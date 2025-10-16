@@ -39,8 +39,10 @@
   name: medical duffel bag
   description: A large duffel bag for holding extra medical supplies.
   components:
-    - type: Sprite
-      sprite: Clothing/Back/Duffels/medical.rsi
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/medical.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingBackpackDuffel, BaseCommandContraband]
@@ -71,6 +73,8 @@
   components:
     - type: Sprite
       sprite: Clothing/Back/Duffels/security.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: [ClothingBackpackDuffel, BaseRestrictedContraband]
@@ -87,8 +91,10 @@
   name: chemistry duffel bag
   description: A large duffel bag for holding extra beakers and test tubes.
   components:
-    - type: Sprite
-      sprite: Clothing/Back/Duffels/chemistry.rsi
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/chemistry.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingBackpackDuffel
@@ -107,6 +113,8 @@
   components:
     - type: Sprite
       sprite: Clothing/Back/Duffels/genetics.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: ClothingBackpackDuffel
@@ -129,6 +137,8 @@
   components:
     - type: Sprite
       sprite: Clothing/Back/Duffels/science.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: ClothingBackpackDuffel
@@ -138,6 +148,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Back/Duffels/robotics.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingBackpackDuffel
@@ -156,6 +168,8 @@
   components:
     - type: Sprite
       sprite: Clothing/Back/Duffels/cargo.rsi
+    - type: StaticPrice
+      price: 8
 
 - type: entity
   parent: ClothingBackpackDuffel

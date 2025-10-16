@@ -136,6 +136,8 @@
     proto: robot
   - type: Speech
     speechVerb: Robotic
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: BasePDA
@@ -150,6 +152,8 @@
     - CrimeAssistCartridge # DeltaV
     - SecWatchCartridge # DeltaV
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -164,6 +168,8 @@
     - NewsReaderCartridge
     - MedTekCartridge
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -222,6 +228,8 @@
   - type: GuideHelp
     guides:
     - Medical Doctor
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: BaseSecurityPDA
@@ -241,6 +249,8 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-interncadet
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   parent: BasePDA
@@ -279,6 +289,8 @@
     accentVColor: "#00cc35"
   - type: Icon
     state: pda-internservice
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -299,6 +311,8 @@
     state: pda-cook
   - type: ReplacementAccent # for random sentience event
     accent: italian
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -318,6 +332,8 @@
     accentVColor: "#00cc35"
   - type: Icon
     state: pda-hydro
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -345,6 +361,8 @@
     borderColor: "#C18199"
   - type: Icon
     state: pda-clown
+  - type: StaticPrice
+    price: 18
   - type: Slippery
     paralyzeTime: 4
     launchForwardsMultiplier: 1.5
@@ -407,6 +425,8 @@
     accentHColor: "#333333"
   - type: Icon
     state: pda-mime
+  - type: StaticPrice
+    price: 18
   - type: Muted # for random sentience event
 
 - type: entity
@@ -525,6 +545,8 @@
     - NewsReaderCartridge
     - StockTradingCartridge # DeltaV - StockTrading
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -552,6 +574,8 @@
     - NewsReaderCartridge
     - AstroNavCartridge
     - NanoChatCartridge
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -570,6 +594,8 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-bartender
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -594,6 +620,8 @@
     borderColor: "#858585"
   - type: Icon
     state: pda-library
+  - type: StaticPrice
+    price: 18
   - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge
@@ -645,6 +673,8 @@
     - CrimeAssistCartridge
     - SecWatchCartridge
     - NanoChatCartridge
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: LawyerPDA
@@ -674,6 +704,8 @@
     borderColor: "#5D2D56"
   - type: Icon
     state: pda-janitor
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: BasePDA
@@ -836,6 +868,8 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-engineer
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1033,6 +1067,8 @@
     - GlimmerMonitorCartridge
     - NanoChatCartridge
     - PsiWatchCartridge
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -1059,6 +1095,8 @@
     - NewsReaderCartridge
     - GlimmerMonitorCartridge
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: SciencePDA
@@ -1258,6 +1296,8 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-musician
+  - type: StaticPrice
+    price: 18
   - type: Instrument
     allowPercussion: false
     handheld: true
@@ -1339,6 +1379,8 @@
     borderColor: "#891417"
   - type: Icon
     state: pda-syndi
+  - type: StaticPrice
+    price: 60
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
@@ -1498,6 +1540,8 @@
     - NewsReaderCartridge
     - StockTradingCartridge # DeltaV - StockTrading
     - NanoChatCartridge # DeltaV
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -1516,6 +1560,8 @@
     borderColor: "#ffe685"
   - type: Icon
     state: pda-zookeeper
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BasePDA
@@ -1535,6 +1581,8 @@
     accentVColor: "#390504"
   - type: Icon
     state: pda-boxer
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1787,3 +1835,5 @@
         type: HealthAnalyzerBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+
+

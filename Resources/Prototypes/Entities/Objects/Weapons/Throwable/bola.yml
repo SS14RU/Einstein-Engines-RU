@@ -78,6 +78,8 @@
       collection: sparks
   - type: KnockdownOnCollide
     knockdownTime: 1
+  - type: StaticPrice
+    price: 15
     jitterTime: 7
     stutterTime: 7
   - type: Tag

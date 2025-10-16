@@ -16,6 +16,8 @@
     sprite: AWS/economy/moneyholder.rsi
     layers:
     - state: icon
+  - type: NameIdentifier
+    group: ThalerHolder
   - type: Item
     size: Small
     heldPrefix: default
@@ -87,7 +89,7 @@
     accountSetup:
       generateAccountID: true
       allowedCurrency: Thaler
-      balance: 10000
+      balance: 6000
 
 # - type: entity
 #   parent: IDCardStandard
@@ -131,7 +133,7 @@
       accountID: NT-Engineering
       accountName: Инженерный отдел
       allowedCurrency: Thaler
-      balance: 1000
+      balance: 3600
       accountTags:
         - Department
 
@@ -149,7 +151,7 @@
       accountID: NT-Service
       accountName: Сервисный отдел
       allowedCurrency: Thaler
-      balance: 500
+      balance: 2400
       accountTags:
         - Department
 
@@ -166,7 +168,7 @@
       accountID: NT-Security
       allowedCurrency: Thaler
       accountName: Департамента Шерифа
-      balance: 1000
+      balance: 3800
       accountTags:
         - Department
 
@@ -183,7 +185,7 @@
       accountID: NT-Medical
       accountName: Медицинский отдел
       allowedCurrency: Thaler
-      balance: 900
+      balance: 3200
       accountTags:
         - Department
 
@@ -200,7 +202,7 @@
       accountID: NT-Science
       accountName: Научный отдел
       allowedCurrency: Thaler
-      balance: 1000
+      balance: 3000
       accountTags:
         - Department
 
@@ -217,7 +219,7 @@
       accountID: NT-Cargo
       accountName: Карго отдел
       allowedCurrency: Thaler
-      balance: 1000
+      balance: 2600
       accountTags:
         - Department
 

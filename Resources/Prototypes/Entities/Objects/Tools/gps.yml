@@ -11,6 +11,8 @@
     - state: active
   - type: Item
     sprite: Objects/Devices/gps.rsi
+  - type: StaticPrice
+    price: 12
   - type: HandheldGPS
   - type: PhysicalComposition
     materialComposition:

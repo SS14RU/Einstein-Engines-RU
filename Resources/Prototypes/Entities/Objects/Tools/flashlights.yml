@@ -76,7 +76,7 @@
     netsync: false
   - type: Appearance
   - type: StaticPrice
-    price: 40
+    price: 6
   - type: StealTarget
     stealGroup: LAMP
   - type: Clothing
@@ -128,6 +128,8 @@
     damage:
       types:
         Blunt: 8
+  - type: StaticPrice
+    price: 12
     bluntStaminaDamageFactor: 2.5
     heavyRangeModifier: 1.2
     maxTargets: 1

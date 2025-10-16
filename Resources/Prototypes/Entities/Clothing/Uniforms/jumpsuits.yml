@@ -111,6 +111,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/cargotech.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -258,6 +260,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/chemistry.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingUniformBase
@@ -280,6 +284,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/genetics.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/genetics.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingUniformBase
@@ -366,6 +372,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/detective.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/detective.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -377,6 +385,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/detective_grey.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/detective_grey.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -604,6 +614,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/medical.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingUniformBase
@@ -626,6 +638,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ ClothingUniformBase, ClothingUniformFoldableBase ]
@@ -637,6 +651,8 @@
     sprite: DeltaV/Clothing/Uniforms/Jumpsuit/brigmedic.rsi # DeltaV - resprite
   - type: Clothing
     sprite: DeltaV/Clothing/Uniforms/Jumpsuit/brigmedic.rsi # DeltaV - resprite
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingUniformBase
@@ -731,6 +747,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/scientist.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ ClothingUniformBase, ClothingUniformFoldableBase ]
@@ -742,6 +760,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/scientist_formal.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/scientist_formal.rsi
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -751,6 +771,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/roboticist.rsi
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase, BaseRestrictedContraband]
@@ -774,6 +796,8 @@
         color: "#C12D30"
         sprite: Clothing/Uniforms/Jumpsuit/color.rsi
       - state: overlay-inhand-right
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase, BaseRestrictedContraband]
@@ -785,6 +809,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/security_blue.rsi # WD EDIT
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/security_blue.rsi # WD EDIT
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase, BaseRestrictedContraband]
@@ -796,6 +822,8 @@
     sprite: DeltaV/Clothing/Uniforms/Jumpsuit/security_grey.rsi # DeltaV - resprite
   - type: Clothing
     sprite: DeltaV/Clothing/Uniforms/Jumpsuit/security_grey.rsi # DeltaV - resprite
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: [ClothingUniformBase, BaseRestrictedContraband]

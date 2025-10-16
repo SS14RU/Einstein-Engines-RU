@@ -236,6 +236,8 @@
     cablePrototypeID: CableApcExtension
     blockingWireType: Apc
   - type: Appearance
+  - type: StaticPrice
+    price: 12
   - type: Extractable
     grindableSolutionName: lvcable
   - type: SolutionContainerManager
@@ -280,6 +282,8 @@
     entries:
     - prototype: makeshifthandcuffs
     - prototype: CableTerminal
+  - type: StackPrice
+    price: 0.4
 
 - type: entity
   parent: CableApcStack

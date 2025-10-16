@@ -28,3 +28,5 @@
   - type: Sprite
     sprite: Objects/Misc/chopstick.rsi
     state: paired
+  - type: StaticPrice
+    price: 2

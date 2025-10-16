@@ -35,6 +35,8 @@
     modifier: 0.8
   - type: ClothingModifyStunTime # Goobstation
     modifier: 0.8
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingShoesMilitaryBase
@@ -96,6 +98,8 @@
     modifier: 0.5
   - type: ClothingModifyStunTime # Goobstation
     modifier: 0.8
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingShoesMilitaryBase
@@ -165,6 +169,8 @@
     sprite: Clothing/Shoes/Boots/winterbootscargo.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/winterbootscargo.rsi
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: ClothingShoesBaseWinterBoots
@@ -185,6 +191,8 @@
     sprite: Clothing/Shoes/Boots/winterbootsmed.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/winterbootsmed.rsi
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: ClothingShoesBaseWinterBoots
@@ -195,6 +203,8 @@
     sprite: Clothing/Shoes/Boots/winterbootssci.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/winterbootssci.rsi
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseRestrictedContraband]
@@ -205,6 +215,8 @@
     sprite: Clothing/Shoes/Boots/winterbootssec.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/winterbootssec.rsi
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: [ClothingShoesBaseWinterBoots, BaseSyndicateContraband]

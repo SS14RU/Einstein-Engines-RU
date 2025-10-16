@@ -107,6 +107,8 @@
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_uniform.rsi
     - type: Clothing
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_uniform.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity 
   parent: ClothingUniformBase
@@ -118,6 +120,8 @@
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_green_uniform.rsi
     - type: Clothing
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_green_uniform.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: ClothingUniformBase
@@ -129,6 +133,8 @@
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_chem_uniform.rsi
     - type: Clothing
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_chem_uniform.rsi
+    - type: StaticPrice
+      price: 6
     
 - type: entity 
   parent: ClothingUniformBase
@@ -140,6 +146,8 @@
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_para_uniform.rsi
     - type: Clothing
       sprite: _White/Clothing/Uniforms/Jumpsuit/med_para_uniform.rsi
+    - type: StaticPrice
+      price: 6
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]

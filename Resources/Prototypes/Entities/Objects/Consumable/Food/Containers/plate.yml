@@ -65,6 +65,8 @@
         - ItemMask
         layer:
         - BulletImpassable # Ever seen a John Woo movie?
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   name: broken plate
@@ -119,6 +121,8 @@
   - type: PhysicalComposition
     materialComposition:
       Glass: 30
+  - type: StaticPrice
+    price: 2
 
 - type: entity
   parent: FoodPlateTrash
@@ -148,6 +152,8 @@
   - type: Tag
     tags:
     - Trash
+  - type: StaticPrice
+    price: 2
 
 - type: entity
   name: plastic plate
@@ -165,6 +171,8 @@
   - type: Tag
     tags:
     - Trash
+  - type: StaticPrice
+    price: 2
 
 # Pie Tin
 
@@ -189,6 +197,8 @@
     materialComposition:
       Steel: 60
   - type: SpaceGarbage
+  - type: StaticPrice
+    price: 4
 
 # Muffin Tin
 
@@ -213,3 +223,5 @@
     materialComposition:
       Steel: 30
   - type: SpaceGarbage
+  - type: StaticPrice
+    price: 6

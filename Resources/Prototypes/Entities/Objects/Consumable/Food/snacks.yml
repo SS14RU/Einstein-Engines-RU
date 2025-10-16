@@ -429,6 +429,8 @@
       - id: FoodSnackNutribrickOpen
     sound:
       path: /Audio/Effects/unwrap.ogg
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   id: FoodSnackNutribrickOpen
@@ -473,6 +475,8 @@
       - id: FoodSnackMREBrownieOpen
     sound:
       path: /Audio/Effects/unwrap.ogg
+  - type: StaticPrice
+    price: 5
 
 
 - type: entity
@@ -724,6 +728,8 @@
           Quantity: 1
         - ReagentId: Theobromine
           Quantity: 1
+  - type: StaticPrice
+    price: 6
 
 # Sol Vend / Mars Mart
 - type: entity

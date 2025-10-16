@@ -33,6 +33,8 @@
     sprite: Clothing/Eyes/Hud/diag.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/diag.rsi
+  - type: StaticPrice
+    price: 18
   - type: ShowHealthBars
     damageContainers:
     - Inorganic
@@ -55,6 +57,8 @@
   - type: Construction # WWDP
     graph: HudMedSec
     node: medhud
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, BaseRestrictedContraband]

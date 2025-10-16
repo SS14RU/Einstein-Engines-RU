@@ -66,6 +66,8 @@
     - cig5
     - cig6
   - type: Appearance
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   id: CigPackMixedBase
@@ -157,6 +159,8 @@
     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/red.rsi
   - type: Item
     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/red.rsi
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   id: CigPackBlue
@@ -168,6 +172,8 @@
     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/blue.rsi
   - type: Item
     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/blue.rsi
+  - type: StaticPrice
+    price: 15
 
 - type: entity
   id: CigPackBlack
@@ -179,6 +185,8 @@
     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/black.rsi
   - type: Item
     sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/black.rsi
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   id: CigPackSyndicate
@@ -256,6 +264,8 @@
       prob: 0.50
     - id: CigaretteLicoxide
       prob: 0.10
+  - type: StaticPrice
+    price: 25
 
 - type: entity
   id: CigPackMixedNasty

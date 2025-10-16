@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using Content.Shared.Cargo;
 using Content.Shared.Cargo.BUI;
+using Content.Shared.Cargo;
+using System.Collections.Generic;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.AWS.Economy.Cargo;
@@ -16,4 +16,3 @@ public sealed class CargoConsoleAwsInterfaceState : CargoConsoleInterfaceState
         CurrencyPrototype = currencyPrototype;
     }
 }
-

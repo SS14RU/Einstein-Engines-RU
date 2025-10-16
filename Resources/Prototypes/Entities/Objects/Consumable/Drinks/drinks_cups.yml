@@ -71,10 +71,10 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug.rsi
     layers:
-    - state: icon-0
-    - map: ["enum.SolutionContainerLayers.Fill"]
-      state: icon-3
-      visible: false
+      - state: icon-0
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: icon-3
+        visible: false
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 3
@@ -82,6 +82,8 @@
   - type: PhysicalComposition
     materialComposition:
       Glass: 25
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: DrinkBaseMug
@@ -128,6 +130,8 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_dog.rsi
     state: icon-3
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   parent: DrinkBaseMug

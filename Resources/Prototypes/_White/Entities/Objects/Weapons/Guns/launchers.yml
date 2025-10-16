@@ -49,3 +49,5 @@
   - type: Tag
     tags:
     - Sidearm
+  - type: StaticPrice
+    price: 60

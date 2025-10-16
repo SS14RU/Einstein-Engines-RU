@@ -21,6 +21,8 @@
   - type: DrainableSolution
     solution: spray
   - type: Item
+  - type: StaticPrice
+    price: 4
     sprite: Objects/Tools/Hydroponics/sprays.rsi
     heldPrefix: plantbgone
 
@@ -51,6 +53,8 @@
   - type: Spray
     transferAmount: 1
   - type: Item
+  - type: StaticPrice
+    price: 4
     sprite: Objects/Tools/Hydroponics/sprays.rsi
 
 - type: entity
@@ -72,4 +76,6 @@
   - type: DrainableSolution
     solution: spray
   - type: Item
+  - type: StaticPrice
+    price: 4
     sprite: Objects/Tools/Hydroponics/sprays.rsi

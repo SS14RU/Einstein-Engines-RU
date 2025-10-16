@@ -1761,6 +1761,8 @@
     size: Normal
     sprite: Objects/Fun/toys.rsi
     heldPrefix: orb
+  - type: StaticPrice
+    price: 25
   - type: TileFrictionModifier
     modifier: 0.001
 

@@ -38,3 +38,5 @@
     guides:
     - Botanical
     - Chemicals
+  - type: StaticPrice
+    price: 20

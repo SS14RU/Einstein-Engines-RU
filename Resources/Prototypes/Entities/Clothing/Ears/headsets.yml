@@ -34,6 +34,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Ears/Headsets/base.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: ClothingHeadset
@@ -50,6 +52,8 @@
     sprite: Clothing/Ears/Headsets/cargo.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/cargo.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: ClothingHeadsetCargo
@@ -122,6 +126,8 @@
     sprite: Clothing/Ears/Headsets/engineering.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/engineering.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: [ClothingHeadsetEngineering, BaseCommandContraband]
@@ -151,6 +157,8 @@
     sprite: Clothing/Ears/Headsets/medical.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/medical.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: [ClothingHeadsetMedical, BaseCommandContraband]
@@ -180,6 +188,8 @@
     sprite: Clothing/Ears/Headsets/science.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/science.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: ClothingHeadsetScience
@@ -212,6 +222,8 @@
     sprite: Clothing/Ears/Headsets/robotics.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/robotics.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: [ClothingHeadsetScience, BaseCommandContraband]
@@ -241,6 +253,8 @@
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/security.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: [ClothingHeadset, BaseRestrictedContraband]
@@ -274,6 +288,8 @@
     sprite: Clothing/Ears/Headsets/service.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/service.rsi
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   parent: ClothingHeadset

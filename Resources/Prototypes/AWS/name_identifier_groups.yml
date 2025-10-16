@@ -46,3 +46,9 @@
   minValue: 0
   maxValue: 999
 
+- type: nameIdentifierGroup
+  id: ThalerHolder
+  prefix: Th
+  minValue: 0
+  maxValue: 9999
+

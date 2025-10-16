@@ -513,6 +513,8 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 25
 
 - type: entity
   parent: ClothingHeadHelmetJustice

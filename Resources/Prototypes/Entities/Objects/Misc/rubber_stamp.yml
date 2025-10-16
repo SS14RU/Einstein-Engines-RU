@@ -246,6 +246,8 @@
     stampState: "paper_stamp-ok"
   - type: Sprite
     state: stamp-ok
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   name: DENIED rubber stamp
@@ -258,6 +260,8 @@
     stampState: "paper_stamp-deny"
   - type: Sprite
     state: stamp-deny
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   name: detective's rubber stamp

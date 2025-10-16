@@ -213,6 +213,8 @@
     layers:
       - state: box
       - state: inflatable
+  - type: StaticPrice
+    price: 6
 
 
 - type: entity

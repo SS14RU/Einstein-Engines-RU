@@ -62,6 +62,8 @@
         amount: 3
       - id: MonkeyCubeWrapped
         amount: 3
+  - type: StaticPrice
+    price: 15
   - type: Sprite
     sprite: Objects/Misc/monkeycube.rsi
     state: box_variant

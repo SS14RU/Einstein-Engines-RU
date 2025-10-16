@@ -5,8 +5,10 @@ using Content.Shared.Popups;
 using JetBrains.Annotations;
 using Robust.Shared.Serialization;
 using System.Linq;
+using System.Collections.Generic;
 using Content.Shared.Access.Systems;
 using Content.Shared.Access.Components;
+using System;
 using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
 using System.Diagnostics.CodeAnalysis;
@@ -26,6 +28,8 @@ namespace Content.Shared.AWS.Economy.Bank
         [Dependency] private readonly SharedUserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+
+        private const int MaxAtmHistoryEntries = 10;
 
         private EntityQuery<ContainerManagerComponent> _containerQuery;
         private bool _containerQueryInitialized;
@@ -191,23 +195,49 @@ namespace Content.Shared.AWS.Economy.Bank
         [PublicAPI]
         public void UpdateATMUserInterface(Entity<EconomyBankATMComponent> entity, string? error = null)
         {
-            if (!TryGetATMInsertedAccount(entity, out var accountHolder))
-                return;
+            EconomyBankATMAccountInfo? uiAccount = null;
+            var finalError = error;
 
-            TryGetAccount(accountHolder.Value.Comp.AccountID, out var account);
-
-            _userInterfaceSystem.SetUiState(entity.Owner, EconomyBankATMUiKey.Key, new EconomyBankATMUserInterfaceState()
+            if (TryGetATMInsertedAccount(entity, out var accountHolder))
             {
-                BankAccount = account is null ? null :
-                new()
+                if (TryGetAccount(accountHolder.Value.Comp.AccountID, out var account))
                 {
-                    Balance = account.Value.Comp.Balance,
-                    AccountId = account.Value.Comp.AccountID,
-                    AccountName = account.Value.Comp.AccountName,
-                    Blocked = account.Value.Comp.Blocked,
-                },
-                Error = error,
+                    uiAccount = new EconomyBankATMAccountInfo
+                    {
+                        Balance = account.Value.Comp.Balance,
+                        AccountId = account.Value.Comp.AccountID,
+                        AccountName = account.Value.Comp.AccountName,
+                        Blocked = account.Value.Comp.Blocked,
+                        Logs = BuildAtmLogSnapshot(account.Value.Comp.Logs),
+                    };
+                }
+            }
+            else
+            {
+                finalError = null;
+            }
+
+            _userInterfaceSystem.SetUiState(entity.Owner, EconomyBankATMUiKey.Key, new EconomyBankATMUserInterfaceState
+            {
+                BankAccount = uiAccount,
+                Error = finalError,
             });
+        }
+
+        private List<EconomyBankAccountLogField> BuildAtmLogSnapshot(List<EconomyBankAccountLogField> source)
+        {
+            if (source.Count == 0)
+                return new();
+
+            var startIndex = Math.Max(0, source.Count - MaxAtmHistoryEntries);
+            var result = new List<EconomyBankAccountLogField>(source.Count - startIndex);
+
+            for (var i = source.Count - 1; i >= startIndex; i--)
+            {
+                result.Add(source[i]);
+            }
+
+            return result;
         }
 
         [PublicAPI]

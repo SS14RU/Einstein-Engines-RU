@@ -30,6 +30,8 @@
     sprite: _White/Clothing/Hands/dark_vinyl_gloves.rsi
   - type: Clothing
     sprite: _White/Clothing/Hands/dark_vinyl_gloves.rsi
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   parent: ClothingHandsGlovesLatex
@@ -41,6 +43,8 @@
     sprite: _White/Clothing/Hands/orange_vinyl_gloves.rsi
   - type: Clothing
     sprite: _White/Clothing/Hands/orange_vinyl_gloves.rsi
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   parent: ClothingHandsBase

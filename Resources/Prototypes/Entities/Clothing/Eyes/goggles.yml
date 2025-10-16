@@ -1,4 +1,4 @@
-# Night Vision Goggles
+﻿# Night Vision Goggles
 
 - type: entity
   parent: ClothingEyesBase
@@ -12,6 +12,8 @@
     sprite: Clothing/Eyes/Goggles/nightvision.rsi
   - type: NightVision
     isEquipment: true
+  - type: StaticPrice
+    price: 60
   - type: IdentityBlocker
     coverage: EYES
 
@@ -57,6 +59,8 @@
     interfaces:
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: [ClothingEyesNightVisionGogglesSyndie, ShowSecurityIcons]
@@ -115,3 +119,4 @@
   suffix: "Chameleon, NukeOps"
   components:
   - type: ShowSyndicateIcons
+

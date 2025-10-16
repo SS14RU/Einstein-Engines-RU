@@ -49,3 +49,5 @@
           True: { state: orebag_on }
           False: { state: orebag_off }
   # WHITE EDIT END
+  - type: StaticPrice
+    price: 15

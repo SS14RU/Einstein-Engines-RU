@@ -66,6 +66,8 @@
     sprite: Nyanotrasen/Clothing/Head/Hats/tinfoil.rsi
   - type: Clothing
     sprite: Nyanotrasen/Clothing/Head/Hats/tinfoil.rsi
+  - type: StaticPrice
+    price: 5
   - type: TinfoilHat
   - type: Armor
     modifiers:
@@ -100,6 +102,8 @@
     sprite: Nyanotrasen/Clothing/Head/Hats/cage.rsi
     equipDelay: 0.5
     unequipDelay: 6
+  - type: StaticPrice
+    price: 20
   - type: HeadCage
   - type: Tag
     tags:
@@ -115,6 +119,8 @@
     sprite: Nyanotrasen/Clothing/Head/Helmets/insulative_skullcap.rsi
   - type: Clothing
     sprite: Nyanotrasen/Clothing/Head/Helmets/insulative_skullcap.rsi
+  - type: StaticPrice
+    price: 25
   - type: Armor
     modifiers:
       coefficients:

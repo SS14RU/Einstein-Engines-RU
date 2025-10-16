@@ -147,6 +147,8 @@
     clothingVisuals:
       outerClothing:
       - state: CARGO-equipped-OUTERCLOTHING
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterCargo
 
@@ -248,6 +250,8 @@
     priceMultiplier: 0.15
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterChem
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
@@ -340,6 +344,8 @@
         Heat: 0.90
         Caustic: 0.9
     priceMultiplier: 0.15
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
@@ -495,6 +501,8 @@
     priceMultiplier: 0.15
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterMed
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -539,6 +547,8 @@
     clothingVisuals:
       outerClothing:
       - state: MINER-equipped-OUTERCLOTHING
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterMiner
 
@@ -646,6 +656,8 @@
     clothingVisuals:
       outerClothing:
       - state: ROBO-equipped-OUTERCLOTHING
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterRobo
 
@@ -677,6 +689,8 @@
         Heat: 0.90
         Caustic: 0.9
     priceMultiplier: 0.15
+  - type: StaticPrice
+    price: 18
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
@@ -709,6 +723,8 @@
         Slash: 0.85
         Piercing: 0.85 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
         Heat: 0.75
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable

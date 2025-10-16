@@ -44,6 +44,8 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: StaticPrice
+    price: 20
 
 - type: entity
   parent: BaseMagazineBoxCaselessRifle
@@ -78,6 +80,8 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: StaticPrice
+    price: 45
 
 - type: entity
   parent: BaseMagazineBoxCaselessRifle
@@ -93,6 +97,8 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: practice
+  - type: StaticPrice
+    price: 18
 
 - type: entity
   parent: MagazineBoxCaselessRifle

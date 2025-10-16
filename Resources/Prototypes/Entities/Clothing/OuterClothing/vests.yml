@@ -60,6 +60,8 @@
         Heat: 0.80
   - type: ExplosionResistance
     damageCoefficient: 0.90
+  - type: StaticPrice
+    price: 25
 
 #Hazard vest
 - type: entity

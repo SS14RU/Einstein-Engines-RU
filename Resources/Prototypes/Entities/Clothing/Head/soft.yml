@@ -66,6 +66,8 @@
     sprite: Clothing/Head/Soft/cargosoft.rsi
   - type: Clothing
     sprite: Clothing/Head/Soft/cargosoft.rsi
+  - type: StaticPrice
+    price: 6
   - type: Tag
     tags:
     - ClothMade

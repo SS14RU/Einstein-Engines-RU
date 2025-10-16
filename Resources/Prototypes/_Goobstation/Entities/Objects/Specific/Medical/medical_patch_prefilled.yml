@@ -22,6 +22,8 @@
   - type: MedicalPatch
     singleUse: true
     transferAmount: 0.25
+  - type: StaticPrice
+    price: 7
 
 - type: entity
   parent: MedicalPatchPrefilledBase

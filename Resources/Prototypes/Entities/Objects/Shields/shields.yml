@@ -70,7 +70,7 @@
   description: A large tower shield. Good for controlling crowds.
   components:
     - type: StaticPrice
-      price: 90
+      price: 40
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -94,6 +94,8 @@
       state: riot_laser-icon
     - type: Item
       heldPrefix: riot_laser
+    - type: StaticPrice
+      price: 45
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -114,6 +116,8 @@
       state: riot_bullet-icon
     - type: Item
       heldPrefix: riot_bullet
+    - type: StaticPrice
+      price: 45
     - type: Blocking
       passiveBlockModifier:
         coefficients:

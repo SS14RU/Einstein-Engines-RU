@@ -40,6 +40,8 @@
     layers:
     - state: crypt_gray
     - state: cargo_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseCentcommContraband ]
@@ -109,6 +111,8 @@
     layers:
     - state: crypt_gray
     - state: eng_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseMedicalContraband ]
@@ -124,6 +128,8 @@
     layers:
     - state: crypt_gray
     - state: med_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseMedicalScienceContraband ]
@@ -140,6 +146,8 @@
     layers:
     - state: crypt_gray
     - state: medsci_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseScienceContraband ]
@@ -155,6 +163,8 @@
     layers:
     - state: crypt_gray
     - state: sci_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseScienceContraband ]
@@ -170,6 +180,8 @@
     layers:
     - state: crypt_gray
     - state: robotics_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseSecurityContraband ]
@@ -186,6 +198,8 @@
     layers:
     - state: crypt_gray
     - state: sec_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseCivilianContraband ]
@@ -201,6 +215,8 @@
     layers:
     - state: crypt_gray
     - state: service_label
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: [ EncryptionKey, BaseSyndicateContraband ]
@@ -220,6 +236,8 @@
     difficulty: 5
     recipes:
       - EncryptionKeySyndie
+  - type: StaticPrice
+    price: 40
 
 - type: entity
   parent: [ EncryptionKey, BaseSiliconScienceContraband ]

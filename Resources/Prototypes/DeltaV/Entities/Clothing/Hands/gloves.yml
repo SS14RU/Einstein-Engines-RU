@@ -58,3 +58,5 @@
   - type: TemperatureProtection
     heatingCoefficient: 1
     coolingCoefficient: 1
+  - type: StaticPrice
+    price: 6

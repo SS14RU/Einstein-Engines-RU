@@ -49,6 +49,8 @@
     graph: Blindfold
     node: blindfold
   - type: FlashImmunity
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingEyesBlindfold

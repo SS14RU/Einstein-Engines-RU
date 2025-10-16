@@ -24,3 +24,5 @@
           - Book
           - Document
     - type: Dumpable
+    - type: StaticPrice
+      price: 10

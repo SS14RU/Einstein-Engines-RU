@@ -6,7 +6,6 @@
   - type: Item
     storedRotation: -90
   - type: Battery
-    pricePerJoule: 0.15
   - type: PowerCell
   - type: Explosive
     explosionType: Default
@@ -96,6 +95,8 @@
   - type: Battery
     maxCharge: 360
     startingCharge: 0
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   name: medium-capacity power cell
@@ -117,6 +118,8 @@
   - type: MachinePart
     partType: PowerCell
     rating: 2
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   id: PowerCellMediumPrinted

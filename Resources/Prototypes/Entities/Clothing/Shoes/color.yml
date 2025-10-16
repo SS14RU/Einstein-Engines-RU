@@ -30,6 +30,8 @@
       - state: equipped-FEET
         color: "#1d1d1d"
       - state: soles-equipped-FEET
+  - type: StaticPrice
+    price: 6
 
 # White Shoes
 - type: entity
@@ -52,7 +54,7 @@
       right:
       - state: inhand-right
         color: "#EAE8E8"
-  - type: Clothing
+  
     sprite: Clothing/Shoes/color.rsi
     clothingVisuals:
       shoes:
@@ -121,6 +123,8 @@
       - state: equipped-FEET
         color: "#592D01"
       - state: soles-equipped-FEET
+  - type: StaticPrice
+    price: 6
 
 # Green Shoes
 - type: entity

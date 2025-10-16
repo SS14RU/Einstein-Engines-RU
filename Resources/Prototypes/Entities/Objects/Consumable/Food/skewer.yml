@@ -60,6 +60,8 @@
           Quantity: 6
         - ReagentId: Vitamin
           Quantity: 2
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   name: double rat kebab

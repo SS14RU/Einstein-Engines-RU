@@ -9,12 +9,21 @@ public sealed partial class CargoConsoleMenu
 {
     private CurrencyPrototype? _awsCurrency;
     private int _awsCurrentBankBalance;
-    private Label? _awsPointsKeyLabel;
+    private Label? _awsBalanceLabel;
 
     partial void OnMenuConstructed()
     {
-        _awsPointsKeyLabel = PointsKeyLabel;
-        UpdatePointsKeyLabel();
+        _awsBalanceLabel = PointsKeyLabel ?? _awsBalanceLabel;
+
+        if (_awsBalanceLabel == null &&
+            PointsLabel.Parent is BoxContainer box &&
+            box.ChildCount > 0 &&
+            box.GetChild(0) is Label label)
+        {
+            _awsBalanceLabel = label;
+        }
+
+        UpdateBalanceLabel();
     }
 
     private partial string FormatPointCost(int cost, string defaultText)
@@ -30,8 +39,8 @@ public sealed partial class CargoConsoleMenu
     partial void OnBankDataUpdated(string name, int points)
     {
         _awsCurrentBankBalance = points;
+        UpdateBalanceLabel();
         PointsLabel.Text = FormatPointCost(points, Loc.GetString("cargo-console-menu-points-amount", ("amount", points.ToString())));
-        UpdatePointsKeyLabel();
     }
 
     public void SetCurrency(string? currencyId)
@@ -46,22 +55,22 @@ public sealed partial class CargoConsoleMenu
             _awsCurrency = null;
         }
 
+        UpdateBalanceLabel();
         PointsLabel.Text = FormatPointCost(_awsCurrentBankBalance, Loc.GetString("cargo-console-menu-points-amount", ("amount", _awsCurrentBankBalance.ToString())));
-        UpdatePointsKeyLabel();
     }
 
-    private void UpdatePointsKeyLabel()
+    private void UpdateBalanceLabel()
     {
-        if (_awsPointsKeyLabel == null)
+        if (_awsBalanceLabel == null)
             return;
 
         if (_awsCurrency == null)
         {
-            _awsPointsKeyLabel.Text = Loc.GetString("cargo-console-menu-points-label");
+            _awsBalanceLabel.Text = Loc.GetString("cargo-console-menu-points-label");
             return;
         }
 
         var currencyName = Loc.GetString(_awsCurrency.DisplayName);
-        _awsPointsKeyLabel.Text = Loc.GetString("aws-economy-cargo-console-balance-label", ("currency", currencyName));
+        _awsBalanceLabel.Text = Loc.GetString("aws-economy-cargo-console-balance-label", ("currency", currencyName));
     }
 }

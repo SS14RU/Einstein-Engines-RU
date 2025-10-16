@@ -27,6 +27,8 @@
       - state: staff-inhand-right
       - state: staff-inhand-right-unshaded
         shader: unshaded
+  - type: StaticPrice
+    price: 60
   - type: RgbLightController
   - type: PointLight
     enabled: true

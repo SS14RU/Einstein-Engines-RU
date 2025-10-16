@@ -12,6 +12,8 @@
     modifiers:
       coefficients:
         Caustic: 0.85
+  - type: StaticPrice
+    price: 6
 
 - type: entity
   parent: ClothingEyesGlassesGar

@@ -28,6 +28,8 @@
   - type: ThrowingAngle
     angle: 135
   - type: Item
+  - type: StaticPrice
+    price: 8
     sprite: Objects/Tools/Hydroponics/hoe.rsi
 
 - type: entity
@@ -65,6 +67,8 @@
   - type: Hemostat
     speed: 0.6
   - type: SurgeryTool
+  - type: StaticPrice
+    price: 8
     startSound:
       path: /Audio/_Shitmed/Medical/Surgery/retractor1.ogg
     endSound:
@@ -106,7 +110,7 @@
     slots:
     - back
   - type: StaticPrice
-    price: 40
+    price: 25
   - type: Execution # WWDP
 
 - type: entity
@@ -146,6 +150,8 @@
   - type: BoneSaw
     speed: 0.35
   - type: SurgeryTool
+  - type: StaticPrice
+    price: 8
     startSound:
       path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
 
@@ -181,6 +187,8 @@
   - type: Item
     sprite: Objects/Tools/Hydroponics/spade.rsi
   - type: Shovel
+  - type: StaticPrice
+    price: 8
     speedModifier: 0.85 # slower at digging than a full-sized shovel
 
 - type: entity
@@ -209,3 +217,5 @@
         - Produce
         - Seed
   - type: Dumpable
+  - type: StaticPrice
+    price: 6
