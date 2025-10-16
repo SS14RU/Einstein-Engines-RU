@@ -11,7 +11,8 @@
                    Text="{Loc 'cargo-console-menu-account-name-none-text'}" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'cargo-console-menu-points-label'}"
+            <Label Name="PointsKeyLabel"
+                   Text="{Loc 'cargo-console-menu-points-label'}"
                    StyleClasses="LabelKeyText" />
             <Label Name="PointsLabel"
                    Text="$0" />

@@ -12,7 +12,7 @@ using static Robust.Client.UserInterface.Controls.BaseButton;
 
 namespace Content.Client.Cargo.BUI
 {
-    public sealed class CargoOrderConsoleBoundUserInterface : BoundUserInterface
+    public sealed partial class CargoOrderConsoleBoundUserInterface : BoundUserInterface
     {
         [ViewVariables]
         private CargoConsoleMenu? _menu;
@@ -41,6 +41,9 @@ namespace Content.Client.Cargo.BUI
         [ViewVariables]
         private CargoProductPrototype? _product;
 
+        partial void OnMenuOpenedExtended(CargoConsoleMenu menu);
+        partial void OnStateUpdatedExtended(CargoConsoleInterfaceState state);
+
         public CargoOrderConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
         }
@@ -65,6 +68,7 @@ namespace Content.Client.Cargo.BUI
             _orderMenu = new CargoConsoleOrderMenu();
 
             _menu.OnClose += Close;
+            OnMenuOpenedExtended(_menu);
 
             _menu.OnItemSelected += (args) =>
             {
@@ -121,6 +125,7 @@ namespace Content.Client.Cargo.BUI
 
             AccountName = cState.Name;
 
+            OnStateUpdatedExtended(cState);
             Populate(cState.Orders);
             _menu?.UpdateCargoCapacity(OrderCount, OrderCapacity);
             _menu?.UpdateBankData(AccountName, BankBalance);

@@ -65,6 +65,10 @@ public sealed partial class CargoSystem : SharedCargoSystem
     private List<EntityUid> _listEnts = new();
     private List<(EntityUid, CargoPalletComponent, TransformComponent)> _pads = new();
 
+    partial void InitializeAwsBridge();
+    partial void BeforeCargoBankUpdate(EntityUid station, StationBankAccountComponent component, ref int amount, ref bool handled);
+    partial void AfterCargoBankUpdate(EntityUid station, StationBankAccountComponent component, int amount, bool handled);
+
     public override void Initialize()
     {
         base.Initialize();
@@ -78,6 +82,7 @@ public sealed partial class CargoSystem : SharedCargoSystem
         InitializeShuttle();
         InitializeTelepad();
         InitializeBounty();
+        InitializeAwsBridge();
     }
 
     public override void Update(float frameTime)
@@ -91,7 +96,13 @@ public sealed partial class CargoSystem : SharedCargoSystem
     [PublicAPI]
     public void UpdateBankAccount(EntityUid uid, StationBankAccountComponent component, int balanceAdded)
     {
-        component.Balance += balanceAdded;
+        var handled = false;
+        BeforeCargoBankUpdate(uid, component, ref balanceAdded, ref handled);
+
+        if (!handled)
+            component.Balance += balanceAdded;
+
+        AfterCargoBankUpdate(uid, component, balanceAdded, handled);
         var query = EntityQueryEnumerator<BankClientComponent, TransformComponent>();
 
         var ev = new BankBalanceUpdatedEvent(uid, component.Balance);

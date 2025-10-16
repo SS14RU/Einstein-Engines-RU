@@ -19,6 +19,9 @@ namespace Content.Client.Cargo.UI
         private IPrototypeManager _protoManager;
         private SpriteSystem _spriteSystem;
         private EntityUid _owner;
+        partial void OnMenuConstructed();
+        private partial string FormatPointCost(int cost, string defaultText);
+        partial void OnBankDataUpdated(string name, int points);
 
         public event Action<ButtonEventArgs>? OnItemSelected;
         public event Action<ButtonEventArgs>? OnOrderApproved;
@@ -39,6 +42,7 @@ namespace Content.Client.Cargo.UI
 
             SearchBar.OnTextChanged += OnSearchBarTextChanged;
             Categories.OnItemSelected += OnCategoryItemSelected;
+            OnMenuConstructed();
         }
 
         private void OnCategoryItemSelected(OptionButton.ItemSelectedEventArgs args)
@@ -100,7 +104,7 @@ namespace Content.Client.Cargo.UI
                         Product = prototype,
                         ProductName = { Text = prototype.Name },
                         MainButton = { ToolTip = prototype.Description },
-                        PointCost = { Text = Loc.GetString("cargo-console-menu-points-amount", ("amount", prototype.Cost.ToString())) },
+                        PointCost = { Text = FormatPointCost(prototype.Cost, Loc.GetString("cargo-console-menu-points-amount", ("amount", prototype.Cost.ToString()))) },
                         Icon = { Texture = _spriteSystem.Frame0(prototype.Icon) },
                     };
                     button.MainButton.OnPressed += args =>
@@ -192,7 +196,8 @@ namespace Content.Client.Cargo.UI
         public void UpdateBankData(string name, int points)
         {
             AccountNameLabel.Text = name;
-            PointsLabel.Text = Loc.GetString("cargo-console-menu-points-amount", ("amount", points.ToString()));
+            PointsLabel.Text = FormatPointCost(points, Loc.GetString("cargo-console-menu-points-amount", ("amount", points.ToString())));
+            OnBankDataUpdated(name, points);
         }
     }
 }

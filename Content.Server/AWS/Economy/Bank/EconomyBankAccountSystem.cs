@@ -467,6 +467,29 @@ namespace Content.Server.AWS.Economy.Bank
         /// Changes the balance of the account.
         /// </summary>
         /// <param name="addition">Whether to add or substract the given amount.</param>
+        [PublicAPI]
+        public bool TryChangeAccountBalance(string accountID, long delta, string? logMessage = null)
+        {
+            if (delta == 0)
+                return true;
+
+            var addition = delta > 0;
+            var amount = addition ? (ulong) delta : (ulong) (-delta);
+
+            if (!TryChangeAccountBalance(accountID, amount, addition))
+                return false;
+
+            if (logMessage == null)
+                return true;
+
+            if (!TryGetAccount(accountID, out var entity) || entity == null)
+                return true;
+
+            entity.Value.Comp.Logs.Add(new EconomyBankAccountLogField(_gameTiming.CurTime, logMessage));
+            Dirty(entity.Value);
+            return true;
+        }
+
         private bool TryChangeAccountBalance(string accountID, ulong amount, bool addition = true)
         {
             if (!TryGetAccount(accountID, out var entity))
