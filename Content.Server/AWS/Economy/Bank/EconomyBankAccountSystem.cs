@@ -149,16 +149,6 @@ namespace Content.Server.AWS.Economy.Bank
             _pvsOverrideSystem.AddGlobalOverride(accountEntity);
             Dirty(account);
 
-            if (salary is { } spawnSalary && spawnSalary > 0)
-            {
-                var newBalance = accountComp.Balance + spawnSalary;
-                if (newBalance < accountComp.Balance)
-                    newBalance = ulong.MaxValue;
-
-                accountComp.Balance = newBalance;
-                Dirty(account);
-            }
-
             return true;
         }
 
@@ -317,7 +307,7 @@ namespace Content.Server.AWS.Economy.Bank
         }
 
         [PublicAPI]
-        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, Entity<EconomyBankAccountComponent> recipientAccount, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
+        public bool TrySendMoney(EntityUid fromHolderUid, EconomyMoneyHolderComponent fromHolder, Entity<EconomyBankAccountComponent> recipientAccount, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
         {
             errorMessage = null;
 
@@ -330,7 +320,7 @@ namespace Content.Server.AWS.Economy.Bank
             // if this is a fake money holder
             if (fromHolder.Emagged)
             {
-                var holderId = GetMoneyHolderIdentifier(fromHolder.Owner, fromHolder);
+                var holderId = GetMoneyHolderIdentifier(fromHolderUid, fromHolder);
                 var deducted = Math.Min(fromHolder.Balance, amount);
                 if (deducted > 0)
                     fromHolder.Balance -= deducted;
@@ -340,15 +330,15 @@ namespace Content.Server.AWS.Economy.Bank
                 TryAddLog(recipientAccount,
                    new EconomyBankAccountLogField(_gameTiming.CurTime, errorMessage));
 
-                Dirty(fromHolder.Owner, fromHolder);
+                Dirty(fromHolderUid, fromHolder);
                 return false;
             }
 
-            return TryTransferMoney(fromHolder, recipientAccount, amount, reason);
+            return TryTransferMoney(fromHolderUid, fromHolder, recipientAccount, amount, reason);
         }
 
         [PublicAPI]
-        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, Entity<EconomyAccountHolderComponent> recipientAccountHolder, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
+        public bool TrySendMoney(EntityUid fromHolderUid, EconomyMoneyHolderComponent fromHolder, Entity<EconomyAccountHolderComponent> recipientAccountHolder, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
         {
             errorMessage = null;
 
@@ -364,11 +354,11 @@ namespace Content.Server.AWS.Economy.Bank
                 return false;
             }
 
-            return TrySendMoney(fromHolder, recipientAccount.Value, amount, out errorMessage, reason);
+            return TrySendMoney(fromHolderUid, fromHolder, recipientAccount.Value, amount, out errorMessage, reason);
         }
 
         [PublicAPI]
-        public bool TrySendMoney(EconomyMoneyHolderComponent fromHolder, string recipientAccountId, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
+        public bool TrySendMoney(EntityUid fromHolderUid, EconomyMoneyHolderComponent fromHolder, string recipientAccountId, ulong amount, [NotNullWhen(false)] out string? errorMessage, string? reason = null)
         {
             errorMessage = null;
 
@@ -378,7 +368,7 @@ namespace Content.Server.AWS.Economy.Bank
                 return false;
             }
 
-            return TrySendMoney(fromHolder, account.Value, amount, out errorMessage, reason);
+            return TrySendMoney(fromHolderUid, fromHolder, account.Value, amount, out errorMessage, reason);
         }
 
         [PublicAPI]
@@ -541,7 +531,7 @@ namespace Content.Server.AWS.Economy.Bank
             return TryTransferMoney(senderEntity.Value, receiverEntity.Value, amount, reason);
         }
 
-        private bool TryTransferMoney(EconomyMoneyHolderComponent moneyHolder, Entity<EconomyBankAccountComponent> receiverEntity, ulong amount, string? reason = null)
+        private bool TryTransferMoney(EntityUid moneyHolderUid, EconomyMoneyHolderComponent moneyHolder, Entity<EconomyBankAccountComponent> receiverEntity, ulong amount, string? reason = null)
         {
             if (amount <= 0)
                 return false;
@@ -554,18 +544,15 @@ namespace Content.Server.AWS.Economy.Bank
             moneyHolder.Balance -= amount;
             receiver.Balance += amount;
 
-            var holderId = GetMoneyHolderIdentifier(moneyHolder.Owner, moneyHolder);
+            var holderId = GetMoneyHolderIdentifier(moneyHolderUid, moneyHolder);
             var receiverLog = Loc.GetString("economybanksystem-log-insert-holder",
                 ("amount", amount), ("currencyName", receiver.AllowedCurrency), ("holderId", holderId));
             if (reason != null)
                 receiverLog += $" {reason}";
 
-            // what the fuck
-            var moneyHolderEnt = _entManager.AllEntities<EconomyMoneyHolderComponent>().Single(x => x.Comp == moneyHolder);
-
             receiver.Logs.Add(new(_gameTiming.CurTime, receiverLog));
 
-            Dirty(moneyHolderEnt);
+            Dirty(moneyHolderUid, moneyHolder);
             Dirty(receiverEntity);
             return true;
         }
@@ -744,7 +731,7 @@ namespace Content.Server.AWS.Economy.Bank
                 return;
 
             string? error = null;
-            var success = TrySendMoney(economyMoneyHolderComponent, insertedAccountHolder.Value, amount, out error);
+            var success = TrySendMoney(usedEnt, economyMoneyHolderComponent, insertedAccountHolder.Value, amount, out error);
 
             if (success)
             {
@@ -811,7 +798,7 @@ namespace Content.Server.AWS.Economy.Bank
 
             if (economyMoneyHolderComponent is not null)
             {
-                if (!TrySendMoney(economyMoneyHolderComponent, component.LinkedAccount, amount, out var err, purchaseReason))
+                if (!TrySendMoney(usedEnt, economyMoneyHolderComponent, component.LinkedAccount, amount, out var err, purchaseReason))
                 {
                     _popupSystem.PopupEntity(err, uid, type: PopupType.MediumCaution);
                     return;
