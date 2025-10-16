@@ -1,5 +1,7 @@
+//SS14RU - start
 using System;
 using System.Collections.Generic;
+//SS14RU - end
 using System.Linq;
 using System.Numerics;
 using Content.Server.Advertise;
@@ -17,10 +19,14 @@ using Content.Shared.DoAfter;
 using Content.Shared.Emag.Components;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Emp;
+//SS14RU - start
 using Content.Shared.Cargo.Prototypes;
+//SS14RU - end
 using Content.Shared.Popups;
 using Content.Shared.Power;
+//SS14RU - start
 using Content.Shared.Storage.Components;
+//SS14RU - end
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
 using Content.Shared.VendingMachines;
@@ -75,6 +81,7 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
         }
 
+        //SS14RU - start
         protected override void RecalculateEntriesPrice(EntityUid uid, VendingMachineComponent component)
         {
             base.RecalculateEntriesPrice(uid, component);
@@ -82,15 +89,18 @@ namespace Content.Server.VendingMachines
             var ev = new VendingMachineRecalculatePriceEvent(uid, component);
             RaiseLocalEvent(uid, ev);
         }
+        //SS14RU - end
 
         private void OnSelectMessage(EntityUid uid, VendingMachineComponent component, VendingMachineSelectMessage args)
         {
             var entry = GetEntry(uid, args.ID, args.Type, component);
+            //SS14RU - start
             var ev = new VendingMachineSelectAttemptEvent(args.Actor, args.Type, args.ID, entry);
             RaiseLocalEvent(uid, ev);
 
             if (ev.Handled)
                 return;
+            //SS14RU - end
 
             OnInventoryEjectMessage(uid, component, new VendingMachineEjectMessage(args.Type, args.ID)
             {

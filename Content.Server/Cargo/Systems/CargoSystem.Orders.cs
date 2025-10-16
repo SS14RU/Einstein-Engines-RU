@@ -34,8 +34,8 @@ namespace Content.Server.Cargo.Systems
         private float _timer;
 
         //SS14RU - start
-        private partial void ShouldSkipCargoPassiveIncome(EntityUid station, ref bool skip);
-        private partial void GetCargoCurrency(EntityUid? station, ref string? currencyPrototype);
+        partial void AwsShouldSkipPassiveIncome(EntityUid station, StationBankAccountComponent bank, ref bool skip);
+        partial void AwsAdjustInterfaceState(EntityUid station, StationCargoOrderDatabaseComponent orderDatabase, StationBankAccountComponent bankAccount, ref CargoConsoleInterfaceState state);
         //SS14RU - end
 
         private void InitializeConsole()
@@ -110,9 +110,9 @@ namespace Content.Server.Cargo.Systems
                     if (bank.IncreasePerSecond == 0)
                         continue;
 
-                    var skipIncome = false;
-                    ShouldSkipCargoPassiveIncome(uid, ref skipIncome);
-                    if (skipIncome)
+                    var skipPassiveIncome = false;
+                    AwsShouldSkipPassiveIncome(uid, bank, ref skipPassiveIncome);
+                    if (skipPassiveIncome)
                         continue;
                     //SS14RU - end
 
@@ -368,19 +368,17 @@ namespace Content.Server.Cargo.Systems
 
             if (_uiSystem.HasUi(consoleUid, CargoConsoleUiKey.Orders))
             {
-                //SS14RU - start
-                string? currency = null;
-                GetCargoCurrency(station, ref currency);
-                //SS14RU - end
-
-                _uiSystem.SetUiState(consoleUid, CargoConsoleUiKey.Orders, new CargoConsoleInterfaceState(
+                var defaultState = new CargoConsoleInterfaceState(
                     MetaData(station.Value).EntityName,
                     GetOutstandingOrderCount(orderDatabase),
                     orderDatabase.Capacity,
                     bankAccount.Balance,
-                    orderDatabase.Orders,
-                    currency //SS14RU
-                    ));
+                    orderDatabase.Orders
+                );
+                //SS14RU - start
+                AwsAdjustInterfaceState(station.Value, orderDatabase, bankAccount, ref defaultState);
+                //SS14RU - end
+                _uiSystem.SetUiState(consoleUid, CargoConsoleUiKey.Orders, defaultState);
             }
         }
 

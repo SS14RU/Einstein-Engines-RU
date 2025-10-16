@@ -1,6 +1,8 @@
 using Content.Server.AWS.Economy.Bank;
 using Content.Server.AWS.Economy.CargoBridge;
 using Content.Server.Cargo.Components;
+using Content.Shared.AWS.Economy.Cargo;
+using Content.Shared.Cargo.BUI;
 using Robust.Shared.Log;
 
 namespace Content.Server.Cargo.Systems;
@@ -103,22 +105,23 @@ public sealed partial class CargoSystem
         bank.Balance = newBalance;
     }
 
-    //SS14RU - start
-    private partial void ShouldSkipCargoPassiveIncome(EntityUid station, ref bool skip)
+    partial void AwsShouldSkipPassiveIncome(EntityUid station, StationBankAccountComponent bank, ref bool skip)
     {
         if (_cargoAccountQuery.HasComponent(station))
             skip = true;
     }
 
-    private partial void GetCargoCurrency(EntityUid? station, ref string? currencyPrototype)
+    partial void AwsAdjustInterfaceState(EntityUid station, StationCargoOrderDatabaseComponent orderDatabase, StationBankAccountComponent bankAccount, ref CargoConsoleInterfaceState state)
     {
-        if (station == null)
+        if (!_cargoAccountQuery.TryGetComponent(station, out var account))
             return;
 
-        if (!_cargoAccountQuery.TryGetComponent(station.Value, out var account))
-            return;
-
-        currencyPrototype = account.Currency;
+        state = new CargoConsoleAwsInterfaceState(
+            state.Name,
+            state.Count,
+            state.Capacity,
+            state.Balance,
+            orderDatabase.Orders,
+            account.Currency.Id);
     }
-    //SS14RU - end
 }

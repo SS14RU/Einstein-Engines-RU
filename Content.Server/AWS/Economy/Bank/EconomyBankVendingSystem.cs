@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
 using Content.Server.Cargo.Systems;
+using Content.Server.Power.Components;
 using Content.Server.VendingMachines;
 using Content.Shared.AWS.Economy.Bank;
 using Content.Shared.Cargo.Prototypes;
+using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Emag.Components;
 using Content.Shared.Storage.Components;
 using Content.Shared.VendingMachines;
+using Robust.Shared.Localization;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.AWS.Economy.Bank;
@@ -17,6 +21,7 @@ public sealed class EconomyBankVendingSystem : EntitySystem
     [Dependency] private readonly PricingSystem _pricing = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly VendingMachineSystem _vendingMachineSystem = default!;
+    [Dependency] private readonly IComponentFactory _componentFactory = default!;
 
     private const double StationMarginRate = 0.2;
     private readonly Dictionary<string, double> _inventoryWholesaleCost = new();
@@ -42,9 +47,13 @@ public sealed class EconomyBankVendingSystem : EntitySystem
         if (args.Entry is not { } entry || entry.Price == 0)
             return;
 
+        var itemName = args.ID;
+        if (_prototypeManager.TryIndex<EntityPrototype>(args.ID, out var productProto))
+            itemName = productProto.Name;
+
         _bankAccountSystem.UpdateTerminal((uid, terminal),
             entry.Price,
-            Loc.GetString("economyBankTerminal-component-vending-reason", ("itemName", args.ID)));
+            Loc.GetString("economyBankTerminal-component-vending-reason", ("itemName", itemName)));
 
         component.SelectedItemInventoryType = args.Type;
         component.SelectedItemId = args.ID;
@@ -65,7 +74,7 @@ public sealed class EconomyBankVendingSystem : EntitySystem
             if (!_prototypeManager.TryIndex<EntityPrototype>(entry.ID, out var prototype))
                 continue;
 
-            var estimate = _pricing.GetEstimatedPrice(prototype);
+            var estimate = GetPrototypeEstimate(prototype, new HashSet<string>());
             if (estimate <= 0)
                 continue;
 
@@ -90,7 +99,7 @@ public sealed class EconomyBankVendingSystem : EntitySystem
             if (!_prototypeManager.TryIndex<EntityPrototype>(entry.ID, out var prototype))
                 continue;
 
-            var estimate = _pricing.GetEstimatedPrice(prototype);
+            var estimate = GetPrototypeEstimate(prototype, new HashSet<string>());
             if (estimate <= 0)
                 continue;
 
@@ -106,6 +115,54 @@ public sealed class EconomyBankVendingSystem : EntitySystem
             Dirty(uid, component);
 
         args.Handled = true;
+    }
+
+    private double GetPrototypeEstimate(EntityPrototype prototype, HashSet<string> visited)
+    {
+        if (!visited.Add(prototype.ID))
+            return 0;
+
+        var price = _pricing.GetEstimatedPrice(prototype);
+        price += GetBatteryPrice(prototype);
+        price += GetItemSlotStartingItemPrice(prototype, visited);
+        visited.Remove(prototype.ID);
+        return price;
+    }
+
+    private double GetBatteryPrice(EntityPrototype prototype)
+    {
+        if (!prototype.Components.TryGetValue(_componentFactory.GetComponentName(typeof(BatteryComponent)), out var batteryEntry))
+            return 0;
+
+        if (batteryEntry.Component is not BatteryComponent battery)
+            return 0;
+
+        return battery.CurrentCharge * battery.PricePerJoule;
+    }
+
+    private double GetItemSlotStartingItemPrice(EntityPrototype prototype, HashSet<string> visited)
+    {
+        var componentName = _componentFactory.GetComponentName(typeof(ItemSlotsComponent));
+        if (!prototype.Components.TryGetValue(componentName, out var componentEntry))
+            return 0;
+
+        if (componentEntry.Component is not ItemSlotsComponent itemSlots)
+            return 0;
+
+        var price = 0.0;
+
+        foreach (var slot in itemSlots.Slots.Values)
+        {
+            if (slot.StartingItem is not { } startingItem)
+                continue;
+
+            if (!_prototypeManager.TryIndex<EntityPrototype>(startingItem, out var itemPrototype))
+                continue;
+
+            price += GetPrototypeEstimate(itemPrototype, visited);
+        }
+
+        return price;
     }
 
     private void EnsureWholesaleMap()

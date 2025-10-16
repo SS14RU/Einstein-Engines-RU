@@ -12,7 +12,7 @@ using static Robust.Client.UserInterface.Controls.BaseButton;
 
 namespace Content.Client.Cargo.BUI
 {
-    public sealed class CargoOrderConsoleBoundUserInterface : BoundUserInterface
+    public sealed partial class CargoOrderConsoleBoundUserInterface : BoundUserInterface //SS14RU
     {
         [ViewVariables]
         private CargoConsoleMenu? _menu;
@@ -42,7 +42,8 @@ namespace Content.Client.Cargo.BUI
         private CargoProductPrototype? _product;
 
         //SS14RU - start
-        private string? _currentCurrencyId;
+        partial void AwsOnMenuOpened(CargoConsoleMenu menu);
+        partial void AwsOnStateUpdated(CargoConsoleInterfaceState state);
         //SS14RU - end
 
         public CargoOrderConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
@@ -69,10 +70,7 @@ namespace Content.Client.Cargo.BUI
             _orderMenu = new CargoConsoleOrderMenu();
 
             _menu.OnClose += Close;
-
-            //SS14RU - start
-            _menu.SetCurrency(_currentCurrencyId);
-            //SS14RU - end
+            AwsOnMenuOpened(_menu); //SS14RU
 
             _menu.OnItemSelected += (args) =>
             {
@@ -126,12 +124,12 @@ namespace Content.Client.Cargo.BUI
             OrderCapacity = cState.Capacity;
             OrderCount = cState.Count;
             BankBalance = cState.Balance;
-            _currentCurrencyId = cState.CurrencyPrototype;
 
             AccountName = cState.Name;
 
-            if (_menu != null)
-                _menu.SetCurrency(_currentCurrencyId);
+            //SS14RU - start
+            AwsOnStateUpdated(cState);
+            //SS14RU - end
 
             Populate(cState.Orders);
             _menu?.UpdateCargoCapacity(OrderCount, OrderCapacity);
