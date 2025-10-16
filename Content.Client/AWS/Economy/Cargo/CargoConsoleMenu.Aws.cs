@@ -31,9 +31,7 @@ public sealed partial class CargoConsoleMenu
         if (_awsCurrency == null)
             return defaultText;
 
-        var amountText = cost.ToString();
-        var currencyName = Loc.GetString(_awsCurrency.DisplayName);
-        return Loc.GetString("aws-economy-cargo-console-currency-amount", ("currency", currencyName), ("amount", amountText));
+        return cost.ToString();
     }
 
     partial void OnBankDataUpdated(string name, int points)

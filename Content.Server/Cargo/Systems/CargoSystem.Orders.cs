@@ -342,6 +342,8 @@ namespace Content.Server.Cargo.Systems
         private void OnOrderUIOpened(EntityUid uid, CargoOrderConsoleComponent component, BoundUIOpenedEvent args)
         {
             var station = _station.GetOwningStation(uid);
+            if (station != null)
+                EnsureAwsBalanceSync(station.Value);
             UpdateOrderState(uid, station);
         }
 

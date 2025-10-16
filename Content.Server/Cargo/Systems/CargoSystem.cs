@@ -68,6 +68,7 @@ public sealed partial class CargoSystem : SharedCargoSystem
     partial void InitializeAwsBridge();
     partial void BeforeCargoBankUpdate(EntityUid station, StationBankAccountComponent component, ref int amount, ref bool handled);
     partial void AfterCargoBankUpdate(EntityUid station, StationBankAccountComponent component, int amount, bool handled);
+    partial void EnsureAwsBalanceSync(EntityUid station);
 
     public override void Initialize()
     {
