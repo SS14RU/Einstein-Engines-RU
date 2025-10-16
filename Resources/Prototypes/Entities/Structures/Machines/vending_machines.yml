@@ -198,8 +198,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Bar"]]
   - type: GuideHelp
     guides:
     - Bartender
@@ -233,8 +231,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
   - type: GuideHelp
     guides:
     - Bartender
@@ -270,8 +266,6 @@
     color: "#ffb0b0"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: AccessReader
-    access: [["HeadOfPersonnel"]]
   - type: Transform
     noRot: false
   - type: Rotatable
@@ -304,8 +298,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Service"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -791,8 +783,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Kitchen"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -905,8 +895,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Engineering"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -948,8 +936,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Medical"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -992,8 +978,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Hydroponics"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -1029,8 +1013,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Security"]]
   - type: PointLight
     radius: 2
     energy: 1.8
@@ -1087,8 +1069,6 @@
   id: VendingMachineSeeds
   suffix: Hydroponics
   components:
-  - type: AccessReader
-    access: [["Hydroponics"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -1413,8 +1393,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Research"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -1595,8 +1573,6 @@
         type: MiningVoucherBoundUserInterface
   - type: Wires # DeltaV: Use shop vendor wires layout
     layoutId: ShopVendor
-  - type: AccessReader
-    access: [["Salvage"]]
   - type: GuideHelp
     guides:
     - Salvage
@@ -1700,8 +1676,6 @@
     color: "#9dc5c9"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: AccessReader
-    access: [["Medical"]]
   - type: GuideHelp
     guides:
     - Medical
@@ -1742,8 +1716,6 @@
     radius: 1.5
     energy: 1.6
     color: "#326e3f"
-  - type: AccessReader
-    access: [["Hydroponics"]]
 
 - type: entity
   parent: VendingMachine-NT-Command
@@ -1770,8 +1742,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Justice"]]
 
 - type: entity
   parent: VendingMachine-NT-Security
@@ -1802,8 +1772,6 @@
     radius: 1.5
     energy: 1.6
     color: "#d82929"
-  - type: AccessReader
-    access: [["Security"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -1830,8 +1798,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Bar"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -1854,8 +1820,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Chapel"]]
   - type: PointLight
     radius: 2
     energy: 1.6
@@ -1892,8 +1856,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b89e2a"
-  - type: AccessReader
-    access: [["Cargo"]]
 
 - type: entity
   parent: VendingMachine-NT-Medical
@@ -1920,8 +1882,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Medical"]]
 
 - type: entity
   parent: VendingMachine-NT-Medical
@@ -1948,8 +1908,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Chemistry"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -1976,8 +1934,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Library"]]
 
 - type: entity
   parent: VendingMachine-NT-Engineering
@@ -2008,8 +1964,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b89e2a"
-  - type: AccessReader
-    access: [["Engineering"]]
 
 - type: entity
   parent: VendingMachine-NT-Engineering
@@ -2040,8 +1994,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b89e2a"
-  - type: AccessReader
-    access: [["Engineering"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -2068,8 +2020,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Kitchen"]]
 
 - type: entity
   parent: VendingMachine-NT-Security
@@ -2096,8 +2046,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Detective"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -2132,8 +2080,6 @@
     color: "#9dc5c9"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: AccessReader
-    access: [["Janitor"]]
 
 - type: entity
   parent: VendingMachine-NT-Science
@@ -2160,8 +2106,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Research"]]
 
 - type: entity
   parent: VendingMachine
@@ -2192,8 +2136,6 @@
     radius: 1.5
     energy: 1.6
     color: "#d82929"
-  - type: AccessReader
-    access: [["NuclearOperative"], ["SyndicateAgent"]]
 
 - type: entity
   parent: VendingMachine-NT-Science
@@ -2220,8 +2162,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Research"]]
 
 - type: entity
   parent: VendingMachine-NT-Science
@@ -2248,8 +2188,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Medical"]]
 
 - type: entity
   parent: VendingMachine-NT-Medical
@@ -2276,8 +2214,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Medical"]]
 
 - type: entity
   parent: VendingMachine-NT-Centcom
@@ -2306,8 +2242,6 @@
     color: "#48CF48"
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: AccessReader
-    access: [["CentralCommand"]]
 
 - type: entity
   parent: VendingMachine-NT-Service
@@ -2346,8 +2280,6 @@
     pack: HappyHonkAds
   - type: SpeakOnUIClosed
     pack: HappyHonkGoodbyes
-  - type: AccessReader
-    access: [["Kitchen"], ["Theatre"]]
 
 # Gas Tank Dispenser
 
@@ -2401,8 +2333,6 @@
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Chemistry"]]
   - type: GuideHelp
     guides:
     - Chemicals
@@ -2420,8 +2350,6 @@
     normalState: normal
     denyState: deny
     ejectDelay: 2
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
 
 - type: entity
   id: VendingMachineFitness
