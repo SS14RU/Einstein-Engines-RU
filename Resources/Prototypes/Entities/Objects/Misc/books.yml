@@ -383,6 +383,8 @@
       color: "#87011c"
     - state: icon_law
       color: "#f7d61a"
+  - type: StaticPrice
+    price: 15
   - type: Tag
     tags:
     - Book

@@ -184,6 +184,8 @@
     sprite: Objects/Consumable/Drinks/lemon-lime-cranberry.rsi
   - type: Item
     sprite: Objects/Consumable/Drinks/lemon-lime-cranberry.rsi
+  - type: StaticPrice
+    price: 15
   - type: Fixtures
     fixtures:
       fix1:
@@ -424,6 +426,8 @@
     sprite: Objects/Consumable/Drinks/dr_gibb.rsi
   - type: Item
     sprite: Objects/Consumable/Drinks/dr_gibb.rsi
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   parent: DrinkCanBaseFull

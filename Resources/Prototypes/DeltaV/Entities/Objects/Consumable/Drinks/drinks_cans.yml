@@ -13,3 +13,5 @@
           Quantity: 30
   - type: Sprite
     sprite: DeltaV/Objects/Consumable/Drinks/drgibbbloodred.rsi
+  - type: StaticPrice
+    price: 10

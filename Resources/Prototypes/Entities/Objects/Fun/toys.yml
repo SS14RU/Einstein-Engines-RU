@@ -1864,6 +1864,8 @@
   - type: Sprite
     sprite: Objects/Weapons/Melee/cutlass.rsi
     state: foam_icon
+  - type: StaticPrice
+    price: 10
   - type: MeleeWeapon
     canBeBlocked: false # WD EDIT
     wideAnimationRotation: -135
