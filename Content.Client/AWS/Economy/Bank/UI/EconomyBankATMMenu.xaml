@@ -29,7 +29,10 @@
         <Label Text="{Loc 'economy-bank-atm-menu-transfer-label'}" />
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
             <Label Text="{Loc 'economy-bank-atm-menu-transfer-recipient-label'}" HorizontalExpand="True" />
-            <LineEdit Name="TransferRecipientField" HorizontalExpand="True" />   
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SeparationOverride="4">
+                <OptionButton Name="TransferRecipientPrefixOption" MinSize="70 0" />
+                <LineEdit Name="TransferRecipientNumberField" HorizontalExpand="True" />
+            </BoxContainer>
         </BoxContainer>
         <SpinBox Name="TransferAmountBox" HorizontalExpand="True" Value="0" />
         <Button Name="TransferButton" Text="{Loc 'economy-bank-atm-menu-transfer-button'}" HorizontalAlignment="Right" />

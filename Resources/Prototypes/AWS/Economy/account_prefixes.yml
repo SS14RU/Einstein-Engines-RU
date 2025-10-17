@@ -1,0 +1,12 @@
+- type: economyAccountPrefix
+  id: AccountPrefixEmpty
+  order: 0
+  display: " "
+  prefix: ""
+
+- type: economyAccountPrefix
+  id: AccountPrefixNT
+  order: 1
+  displayLoc: economy-bank-atm-menu-transfer-prefix-nt
+  prefix: "NT-"
+  isDefault: true

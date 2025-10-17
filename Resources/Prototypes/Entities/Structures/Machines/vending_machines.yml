@@ -1068,8 +1068,6 @@
   parent: VendingMachineSeedsUnlocked
   id: VendingMachineSeeds
   suffix: Hydroponics
-  components:
-
 - type: entity
   parent: VendingMachine-NT-Service
   id: VendingMachineSnack

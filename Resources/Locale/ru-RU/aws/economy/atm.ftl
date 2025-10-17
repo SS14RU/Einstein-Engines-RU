@@ -6,6 +6,7 @@ economy-bank-atm-menu-withdraw-label = Снять со счёта
 economy-bank-atm-menu-withdraw-button = Снять
 economy-bank-atm-menu-transfer-label = Перевод на счёт
 economy-bank-atm-menu-transfer-recipient-label = Номер счёта-получателя
+economy-bank-atm-menu-transfer-prefix-nt = NT-
 economy-bank-atm-menu-transfer-button = Перевести
 economy-bank-atm-menu-history-label = История операций
 economy-bank-atm-menu-history-search-placeholder = Фильтр по операциям...

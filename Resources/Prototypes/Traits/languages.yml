@@ -86,15 +86,15 @@
   points: 0
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
-    # - !type:CharacterItemGroupRequirement
-    #   group: TraitsLanguagesBasic
-    #AWS-start
-    # - !type:CharacterNationalityRequirement
-    #   inverted: true
-    #   nationalities:
-    #     - Elyran
-    #AWS-end
+  requirements: []
+  # - !type:CharacterItemGroupRequirement
+  #   group: TraitsLanguagesBasic
+  #AWS-start
+  # - !type:CharacterNationalityRequirement
+  #   inverted: true
+  #   nationalities:
+  #     - Elyran
+  #AWS-end
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
