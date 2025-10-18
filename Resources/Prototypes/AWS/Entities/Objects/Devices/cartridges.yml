@@ -1,0 +1,21 @@
+- type: entity
+  parent: BaseItem
+  id: EconomyCartridgeBank
+  name: ent-EconomyCartridgeBank
+  description: ent-EconomyCartridgeBank.desc
+  suffix: Economy
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-y
+  - type: Icon
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-y
+  - type: UIFragment
+    ui: !type:BankTransferCartridgeUi
+  - type: Cartridge
+    programName: bank-transfer-program-name
+    icon:
+      sprite: DeltaV/Misc/program_icons.rsi
+      state: stock_trading
+  - type: BankTransferCartridge

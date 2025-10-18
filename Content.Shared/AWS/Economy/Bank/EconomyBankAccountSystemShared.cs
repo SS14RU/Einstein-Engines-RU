@@ -200,17 +200,8 @@ namespace Content.Shared.AWS.Economy.Bank
 
             if (TryGetATMInsertedAccount(entity, out var accountHolder))
             {
-                if (TryGetAccount(accountHolder.Value.Comp.AccountID, out var account))
-                {
-                    uiAccount = new EconomyBankATMAccountInfo
-                    {
-                        Balance = account.Value.Comp.Balance,
-                        AccountId = account.Value.Comp.AccountID,
-                        AccountName = account.Value.Comp.AccountName,
-                        Blocked = account.Value.Comp.Blocked,
-                        Logs = BuildAtmLogSnapshot(account.Value.Comp.Logs),
-                    };
-                }
+                if (TryBuildAccountInfo(accountHolder.Value.Comp.AccountID, out var info))
+                    uiAccount = info;
             }
             else
             {
@@ -238,6 +229,36 @@ namespace Content.Shared.AWS.Economy.Bank
             }
 
             return result;
+        }
+
+        [PublicAPI]
+        public bool TryBuildAccountInfo(EconomyAccountHolderComponent holder, out EconomyBankATMAccountInfo info)
+        {
+            return TryBuildAccountInfo(holder.AccountID, out info);
+        }
+
+        [PublicAPI]
+        public bool TryBuildAccountInfo(string accountId, out EconomyBankATMAccountInfo info)
+        {
+            info = default!;
+
+            if (!TryGetAccount(accountId, out var account))
+                return false;
+
+            info = BuildAtmAccountInfo(account.Value.Comp);
+            return true;
+        }
+
+        private EconomyBankATMAccountInfo BuildAtmAccountInfo(EconomyBankAccountComponent account)
+        {
+            return new EconomyBankATMAccountInfo
+            {
+                Balance = account.Balance,
+                AccountId = account.AccountID,
+                AccountName = account.AccountName,
+                Blocked = account.Blocked,
+                Logs = BuildAtmLogSnapshot(account.Logs),
+            };
         }
 
         [PublicAPI]

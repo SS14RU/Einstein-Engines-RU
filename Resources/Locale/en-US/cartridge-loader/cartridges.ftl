@@ -24,6 +24,8 @@ astro-nav-program-name = AstroNav
 
 med-tek-program-name = MedTek
 
+bank-transfer-program-name = Wire transfer
+
 # Wanted list cartridge
 wanted-list-program-name = Wanted list
 wanted-list-label-no-records = It's all right, cowboy

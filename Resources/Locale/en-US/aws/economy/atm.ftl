@@ -13,3 +13,4 @@ economy-bank-atm-menu-history-search-placeholder = Filter transactions…
 economy-bank-atm-menu-history-empty = No transactions for this account yet.
 economy-bank-atm-menu-history-empty-filtered = No transactions match your search.
 economy-bank-atm-menu-history-entry = { $time } - { $message }
+economy-bank-atm-menu-transfer-amount-label = Transfer amount

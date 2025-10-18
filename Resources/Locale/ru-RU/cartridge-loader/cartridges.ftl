@@ -23,6 +23,7 @@ log-probe-label-number = #
 astro-nav-program-name = АстроНав
 
 med-tek-program-name = МедТек
+bank-transfer-program-name = Банковский перевод
 # Wanted list cartridge
 wanted-list-program-name = Список розыска
 wanted-list-label-no-records = Всё спокойно, ковбой

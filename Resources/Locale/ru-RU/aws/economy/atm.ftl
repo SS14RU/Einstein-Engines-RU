@@ -13,3 +13,4 @@ economy-bank-atm-menu-history-search-placeholder = Фильтр по опера�
 economy-bank-atm-menu-history-empty = Нет операций по этому счёту.
 economy-bank-atm-menu-history-empty-filtered = Нет операций, подходящих под поиск.
 economy-bank-atm-menu-history-entry = { $time } - { $message }
+economy-bank-atm-menu-transfer-amount-label = Сумма перевода
