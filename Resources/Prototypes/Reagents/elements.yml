@@ -6,6 +6,7 @@
   physicalDesc: reagent-physical-desc-metallic
   flavor: metallic
   color: "#848789"
+  pricePerUnit: 0.1
   boilingPoint: 2327.0
   meltingPoint: 660.0
 
@@ -17,6 +18,7 @@
   physicalDesc: reagent-physical-desc-crystalline
   flavor: bitter
   color: "#22282b"
+  pricePerUnit: 0.2
   boilingPoint: 4200.0
   meltingPoint: 3550.0
 
@@ -28,6 +30,7 @@
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#a2ff00"
+  pricePerUnit: 0.15
   meltingPoint: -101.5
   boilingPoint: -34.04
   plantMetabolism:
@@ -55,6 +58,7 @@
   physicalDesc: reagent-physical-desc-metallic
   flavor: metallic
   color: "#b05b3c"
+  pricePerUnit: 0.125
   boilingPoint: 2595.0
   meltingPoint: 1083.0
   metabolisms:
@@ -86,6 +90,7 @@
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#ba85cc"
+  pricePerUnit: 0.15
   boilingPoint: -188.11
   meltingPoint: -219.67
   plantMetabolism:
@@ -124,6 +129,7 @@
   physicalDesc: reagent-physical-desc-dark-brown
   flavor: bitter
   color: "#BC8A00"
+  pricePerUnit: 0.125
   boilingPoint: 184.3
   meltingPoint: 113.7
 
@@ -135,6 +141,7 @@
   physicalDesc: reagent-physical-desc-metallic
   flavor: metallic
   color: "#434b4d"
+  pricePerUnit: 0.15
   boilingPoint: 2862.0
   meltingPoint: 1538.0
   metabolisms:
@@ -166,6 +173,7 @@
   physicalDesc: reagent-physical-desc-shiny
   flavor: metallic
   color: "#d6c0a7"
+  pricePerUnit: 0.05
   meltingPoint: 180.5
   boilingPoint: 1330.0
   metabolisms:
@@ -193,6 +201,7 @@
   physicalDesc: reagent-physical-desc-shiny
   flavor: metallic
   color: "#929296"
+  pricePerUnit: 0.05
   meltingPoint: -38.83
   boilingPoint: 356.73
   metabolisms:
@@ -214,6 +223,7 @@
   physicalDesc: reagent-physical-desc-shiny
   flavor: metallic
   color: "#c6c8cc"
+  pricePerUnit: 0.1
   meltingPoint: 65.5
   boilingPoint: 759.0
 
@@ -225,6 +235,7 @@
   physicalDesc: reagent-physical-desc-powdery
   flavor: metallic
   color: "#f5da9a"
+  pricePerUnit: 0.175
   meltingPoint: 44.2
   boilingPoint: 280.5
   plantMetabolism:
@@ -244,6 +255,7 @@
   physicalDesc: reagent-physical-desc-glowing
   flavor: metallic
   color: "#00ff04"
+  pricePerUnit: 0.225
   meltingPoint: 700.0
   boilingPoint: 1737.0
 
@@ -255,6 +267,7 @@
   physicalDesc: reagent-physical-desc-crystalline
   flavor: metallic
   color: "#364266"
+  pricePerUnit: 0.1
   boilingPoint: 3265.0
   meltingPoint: 1414.0
   metabolisms:
@@ -284,6 +297,7 @@
   physicalDesc: reagent-physical-desc-powdery
   flavor: bitter
   color: "#fff385"
+  pricePerUnit: 0.15
   boilingPoint: 445.0
   meltingPoint: 120.0
   metabolisms:
@@ -302,6 +316,7 @@
   physicalDesc: reagent-physical-desc-metallic
   flavor: bitter
   color: "#a7b3d6"
+  pricePerUnit: 0.025
   meltingPoint: 97.8
   boilingPoint: 883.0
 

@@ -18,7 +18,9 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 4
   - type: Item
     sprite: Objects/Consumable/Food/Baked/donut.rsi
     size: Tiny
@@ -60,9 +62,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 
 # Donuts
 
@@ -176,7 +180,9 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 4
         - ReagentId: Theobromine
           Quantity: 1
 # Tastes like donut, bitterness.
@@ -250,9 +256,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 
 - type: entity
   name: pink jelly-donut
@@ -270,9 +278,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 
 - type: entity
   name: spaceman's jelly-donut
@@ -288,9 +298,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 # Tastes like jelly-donut, violets.
 
 - type: entity
@@ -307,9 +319,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit
@@ -329,9 +343,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 # Tastes like jelly-donut, buttery sweetness.
 
 - type: entity
@@ -348,9 +364,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Theobromine
           Quantity: 1
+        - ReagentId: Sugar
+          Quantity: 4
         - ReagentId: Vitamin
           Quantity: 1
 # Tastes like jelly-donut, bitterness.
@@ -373,9 +391,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit
@@ -395,9 +415,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit # Apparently this is a fruit. Huh.
@@ -417,9 +439,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 # Tastes like jelly-donut, matcha.
 
 - type: entity
@@ -436,9 +460,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 # Tastes like jelly-donut, fizzy tutti frutti.
 
 - type: entity
@@ -455,9 +481,11 @@
         maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 4
 # Tastes like jelly-donut, fizzy tutti frutti.
 
 # Poison donut

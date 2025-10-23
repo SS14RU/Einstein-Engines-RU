@@ -105,6 +105,7 @@
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#cccccc"
+  pricePerUnit: 0.15
   boilingPoint: -253.0
   meltingPoint: -259.2
 

@@ -43,9 +43,9 @@
         maxVol: 30
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 4.5
         - ReagentId: Nausium
-          Quantity: 5.5
+          Quantity: 4.125
   - type: Tag
     tags:
     - Pizza
@@ -106,11 +106,11 @@
         maxVol: 6
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 3.125
         - ReagentId: Vitamin
-          Quantity: 0.8
+          Quantity: 0.625
         - ReagentId: CapsaicinOil
-          Quantity: 0.1
+          Quantity: 0.125
         - ReagentId: BbqSauce
           Quantity: 0.5
   - type: Tag
@@ -214,9 +214,9 @@
         maxVol: 6
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 3.75
         - ReagentId: Vitamin
-          Quantity: 0.8
+          Quantity: 0.625
         - ReagentId: Allicin
           Quantity: 0.25
   - type: Tag
@@ -278,11 +278,11 @@
         maxVol: 6
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4.4
+          Quantity: 3.125
         - ReagentId: Vitamin
-          Quantity: 0.8
+          Quantity: 0.625
         - ReagentId: Fiber
-          Quantity: 0.8
+          Quantity: 0.625
   - type: Tag
     tags:
     - Pizza

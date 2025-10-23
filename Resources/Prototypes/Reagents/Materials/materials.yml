@@ -90,7 +90,7 @@
   unit: materials-unit-slab
   icon: { sprite: Objects/Materials/Sheets/meaterial.rsi, state: meat }
   color: "#c53648"
-  price: 0.05
+  price: 0.03
 
 - type: material
   id: WebSilk

@@ -36,12 +36,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 36
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 16
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 3
+        - ReagentId: Sugar
+          Quantity: 14
   - type: FlavorProfile
     flavors:
       - sweet
@@ -59,14 +61,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 40
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 16
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 14
         - ReagentId: JuiceBerry
-          Quantity: 2
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit
@@ -82,14 +86,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 40
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 16
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 14
         - ReagentId: JuiceCherry
-          Quantity: 2
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit
@@ -102,6 +108,19 @@
   components:
   - type: Sprite
     state: muffin-bluecherry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 16
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 14
+        - ReagentId: JuiceBluecherry
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit
@@ -117,14 +136,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 42
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 16
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 3
         - ReagentId: CocoaPowder
-          Quantity: 2
+          Quantity: 4
+        - ReagentId: Sugar
+          Quantity: 22
 
 - type: entity
   name: banana muffin
@@ -137,14 +158,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 40
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 16
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 14
         - ReagentId: JuiceBanana
-          Quantity: 2
+          Quantity: 4
   - type: Tag
     tags:
     - Fruit
@@ -197,6 +220,17 @@
   components:
   - type: Sprite
     state: COOKIE!!!
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 24
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 1
+        - ReagentId: Sugar
+          Quantity: 15
 
 - type: entity
   name: oatmeal cookie
@@ -209,12 +243,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 8
+        maxVol: 28
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 8
         - ReagentId: Vitamin
           Quantity: 1
+        - ReagentId: Fiber
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 15
 
 - type: entity
   name: raisin cookie
@@ -227,12 +265,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 8
+        maxVol: 26
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 36
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 8
+        - ReagentId: Sugar
+          Quantity: 24
   - type: Tag
     tags:
     - Fruit
@@ -245,6 +285,17 @@
   components:
   - type: Sprite
     state: cookie-sugar
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 24
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 1
+        - ReagentId: Sugar
+          Quantity: 13
 
 # Nuggets
 
@@ -342,6 +393,17 @@
   - type: Tag
     tags:
     - Pancake
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 10
 
 - type: entity
   name: blueberry pancake
@@ -395,6 +457,19 @@
     tags:
     - Pancake
     - Fruit
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 22
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 10
+        - ReagentId: JuiceBerry
+          Quantity: 4
 
 - type: entity
   name: chocolate chip pancake
@@ -447,12 +522,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 6
+        maxVol: 22
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 8
         - ReagentId: Theobromine
-          Quantity: 1
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Sugar
+          Quantity: 10
+        - ReagentId: Sugar
+          Quantity: 2
 
 - type: entity
   name: waffles

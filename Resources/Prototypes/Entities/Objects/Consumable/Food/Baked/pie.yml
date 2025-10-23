@@ -19,9 +19,9 @@
         maxVol: 20
         reagents: #Most of these are this with slight variations, not worth changing until we have the rest of the reagents
         - ReagentId: Nutriment
-          Quantity: 11
+          Quantity: 16
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 4
   - type: Food #All pies here made with a pie tin; unless you're some kind of savage, you're probably not destroying this when you eat or slice the pie!
     trash:
     - FoodPlateTin
@@ -50,7 +50,7 @@
         maxVol: 6
         reagents:
         - ReagentId: Nutriment
-          Quantity: 1.2
+          Quantity: 4
         - ReagentId: Vitamin
           Quantity: 1
   - type: Tag
@@ -118,6 +118,17 @@
     - state: baklava
   - type: SliceableFood
     slice: FoodPieBaklavaSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 48
+        - ReagentId: Vitamin
+          Quantity: 10
+        - ReagentId: Sugar
+          Quantity: 12
 
 - type: entity
   name: slice of baklava
@@ -131,6 +142,21 @@
       - nutty
   - type: Sprite
     state: baklava-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 12
+        - ReagentId: Vitamin
+          Quantity: 2.5
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 1.5
+        - ReagentId: Sugar
+          Quantity: 1
 # Tastes like pie, nuts.
 
 - type: entity
@@ -250,6 +276,17 @@
     layers:
     - state: tin
     - state: cherry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 24
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 7
+        - ReagentId: Sugar
+          Quantity: 8
   - type: SliceableFood
     slice: FoodPieCherrySlice
   - type: Tag
@@ -270,6 +307,17 @@
     - state: plain-slice
     - state: alpha-slice-filling
       color: red
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 8
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 7.5
+        - ReagentId: Vitamin
+          Quantity: 1.75
+        - ReagentId: Sugar
+          Quantity: 2
   - type: Tag
     tags:
     - Fruit
@@ -292,6 +340,17 @@
     - state: meat
   - type: SliceableFood
     slice: FoodPieMeatSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 60
+        - ReagentId: Protein
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 4
   - type: Tag
     tags:
     - Meat
@@ -310,6 +369,17 @@
     - state: plain-slice
     - state: alpha-slice-filling
       color: brown
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 15
+        - ReagentId: Protein
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 1
   - type: Tag
     tags:
     - Meat
@@ -369,6 +439,17 @@
     - state: xeno
   - type: SliceableFood
     slice: FoodPieXenoSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 28
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 120
+        - ReagentId: Protein
+          Quantity: 20
+        - ReagentId: Vitamin
+          Quantity: 12
   - type: Tag
     tags:
     - Meat
@@ -388,6 +469,17 @@
     - state: plain-slice
     - state: alpha-slice-filling
       color: green
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Protein
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 3
   - type: Tag
     tags:
     - Meat
@@ -553,3 +645,5 @@
         - ReagentId: Theobromine
           Quantity: 2
 # Tastes like tart, dark chocolate.
+
+

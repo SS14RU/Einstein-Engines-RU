@@ -157,6 +157,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: alcohol
   color: "#b05b3c"
+  pricePerUnit: 0.025
   boilingPoint: 78.2
   meltingPoint: -114.1
   metabolisms:

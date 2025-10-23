@@ -152,6 +152,7 @@
   flavor: bitter
   flavorMinimum: 0.01
   color: "#a76b1c"
+  pricePerUnit: 0.05
   recognizable: true
   boilingPoint: -84.7 # Acetylene. Close enough.
   meltingPoint: -80.7

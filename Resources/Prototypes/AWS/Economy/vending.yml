@@ -107,7 +107,7 @@
     allowCurrency: Thaler
     linkedAccount: NT-Command
 
-
+#Устарело, используется как затычка
 - type: vendingMachineInventoryPricing
   id: AllEntsPricing
   entsPricing:
@@ -296,26 +296,6 @@
     ClothingHeadsetMedical: 60
     ClothingOuterWinterChem: 20
 # id: ChemVendInventory
-    JugAluminium: 10
-    JugCarbon: 10
-    JugChlorine: 10
-    JugCopper: 10
-    JugEthanol: 10
-    JugFluorine: 10
-    JugHydrogen: 10
-    JugIodine: 10
-    JugIron: 10
-    JugLithium: 10
-    JugMercury: 10
-    JugNitrogen: 10
-    JugOxygen: 10
-    JugPhosphorus: 10
-    JugPotassium: 10
-    JugRadium: 10
-    JugSilicon: 10
-    JugSodium: 10
-    JugSugar: 10
-    JugSulfur: 10
     ToxinChemistryBottle: 0
 # id: CigaretteMachineInventory
     CigPackGreen: 5

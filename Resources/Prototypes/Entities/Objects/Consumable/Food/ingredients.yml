@@ -389,6 +389,13 @@
   - type: Tag
     tags:
     - Slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
 
 - type: entity
   name: tortilla dough
@@ -424,6 +431,13 @@
   - type: Tag
     tags:
     - Slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
 
 - type: entity
   name: flattened tortilla dough
@@ -497,9 +511,9 @@
         maxVol: 6
         reagents:
         - ReagentId: Nutriment
-          Quantity: 1.5
+          Quantity: 1.67
         - ReagentId: Fiber
-          Quantity: 3.5
+          Quantity: 3.33
 
 - type: entity
   name: dough rope
@@ -679,10 +693,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 100
+        maxVol: 120
         reagents:
         - ReagentId: Butter
           Quantity: 10
+        - ReagentId: Nutriment
+          Quantity: 36
+        - ReagentId: Protein
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 8
+        - ReagentId: DoctorsDelight
+          Quantity: 2
         - ReagentId: THC
           Quantity: 82
   - type: Extractable

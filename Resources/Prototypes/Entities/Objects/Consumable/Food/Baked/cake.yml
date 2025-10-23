@@ -15,12 +15,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 36
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
+          Quantity: 12
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 3
+        - ReagentId: Sugar
+          Quantity: 21
   - type: Item
     size: Normal
   - type: Tag
@@ -40,7 +42,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
           Quantity: 4
@@ -68,6 +70,7 @@
       color: blue
   - type: SliceableFood
     slice: FoodCakeBlueberrySlice
+    count: 6
   - type: Tag
     tags:
     - Cake
@@ -102,6 +105,7 @@
     state: plain
   - type: SliceableFood
     slice: FoodCakePlainSlice
+    count: 6
 
 # Added in type lines above
 
@@ -124,17 +128,20 @@
     state: carrot
   - type: SliceableFood
     slice: FoodCakeCarrotSlice
+    count: 6
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 54
         reagents:
+        - ReagentId: Nutriment
+          Quantity: 18
         - ReagentId: JuiceCarrot
-          Quantity: 15
+          Quantity: 8
         - ReagentId: Sugar
-          Quantity: 5
+          Quantity: 24
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 4
 
 - type: entity
   name: slice of carrot cake
@@ -147,14 +154,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 6
+        maxVol: 12
         reagents:
-        - ReagentId: JuiceCarrot
+        - ReagentId: Nutriment
           Quantity: 3
+        - ReagentId: JuiceCarrot
+          Quantity: 1.33
         - ReagentId: Sugar
-          Quantity: 1
+          Quantity: 4
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.67
 
 # Tastes like sweetness, cake, carrot.
 
@@ -168,6 +177,7 @@
     state: brain
   - type: SliceableFood
     slice: FoodCakeBrainSlice
+    count: 6
 
 
 - type: entity
@@ -190,6 +200,7 @@
     state: cheese
   - type: SliceableFood
     slice: FoodCakeCheeseSlice
+    count: 6
 
 - type: entity
   name: slice of cheese cake
@@ -211,6 +222,7 @@
     state: orange
   - type: SliceableFood
     slice: FoodCakeOrangeSlice
+    count: 6
   - type: Tag
     tags:
     - Cake
@@ -240,6 +252,7 @@
     state: lime
   - type: SliceableFood
     slice: FoodCakeLimeSlice
+    count: 6
   - type: Tag
     tags:
     - Cake
@@ -269,6 +282,7 @@
     state: lemon
   - type: SliceableFood
     slice: FoodCakeLemonSlice
+    count: 6
   - type: Tag
     tags:
     - Cake
@@ -302,17 +316,20 @@
       - berry
   - type: SliceableFood
     slice: FoodCakeLemoonSlice
+    count: 6
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 40
         reagents:
         - ReagentId: Nutriment
-          Quantity: 15
+          Quantity: 20
         - ReagentId: Vitamin
           Quantity: 5
         - ReagentId: Milk
-          Quantity: 5
+          Quantity: 4
+        - ReagentId: Sugar
+          Quantity: 22
   - type: Tag
     tags:
     - Cake
@@ -333,14 +350,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 4
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 1.25
+        - ReagentId: Sugar
+          Quantity: 5.5
         - ReagentId: Milk
-          Quantity: 1
+          Quantity: 1.3
   - type: Tag
     tags:
     - Cake
@@ -357,17 +376,20 @@
     state: chocolate
   - type: SliceableFood
     slice: FoodCakeChocolateSlice
+    count: 6
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 35
+        maxVol: 52
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
+          Quantity: 18
         - ReagentId: Theobromine
-          Quantity: 8 # WD EDIT: 5 -> 8
+          Quantity: 6
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 4
+        - ReagentId: Sugar
+          Quantity: 24
 
 - type: entity
   name: slice of chocolate cake
@@ -379,14 +401,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 8
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 3
         - ReagentId: Theobromine
-          Quantity: 1.6 # WD EDIT: 1 -> 1.6
-        - ReagentId: Vitamin
           Quantity: 1
+        - ReagentId: Vitamin
+          Quantity: 0.67
+        - ReagentId: Sugar
+          Quantity: 4
 # Tastes like sweetness, cake, chocolate.
 
 - type: entity
@@ -399,6 +423,7 @@
     state: apple
   - type: SliceableFood
     slice: FoodCakeAppleSlice
+    count: 6
   - type: Tag
     tags:
     - Cake
@@ -429,6 +454,7 @@
     state: slime
   - type: SliceableFood
     slice: FoodCakeSlimeSlice
+    count: 6
 
 - type: entity
   name: slice of slime cake
@@ -450,15 +476,18 @@
     state: pumpkinspice
   - type: SliceableFood
     slice: FoodCakePumpkinSlice
+    count: 6
   - type: SolutionContainerManager
     solutions:
       food:
         maxVol: 50
         reagents:
         - ReagentId: Nutriment
-          Quantity: 32
+          Quantity: 12
         - ReagentId: Vitamin
-          Quantity: 11
+          Quantity: 3
+        - ReagentId: Sugar
+          Quantity: 18
   - type: Tag
     tags:
     - Cake
@@ -475,12 +504,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6.4
+          Quantity: 2
         - ReagentId: Vitamin
-          Quantity: 2.2
+          Quantity: 0.5
+        - ReagentId: Sugar
+          Quantity: 3
   - type: Tag
     tags:
     - Cake
@@ -498,6 +529,7 @@
     state: christmas
   - type: SliceableFood
     slice: FoodCakeChristmasSlice
+    count: 6
 
 - type: entity
   name: slice of christmas cake
@@ -518,6 +550,7 @@
     state: birthday
   - type: SliceableFood
     slice: FoodCakeBirthdaySlice
+    count: 6
 
 - type: entity
   name: slice of birthday cake
@@ -539,17 +572,18 @@
     state: vanilla
   - type: SliceableFood
     slice: FoodCakeVanillaSlice
+    count: 6
   - type: SolutionContainerManager #TODO Sprinkles
     solutions:
       food:
-        maxVol: 45
+        maxVol: 48
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
-        - ReagentId: Vitamin
-          Quantity: 5
-        - ReagentId: Sugar
           Quantity: 15
+        - ReagentId: Vitamin
+          Quantity: 3
+        - ReagentId: Sugar
+          Quantity: 30
 
 - type: entity
   name: slice of vanilla cake
@@ -562,14 +596,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 45
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 2.5
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
         - ReagentId: Sugar
-          Quantity: 3
+          Quantity: 5
 # Tastes like sweetness, cake, vanilla.
 
 - type: entity
@@ -582,17 +616,18 @@
     state: clown
   - type: SliceableFood
     slice: FoodCakeClownSlice
+    count: 6
   - type: SolutionContainerManager #TODO Sprinkles
     solutions:
       food:
-        maxVol: 45
+        maxVol: 50
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
+          Quantity: 48
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 10
         - ReagentId: Sugar
-          Quantity: 15
+          Quantity: 40
 
 - type: entity
   name: slice of clown cake
@@ -605,14 +640,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 45
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 8
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 2
         - ReagentId: Sugar
-          Quantity: 3
+          Quantity: 7
 # Tastes like sweetness, cake, clown.
 
 - type: entity
@@ -625,17 +660,20 @@
     state: trumpet
   - type: SliceableFood
     slice: FoodCakeSpacemanSlice
+    count: 6
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 45
+        maxVol: 58
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
-        - ReagentId: Vitamin
-          Quantity: 5
-        - ReagentId: Omnizine #This is a really rare cake with healing stuff and we don't have any of its chems yet
           Quantity: 15
+        - ReagentId: Vitamin
+          Quantity: 3
+        - ReagentId: Omnizine #This is a really rare cake with healing stuff and we don't have any of its chems yet
+          Quantity: 10
+        - ReagentId: Sugar
+          Quantity: 30
 
 - type: entity
   name: slice of spaceman's cake
@@ -648,14 +686,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 12
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 2.5
         - ReagentId: Vitamin
-          Quantity: 1
+          Quantity: 0.5
         - ReagentId: Omnizine
-          Quantity: 3
+          Quantity: 1.67
+        - ReagentId: Sugar
+          Quantity: 5
 # Tastes like sweetness, cake, jam.
 
 - type: entity
@@ -709,6 +749,17 @@
     speechVerb: SmallMob
   - type: MovementSpeedModifier
     baseWalkSpeed : 5
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 60
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 48
+        - ReagentId: Vitamin
+          Quantity: 10
+        - ReagentId: Sugar
+          Quantity: 36
     baseSprintSpeed : 3
   - type: Tag
     tags:
@@ -747,10 +798,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 48
+        maxVol: 24
         reagents:
         - ReagentId: Nutriment
-          Quantity: 48
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Plasma
+          Quantity: 1
+        - ReagentId: Radium
+          Quantity: 0.5
+        - ReagentId: Uranium
+          Quantity: 0.5
   - type: Food
     transferAmount: 12
   - type: Item
@@ -771,10 +830,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 6
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12
+          Quantity: 1
+        - ReagentId: Vitamin
+          Quantity: 0.25
+        - ReagentId: Plasma
+          Quantity: 0.25
+        - ReagentId: Radium
+          Quantity: 0.125
+        - ReagentId: Uranium
+          Quantity: 0.125
   - type: Food
     transferAmount: 3
   - type: PointLight
