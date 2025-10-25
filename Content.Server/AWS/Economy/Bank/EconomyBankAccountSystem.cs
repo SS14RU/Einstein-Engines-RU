@@ -731,17 +731,6 @@ namespace Content.Server.AWS.Economy.Bank
 
             if (success)
             {
-                if (insertedAccountHolder is not null &&
-                    TryGetAccount(insertedAccountHolder.Value.Comp.AccountID, out var account))
-                {
-                    TryAddLog(account.Value,
-                        new EconomyBankAccountLogField(
-                            _gameTiming.CurTime,
-                            Loc.GetString("economybanksystem-log-insert",
-                                ("amount", amount),
-                                ("currencyName", account.Value.Comp.AllowedCurrency))));
-                }
-
                 if (_netManager.IsServer)
                     _popupSystem.PopupEntity(Loc.GetString("economybanksystem-atm-moneyentering"), uid, type: PopupType.Medium);
 
