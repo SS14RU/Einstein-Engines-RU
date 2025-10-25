@@ -9,6 +9,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: absinthe
   color: "#33EE00"
+  pricePerUnit: 0.34
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/absintheglass.rsi
     state: icon_empty
@@ -32,6 +33,7 @@
   physicalDesc: reagent-physical-desc-bubbly
   flavor: ale
   color: "#663100"
+  pricePerUnit: 0.14
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/aleglass.rsi
@@ -49,6 +51,7 @@
   physicalDesc: reagent-physical-desc-bubbly
   flavor: beer
   color: "#e3e77b"
+  pricePerUnit: 0.12
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerglass.rsi
@@ -66,6 +69,7 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: bluecuracao
   color: "#0099FF"
+  pricePerUnit: 0.24
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/thin_glass.rsi
     state: icon_empty
@@ -109,6 +113,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: cognac
   color: "#AB3C05"
+  pricePerUnit: 0.26
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/cognacglass.rsi
@@ -273,6 +278,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: gin
   color: "#664300"
+  pricePerUnit: 0.22
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/ginvodkaglass.rsi
@@ -297,6 +303,7 @@
   physicalDesc: reagent-physical-desc-cloudy
   flavor: coffeeliquor
   color: "#664300"
+  pricePerUnit: 0.24
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coffeeliqueurglass.rsi
     state: icon_empty
@@ -323,6 +330,7 @@
   physicalDesc: reagent-physical-desc-sweet
   flavor: watermelon
   color: "#00FF33"
+  pricePerUnit: 0.24
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/thin_glass.rsi
     state: icon_empty
@@ -394,6 +402,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: rum
   color: "#f09f42"
+  pricePerUnit: 0.22
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/rumglass.rsi
@@ -428,6 +437,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: tequila
   color: "#d7d1d155"
+  pricePerUnit: 0.22
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/tequillaglass.rsi
     state: icon_empty
@@ -451,6 +461,7 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: vermouth
   color: "#91FF91"
+  pricePerUnit: 0.2
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/vermouthglass.rsi
     state: icon_empty
@@ -472,6 +483,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: vodka
   color: "#d1d1d155"
+  pricePerUnit: 0.2
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/ginvodkaglass.rsi
@@ -496,6 +508,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: whiskey
   color: "#ee7732"
+  pricePerUnit: 0.24
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/whiskeyglass.rsi
@@ -520,6 +533,7 @@
   physicalDesc: reagent-physical-desc-translucent
   flavor: shittywine
   color: "#7E4043"
+  pricePerUnit: 0.2
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/wineglass.rsi
@@ -544,6 +558,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: champagne
   color: "#FCFCEE"
+  pricePerUnit: 0.32
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/champagneglass.rsi
@@ -1190,6 +1205,7 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: gildlager
   color: "#FFFF91"
+  pricePerUnit: 0.27
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/gildlagerglass.rsi
     state: icon_empty
@@ -1601,6 +1617,7 @@
   physicalDesc: reagent-physical-desc-metallic
   flavor: patron
   color: "#585840"
+  pricePerUnit: 0.34
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/patronglass.rsi
     state: icon_empty

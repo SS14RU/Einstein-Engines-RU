@@ -52,6 +52,7 @@
   physicalDesc: reagent-physical-desc-creamy
   flavor: creamy
   color: "#DFD7AF"
+  pricePerUnit: 0.1
   metabolisms:
     Drink:
       effects:
@@ -66,6 +67,7 @@
   physicalDesc: reagent-physical-desc-milky
   flavor: nutty
   color: "#f4eadb"
+  pricePerUnit: 0.02
   metabolisms:
     Drink:
       effects:
@@ -148,6 +150,7 @@
   physicalDesc: reagent-physical-desc-dark-red
   flavor: bitter
   color: "#EA1D26"
+  pricePerUnit: 0.02
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/grenadineglass.rsi
     state: icon_empty
@@ -275,6 +278,7 @@
   physicalDesc: reagent-physical-desc-opaque
   flavor: milk
   color: "#DFDFDF"
+  pricePerUnit: 0.05
   recognizable: true
   plantMetabolism:
     - !type:PlantAdjustNutrition
@@ -403,6 +407,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: fizzy
   color: "#619494"
+  pricePerUnit: 0.0033
   fizziness: 0.8
 
 - type: reagent
@@ -466,6 +471,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: tonicwater
   color: "#0064C8"
+  pricePerUnit: 0.0033
   fizziness: 0.4
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/tonicglass.rsi
@@ -499,6 +505,7 @@
   physicalDesc: reagent-physical-desc-frosty
   flavor: cold
   color: "#bed8e6"
+  pricePerUnit: 0.04
   recognizable: true
   meltingPoint: 0.0
   boilingPoint: 100.0

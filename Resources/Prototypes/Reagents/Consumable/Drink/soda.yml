@@ -6,6 +6,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: soda
   color: "#6c2828"
+  pricePerUnit: 0.01
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/colaglass.rsi
@@ -72,6 +73,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: energydrink
   color: "#ffffbf"
+  pricePerUnit: 0.1033
   metabolisms:
     Drink:
       effects:
@@ -181,6 +183,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: gingersoda
   color: "#ccb87e"
+  pricePerUnit: 0.0033
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/sol_dry_glass.rsi
     state: icon
@@ -210,6 +213,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: sodacitrus
   color: "#a6fa5a"
+  pricePerUnit: 0.25
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/space_mountain_wind_glass.rsi
     state: icon_empty
@@ -225,6 +229,7 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: spaceup
   color: "#e3e3e37d"
+  pricePerUnit: 0.01
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/space-up_glass.rsi
     state: icon_empty

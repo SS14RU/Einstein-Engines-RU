@@ -69,7 +69,7 @@
     solution: drink
   - type: PhysicalComposition
     materialComposition:
-      Steel: 50 #reduce, reuse, recycle
+      Steel: 26 # tuned for ~4 cr tare cost
   - type: Tag
     tags:
     - DrinkCan
@@ -103,8 +103,6 @@
     sprite: Objects/Consumable/Drinks/cola.rsi
   - type: Item
     sprite: Objects/Consumable/Drinks/cola.rsi
-  - type: StaticPrice
-    price: 6
 
 # created when taking apart an ied
 - type: entity
@@ -184,8 +182,6 @@
     sprite: Objects/Consumable/Drinks/lemon-lime-cranberry.rsi
   - type: Item
     sprite: Objects/Consumable/Drinks/lemon-lime-cranberry.rsi
-  - type: StaticPrice
-    price: 15
   - type: Fixtures
     fixtures:
       fix1:
@@ -274,9 +270,6 @@
           Quantity: 30
   - type: Drink
   - type: Sprite
-  - type: StaticPrice
-    price: 4
-    sprite: Objects/Consumable/Drinks/sodawater.rsi
 
 - type: entity
   parent: DrinkCanBaseFull
@@ -330,9 +323,6 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/sol_dry.rsi
   - type: Item
-  - type: StaticPrice
-    price: 4
-    sprite: Objects/Consumable/Drinks/sol_dry.rsi
 
 - type: entity
   parent: DrinkCanBaseFull
@@ -367,9 +357,6 @@
           Quantity: 30
   - type: Drink
   - type: Sprite
-  - type: StaticPrice
-    price: 4
-    sprite: Objects/Consumable/Drinks/tonic.rsi
 
 - type: entity
   parent: DrinkCanBaseFull
@@ -426,8 +413,6 @@
     sprite: Objects/Consumable/Drinks/dr_gibb.rsi
   - type: Item
     sprite: Objects/Consumable/Drinks/dr_gibb.rsi
-  - type: StaticPrice
-    price: 5
 
 - type: entity
   parent: DrinkCanBaseFull
@@ -472,9 +457,6 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/energy_drink.rsi
   - type: Item
-  - type: StaticPrice
-    price: 7
-    sprite: Objects/Consumable/Drinks/energy_drink.rsi
 
 - type: entity
   id: DrinkCanPack
@@ -588,8 +570,6 @@
   - type: Tag
     tags:
     - Beer
-  - type: StaticPrice
-    price: 6
 
 - type: entity
   parent: DrinkCanBaseFull
@@ -612,5 +592,3 @@
   - type: Tag
     tags:
     - Wine
-  - type: StaticPrice
-    price: 8

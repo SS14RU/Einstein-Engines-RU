@@ -115,7 +115,7 @@
         Blunt: 5
   - type: PhysicalComposition
     materialComposition:
-      Glass: 25
+      Glass: 13
   - type: ExaminableSolution
     solution: drink
   - type: FitsInDispenser
@@ -154,8 +154,6 @@
       sprite: Objects/Consumable/Drinks/glass_clear.rsi
       state: icon
   - type: TransformableContainer
-  - type: StaticPrice
-    price: 2
 
 - type: entity
   name: coupe glass
@@ -179,10 +177,6 @@
         drink:
           maxVol: 30
     - type: SolutionContainerVisuals
-    - type: StaticPrice
-      price: 2
-      maxFillLevels: 5
-      fillBaseName: fill
 
 - type: entity
   parent: DrinkGlass
@@ -2427,8 +2421,6 @@
     timeToMix: 1
   - type: FitsInDispenser
     solution: drink
-  - type: StaticPrice
-    price: 8
 
 - type: entity
   parent: DrinkFitnessShakerBlack

@@ -6,7 +6,7 @@
   - type: Drink
   - type: PhysicalComposition
     materialComposition:
-      Steel: 300
+      Steel: 67
   - type: FitsInDispenser
     solution: drink
   - type: DamageOtherOnHit
@@ -39,8 +39,6 @@
           Quantity: 50
   - type: TrashOnSolutionEmpty
     solution: drink
-  - type: StaticPrice
-    price: 6
 
 - type: entity
   parent: FlaskBase
@@ -75,10 +73,8 @@
   name: bar flask
   description: A metal flask often given out by the bartender on loan. Don't forget to return it!
   components:
-    - type: Sprite
-    - type: StaticPrice
-      price: 6
-      sprite: Objects/Consumable/Drinks/barflask.rsi
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/barflask.rsi
 
 - type: entity
   parent: FlaskBase
@@ -105,8 +101,6 @@
   description: Keeping your drinks at the perfect temperature since 1892.
   components:
   - type: Sprite
-  - type: StaticPrice
-    price: 6
     sprite: Objects/Consumable/Drinks/vacuumflask.rsi
 
 - type: entity
@@ -130,5 +124,3 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: fill-
-  - type: StaticPrice
-    price: 5
