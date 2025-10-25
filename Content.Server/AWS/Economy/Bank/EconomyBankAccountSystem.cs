@@ -796,6 +796,9 @@ namespace Content.Server.AWS.Economy.Bank
             {
                 if (!TrySendMoney(usedEnt, economyMoneyHolderComponent, component.LinkedAccount, amount, out var err, purchaseReason))
                 {
+                    //SS14RU - start
+                    TriggerVendingPaymentFailEffect(uid, vendingMachineComponent);
+                    //SS14RU - end
                     _popupSystem.PopupEntity(err, uid, type: PopupType.MediumCaution);
                     return;
                 }
@@ -804,6 +807,9 @@ namespace Content.Server.AWS.Economy.Bank
             {
                 if (!TrySendMoney(economyBankAccountHolderComponent, component.LinkedAccount, amount, purchaseReason, out var err))
                 {
+                    //SS14RU - start
+                    TriggerVendingPaymentFailEffect(uid, vendingMachineComponent);
+                    //SS14RU - end
                     _popupSystem.PopupEntity(err, uid, type: PopupType.MediumCaution);
                     return;
                 }
@@ -824,6 +830,16 @@ namespace Content.Server.AWS.Economy.Bank
 
             _popupSystem.PopupEntity(Loc.GetString("economybanksystem-transaction-success", ("amount", amount), ("currencyName", receiverAccount.Value.Comp.AllowedCurrency)), uid, type: PopupType.Medium);
         }
+
+        //SS14RU - start
+        private void TriggerVendingPaymentFailEffect(EntityUid uid, VendingMachineComponent? vendingMachine)
+        {
+            if (vendingMachine is null)
+                return;
+
+            _vendingMachine.Deny(uid, vendingMachine);
+        }
+        //SS14RU - end
 
 
         private bool TryBuildVendingPurchaseReason(EntityUid uid, VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? reason, out string? error)

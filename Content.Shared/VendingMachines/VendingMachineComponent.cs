@@ -91,7 +91,7 @@ namespace Content.Shared.VendingMachines
         ///     Cooldown between successful wire pulses that force an eject.
         /// </summary>
         [DataField("wirePulseCooldown")]
-        public TimeSpan WirePulseCooldown = TimeSpan.FromSeconds(5f);
+        public TimeSpan WirePulseCooldown = TimeSpan.FromMinutes(2f);
 
         public TimeSpan NextWirePulse = TimeSpan.Zero;
         //SS14RU - end
