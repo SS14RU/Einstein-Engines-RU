@@ -233,6 +233,21 @@ namespace Content.Server.VendingMachines
             Dirty(uid, component);
         }
 
+        //SS14RU - start
+        public void SetDisabled(EntityUid uid, bool disabled, VendingMachineComponent? component = null)
+        {
+            if (!Resolve(uid, ref component))
+                return;
+
+            if (component.Disabled == disabled)
+                return;
+
+            component.Disabled = disabled;
+            Dirty(uid, component);
+            TryUpdateVisualState(uid, component);
+        }
+        //SS14RU - end
+
         public void Deny(EntityUid uid, VendingMachineComponent? vendComponent = null)
         {
             if (!Resolve(uid, ref vendComponent))
@@ -281,6 +296,14 @@ namespace Content.Server.VendingMachines
         {
             if (!Resolve(uid, ref vendComponent))
                 return;
+
+            //SS14RU - start
+            if (vendComponent.Disabled)
+            {
+                Deny(uid, vendComponent);
+                return;
+            }
+            //SS14RU - end
 
             if (vendComponent.Ejecting || vendComponent.Broken || !this.IsPowered(uid, EntityManager))
             {
@@ -350,6 +373,12 @@ namespace Content.Server.VendingMachines
             {
                 finalState = VendingMachineVisualState.Broken;
             }
+            //SS14RU - start
+            else if (vendComponent.Disabled)
+            {
+                finalState = VendingMachineVisualState.Off;
+            }
+            //SS14RU - end
             else if (vendComponent.Ejecting)
             {
                 finalState = VendingMachineVisualState.Eject;
@@ -375,18 +404,25 @@ namespace Content.Server.VendingMachines
         /// <summary>
         /// Ejects a random item from the available stock. Will do nothing if the vending machine is empty.
         /// </summary>
-        /// <param name="uid"></param>
-        /// <param name="throwItem">Whether to throw the item in a random direction after dispensing it.</param>
-        /// <param name="forceEject">Whether to skip the regular ejection checks and immediately dispense the item without animation.</param>
-        /// <param name="vendComponent"></param>
         public void EjectRandom(EntityUid uid, bool throwItem, bool forceEject = false, VendingMachineComponent? vendComponent = null)
         {
+            //SS14RU - start
+            TryEjectRandomInternal(uid, throwItem, forceEject, vendComponent);
+            //SS14RU - end
+        }
+
+        //SS14RU - start
+        private bool TryEjectRandomInternal(EntityUid uid, bool throwItem, bool forceEject, VendingMachineComponent? vendComponent = null)
+        {
             if (!Resolve(uid, ref vendComponent))
-                return;
+                return false;
+
+            if (!forceEject && vendComponent.Disabled)
+                return false;
 
             var availableItems = GetAvailableInventory(uid, vendComponent);
             if (availableItems.Count <= 0)
-                return;
+                return false;
 
             var item = _random.Pick(availableItems);
 
@@ -403,7 +439,39 @@ namespace Content.Server.VendingMachines
             {
                 TryEjectVendorItem(uid, item.Type, item.ID, throwItem, vendComponent);
             }
+
+            return true;
         }
+
+        public bool TryWireEject(EntityUid uid, VendingMachineComponent? vendComponent = null)
+        {
+            if (!Resolve(uid, ref vendComponent))
+                return false;
+
+            if (vendComponent.Disabled)
+            {
+                Deny(uid, vendComponent);
+                return false;
+            }
+
+            var now = _timing.CurTime;
+            if (now < vendComponent.NextWirePulse)
+            {
+                Deny(uid, vendComponent);
+                return false;
+            }
+
+            if (!TryEjectRandomInternal(uid, true, false, vendComponent))
+            {
+                Deny(uid, vendComponent);
+                return false;
+            }
+
+            vendComponent.NextWirePulse = now + vendComponent.WirePulseCooldown;
+            Dirty(uid, vendComponent);
+            return true;
+        }
+        //SS14RU - end
 
         private void EjectItem(EntityUid uid, VendingMachineComponent? vendComponent = null, bool forceEject = false)
         {

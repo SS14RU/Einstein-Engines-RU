@@ -13,8 +13,14 @@ public sealed partial class VendingMachineEjectItemWireAction : ComponentWireAct
 
     public override object? StatusKey { get; } = EjectWireKey.StatusKey;
 
+    //SS14RU - start
     public override StatusLightState? GetLightState(Wire wire, VendingMachineComponent comp)
-        => comp.CanShoot ? StatusLightState.BlinkingFast : StatusLightState.On;
+        => comp.Disabled
+            ? StatusLightState.Off
+            : comp.CanShoot
+                ? StatusLightState.BlinkingFast
+                : StatusLightState.On;
+    //SS14RU - end
 
     public override void Initialize()
     {
@@ -25,6 +31,9 @@ public sealed partial class VendingMachineEjectItemWireAction : ComponentWireAct
 
     public override bool Cut(EntityUid user, Wire wire, VendingMachineComponent vending)
     {
+        //SS14RU - start
+        _vendingMachineSystem.SetDisabled(wire.Owner, true, vending);
+        //SS14RU - end
         _vendingMachineSystem.SetShooting(wire.Owner, true, vending);
         return true;
     }
@@ -32,11 +41,14 @@ public sealed partial class VendingMachineEjectItemWireAction : ComponentWireAct
     public override bool Mend(EntityUid user, Wire wire, VendingMachineComponent vending)
     {
         _vendingMachineSystem.SetShooting(wire.Owner, false, vending);
+        //SS14RU - start
+        _vendingMachineSystem.SetDisabled(wire.Owner, false, vending);
+        //SS14RU - end
         return true;
     }
 
     public override void Pulse(EntityUid user, Wire wire, VendingMachineComponent vending)
     {
-        _vendingMachineSystem.EjectRandom(wire.Owner, true, vendComponent: vending);
+        _vendingMachineSystem.TryWireEject(wire.Owner, vending); //SS14RU - edit
     }
 }

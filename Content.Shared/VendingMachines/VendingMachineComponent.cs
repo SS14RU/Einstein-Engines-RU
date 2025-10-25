@@ -1,3 +1,4 @@
+using System;
 using System.Numerics;
 using Content.Shared.Actions;
 using MathNet.Numerics.LinearAlgebra.Double;
@@ -85,6 +86,16 @@ namespace Content.Shared.VendingMachines
         [DataField("dispenseOnHitCooldown")]
         public float? DispenseOnHitCooldown = 1.0f;
 
+        //SS14RU - start
+        /// <summary>
+        ///     Cooldown between successful wire pulses that force an eject.
+        /// </summary>
+        [DataField("wirePulseCooldown")]
+        public TimeSpan WirePulseCooldown = TimeSpan.FromSeconds(5f);
+
+        public TimeSpan NextWirePulse = TimeSpan.Zero;
+        //SS14RU - end
+
         /// <summary>
         ///     Sound that plays when ejecting an item
         /// </summary>
@@ -113,6 +124,14 @@ namespace Content.Shared.VendingMachines
         public float EjectAccumulator = 0f;
         public float DenyAccumulator = 0f;
         public float DispenseOnHitAccumulator = 0f;
+
+        //SS14RU - start
+        /// <summary>
+        ///     Prevents any dispensing while true, regardless of power state.
+        /// </summary>
+        [DataField]
+        public bool Disabled;
+        //SS14RU - end
 
         /// <summary>
         /// The quality of the stock in the vending machine on spawn.
