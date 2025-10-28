@@ -1,4 +1,3 @@
-humanoid-profile-editor-voice-label = Voice:
 humanoid-profile-editor-body-type-label = Body type:
 
 humanoid-profile-editor-loadouts-customize-book-text = Book content
