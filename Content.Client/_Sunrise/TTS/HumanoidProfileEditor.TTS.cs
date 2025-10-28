@@ -1,10 +1,8 @@
 using System.Linq;
-using Content.Client._White.TTS;
-using Content.Shared._White.TTS;
+using Content.Client._Sunrise.TTS;
+using Content.Shared._Sunrise.TTS;
 using Content.Shared.Preferences;
 
-// ReSharper disable InconsistentNaming
-// ReSharper disable once CheckNamespace
 namespace Content.Client.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
@@ -25,7 +23,7 @@ public sealed partial class HumanoidProfileEditor
             SetVoice(_voiceList[args.Id].ID);
         };
 
-        VoicePlayButton.OnPressed += _ => PlayPreviewTTS();
+        VoicePlayButton.OnPressed += _ => PlayPreviewTts();
     }
 
     private void UpdateTTSVoicesControls()
@@ -41,12 +39,12 @@ public sealed partial class HumanoidProfileEditor
             var voice = _voiceList[i];
             if (!HumanoidCharacterProfile.CanHaveVoice(voice, Profile.Sex))
                 continue;
-
             var name = Loc.GetString(voice.Name);
             VoiceButton.AddItem(name, i);
 
             if (firstVoiceChoiceId == 1)
                 firstVoiceChoiceId = i;
+
         }
 
         var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.Voice);
@@ -57,11 +55,11 @@ public sealed partial class HumanoidProfileEditor
         }
     }
 
-    private void PlayPreviewTTS()
+    private void PlayPreviewTts()
     {
         if (Profile is null)
             return;
 
-        _entManager.System<TTSSystem>().RequestGlobalTTS(VoiceRequestType.Preview,Profile.Voice);
+        _entManager.System<TTSSystem>().RequestPreviewTts(Profile.Voice);
     }
 }

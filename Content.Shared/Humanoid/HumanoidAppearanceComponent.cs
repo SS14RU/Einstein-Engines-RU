@@ -1,5 +1,5 @@
 using Content.Shared._White.Humanoid.Prototypes;
-using Content.Shared._White.TTS;
+using Content.Shared._Sunrise.TTS;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences; // DeltaV

@@ -2,23 +2,20 @@
 using System.Text.RegularExpressions;
 using Content.Server.Chat.Systems;
 
-namespace Content.Server._White.TTS;
+namespace Content.Server._Sunrise.TTS;
 
 // ReSharper disable once InconsistentNaming
 public sealed partial class TTSSystem
 {
     private void OnTransformSpeech(TransformSpeechEvent args)
     {
-        if (!_isEnabled)
-            return;
-
+        if (!_isEnabled) return;
         args.Message = args.Message.Replace("+", "");
     }
 
     private string Sanitize(string text)
     {
         text = text.Trim();
-        text = Regex.Replace(text, @"\[(/?font.*?|/?bold|/?italic|/?color.*?|/?Name|/?BubbleHeader|/?BubbleContent)\]", "");
         text = Regex.Replace(text, @"[^a-zA-Zа-яА-ЯёЁ0-9,\-+?!. ]", "");
         text = Regex.Replace(text, @"[a-zA-Z]", ReplaceLat2Cyr, RegexOptions.Multiline | RegexOptions.IgnoreCase);
         text = Regex.Replace(text, @"(?<![a-zA-Zа-яёА-ЯЁ])[a-zA-Zа-яёА-ЯЁ]+?(?![a-zA-Zа-яёА-ЯЁ])", ReplaceMatchedWord, RegexOptions.Multiline | RegexOptions.IgnoreCase);
@@ -32,7 +29,6 @@ public sealed partial class TTSSystem
     {
         if (ReverseTranslit.TryGetValue(oneChar.Value.ToLower(), out var replace))
             return replace;
-
         return oneChar.Value;
     }
 
@@ -40,7 +36,6 @@ public sealed partial class TTSSystem
     {
         if (WordReplacement.TryGetValue(word.Value.ToLower(), out var replace))
             return replace;
-
         return word.Value;
     }
 
@@ -48,7 +43,6 @@ public sealed partial class TTSSystem
     {
         if (!long.TryParse(word.Value, out var number))
             return word.Value;
-
         return NumberConverter.NumberToText(number);
     }
 
@@ -143,9 +137,8 @@ public sealed partial class TTSSystem
             {"с4", "Си 4"}, // cyrillic
             {"c4", "Си 4"}, // latinic
             {"бсс", "Бэ Эс Эс"},
-            {"сии", "Эс И И"},
-            {"ии", "И И"},
-            {"опз", "О Пэ Зэ"},
+            {"квилу", "хуиллу"},
+            {"qillu", "хуиллу"},
         };
 
     private static readonly IReadOnlyDictionary<string, string> ReverseTranslit =
@@ -290,21 +283,28 @@ public static class NumberConverter
         bool male,
 		string valueDeclensionFor1,
 		string valueDeclensionFor2,
-		string valueDeclensionFor5
-        ) =>
-        NumberToText(value, male)
-        + " "
-        + GetDeclension((int)(value % 10), valueDeclensionFor1, valueDeclensionFor2, valueDeclensionFor5);
+		string valueDeclensionFor5)
+	{
+		return
+            NumberToText(value, male)
+			+ " "
+			+ GetDeclension((int)(value % 10), valueDeclensionFor1, valueDeclensionFor2, valueDeclensionFor5);
+	}
 
-    private static string GetDeclension(int val, string one, string two, string five)
-    {
-        var t = (val % 100 > 20) ? val % 10 : val % 20;
+	private static string GetDeclension(int val, string one, string two, string five)
+	{
+		var t = (val % 100 > 20) ? val % 10 : val % 20;
 
-        return t switch
-        {
-            1 => one,
-            2 or 3 or 4 => two,
-            _ => five
-        };
-    }
+		switch (t)
+		{
+			case 1:
+				return one;
+			case 2:
+			case 3:
+			case 4:
+				return two;
+			default:
+				return five;
+		}
+	}
 }

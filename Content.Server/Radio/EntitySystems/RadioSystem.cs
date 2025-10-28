@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Content.Server._White.Hearing;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
@@ -160,6 +161,7 @@ public sealed class RadioSystem : EntitySystem
 
         var speakerQuery = GetEntityQuery<RadioSpeakerComponent>();
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
+        var receiversList = new List<EntityUid>();
 
         if (frequency == null) // Nuclear-14
             frequency = GetFrequency(messageSource, channel); // Nuclear-14
@@ -193,7 +195,11 @@ public sealed class RadioSystem : EntitySystem
 
             // send the message
             RaiseLocalEvent(receiver, ref ev);
+            receiversList.Add(receiver);
         }
+
+        if (receiversList.Count > 0)
+            RaiseLocalEvent(new RadioSpokeEvent(messageSource, FormattedMessage.RemoveMarkupPermissive(message), receiversList.ToArray()));
 
         if (name != Name(messageSource))
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} as {name} on {channel.LocalizedName}: {message}");

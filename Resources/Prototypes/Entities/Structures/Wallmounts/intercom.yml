@@ -5,6 +5,10 @@
   abstract: true
   components:
   - type: StationAiWhitelist
+  - type: AnnouncementSpeaker
+    range: 30
+    enabled: true
+    requiresPower: true
   - type: WallMount
   - type: ApcPowerReceiver
   - type: Electrified

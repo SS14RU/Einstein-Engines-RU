@@ -1,8 +1,8 @@
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using Content.Server._White.Hearing;
-using Content.Server._White.TTS;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -492,7 +492,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         SendInVoiceRange(ChatChannel.Local, name, message, wrappedMessage, obfuscated, wrappedObfuscated, source, range, languageOverride: language);
 
-        var ev = new EntitySpokeEvent(source, message, null, false, language);
+        var ev = new EntitySpokeEvent(source, message, originalMessage, null, null, false, language);
         RaiseLocalEvent(source, ev, true);
 
         // To avoid logging any messages sent by entities that are not players, like vendors, cloning, etc.
@@ -604,7 +604,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         var replayWrap = WrapWhisperMessage(source, "chat-manager-entity-whisper-wrap-message", name, message, language);
         _replay.RecordServerMessage(new ChatMessage(ChatChannel.Whisper, message, replayWrap, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
 
-        var ev = new EntitySpokeEvent(source, message, channel, true, language);
+        var ev = new EntitySpokeEvent(source, message, originalMessage, channel, languageObfuscatedMessage, true, language);
         RaiseLocalEvent(source, ev, true);
         if (!hideLog)
             if (originalMessage == message)
@@ -1095,7 +1095,10 @@ public sealed class EntitySpokeEvent : EntityEventArgs
 {
     public readonly EntityUid Source;
     public readonly string Message;
+    public readonly string OriginalMessage;
+    public readonly string? ObfuscatedMessage;
     public readonly bool IsWhisper;
+    public readonly bool IsRadio;
     public readonly LanguagePrototype Language;
 
     /// <summary>
@@ -1104,13 +1107,53 @@ public sealed class EntitySpokeEvent : EntityEventArgs
     /// </summary>
     public RadioChannelPrototype? Channel;
 
-    public EntitySpokeEvent(EntityUid source, string message, RadioChannelPrototype? channel, bool isWhisper, LanguagePrototype language)
+    public EntitySpokeEvent(
+        EntityUid source,
+        string message,
+        string originalMessage,
+        RadioChannelPrototype? channel,
+        string? obfuscatedMessage,
+        bool isWhisper,
+        LanguagePrototype language)
     {
         Source = source;
         Message = message;
+        OriginalMessage = originalMessage;
         Channel = channel;
+        ObfuscatedMessage = obfuscatedMessage;
         IsWhisper = isWhisper;
         Language = language;
+        IsRadio = channel != null;
+    }
+}
+
+public sealed class RadioSpokeEvent : EntityEventArgs
+{
+    public EntityUid Source { get; }
+    public string Message { get; }
+    public EntityUid[] Receivers { get; }
+
+    public RadioSpokeEvent(EntityUid source, string message, EntityUid[] receivers)
+    {
+        Source = source;
+        Message = message;
+        Receivers = receivers;
+    }
+}
+
+public sealed class CollectiveMindSpokeEvent : EntityEventArgs
+{
+    public EntityUid Source { get; }
+    public string Message { get; }
+    public IReadOnlyCollection<EntityUid> Receivers { get; }
+    public string CollectiveMindId { get; }
+
+    public CollectiveMindSpokeEvent(EntityUid source, string message, IReadOnlyCollection<EntityUid> receivers, string collectiveMindId)
+    {
+        Source = source;
+        Message = message;
+        Receivers = receivers;
+        CollectiveMindId = collectiveMindId;
     }
 }
 

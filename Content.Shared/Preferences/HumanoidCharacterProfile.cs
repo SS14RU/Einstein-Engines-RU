@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using Content.Shared._EE.Contractors.Prototypes;
 using Content.Shared._White.Bark;
 using Content.Shared._White.Bark.Systems;
-using Content.Shared._White.TTS;
+using Content.Shared._Sunrise.TTS;
 using Content.Shared.AWS.Economy.Insurance;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing.Loadouts.Prototypes;

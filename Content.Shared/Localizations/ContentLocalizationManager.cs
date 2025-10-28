@@ -34,6 +34,7 @@ namespace Content.Shared.Localizations
             // White Dream
             var cfgManager = IoCManager.Resolve<IConfigurationManager>();
             _culture = cfgManager.GetCVar(WhiteCVars.ServerCulture);
+            _loc.Initialize();
 
             var culture = new CultureInfo(_culture);
             var fallbackCulture = new CultureInfo(FallbackCulture);

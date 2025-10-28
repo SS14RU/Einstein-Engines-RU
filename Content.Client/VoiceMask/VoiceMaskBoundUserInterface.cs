@@ -21,14 +21,13 @@ public sealed class VoiceMaskBoundUserInterface : BoundUserInterface
         base.Open();
 
         _window = this.CreateWindow<VoiceMaskNameChangeWindow>();
-        _window.ReloadVoices(_protomanager);
-        _window.AddVoices();
         _window.ReloadVerbs(_protomanager);
         _window.AddVerbs();
 
         _window.OnNameChange += OnNameSelected;
         _window.OnVoiceChange += voice => SendMessage(new VoiceMaskChangeVoiceMessage(voice));
         _window.OnVerbChange += verb => SendMessage(new VoiceMaskChangeVerbMessage(verb));
+        _window.ReloadVoices(_protomanager);
     }
 
     private void OnNameSelected(string name)

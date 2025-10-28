@@ -3,7 +3,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Shared._EE.Contractors.Prototypes;
 using Content.Shared._White.Humanoid.Prototypes;
-using Content.Shared._White.TTS;
+using Content.Shared._Sunrise.TTS;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -63,14 +63,14 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [ValidatePrototypeId<BodyTypePrototype>]
     public const string DefaultBodyType = "HumanNormal";
 
-    public const string DefaultVoice = "Aidar";
+    public const string DefaultVoice = "Voljin";
     public const string DefaultBarkVoice = "Txt1";
 
     public static readonly Dictionary<Sex, string> DefaultSexVoice = new()
     {
-        { Sex.Male, "Aidar" },
-        { Sex.Female, "Kseniya" },
-        { Sex.Unsexed, "Baya" },
+        { Sex.Male, "Voljin" },
+        { Sex.Female, "Amina" },
+        { Sex.Unsexed, "Charlotte" },
     };
     // WD EDIT END
 

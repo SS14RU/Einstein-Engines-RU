@@ -1,15 +1,16 @@
-using Content.Server._White.TTS;
-using Content.Shared._White.TTS;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Chat;
 using Content.Shared.Clothing;
 using Content.Shared.Database;
 using Content.Shared.Inventory;
+using Content.Shared.Lock;
 using Content.Shared.Popups;
 using Content.Shared.Preferences;
 using Content.Shared.Speech;
 using Content.Shared.VoiceMask;
+using Robust.Shared.Configuration;
+using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.VoiceMask;
@@ -21,27 +22,35 @@ public sealed partial class VoiceMaskSystem : EntitySystem
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private readonly LockSystem _lock = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-
         SubscribeLocalEvent<VoiceMaskComponent, InventoryRelayedEvent<TransformSpeakerNameEvent>>(OnTransformSpeakerName);
+        SubscribeLocalEvent<VoiceMaskComponent, LockToggledEvent>(OnLockToggled);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeNameMessage>(OnChangeName);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeVerbMessage>(OnChangeVerb);
         SubscribeLocalEvent<VoiceMaskComponent, ClothingGotEquippedEvent>(OnEquip);
+        SubscribeLocalEvent<VoiceMaskComponent, ClothingGotUnequippedEvent>(OnUnequip);
         SubscribeLocalEvent<VoiceMaskSetNameEvent>(OpenUI);
 
-        // WD EDIT START - TTS
-        SubscribeLocalEvent<VoiceMaskComponent, TransformSpeakerVoiceEvent>(OnSpeakerVoiceTransform);
-        SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeVoiceMessage>(OnChangeVoice);
-        // WD EDIT END
+        InitializeTTS();
     }
 
     private void OnTransformSpeakerName(Entity<VoiceMaskComponent> entity, ref InventoryRelayedEvent<TransformSpeakerNameEvent> args)
     {
         args.Args.VoiceName = GetCurrentVoiceName(entity);
         args.Args.SpeechVerb = entity.Comp.VoiceMaskSpeechVerb ?? args.Args.SpeechVerb;
+    }
+
+    private void OnLockToggled(Entity<VoiceMaskComponent> ent, ref LockToggledEvent args)
+    {
+        if (args.Locked)
+            _actions.RemoveAction(ent.Comp.ActionEntity);
+        else if (_container.TryGetContainingContainer(ent.Owner, out var container))
+            _actions.AddAction(container.Owner, ref ent.Comp.ActionEntity, ent.Comp.Action, ent);
     }
 
     #region User inputs from UI
@@ -51,8 +60,6 @@ public sealed partial class VoiceMaskSystem : EntitySystem
             return;
 
         entity.Comp.VoiceMaskSpeechVerb = msg.Verb;
-        // verb is only important to metagamers so no need to log as opposed to name
-
         _popupSystem.PopupEntity(Loc.GetString("voice-mask-popup-success"), entity, msg.Actor);
 
         UpdateUI(entity);
@@ -73,33 +80,22 @@ public sealed partial class VoiceMaskSystem : EntitySystem
 
         UpdateUI(entity);
     }
-
-    private void OnSpeakerVoiceTransform(EntityUid uid, VoiceMaskComponent component, TransformSpeakerVoiceEvent args) =>
-        args.VoiceId = component.VoiceId;
-
-    private void OnChangeVoice(Entity<VoiceMaskComponent> entity, ref VoiceMaskChangeVoiceMessage msg)
-    {
-        if (msg.Voice is { } id && !_proto.HasIndex<TTSVoicePrototype>(id))
-            return;
-
-        entity.Comp.VoiceId = msg.Voice;
-        _adminLogger.Add(LogType.Action, LogImpact.Medium, $"{ToPrettyString(msg.Actor):player} set voice ID of {ToPrettyString(entity):mask}: {entity.Comp.VoiceId}");
-
-        _popupSystem.PopupEntity(Loc.GetString("voice-mask-voice-popup-success"), entity);
-
-        UpdateUI(entity);
-    }
     #endregion
 
     #region UI
     private void OnEquip(EntityUid uid, VoiceMaskComponent component, ClothingGotEquippedEvent args)
     {
-        // WD EDIT START
-        if (component.Action == null)
+        if (_lock.IsLocked(uid) || component.Action == null)
             return;
-        // WD EDIT END
-        
+
         _actions.AddAction(args.Wearer, ref component.ActionEntity, component.Action, uid);
+        EnsureComp<VoiceMaskerComponent>(args.Wearer, out var maskerComponent);
+        maskerComponent.VoiceId = component.VoiceId;
+    }
+
+    private void OnUnequip(Entity<VoiceMaskComponent> ent, ref ClothingGotUnequippedEvent args)
+    {
+        RemCompDeferred<VoiceMaskerComponent>(args.Wearer);
     }
 
     private void OpenUI(VoiceMaskSetNameEvent ev)
@@ -119,7 +115,8 @@ public sealed partial class VoiceMaskSystem : EntitySystem
     private void UpdateUI(Entity<VoiceMaskComponent> entity)
     {
         if (_uiSystem.HasUi(entity, VoiceMaskUIKey.Key))
-            _uiSystem.SetUiState(entity.Owner, VoiceMaskUIKey.Key, new VoiceMaskBuiState(GetCurrentVoiceName(entity), entity.Comp.VoiceId, entity.Comp.VoiceMaskSpeechVerb)); // WD EDIT
+            _uiSystem.SetUiState(entity.Owner, VoiceMaskUIKey.Key,
+                new VoiceMaskBuiState(GetCurrentVoiceName(entity), entity.Comp.VoiceId, entity.Comp.VoiceMaskSpeechVerb));
     }
     #endregion
 
