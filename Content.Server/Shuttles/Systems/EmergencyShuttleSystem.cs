@@ -550,41 +550,55 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
             return;
         }
 
-        var map = _mapSystem.CreateMap(out var mapId);
-        if (!_loader.TryLoadGrid(mapId, mapPath, out var grid))
+        if (!_loader.TryLoadMap(mapPath, out var map, out var grids))
         {
-            Log.Error($"Failed to set up centcomm grid!");
+            Log.Error($"Failed to set up centcomm map from {mapPath}!");
             return;
         }
 
-        if (!Exists(map))
+        if (map is null || grids is null || grids.Count == 0)
+        {
+            Log.Error($"Centcomm map {mapPath} did not contain any grids.");
+            if (map != null)
+                QueueDel(map.Value.Owner);
+            return;
+        }
+
+        if (grids.Count > 1)
+        {
+            Log.Warning($"Centcomm map {mapPath} contained multiple grids; using the first one.");
+        }
+
+        var grid = grids.First();
+        if (!Exists(map.Value.Owner))
         {
             Log.Error($"Failed to set up centcomm map!");
-            QueueDel(grid);
             return;
         }
 
-        if (!Exists(grid))
+        if (!Exists(grid.Owner))
         {
             Log.Error($"Failed to set up centcomm grid!");
-            QueueDel(map);
+            QueueDel(map.Value.Owner);
             return;
         }
 
-        var xform = Transform(grid.Value);
-        if (xform.ParentUid != map || xform.MapUid != map)
+        var xform = Transform(grid.Owner);
+        if (xform.ParentUid != map.Value.Owner || xform.MapUid != map.Value.Owner)
         {
             Log.Error($"Centcomm grid is not parented to its own map?");
-            QueueDel(map);
-            QueueDel(grid);
+            QueueDel(map.Value.Owner);
+            QueueDel(grid.Owner);
             return;
         }
 
-        component.MapEntity = map;
-        _metaData.SetEntityName(map, Loc.GetString("map-name-centcomm"));
-        component.Entity = grid;
-        _shuttle.TryAddFTLDestination(mapId, true, out _);
-        Log.Info($"Created centcomm grid {ToPrettyString(grid)} on map {ToPrettyString(map)} for station {ToPrettyString(station)}");
+        _mapSystem.InitializeMap(map.Value.Comp.MapId);
+
+        component.MapEntity = map.Value.Owner;
+        _metaData.SetEntityName(map.Value.Owner, Loc.GetString("map-name-centcomm"));
+        component.Entity = grid.Owner;
+        _shuttle.TryAddFTLDestination(map.Value.Comp.MapId, true, out _);
+        Log.Info($"Created centcomm grid {ToPrettyString(grid)} on map {ToPrettyString(map.Value.Owner)} for station {ToPrettyString(station)}");
     }
 
     public HashSet<EntityUid> GetCentcommMaps()
