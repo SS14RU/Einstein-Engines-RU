@@ -1,0 +1,20 @@
+<Document>
+# Практические советы
+
+- Держите на счету отделов запас минимум на две выплаты.
+- Возвращайте карты касс в сейфы после использования.
+- Ставьте терминалы так, чтобы их нельзя было выломать или обесточить.
+- Храните при себе картридж Bank и небольшую наличность на внеплановые платежи.
+
+  <Box>
+    <GuideEntityEmbed Entity="EconomyCartridgeBank" Init="true" Caption="Переводы из КПК"/>
+    <GuideEntityEmbed Entity="ThalerHolder" Init="true" Caption="Ваши наличные"/>
+  </Box>
+
+  <Box>
+    <GuideEntityEmbed Entity="SafeService" Init="true" Caption="Не доставайте счета станции из сейфа"/>
+    <GuideEntityEmbed Entity="ComputerEconomyManagement" Init="true" Caption="Проверяйте логи"/>
+  </Box>
+
+[color=#d1b46c][italic]Деньги станции — кровеносная система отделов. Пусть талеры ходят по здоровым артериям![/italic][/color]
+</Document>

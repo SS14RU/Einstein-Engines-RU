@@ -1,0 +1,49 @@
+- type: entity
+  id: GuideInsuranceIconNonStatus
+  name: Иконка страховки — гражданская
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Textures/AWS/economy/insurance.rsi
+    layers:
+    - state: NonStatus
+
+- type: entity
+  id: GuideInsuranceIconCopper
+  name: Иконка страховки — бронзовая
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Textures/AWS/economy/insurance.rsi
+    layers:
+    - state: Copper
+
+- type: entity
+  id: GuideInsuranceIconSilver
+  name: Иконка страховки — серебряная
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Textures/AWS/economy/insurance.rsi
+    layers:
+    - state: Silver
+
+- type: entity
+  id: GuideInsuranceIconGold
+  name: Иконка страховки — золотая
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Textures/AWS/economy/insurance.rsi
+    layers:
+    - state: Gold
+
+- type: entity
+  id: GuideInsuranceIconPlatinum
+  name: Иконка страховки — платиновая
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: /Textures/AWS/economy/insurance.rsi
+    layers:
+    - state: Platinum

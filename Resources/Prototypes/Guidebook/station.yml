@@ -4,6 +4,7 @@
   text: "/ServerInfo/Guidebook/SpaceStation14.xml"
   children:
   - Jobs
+  - Economy
   - Survival
   - Antagonists
   - Glossary
@@ -20,3 +21,39 @@
   id: Survival
   name: guide-entry-survival
   text: "/ServerInfo/Guidebook/Survival.xml"
+
+- type: guideEntry
+  id: Economy
+  name: guide-entry-economy
+  text: "/ServerInfo/Guidebook/Economy.xml"
+  children:
+  - EconomyPayroll
+  - EconomyInfrastructure
+  - EconomyInsurance
+  - EconomyThreats
+  - EconomyTips
+
+- type: guideEntry
+  id: EconomyPayroll
+  name: guide-entry-economy-payroll
+  text: "/ServerInfo/Guidebook/Economy/Payroll.xml"
+
+- type: guideEntry
+  id: EconomyInfrastructure
+  name: guide-entry-economy-infrastructure
+  text: "/ServerInfo/Guidebook/Economy/Infrastructure.xml"
+
+- type: guideEntry
+  id: EconomyInsurance
+  name: guide-entry-economy-insurance
+  text: "/ServerInfo/Guidebook/Economy/Insurance.xml"
+
+- type: guideEntry
+  id: EconomyThreats
+  name: guide-entry-economy-threats
+  text: "/ServerInfo/Guidebook/Economy/Threats.xml"
+
+- type: guideEntry
+  id: EconomyTips
+  name: guide-entry-economy-tips
+  text: "/ServerInfo/Guidebook/Economy/Tips.xml"

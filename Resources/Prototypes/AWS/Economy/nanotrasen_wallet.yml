@@ -108,6 +108,15 @@
   name: Платёжный счет "Станции"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: gold
+      color: "#3A3126"
+    - state: departmenthead
+      color: "#1B67A5"
+    - state: subdepartment
+      color: "#1B67A5"
+    - state: captain
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -126,6 +135,15 @@
   name: Платёжный счет "Инженерного отдела"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#3A3126"
+    - state: department
+      color: "#F39F27"
+    - state: subdepartment
+      color: "#F39F27"
+    - state: stationengineer
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -144,6 +162,15 @@
   name: Платёжный счет "Сервисного отдела"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#3A3126"
+    - state: department
+      color: "#58C800"
+    - state: subdepartment
+      color: "#58C800"
+    - state: headofpersonnel
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -161,6 +188,15 @@
   name: Платёжный счет "Службы безопасности"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#3A3126"
+    - state: department
+      color: "#CB0000"
+    - state: subdepartment
+      color: "#CB0000"
+    - state: securityofficer
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -178,6 +214,15 @@
   name: Платёжный счет "Медицинского отдела"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#3A3126"
+    - state: department
+      color: "#5B97BC"
+    - state: subdepartment
+      color: "#5B97BC"
+    - state: medicaldoctor
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -195,6 +240,15 @@
   name: Платёжный счет "Научного отдела"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#3A3126"
+    - state: department
+      color: "#C96DBF"
+    - state: subdepartment
+      color: "#C96DBF"
+    - state: scientist
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -212,6 +266,15 @@
   name: Платёжный счет "Отдела снабжения"
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#3A3126"
+    - state: department
+      color: "#B18644"
+    - state: subdepartment
+      color: "#B18644"
+    - state: cargotechnician
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -230,6 +293,15 @@
   description: ТВОЙ БОГ
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: centcom
+      color: "#1D1915"
+    - state: departmenthead
+      color: "#1B67A5"
+    - state: subdepartment
+      color: "#1B67A5"
+    - state: cc
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -247,6 +319,15 @@
   description: Счет для оплаты напитков для клиентов.
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#695441"
+    - state: department
+      color: "#58C800"
+    - state: subdepartment
+      color: "#58C800"
+    - state: bartender
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -265,6 +346,15 @@
   description: Счет для оплаты продуктов для клиентов.
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#695441"
+    - state: department
+      color: "#58C800"
+    - state: subdepartment
+      color: "#58C800"
+    - state: cook
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -283,6 +373,15 @@
   description: Счет для оплаты семян.
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#695441"
+    - state: department
+      color: "#58C800"
+    - state: subdepartment
+      color: "#58C800"
+    - state: botanist
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -301,6 +400,15 @@
   description: Счет для оплаты химических реагентов.
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#695441"
+    - state: department
+      color: "#5B97BC"
+    - state: subdepartment
+      color: "#5B97BC"
+    - state: chemist
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder
@@ -319,6 +427,15 @@
   description: Счет для оплаты медицинских расходников.
   suffix: Economy
   components:
+  - type: Sprite
+    layers:
+    - state: default
+      color: "#695441"
+    - state: department
+      color: "#5B97BC"
+    - state: subdepartment
+      color: "#5B97BC"
+    - state: paramedic
   - type: EconomyAccountHolder
     accountIdByProto: Nanotrasen
     moneyHolderEntId: ThalerHolder

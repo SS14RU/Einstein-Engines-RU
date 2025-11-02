@@ -1,0 +1,37 @@
+<Document>
+# Терминалы и аппараты
+
+## Банкоматы и терминалы
+- [bold]Банкомат[/bold] показывает баланс, выдаёт наличные и переводит талеры.
+- Терминалы отделов привязаны к конкретным счетам и отображают выставленный платёж.
+- PDA-картридж «Bank» позволяет переводить деньги в поле.
+
+  <Box>
+    <GuideEntityEmbed Entity="BankATM" Init="true" Caption="Банкомат"/>
+    <GuideEntityEmbed Entity="ServiceTerminal" Init="true" Caption="Сервисный терминал"/>
+    <GuideEntityEmbed Entity="SecurityTerminal" Init="true" Caption="Терминал ДШ"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="EngineeringTerminal" Init="true" Caption="Инженерия"/>
+    <GuideEntityEmbed Entity="ScienceTerminal" Init="true" Caption="Наука"/>
+    <GuideEntityEmbed Entity="MedicalTerminal" Init="true" Caption="Медицина"/>
+    <GuideEntityEmbed Entity="CargoTerminal" Init="true" Caption="Карго"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="CCTerminal" Init="true" Caption="Центком"/>
+    <GuideEntityEmbed Entity="EconomyCartridgeBank" Init="true" Caption="Картридж Bank"/>
+    <GuideEntityEmbed Entity="ThalerHolder" Init="true" Caption="Резерв наличных"/>
+  </Box>
+
+## Логи и аудит
+- Все операции (снятия, переводы, покупки, премии) попадают в лог.
+- Консоль логов доступна капитану и службе безопасности.
+- Инспектируйте сейфы: физические карты счётов не менее важны, чем цифра в терминале.
+
+  <Box>
+    <GuideEntityEmbed Entity="ComputerLogs" Init="true" Caption="Консоль логов"/>
+    <GuideEntityEmbed Entity="SafeEconomy" Init="true" Caption="Проверка сейфов"/>
+    <GuideEntityEmbed Entity="ToyFigurineDetective" Init="true" Caption="Аудит СБ"/>
+  </Box>
+
+</Document>

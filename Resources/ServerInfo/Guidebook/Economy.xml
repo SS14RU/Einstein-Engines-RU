@@ -1,0 +1,41 @@
+<Document>
+# Экономика станции
+Экономика держится на талерах, ведомственных счетах и том, как внимательно экипаж следит за оборудованием, привязанным к финансированию. Разобравшись в системе, вы сможете без сбоев выдавать зарплаты, финансировать отделы и отлавливать злоупотребления.
+
+## Валюта и счета
+- Основная валюта — [color=#85bb65]талер (₮)[/color]. Наличные хранятся в талер-холдерах, которые можно пополнять и передавать.
+- К каждой банковской карте привязан счёт формата NT-XXXX; префикс NT- подставляется автоматически при переводах.
+- У отделов свои счета: [bold]NT-Command[/bold], [bold]NT-Engineering[/bold], [bold]NT-Service[/bold], [bold]NT-Security[/bold], [bold]NT-Medical[/bold], [bold]NT-Science[/bold], [bold]NT-Cargo[/bold]. Баланс пополняется премиями, продажами и контрактами.
+- Кассы баров, кухни, химии и других служб имеют отдельные карты и хранятся в командных сейфах.
+
+  <Box>
+    <GuideEntityEmbed Entity="IDCard-NT-Command" Init="false" Caption="Станция (Command)"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Engineering" Init="false" Caption="Инженерия"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Service" Init="false" Caption="Сервис"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Security" Init="false" Caption="Безопасность"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="IDCard-NT-Medical" Init="false" Caption="Медицина"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Science" Init="false" Caption="Наука"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Cargo" Init="false" Caption="Снабжение"/>
+    <GuideEntityEmbed Entity="IDCard-NT-CentCom" Init="false" Caption="ЦентКом"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="IDCard-NT-Service-B" Init="false" Caption="Касса бара"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Service-K" Init="false" Caption="Касса кухни"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="IDCard-NT-Service-H" Init="false" Caption="Касса гидропоники"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Medical-C" Init="false" Caption="Касса химии"/>
+    <GuideEntityEmbed Entity="IDCard-NT-Medical-M" Init="false" Caption="Касса медотдела"/>
+  </Box>
+
+## Навигация по системе
+- [textlink="Зарплаты и премии" link="EconomyPayroll"] — таблица выплат, множители ЦК и работа с консолью управления.
+- [textlink="Терминалы и аппараты" link="EconomyInfrastructure"] — банкоматы, отделовские терминалы, логи и ценовые ориентиры вендингов.
+- [textlink="Страхование" link="EconomyInsurance"] — тарифы, терминал страхования и значение иконок на HUD.
+- [textlink="Финансовые угрозы" link="EconomyThreats"] — антагонисты, взломанные банкоматы и порядок реагирования.
+- [textlink="Практические советы" link="EconomyTips"] — быстрые рекомендации, чтобы отделы не остались без талеров.
+
+[italic]Ищете конкретный инструмент? Используйте ссылки выше или оглавление справа, чтобы перейти к нужному разделу.[/italic]
+</Document>
