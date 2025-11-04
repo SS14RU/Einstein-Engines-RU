@@ -1,9 +1,9 @@
 ﻿humanoid-profile-editor-employer-label = Работодатель
 
-character-employer-requirement = Вам{ ->
+character-employer-requirement = Вам{$inverted ->
     [true]{" "}нельзя
     *[other]{""}
-} иметь один из следующих вариантов трудоустройства: {}
+} иметь один из следующих вариантов трудоустройства: {$employers}
 
 employer_name_nanotrasen = Нанотрейзен
 employer_name_nanotrasen_command = Командование Нанотрейзен
