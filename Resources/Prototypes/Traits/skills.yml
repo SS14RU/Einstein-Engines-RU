@@ -54,11 +54,11 @@
       traits:
         - LightweightDrunk
         - LiquorLifeline
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Dwarf
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Dwarf
+        # - IPC
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -80,11 +80,11 @@
       traits:
         - LightweightDrunk
         - HeavyweightDrunk
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Dwarf
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Dwarf
+        # - IPC
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -125,7 +125,7 @@
       inverted: true
       species:
         - Vulpkanin
-        - IPC
+        -# - IPC
 
 - type: trait
   id: ParkourTraining
@@ -139,10 +139,10 @@
         - SnailPaced
         - BadKnees
         - WheelchairBound
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Diona
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Diona
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -176,10 +176,10 @@
   category: Auditory
   points: -1
   requirements:
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Harpy
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Harpy
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -194,11 +194,12 @@
   id: LyreBird
   category: Auditory
   points: -3
+  enable: false
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Harpy
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Harpy
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -230,20 +231,21 @@
       species:
         - Felinid
         - Tajaran
-        - Harpy
+        -# - Harpy
 
 - type: trait
   id: AnomalousPositronics
   category: Psionics
   points: -4
+  enable: false
   functions:
     - !type:TraitRemoveComponent
       components:
         - type: PsionicInsulation
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
 
 # - type: trait
 #   id: AnimalFriend
@@ -292,4 +294,5 @@
       - Paramedic
       - Brigmedic
       - SeniorPhysician
+
 

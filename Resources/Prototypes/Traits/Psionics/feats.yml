@@ -20,7 +20,7 @@
         - !type:CharacterSpeciesRequirement
           inverted: true
           species:
-            - IPC
+            # - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics
@@ -28,7 +28,7 @@
       inverted: true
       species:
         - Oni
-        - Shadowkin
+        # - Shadowkin
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -57,7 +57,7 @@
         - !type:CharacterSpeciesRequirement
           inverted: true
           species:
-            - IPC
+            # - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics

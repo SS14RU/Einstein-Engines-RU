@@ -1,7 +1,7 @@
 - type: species
   id: Tajaran
   name: species-name-tajaran
-  roundStart: false # WD EDIT
+  roundStart: true
   prototype: MobTajaran
   # WD EDIT START
   bodyTypes:

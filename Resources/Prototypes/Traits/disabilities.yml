@@ -63,10 +63,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddComponent
       components:
@@ -132,10 +132,10 @@
       inverted: true
       lifepaths:
         - Clone
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddComponent
       components:
@@ -155,7 +155,7 @@
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
-        - IPC
+        # - IPC
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents
   functions:
@@ -172,10 +172,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddComponent
       components:
@@ -190,10 +190,10 @@
       inverted: true
       traits:
         - ParkourTraining
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Diona
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Diona
   functions:
     - !type:TraitAddComponent
       components:
@@ -216,10 +216,10 @@
         - ParkourTraining
         - SnailPaced
         - WheelchairBound
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Diona
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Diona
   functions:
     - !type:TraitAddComponent
       components:
@@ -239,10 +239,10 @@
         - ParkourTraining
         - Sluggish
         - WheelchairBound
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Diona
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Diona
   functions:
     - !type:TraitAddComponent
       components:
@@ -261,12 +261,12 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
-        - Lamia
-        - Plasmaman
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
+        # - Lamia
+        # - Plasmaman
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -287,12 +287,12 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
-        - Lamia
-        - Plasmaman
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
+        # - Lamia
+        # - Plasmaman
   functions:
     - !type:TraitAddComponent
       components:
@@ -311,7 +311,7 @@
       inverted: true
       species:
         - Vulpkanin # This trait functions exactly as-is for the Vulpkanin trait.
-        - Shadowkin
+        # - Shadowkin
         - Tajaran
     - !type:CharacterTraitRequirement
       inverted: true

@@ -2,10 +2,11 @@
   id: StudioVisor
   category: Visual
   points: -1
+  enable: false
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddComponent
       components:

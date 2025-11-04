@@ -347,7 +347,7 @@ trait-description-TemperatureTolerance =
     in conditions just slightly below freezing, such as the inside of a kitchen fridge,
     or the sunlit mountainside of the famous Glacier station.
 
-trait-name-Talons = Talons
+trait-name-Talons = Piercing Claws
 trait-description-Talons =
     Your fingertips have been replaced with piercing talons.
     These could come from gene modifications, vatgrown implants,
@@ -355,7 +355,7 @@ trait-description-Talons =
     Your unarmed melee attacks deal Piercing damage instead of the standard damage type for your species.
     This has no effect on damage dealt with any form of armed melee.
 
-trait-name-Claws = Claws
+trait-name-Claws = Slashing Claws
 trait-description-Claws =
     Your fingertips have been replaced with sharp claws.
     These could come from gene modifications, vatgrown implants,

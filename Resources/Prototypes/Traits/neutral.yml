@@ -117,12 +117,13 @@
  # slots: 0
  # itemGroupSlots: 0
   category: TraitsSpeechAccents
+  enable: false
   requirements:
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Plasmaman
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Plasmaman
   functions:
     - !type:TraitAddComponent
       components:
@@ -134,7 +135,7 @@
   requirements:
     - !type:CharacterSpeciesRequirement
       species:
-        - Harpy
+        -# - Harpy
         - Vulpkanin
   functions:
     - !type:TraitRemoveComponent
@@ -190,10 +191,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddMoodlets
       moodEffects:
@@ -260,3 +261,4 @@
     - !type:TraitRemoveComponent
       components:
         - type: Mood
+

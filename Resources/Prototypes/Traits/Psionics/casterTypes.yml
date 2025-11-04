@@ -24,7 +24,7 @@
         - !type:CharacterSpeciesRequirement
           inverted: true
           species:
-            - IPC
+            # - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics
@@ -55,7 +55,7 @@
         - !type:CharacterSpeciesRequirement
           inverted: true
           species:
-            - IPC
+            # - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics
@@ -93,7 +93,7 @@
         - !type:CharacterSpeciesRequirement
           inverted: true
           species:
-            - IPC
+            # - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics

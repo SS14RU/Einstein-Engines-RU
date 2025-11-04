@@ -1,9 +1,9 @@
 ﻿humanoid-profile-editor-employer-label = Employer
 
-character-employer-requirement = You must{$inverted ->
-    [true]{" "}not
-    *[other]{""}
-} be employed by one of these: {$employers}
+# character-employer-requirement = You must{$inverted ->
+#     [true]{" "}not
+#     *[other]{""}
+# } be employed by one of these: {$employers}
 
 employer_name_nanotrasen = NanoTrasen
 employer_name_nanotrasen_command = NanoTrasen Command

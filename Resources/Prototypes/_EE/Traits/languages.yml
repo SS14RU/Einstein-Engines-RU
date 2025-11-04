@@ -1,7 +1,8 @@
 - type: trait
   id: SiikMaas
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -26,8 +27,9 @@
 
 - type: trait
   id: NalRasan
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -45,8 +47,9 @@
 
 - type: trait
   id: SiikTajr
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -2
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -64,8 +67,9 @@
 
 - type: trait
   id: YaSsa
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -2
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -83,8 +87,9 @@
 
 - type: trait
   id: Delvahii
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -2
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -102,18 +107,19 @@
 
 - type: trait
   id: Moffic
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Harpy
-        - Chitinid
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Harpy
+        # - Chitinid
+        # - IPC
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
@@ -123,21 +129,23 @@
 
 - type: trait
   id: Chittin
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Harpy
-        - Moth
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Harpy
+        # - Moth
+        # - IPC
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
         - Chittin
       languagesUnderstood:
         - Chittin
+

@@ -8,10 +8,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -33,10 +33,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -58,10 +58,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -84,10 +84,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -112,11 +112,11 @@
       inverted: true
       traits:
         - Lethargy
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Oni
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     - Oni
+    #     # - IPC
   functions:
     - !type:TraitModifyStamina
       staminaModifier: 10
@@ -158,10 +158,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -183,10 +183,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -352,7 +352,7 @@
       inverted: true
       species:
         - Vulpkanin # This trait functions exactly as-is for the Vulpkanin trait.
-        - Plasmaman # Plasmamen have cold immunity so this trait is unnecessary
+        # - Plasmaman # Plasmamen have cold immunity so this trait is unnecessary
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -368,12 +368,12 @@
   category: Physical
   points: 0
   requirements:
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Harpy # Harpies already have talons
-        - Arachnid # Apparently they have a "piercing" bite
-        - Xelthia # Talons don't make sense on tentacle arms
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     # - Harpy # Harpies already have talons
+    #     # - Arachnid # Apparently they have a "piercing" bite
+    #     # - Xelthia # Talons don't make sense on tentacle arms
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -405,9 +405,9 @@
       species:
         - Felinid # Felinids already have cat claws.
         - Tajaran # Tajaran also have cat claws
-        - Reptilian # Reptilians also have cat claws.
-        - Shadowkin # Shadowkins also have claws.
-        - Xelthia # Claws don't make sense on tentacle arms
+        # - Reptilian # Reptilians also have cat claws.
+        # - Shadowkin # Shadowkins also have claws.
+        # - Xelthia # Claws don't make sense on tentacle arms
         # - Vulpkanin # Vulpkanin have "Blunt" claws. One could argue this trait "Sharpens" their claws.
     - !type:CharacterTraitRequirement
       inverted: true
@@ -439,13 +439,13 @@
       species:
         - Human
         - Oni
-        - SlimePerson
-        - Diona
-        - Dwarf
-        - Arachne
-        - IPC # Other species could justify getting this trait for Blunt stamina damage,
+        # - SlimePerson
+        # - Diona
+        # - Dwarf
+        # - Arachne
+        # - IPC # Other species could justify getting this trait for Blunt stamina damage,
               # but 6 blunt -> 5 blunt is a straight up downgrade.
-        - Xelthia # Their tentacles aren't really weapons probably
+        # - Xelthia # Their tentacles aren't really weapons probably
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -480,10 +480,10 @@
       traits:
         - Claws
         - Talons
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Xelthia # this would fall off
+    # - !type:CharacterSpeciesRequirement
+    #   inverted: true
+    #   species:
+    #     - Xelthia # this would fall off
   functions:
     - !type:TraitModifyUnarmed
       flatDamageIncrease:
@@ -499,14 +499,14 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Arachnid
-        - Arachne
-        - Shadowkin
-        - IPC
-        - Xelthia # this would fall off
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Arachnid
+        # - Arachne
+        # - Shadowkin
+        # - IPC
+        # - Xelthia # this would fall off
   functions:
     - !type:TraitAddComponent
       components:
@@ -539,10 +539,10 @@
       inverted: true
       traits:
         - BionicPryArm
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Xelthia # this would fall off
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Xelthia # this would fall off
   functions:
     - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Arm
@@ -572,7 +572,7 @@
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -627,7 +627,7 @@
     - !type:CharacterSpeciesRequirement
         inverted: true
         species:
-          - IPC
+          # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -817,7 +817,7 @@
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -843,7 +843,7 @@
     - !type:CharacterSpeciesRequirement
       inverted: true
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -906,9 +906,9 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
   functions: # TODO: Code Platelet factories as an actual obtainable implant, and replace this with TraitAddImplant
     - !type:TraitReplaceComponent
       components:
@@ -1014,7 +1014,7 @@
   #     - Dignitary # WD EDIT
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1040,7 +1040,7 @@
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1072,7 +1072,7 @@
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1108,7 +1108,7 @@
 #         - Dignitary - WD EDIT
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1149,7 +1149,7 @@
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1173,7 +1173,7 @@
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1240,10 +1240,10 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
   functions:
   - !type:TraitAddComponent
     components:
@@ -1269,10 +1269,10 @@
       inverted: true
       traits:
         - BionicArm
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Xelthia # this would fall off
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Xelthia # this would fall off
   functions:
     - !type:TraitCyberneticLimbReplacement
       removeBodyPart: Arm
@@ -1295,9 +1295,9 @@
   category: Physical
   points: -4
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddArmor
       damageModifierSets:
@@ -1308,9 +1308,9 @@
   category: Physical
   points: -5
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
   functions:
     - !type:TraitAddComponent
       components:
@@ -1329,7 +1329,7 @@
   requirements:
     - !type:CharacterSpeciesRequirement
       species:
-        - IPC
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -1372,7 +1372,7 @@
   requirements:
     - !type:CharacterSpeciesRequirement
       species:
-        - Reptilian
+        # - Reptilian
     - !type:CharacterHeightRequirement
       max: 150
     - !type:CharacterWidthRequirement
@@ -1395,9 +1395,9 @@
   category: Physical
   points: -2
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Reptilian
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Reptilian
   functions:
     - !type:TraitAddComponent
       components:

@@ -12,11 +12,11 @@
       traits:
         - HeavyweightDrunk
         - LiquorLifeline
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Dwarf
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Dwarf
+        # - IPC
   functions:
     - !type:TraitAddComponent
       components:
@@ -47,8 +47,9 @@
 
 - type: trait
   id: ForeignerLight
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 2
+  enable: false
   requirements:
     - !type:CharacterTraitRequirement
       inverted: true
@@ -68,8 +69,9 @@
 
 - type: trait
   id: Foreigner
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 4
+  enable: false
   requirements: # TODO: Add a requirement to know at least 1 non-gc language
     - !type:CharacterTraitRequirement
       inverted: true

@@ -1,7 +1,8 @@
 - type: trait
   id: SignLanguage
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -20,8 +21,9 @@
 
 - type: trait
   id: SolCommon
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 0
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -46,17 +48,18 @@
 
 - type: trait
   id: Tradeband
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 0
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Harpy
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Harpy
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
@@ -66,8 +69,9 @@
 
 - type: trait
   id: Freespeak
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 0
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   # requirements:
@@ -82,8 +86,9 @@
 
 - type: trait
   id: Elyran
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 0
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements: []
@@ -104,8 +109,9 @@
 
 - type: trait
   id: ValyrianStandard
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
@@ -117,10 +123,10 @@
     #   nationalities:
     #     - Valyrian
     #AWS-end
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
-        - Harpy
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - Harpy
   functions:
     - !type:TraitModifyLanguages
       languagesSpoken:
@@ -130,8 +136,9 @@
 
 - type: trait
   id: NovuNederic
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: 0
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   # requirements:
@@ -152,14 +159,15 @@
 
 - type: trait
   id: Azaziba
-  category: TraitsSpeechLanguages
+  category: TraitsHidden
   points: -1
+  enable: false
   # slots: 1
   # itemGroupSlots: 0
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Reptilian
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Reptilian
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
   functions:
@@ -168,3 +176,4 @@
         - Azaziba
       languagesUnderstood:
         - Azaziba
+

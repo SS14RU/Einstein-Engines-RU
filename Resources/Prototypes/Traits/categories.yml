@@ -24,12 +24,13 @@
   id: Speech
   root: true
   subCategories:
-    - TraitsSpeechUncategorized
+    # - TraitsSpeechUncategorized # hidden to avoid empty tab
     - TraitsSpeechAccents
-    - TraitsSpeechLanguages
+    # - TraitsSpeechLanguages # hidden while language traits disabled
 
 - type: traitCategory
   id: TraitsSpeechUncategorized
+  root: false
 
 - type: traitCategory
   id: TraitsSpeechAccents
@@ -43,4 +44,7 @@
 
 - type: traitCategory
   id: Language
-  root: true
+  root: false
+
+- type: traitCategory
+  id: TraitsHidden

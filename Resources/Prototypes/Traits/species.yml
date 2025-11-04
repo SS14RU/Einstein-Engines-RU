@@ -2,6 +2,7 @@
   id: Swashbuckler
   category: Physical
   points: 0
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -12,9 +13,9 @@
             Slash: 1.35
             Piercing: 1.25
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Oni
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Oni
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -27,6 +28,7 @@
   id: Spearmaster
   category: Physical
   points: 0
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -37,9 +39,9 @@
             Slash: 1.25
             Piercing: 1.35
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Oni
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Oni
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -51,6 +53,7 @@
   id: WeaponsGeneralist
   category: Physical
   points: 0
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -61,9 +64,9 @@
             Slash: 1.30
             Piercing: 1.30
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Oni
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Oni
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -75,6 +78,7 @@
   id: Mystic
   category: Mental
   points: 0
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -87,9 +91,9 @@
       - type: PotentiaModifier
         potentiaMultiplier: 1.15
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Oni
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Oni
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -112,6 +116,7 @@
   id: ShadowkinBlackeye
   category: Mental
   points: 5
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -121,14 +126,15 @@
       components:
         - type: Psionic
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Shadowkin
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Shadowkin
 
 - type: trait
   id: MothFlight
   category: Physical
   points: -2
+  enable: false
   functions:
     - !type:TraitAddComponent
       components:
@@ -137,9 +143,9 @@
           flapInterval: 0.75
           needsHands: false
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - Moth
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - Moth
     - !type:CharacterWeightRequirement # big moffs are too heavy to fly
       max: 60
 
@@ -147,6 +153,7 @@
   id: IPCInefficientCogitator
   category: Physical
   points: 3
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -164,14 +171,15 @@
             1: 0.45
             0: 0.00
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
 
 - type: trait
   id: IPCBrittleBoneDisease
   category: Physical
   points: 6
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -182,27 +190,29 @@
         - type: DeadModifier
           deadThresholdModifier: -60
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
 
 - type: trait
   id: IPCFragileCircuits
   category: Physical
   points: 4 # shock is rare as-is, maybe raise if it becomes more common
+  enable: false
   functions:
     - !type:TraitAddComponent
       components:
         - type: KillOnDamage
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
 
 - type: trait
   id: IPCFaultyWaterproofing
   category: Physical
   points: 3
+  enable: false
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -230,10 +240,11 @@
                   messages: [ "faultyWaterproofing-damage-popup" ]
                   probability: 1
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
-        - IPC
+    # - !type:CharacterSpeciesRequirement
+      # species:
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
         - HardenedCircuits
+
