@@ -1,4 +1,4 @@
-character-requirement-desc = Requirements:
+﻿character-requirement-desc = Requirements:
 
 ## Job
 character-job-requirement = You must{$inverted ->
@@ -10,6 +10,11 @@ character-department-requirement = You must{$inverted ->
     [true]{" "}not
     *[other]{""}
 } be in one of these departments: {$departments}
+
+character-employer-requirement = You must{$inverted ->
+    [true]{" "}not
+    *[other]{""}
+} be employed by one of these: {$employers}
 
 character-antagonist-requirement = You must{$inverted ->
     [true]{" "}not

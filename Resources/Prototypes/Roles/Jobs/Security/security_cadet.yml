@@ -15,10 +15,7 @@
     - BrittleBoneDisease
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
-    - EastOrionCompany
+    - Government
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
   supervisors: job-supervisors-security
@@ -37,7 +34,6 @@
     charges: 6
   - !type:ModifyEnvirohelmSpecial
     powerCell: PowerCellHigh
-
 - type: startingGear
   id: SecurityCadetGear
   subGear:

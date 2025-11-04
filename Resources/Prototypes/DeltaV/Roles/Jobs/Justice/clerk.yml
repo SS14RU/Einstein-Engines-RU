@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: Clerk
   name: job-name-clerk
   description: job-description-clerk
@@ -16,8 +16,7 @@
       min: 36000 # 10 hours
     - !type:CharacterEmployerRequirement
       employers:
-      - IdrisIncorporated
-      - NanoTrasen
+      - Government
 
 
   startingGear: ClerkGear

@@ -25,9 +25,9 @@
   requirements:
     - !type:CharacterEmployerRequirement
       employers:
-      - ZavodskoiInterstellar
-      - PMCG
       - NanoTrasen
+      - Government
+      - Contractors
     # WD EDIT START
     - !type:CharacterOverallTimeRequirement
       min: 3600

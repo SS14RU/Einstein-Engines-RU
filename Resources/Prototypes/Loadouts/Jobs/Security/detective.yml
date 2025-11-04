@@ -80,7 +80,7 @@
         - Detective
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingOuterJacketZavDetective
 
@@ -101,7 +101,7 @@
         - Detective
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingUniformJumpsuitZavodDetective
 
@@ -119,6 +119,6 @@
         - Detective
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingUniformJumpsuitZavodDetectiveAlt

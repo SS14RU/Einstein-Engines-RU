@@ -386,7 +386,7 @@
         - AtmosphericTechnician
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingUniformJumpsuitZavodAtmos
 
@@ -420,6 +420,6 @@
         - AtmosphericTechnician
     - !type:CharacterEmployerRequirement
       employers:
-        - HephaestusIndustries
+        - Contractors
   items:
     - ClothingUniformJumpsuitHephAtmos

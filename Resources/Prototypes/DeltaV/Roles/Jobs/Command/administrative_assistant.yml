@@ -32,8 +32,9 @@
         - ForeignerLight
     - !type:CharacterEmployerRequirement
       employers:
-      - IdrisIncorporated
       - NanoTrasen
+      - Government
+      - Contractors
   startingGear: AdminAssistantGear
   icon: "JobIconAdminAssitant"
   supervisors: job-supervisors-command

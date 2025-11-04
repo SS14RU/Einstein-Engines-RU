@@ -20,10 +20,7 @@
     - BrittleBoneDisease
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
-    - EastOrionCompany
+    - Government
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 3600
@@ -46,7 +43,6 @@
     charges: 6
   - !type:ModifyEnvirohelmSpecial
     powerCell: PowerCellHigh
-
 - type: startingGear
   id: SecurityOfficerGear
   subGear:
@@ -64,7 +60,6 @@
   storage:
     back:
     - WeaponEnergyGunPistolSecurity # WD EDIT
-
 - type: startingGear
   id: SecurityOfficerPlasmamanGear
   parent: BasePlasmamanSecurityGear

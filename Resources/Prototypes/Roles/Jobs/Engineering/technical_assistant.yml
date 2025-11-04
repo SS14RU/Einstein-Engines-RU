@@ -13,9 +13,8 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - HephaestusIndustries
-    - ZavodskoiInterstellar
-    - EinsteinEngines
+    - Government
+    - Contractors
     - NanoTrasen
 
 - type: startingGear

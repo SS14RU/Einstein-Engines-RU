@@ -10,7 +10,7 @@
   requirements:
     - !type:CharacterEmployerRequirement
       employers:
-      - Unemployed
+      - Contractors
 
 - type: lifepath
   id: SolRefugee

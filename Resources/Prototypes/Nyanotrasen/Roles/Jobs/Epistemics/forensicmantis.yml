@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: ForensicMantis
   name: job-name-mantis
   description: job-description-mantis
@@ -25,7 +25,6 @@
     - !type:CharacterEmployerRequirement
       employers:
       - NanoTrasen
-      - ZengHuPharmaceuticals
     - !type:CharacterItemGroupRequirement
       group: TraitsCasterType
   startingGear: ForensicMantisGear
@@ -83,3 +82,4 @@
     jumpsuit: ClothingUniformEnvirosuitMantis
     head: ClothingHeadEnvirohelmMantis
     gloves: ClothingHandsGlovesEnviroglovesWhite
+

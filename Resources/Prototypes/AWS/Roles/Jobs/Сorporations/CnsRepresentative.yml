@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: CnsRepresentative
   name: job-name-cns-representative
   description: job-description-cns-representative
@@ -15,9 +15,8 @@
         - ForeignerLight
         - Muted
     - !type:CharacterEmployerRequirement
-      inverted: true
       employers:
-      - Unemployed
+      - NanoTrasen
     - !type:CharacterOverallTimeRequirement
       min: 7200
   weight: 30
@@ -79,3 +78,5 @@
     jumpsuit: ClothingUniformEnvirosuitNanotrasenRepresentative
     head: ClothingHeadEnvirohelmNanotrasenRepresentative
     gloves: ClothingHandsGlovesEnviroglovesBlack
+
+

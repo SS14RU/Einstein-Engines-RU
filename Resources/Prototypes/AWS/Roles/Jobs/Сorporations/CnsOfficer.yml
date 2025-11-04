@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: CnsOfficer
   name: jon-name-cns-officer
   description: jon-description-cns-officer
@@ -25,7 +25,8 @@
         - BrittleBoneDisease
     - !type:CharacterEmployerRequirement
       employers:
-      - NanoTrasen # BSO works directly for centcomm, they are not a contractor.
+      - NanoTrasen
+      
     - !type:CharacterOverallTimeRequirement
       min: 7200
   weight: 20
@@ -87,3 +88,4 @@
     jumpsuit: ClothingUniformEnvirosuitBlueshield
     head: ClothingHeadEnvirohelmBlueshield
     gloves: ClothingHandsGlovesEnviroglovesBlack
+

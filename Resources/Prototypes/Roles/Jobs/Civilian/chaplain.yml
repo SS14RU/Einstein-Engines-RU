@@ -21,7 +21,7 @@
   - !type:CharacterEmployerRequirement
     inverted: true
     employers:
-    - Unemployed
+    - Contractors
   - !type:CharacterItemGroupRequirement
     group: TraitsCasterType
   startingGear: ChaplainGear

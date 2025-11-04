@@ -396,7 +396,71 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         return profile;
         // WD EDIT END
     }
+        //IH - start
+    public HashSet<ProtoId<JobPrototype>> GetBlockedJobs(IPrototypeManager prototypeManager, IConfigurationManager configurationManager)
+    {
+        var blocked = new HashSet<ProtoId<JobPrototype>>();
 
+        if (!configurationManager.GetCVar(CCVars.ContractorsEnabled)
+            || !configurationManager.GetCVar(CCVars.ContractorsCharacterRequirementsEnabled))
+            return blocked;
+
+        if (prototypeManager.TryIndex<NationalityPrototype>(Nationality, out var nationality))
+            blocked.UnionWith(nationality.BlockingJobs);
+
+        if (prototypeManager.TryIndex<EmployerPrototype>(Employer, out var employer))
+            blocked.UnionWith(employer.BlockingJobs);
+
+        if (prototypeManager.TryIndex<LifepathPrototype>(Lifepath, out var lifepath))
+            blocked.UnionWith(lifepath.BlockingJobs);
+
+        return blocked;
+    }
+
+    public bool IsJobBlockedByBackground(ProtoId<JobPrototype> jobId, IPrototypeManager prototypeManager, IConfigurationManager configurationManager)
+    {
+        return GetBlockedJobs(prototypeManager, configurationManager).Contains(jobId);
+    }
+
+    public FormattedMessage? GetBackgroundBlockedMessage(ProtoId<JobPrototype> jobId, IPrototypeManager prototypeManager, IConfigurationManager configurationManager)
+    {
+        if (!configurationManager.GetCVar(CCVars.ContractorsEnabled)
+            || !configurationManager.GetCVar(CCVars.ContractorsCharacterRequirementsEnabled))
+            return null;
+
+        var entries = new List<string>();
+
+        void AddEntry(string typeLoc, string? nameKey)
+        {
+            if (string.IsNullOrEmpty(nameKey))
+                return;
+
+            var type = Loc.GetString(typeLoc);
+            var name = Loc.GetString(nameKey);
+            entries.Add($"{type}: {name}");
+        }
+
+        if (prototypeManager.TryIndex<NationalityPrototype>(Nationality, out var nationality)
+            && nationality.BlockingJobs.Contains(jobId))
+            AddEntry("contractor-background-type-nationality", nationality.NameKey);
+
+        if (prototypeManager.TryIndex<EmployerPrototype>(Employer, out var employer)
+            && employer.BlockingJobs.Contains(jobId))
+            AddEntry("contractor-background-type-employer", employer.NameKey);
+
+        if (prototypeManager.TryIndex<LifepathPrototype>(Lifepath, out var lifepath)
+            && lifepath.BlockingJobs.Contains(jobId))
+            AddEntry("contractor-background-type-lifepath", lifepath.NameKey);
+
+        if (entries.Count == 0)
+            return null;
+
+        var message = Loc.GetString("contractor-background-job-blocked",
+            ("backgrounds", string.Join(", ", entries)));
+
+        return FormattedMessage.FromUnformatted(message);
+    }
+        //IH - end
     public HumanoidCharacterProfile WithName(string name) => new(this) { Name = name };
     public HumanoidCharacterProfile WithFlavorText(string flavorText) => new(this) { FlavorText = flavorText };
     public HumanoidCharacterProfile WithVoice(string voice) => new(this) { Voice = voice }; // WD EDIT
@@ -688,6 +752,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
                 JobPriority.High => true,
                 _ => false
             }));
+
+        foreach (var blockedJob in GetBlockedJobs(prototypeManager, configManager))
+            priorities.Remove(blockedJob);
 
         var hasHighPrio = false;
         foreach (var (key, value) in priorities)

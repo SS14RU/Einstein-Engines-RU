@@ -673,7 +673,7 @@
     - Prisoner
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
+    - Contractors
   items:
   - ClothingOuterJacketZavSecurity
 
@@ -695,7 +695,7 @@
     - Prisoner
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
+    - Contractors
   items:
   - ClothingOuterJacketZavSecurityAlt
 
@@ -911,7 +911,7 @@
     - Prisoner
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
+    - Contractors
   items:
   - ClothingUniformJumpsuitZavodSecurityOfficer
 
@@ -933,7 +933,7 @@
     - Prisoner
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
+    - Contractors
   items:
   - ClothingUniformJumpsuitZavodSecurityOfficerAlt1
 
@@ -955,7 +955,7 @@
     - Prisoner
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
+    - Contractors
   items:
   - ClothingUniformJumpsuitZavodSecurityOfficerAlt2
 
@@ -973,7 +973,7 @@
     - Detective
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
+    - Contractors
   items:
   - ClothingUniformJumpsuitZavodCadet
 
@@ -987,7 +987,7 @@
     group: LoadoutSecurityUniforms
   - !type:CharacterEmployerRequirement
     employers:
-    - EastOrionCompany
+    - Contractors
   - !type:CharacterJobRequirement # WWDP
     inverted: true
     jobs:
@@ -1008,7 +1008,7 @@
     group: LoadoutSecurityUniforms
   - !type:CharacterEmployerRequirement
     employers:
-    - EastOrionCompany
+    - Contractors
   - !type:CharacterJobRequirement # WWDP
     inverted: true
     jobs:

@@ -15,9 +15,7 @@
     - BrittleBoneDisease
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
+    - Government
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 7200
@@ -49,7 +47,6 @@
     charges: 8
   - !type:ModifyEnvirohelmSpecial
     powerCell: PowerCellHigh
-
 - type: startingGear
   id: HoSGear
   subGear:
@@ -71,7 +68,6 @@
     - TelescopicBaton
     - WeaponEnergyGunMultiphase
     # WD EDIT END
-
 - type: startingGear
   id: HoSPlasmamanGear
   parent: BasePlasmamanSecurityGear

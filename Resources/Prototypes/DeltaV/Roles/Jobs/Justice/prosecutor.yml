@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: Prosecutor
   name: job-name-prosecutor
   description: job-description-prosecutor
@@ -6,7 +6,7 @@
   requirements:
     - !type:CharacterEmployerRequirement
       employers:
-      - NanoTrasen
+      - Government
   startingGear: ProsecutorGear
   setPreference: false # WWDP disabled
   icon: "JobIconProsecutor"

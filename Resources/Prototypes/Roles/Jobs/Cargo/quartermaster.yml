@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: Quartermaster
   name: job-name-qm
   description: job-description-qm
@@ -12,9 +12,7 @@
     - Muted
   - !type:CharacterEmployerRequirement
     employers:
-    - OrionExpress
-    - IdrisIncorporated
-    - NanoTrasen
+    - Contractors
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 7200
@@ -71,3 +69,4 @@
     jumpsuit: ClothingUniformEnvirosuitQM
     head: ClothingHeadEnvirohelmQM
     gloves: ClothingHandsGlovesEnviroglovesCargo
+

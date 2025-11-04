@@ -1087,9 +1087,11 @@ namespace Content.Client.Lobby.UI
         /// </summary>
         public void RefreshJobs()
         {
+            RemoveBlockedJobPriorities();
             JobList.DisposeAllChildren();
             _jobCategories.Clear();
             _jobPriorities.Clear();
+            var activeProfile = Profile ?? HumanoidCharacterProfile.DefaultWithSpecies();
 
             // Get all displayed departments
             var departments = new List<DepartmentPrototype>();
@@ -1165,10 +1167,12 @@ namespace Content.Client.Lobby.UI
 
                     if (!_requirements.CheckJobWhitelist(job, out var reason))
                         selector.LockRequirements(reason);
+                    else if (activeProfile.GetBackgroundBlockedMessage(job.ID, _prototypeManager, _cfgManager) is { } backgroundMessage)
+                        selector.LockRequirements(backgroundMessage);
                     else if (!_characterRequirementsSystem.CheckRequirementsValid(
                         _roleSystem.GetJobRequirement(job) ?? new(),
                         job,
-                        Profile ?? HumanoidCharacterProfile.DefaultWithSpecies(),
+                        activeProfile,
                         _requirements.GetRawPlayTimeTrackers(),
                         _requirements.IsWhitelisted(),
                         job,
@@ -1462,6 +1466,7 @@ namespace Content.Client.Lobby.UI
         private void SetNationality(string newNationality)
         {
             Profile = Profile?.WithNationality(newNationality);
+            RemoveBlockedJobPriorities();
             UpdateCharacterRequired();
             IsDirty = true;
             ReloadProfilePreview();
@@ -1472,6 +1477,7 @@ namespace Content.Client.Lobby.UI
         private void SetEmployer(string newEmployer)
         {
             Profile = Profile?.WithEmployer(newEmployer);
+            RemoveBlockedJobPriorities();
             UpdateCharacterRequired();
             IsDirty = true;
             ReloadProfilePreview();
@@ -1482,11 +1488,25 @@ namespace Content.Client.Lobby.UI
         private void SetLifepath(string newLifepath)
         {
             Profile = Profile?.WithLifepath(newLifepath);
+            RemoveBlockedJobPriorities();
             UpdateCharacterRequired();
             IsDirty = true;
             ReloadProfilePreview();
             ReloadClothes(); // Lifepaths may have specific gear, reload the clothes
             UpdateLifepathDescription(newLifepath);
+        }
+
+        private void RemoveBlockedJobPriorities()
+        {
+            if (Profile is null)
+                return;
+
+            var blockedJobs = Profile.GetBlockedJobs(_prototypeManager, _cfgManager);
+            if (blockedJobs.Count == 0)
+                return;
+
+            foreach (var blockedJob in blockedJobs)
+                Profile = Profile.WithJobPriority(blockedJob, JobPriority.Never);
         }
 
         private void SetName(string newName)

@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: Lawyer
   name: job-name-lawyer
   description: job-description-lawyer
@@ -13,8 +13,7 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - IdrisIncorporated
-    - NanoTrasen
+    - Government
   special: # Goobstation - Everyone knows lawyers are soulless.
   - !type:AddComponentSpecial
     components:
@@ -46,3 +45,4 @@
     jumpsuit: ClothingUniformEnvirosuitEnviroslacks
     head: ClothingHeadEnvirohelmColorWhite
     gloves: ClothingHandsGlovesEnviroglovesWhite
+

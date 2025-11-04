@@ -108,7 +108,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
       employers:
-      - ZavodskoiInterstellar
+      - Contractors
   items:
     - ClothingOuterZiCorporateJacket
 
@@ -126,7 +126,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
       employers:
-      - EinsteinEngines
+      - Contractors
   items:
     - ClothingOuterEeCorporateJacket
 
@@ -144,7 +144,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
       employers:
-      - HephaestusIndustries
+      - Contractors
   items:
     - ClothingOuterHiCorporateJacket
 
@@ -162,7 +162,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
       employers:
-      - Interdyne
+      - Contractors
   items:
     - ClothingOuterIdCorporateJacket
 
@@ -180,7 +180,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
       employers:
-      - ZengHuPharmaceuticals
+      - Contractors
   items:
     - ClothingOuterZhCorporateJacket
 
@@ -200,7 +200,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
         employers:
-        - IdrisIncorporated
+        - Contractors
 
 - type: loadout
   id: LoadoutClothingOuterCorporateJacketOrionExpressCorporateLiaison
@@ -218,7 +218,7 @@
         - CnsRepresentative
     - !type:CharacterEmployerRequirement
         employers:
-        - OrionExpress
+        - Contractors
 
 # Shoes
 

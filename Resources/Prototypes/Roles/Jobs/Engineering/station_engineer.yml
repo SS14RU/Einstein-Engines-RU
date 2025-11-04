@@ -11,9 +11,8 @@
   # WD EDIT END
   - !type:CharacterEmployerRequirement
     employers:
-    - HephaestusIndustries
-    - ZavodskoiInterstellar
-    - EinsteinEngines
+    - Government
+    - Contractors
     - NanoTrasen
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement

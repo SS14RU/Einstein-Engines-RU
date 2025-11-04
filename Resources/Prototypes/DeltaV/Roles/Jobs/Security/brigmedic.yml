@@ -24,10 +24,9 @@
         - BrittleBoneDisease
     - !type:CharacterEmployerRequirement
       employers:
-      - ZavodskoiInterstellar
-      - Interdyne
-      - PMCG
       - NanoTrasen
+      - Government
+      - Contractors
     # WD EDIT START
     - !type:CharacterOverallTimeRequirement
       min: 3600

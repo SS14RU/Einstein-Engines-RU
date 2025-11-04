@@ -11,9 +11,9 @@
   # WD EDIT END
   - !type:CharacterEmployerRequirement
     employers:
-    - ZengHuPharmaceuticals
-    - Interdyne
     - NanoTrasen
+    - Government
+    - Contractors
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo

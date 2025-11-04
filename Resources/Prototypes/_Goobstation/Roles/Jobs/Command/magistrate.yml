@@ -19,8 +19,7 @@
         - Muted
     - !type:CharacterEmployerRequirement
       employers:
-      - IdrisIncorporated
-      - NanoTrasen
+      - Government
     - !type:CharacterOverallTimeRequirement # WWDP
       min: 7200
   weight: 20

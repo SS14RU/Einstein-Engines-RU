@@ -1,4 +1,4 @@
-# Best job.
+﻿# Best job.
 
 - type: job
   id: ChiefMedicalOfficer
@@ -14,9 +14,7 @@
     - Muted
   - !type:CharacterEmployerRequirement
     employers:
-    - ZengHuPharmaceuticals
-    - Interdyne
-    - NanoTrasen
+    - Contractors
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 7200
@@ -76,3 +74,4 @@
     jumpsuit: ClothingUniformEnvirosuitCMO
     head: ClothingHeadEnvirohelmCMO
     gloves: ClothingHandsGlovesEnviroglovesWhite
+

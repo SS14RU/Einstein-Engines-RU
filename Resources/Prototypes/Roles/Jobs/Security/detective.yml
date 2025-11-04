@@ -20,9 +20,7 @@
     - BrittleBoneDisease
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
-    - PMCG
-    - NanoTrasen
+    - Government
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 3600
@@ -46,7 +44,6 @@
     charges: 6
   - !type:ModifyEnvirohelmSpecial
     powerCell: PowerCellHigh
-
 - type: startingGear
   id: DetectiveGear
   subGear:
@@ -61,7 +58,6 @@
     id: DetectivePDA
     ears: ClothingHeadsetAltSecurityRegular
     belt: ClothingBeltHolsterFilled
-
 - type: startingGear
   id: DetectivePlasmamanGear
   parent: BasePlasmamanSecurityGear

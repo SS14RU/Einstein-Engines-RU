@@ -146,7 +146,7 @@
         - TechnicalAssistant
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingUniformJumpsuitZavodEngineerApprentice
 
@@ -180,6 +180,6 @@
         - TechnicalAssistant
     - !type:CharacterEmployerRequirement
       employers:
-        - HephaestusIndustries
+        - Contractors
   items:
     - ClothingUniformJumpsuitHephEngineerApprentice

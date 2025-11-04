@@ -15,8 +15,9 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - Interdyne
     - NanoTrasen
+    - Government
+    - Contractors
 
 - type: startingGear
   id: PsychologistGear

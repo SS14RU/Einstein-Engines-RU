@@ -6,9 +6,9 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - ZengHuPharmaceuticals
-    - Interdyne
     - NanoTrasen
+    - Government
+    - Contractors
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine

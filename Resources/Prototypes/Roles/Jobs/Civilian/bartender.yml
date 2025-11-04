@@ -11,9 +11,9 @@
   # WD EDIT END
   - !type:CharacterEmployerRequirement
     employers:
-    - IdrisIncorporated
     - NanoTrasen
-    - OrionExpress
+    - Government
+    - Contractors
   startingGear: BartenderGear
   icon: "JobIconBartender"
   supervisors: job-supervisors-hop

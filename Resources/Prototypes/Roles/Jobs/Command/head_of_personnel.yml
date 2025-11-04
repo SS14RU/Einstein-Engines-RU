@@ -12,8 +12,7 @@
     - Muted
   - !type:CharacterEmployerRequirement
     employers:
-    - NanoTrasen
-    - IdrisIncorporated
+    - Government
   weight: 10
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"

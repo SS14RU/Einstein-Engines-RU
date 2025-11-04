@@ -11,9 +11,9 @@
   # WD EDIT END
   - !type:CharacterEmployerRequirement
     employers:
-    - Interdyne
     - NanoTrasen
-    - ZengHuPharmaceuticals
+    - Government
+    - Contractors
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo

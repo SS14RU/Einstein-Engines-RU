@@ -238,7 +238,7 @@
         - StationEngineer
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingUniformJumpsuitZavodEngineer
 
@@ -274,6 +274,6 @@
         - StationEngineer
     - !type:CharacterEmployerRequirement
       employers:
-        - HephaestusIndustries
+        - Contractors
   items:
     - ClothingUniformJumpsuitHephEngineer

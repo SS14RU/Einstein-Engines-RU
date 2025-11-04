@@ -15,7 +15,7 @@
   - !type:CharacterEmployerRequirement
     inverted: true
     employers:
-    - Unemployed
+    - Contractors
 
 - type: startingGear
   id: ReporterGear

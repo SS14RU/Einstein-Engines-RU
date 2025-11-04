@@ -11,8 +11,8 @@
   # WD EDIT END
   - !type:CharacterEmployerRequirement
     employers:
-    - HephaestusIndustries
-    - EinsteinEngines
+    - Government
+    - Contractors
     - NanoTrasen
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
@@ -45,3 +45,4 @@
     jumpsuit: ClothingUniformEnvirosuitAtmos
     head: ClothingHeadEnvirohelmAtmos
     gloves: ClothingHandsGlovesEnviroglovesAtmos
+

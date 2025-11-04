@@ -13,7 +13,7 @@
     - Muted
   - !type:CharacterEmployerRequirement
     employers:
-    - NanoTrasen
+    - Government
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 7200

@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: ChiefEngineer
   name: job-name-ce
   description: job-description-ce
@@ -11,9 +11,7 @@
     - ForeignerLight
   - !type:CharacterEmployerRequirement
     employers:
-    - NanoTrasen
-    - ZavodskoiInterstellar
-    - HephaestusIndustries
+    - Contractors
   # WD EDIT START
   - !type:CharacterOverallTimeRequirement
     min: 7200
@@ -66,3 +64,4 @@
     jumpsuit: ClothingUniformEnvirosuitChiefEngineer
     head: ClothingHeadEnvirohelmChiefEngineer
     gloves: ClothingHandsGlovesEnviroglovesChiefEngineer
+

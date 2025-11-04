@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: SeniorResearcher
   name: job-name-senior-researcher
   description: job-description-senior-researcher
@@ -13,7 +13,6 @@
     - !type:CharacterEmployerRequirement
       employers:
       - NanoTrasen
-      - ZengHuPharmaceuticals
   startingGear: SeniorResearcherGear
   icon: "JobIconSeniorResearcher"
   supervisors: job-supervisors-rd
@@ -34,3 +33,4 @@
     id: SeniorResearcherPDA
     ears: ClothingHeadsetScience
     pocket1: BookPsionicsGuidebook
+

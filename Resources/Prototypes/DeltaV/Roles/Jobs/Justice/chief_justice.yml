@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: ChiefJustice
   name: job-name-chief-justice
   description: job-description-chief-justice
@@ -13,8 +13,7 @@
   requirements:
     - !type:CharacterEmployerRequirement
       employers:
-      - IdrisIncorporated
-      - NanoTrasen
+      - Government
   access:
   - Command
   - ChiefJustice
@@ -46,3 +45,4 @@
     ears: ClothingHeadsetAltJustice
     gloves: ClothingHandsGlovesColorWhite
     # Todo - pocket1: Gavel
+

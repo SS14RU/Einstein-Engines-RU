@@ -17,8 +17,8 @@
   - !type:CharacterEmployerRequirement
     employers:
     - NanoTrasen
-    - ZengHuPharmaceuticals
-    - EastOrionCompany
+    - Government
+    - Contractors
 
 - type: startingGear
   id: BotanistGear

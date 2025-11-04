@@ -1,4 +1,4 @@
-character-requirement-desc = Требования:
+﻿character-requirement-desc = Требования:
 
 ## Job
 character-job-requirement = Вы{$inverted ->
@@ -10,6 +10,11 @@ character-department-requirement = Вы{$inverted ->
     [true]{" "}не
     *[other]{""}
 } должны быть в одном из этих отделов: {$departments}
+
+character-employer-requirement = Вы{$inverted ->
+    [true]{" "}не
+    *[other]{""}
+} должны иметь одного из следующих работодателей: {$employers}
 
 
 character-antagonist-requirement = Вы{$inverted ->

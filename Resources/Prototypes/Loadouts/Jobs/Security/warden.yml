@@ -136,6 +136,6 @@
         - Warden
     - !type:CharacterEmployerRequirement
       employers:
-        - ZavodskoiInterstellar
+        - Contractors
   items:
     - ClothingUniformJumpsuitZavodWarden

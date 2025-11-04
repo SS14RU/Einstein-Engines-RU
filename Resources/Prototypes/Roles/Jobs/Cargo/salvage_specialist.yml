@@ -11,9 +11,9 @@
   # WD EDIT END
   - !type:CharacterEmployerRequirement
     employers:
-    - OrionExpress
-    - PMCG
     - NanoTrasen
+    - Government
+    - Contractors
   icon: "JobIconShaftMiner"
   startingGear: SalvageSpecialistGear
   supervisors: job-supervisors-qm

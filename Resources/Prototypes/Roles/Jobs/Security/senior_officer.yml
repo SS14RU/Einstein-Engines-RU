@@ -30,10 +30,7 @@
         - BrittleBoneDisease
     - !type:CharacterEmployerRequirement
       employers:
-      - ZavodskoiInterstellar
-      - PMCG
-      - NanoTrasen
-      - EastOrionCompany
+      - Government
     # SS14 RU START
     - !type:CharacterOverallTimeRequirement
       min: 3600
@@ -55,7 +52,6 @@
     charges: 6
   - !type:ModifyEnvirohelmSpecial
     powerCell: PowerCellHigh
-
 - type: startingGear
   id: SeniorOfficerGear
   subGear:
