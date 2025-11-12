@@ -152,9 +152,9 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
         # - IPC
     - !type:CharacterItemGroupRequirement
       group: TraitsAccents

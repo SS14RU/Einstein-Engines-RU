@@ -291,14 +291,14 @@
   category: Physical
   points: -5
   requirements:
-  - !type:CharacterJobRequirement
-    inverted: true
-    jobs:
-      - Borg
-      - MedicalBorg
-      - Boxer
-      - MartialArtist
-      - Gladiator
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
+        - Boxer
+        - MartialArtist
+        - Gladiator
   functions:
     - !type:TraitModifyUnarmed
       heavyOnLightMiss: true
@@ -527,13 +527,13 @@
   requirements:
     - !type:CharacterLogicOrRequirement
       requirements:
-      - !type:CharacterJobRequirement
-        jobs:
-         - Paramedic
-      - !type:CharacterDepartmentRequirement
+        - !type:CharacterJobRequirement
+          jobs:
+            - Paramedic
+        - !type:CharacterDepartmentRequirement
           departments:
-          - Security
-          - Command
+            - Security
+            - Command
   #       - Dignitary - WD EDIT
     - !type:CharacterTraitRequirement
       inverted: true
@@ -569,9 +569,9 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -624,10 +624,10 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-        inverted: true
-        species:
-          # - IPC
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
+        # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -796,13 +796,13 @@
   points: -6
   enable: false # WD EDIT
   requirements:
-  - !type:CVarRequirement
-    cvar: trait.restrictedgear_enabled
-    requiredValue: true
-  - !type:CharacterJobRequirement
-    inverted: true
-    jobs:
-      - Prisoner # Smuggling for prisoners = immediate jailbreak.
+    - !type:CVarRequirement
+      cvar: trait.restrictedgear_enabled
+      requiredValue: true
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Prisoner # Smuggling for prisoners = immediate jailbreak.
 
 - type: trait
   id: Redshirt
@@ -814,9 +814,9 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -840,9 +840,9 @@
       jobs:
         - Borg
         - MedicalBorg
-    - !type:CharacterSpeciesRequirement
-      inverted: true
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # inverted: true
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1011,9 +1011,9 @@
       departments:
         - Security
         - Command
-  #     - Dignitary # WD EDIT
-    - !type:CharacterSpeciesRequirement
-      species:
+    #     - Dignitary # WD EDIT
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1038,8 +1038,8 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1070,8 +1070,8 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1106,8 +1106,8 @@
         - Security
         - Command
 #         - Dignitary - WD EDIT
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1147,8 +1147,8 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1171,8 +1171,8 @@
       inverted: true
       jobs:
         - Prisoner # Bionics should be "Confiscated" from long term prisoners.
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1294,10 +1294,10 @@
   id: SuperiorRadiationShielding
   category: Physical
   points: -4
-  requirements:
-    # - !type:CharacterSpeciesRequirement
-      # species:
-        # - IPC
+  requirements: []
+  # - !type:CharacterSpeciesRequirement
+    # species:
+      # - IPC
   functions:
     - !type:TraitAddArmor
       damageModifierSets:
@@ -1307,10 +1307,10 @@
   id: G2Chassis
   category: Physical
   points: -5
-  requirements:
-    # - !type:CharacterSpeciesRequirement
-      # species:
-        # - IPC
+  requirements: []
+  # - !type:CharacterSpeciesRequirement
+    # species:
+      # - IPC
   functions:
     - !type:TraitAddComponent
       components:
@@ -1327,8 +1327,8 @@
   category: Physical
   points: -3
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - IPC
     - !type:CharacterTraitRequirement
       inverted: true
@@ -1370,8 +1370,8 @@
   category: Physical
   points: -4
   requirements:
-    - !type:CharacterSpeciesRequirement
-      species:
+    # - !type:CharacterSpeciesRequirement
+      # species:
         # - Reptilian
     - !type:CharacterHeightRequirement
       max: 150
@@ -1394,10 +1394,10 @@
   id: ForkedTongue
   category: Physical
   points: -2
-  requirements:
-    # - !type:CharacterSpeciesRequirement
-      # species:
-        # - Reptilian
+  requirements: []
+  # - !type:CharacterSpeciesRequirement
+    # species:
+      # - Reptilian
   functions:
     - !type:TraitAddComponent
       components:

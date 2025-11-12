@@ -112,10 +112,10 @@
   enable: false
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
-    # - !type:CharacterItemGroupRequirement
-    #   group: TraitsLanguagesBasic
-    # - !type:CharacterSpeciesRequirement
+  requirements: []
+  # - !type:CharacterItemGroupRequirement
+  #   group: TraitsLanguagesBasic
+  # - !type:CharacterSpeciesRequirement
       # species:
         # - Harpy
         # - Chitinid
@@ -134,10 +134,10 @@
   enable: false
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
-    # - !type:CharacterItemGroupRequirement
-    #   group: TraitsLanguagesBasic
-    # - !type:CharacterSpeciesRequirement
+  requirements: []
+  # - !type:CharacterItemGroupRequirement
+  #   group: TraitsLanguagesBasic
+  # - !type:CharacterSpeciesRequirement
       # species:
         # - Harpy
         # - Moth

@@ -3,21 +3,21 @@
   category: Auditory
   points: 4
   requirements:
-  - !type:CharacterJobRequirement
-    inverted: true
-    jobs:
-    - Borg
-    - MedicalBorg
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Borg
+        - MedicalBorg
   functions:
-  - !type:TraitAddComponent
-    components:
-    - type: Deaf
-      alwaysDeaf: true
-  - !type:TraitModifyLanguages
-    languagesSpoken:
-    - Sign
-    languagesUnderstood:
-    - Sign
+    - !type:TraitAddComponent
+      components:
+        - type: Deaf
+          alwaysDeaf: true
+    - !type:TraitModifyLanguages
+      languagesSpoken:
+        - Sign
+      languagesUnderstood:
+        - Sign
 
 - type: trait
   id: Contract
@@ -25,11 +25,11 @@
   points: 13
   enable: false # WD EDIT
   functions:
-  - !type:TraitAddComponent
-    components:
-      - type: TriggerOnMobstateChange
-        mobState:
-        - Dead
-      - type: DeleteOnTrigger
-      - type: SpawnOnTrigger
-        proto: giber
+    - !type:TraitAddComponent
+      components:
+        - type: TriggerOnMobstateChange
+          mobState:
+            - Dead
+        - type: DeleteOnTrigger
+        - type: SpawnOnTrigger
+          proto: giber

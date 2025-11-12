@@ -3,10 +3,10 @@
   category: Visual
   points: -1
   enable: false
-  requirements:
-    # - !type:CharacterSpeciesRequirement
-      # species:
-        # - IPC
+  requirements: []
+  # - !type:CharacterSpeciesRequirement
+    # species:
+      # - IPC
   functions:
     - !type:TraitAddComponent
       components:

@@ -17,10 +17,10 @@
             - Librarian
     - !type:CharacterLogicOrRequirement
       requirements:
-        - !type:CharacterSpeciesRequirement
-          inverted: true
-          species:
-            # - IPC
+        # - !type:CharacterSpeciesRequirement
+        #   inverted: true
+        #   species:
+        #     - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics
@@ -54,10 +54,10 @@
             - Librarian
     - !type:CharacterLogicOrRequirement
       requirements:
-        - !type:CharacterSpeciesRequirement
-          inverted: true
-          species:
-            # - IPC
+        # - !type:CharacterSpeciesRequirement
+        #   inverted: true
+        #   species:
+        #     - IPC
         - !type:CharacterTraitRequirement
           traits:
             - AnomalousPositronics

@@ -53,11 +53,11 @@
   enable: false
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
-    # - !type:CharacterItemGroupRequirement
-    #   group: TraitsLanguagesBasic
-    # - !type:CharacterSpeciesRequirement
-      # inverted: true
+  requirements: []
+  # - !type:CharacterItemGroupRequirement
+  #   group: TraitsLanguagesBasic
+  # - !type:CharacterSpeciesRequirement
+    # inverted: true
       # species:
         # - Harpy
   functions:
@@ -114,10 +114,10 @@
   enable: false
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
-    # - !type:CharacterItemGroupRequirement
-    #   group: TraitsLanguagesBasic
-    #AWS-start
+  requirements: []
+  # - !type:CharacterItemGroupRequirement
+  #   group: TraitsLanguagesBasic
+  #AWS-start
     # - !type:CharacterNationalityRequirement
     #   inverted: true
     #   nationalities:
@@ -164,10 +164,10 @@
   enable: false
   # slots: 1
   # itemGroupSlots: 0
-  requirements:
-    # - !type:CharacterSpeciesRequirement
-      # species:
-        # - Reptilian
+  requirements: []
+  # - !type:CharacterSpeciesRequirement
+    # species:
+      # - Reptilian
     # - !type:CharacterItemGroupRequirement
     #   group: TraitsLanguagesBasic
   functions:

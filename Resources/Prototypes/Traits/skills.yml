@@ -125,7 +125,7 @@
       inverted: true
       species:
         - Vulpkanin
-        -# - IPC
+        # - IPC
 
 - type: trait
   id: ParkourTraining
@@ -231,7 +231,7 @@
       species:
         - Felinid
         - Tajaran
-        -# - Harpy
+        # - Harpy
 
 - type: trait
   id: AnomalousPositronics
@@ -242,10 +242,10 @@
     - !type:TraitRemoveComponent
       components:
         - type: PsionicInsulation
-  requirements:
-    # - !type:CharacterSpeciesRequirement
-      # species:
-        # - IPC
+  requirements: []
+  # - !type:CharacterSpeciesRequirement
+    # species:
+      # - IPC
 
 # - type: trait
 #   id: AnimalFriend
