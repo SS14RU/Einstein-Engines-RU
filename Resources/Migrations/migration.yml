@@ -452,3 +452,7 @@ AirlockHydroponics: AirlockHydroponicsLocked
 Biogenerator: null
 FloraGreyStalagmite: null
 FelinidCube: TajaranCube
+
+# 2025-11-11
+StationAnchor: null
+StationAnchorOff: null

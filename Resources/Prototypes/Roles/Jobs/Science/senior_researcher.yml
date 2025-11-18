@@ -3,13 +3,13 @@
   name: job-name-senior-researcher
   description: job-description-senior-researcher
   playTimeTracker: JobSeniorResearcher
-  setPreference: false # WWDP disabled role, not mapped
+  setPreference: true #SS14RU-edit
   requirements:
-    # WD EDIT START
+    # SS14RU-start
     # - !type:CharacterDepartmentTimeRequirement
     #   department: Epistemics
     #   min: 216000 #60 hrs
-    # WD EDIT END
+    # SS14RU-end
     - !type:CharacterEmployerRequirement
       employers:
       - NanoTrasen

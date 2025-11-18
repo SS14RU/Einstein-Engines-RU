@@ -95,6 +95,10 @@ public sealed partial class ShuttleSystem
         )
             return;
 
+        //IH - Start
+        if (component.SuppressDockingImpact || (TryComp(args.OtherEntity, out ShuttleComponent? otherShuttle) && otherShuttle.SuppressDockingImpact))
+            return;
+        //IH - END
         if (!_gridQuery.TryComp(args.OurEntity, out var ourGrid) ||
             !_gridQuery.TryComp(args.OtherEntity, out var otherGrid)
         )

@@ -3,7 +3,7 @@
   name: job-name-senior-physician
   description: job-description-senior-physician
   playTimeTracker: JobSeniorPhysician
-  setPreference: false # WWDP disabled role, not mapped
+  setPreference: true #SS14RU-edit
   requirements:
     # WD EDIT START
     # - !type:CharacterPlaytimeRequirement
@@ -15,7 +15,7 @@
     # - !type:CharacterDepartmentTimeRequirement
     #   department: Medical
     #   min: 216000 # 60 hrs
-    # WD EDIT END
+    # SS14RU-end
     - !type:CharacterEmployerRequirement
       employers:
       - NanoTrasen

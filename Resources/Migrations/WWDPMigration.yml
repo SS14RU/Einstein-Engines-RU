@@ -74,12 +74,12 @@ LockerNanorepFilled: null
 LockerMagistrateFilled: null
 LockerBlueshieldOfficerFilled: null
 
-# 2025-08-06
-UniqueLockerNanorepFilled: null
-UniqueLockerBlueshieldOfficerFilled: null
-UniqueLockerMagistrateFilled: null
-ClothingOuterHardsuitBlueshield: null
-AntimovCircuitBoard: null
+# 2025-08-06 > SS14RU-edit 02.11.2025
+# UniqueLockerNanorepFilled: null
+# UniqueLockerBlueshieldOfficerFilled: null
+# UniqueLockerMagistrateFilled: null
+# ClothingOuterHardsuitBlueshield: null
+# AntimovCircuitBoard: null
 
 # 2025-14-06
 ModularTrigger: null

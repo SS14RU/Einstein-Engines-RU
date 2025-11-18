@@ -72,15 +72,15 @@
 
 - type: entity
   parent: VendingMachine
-  id: VendingMachine-NT-Centcom
-  name: ТоргоматNT-Centcom
+  id: VendingMachine-NT-CentCom
+  name: ТоргоматNT-CentCom
   abstract: true
   components:
   - type: NameIdentifier
     group: CC
   - type: EconomyBankTerminal
     allowCurrency: Thaler
-    linkedAccount: NT-Centcom
+    linkedAccount: NT-CentCom
 
 - type: entity
   parent: VendingMachineWallmount

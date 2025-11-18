@@ -76,5 +76,12 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [DataField]
         public bool DoTheDinosaur = true;
+
+        /// <summary>
+        /// If true, suppresses impact damage handling (used while forcibly docking via FTL).
+        /// </summary>
+        [ViewVariables]
+        public bool SuppressDockingImpact; //IH - Edit
     }
 }
+

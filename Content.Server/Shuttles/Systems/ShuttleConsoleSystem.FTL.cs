@@ -133,6 +133,14 @@ public sealed partial class ShuttleConsoleSystem
         if (shuttleComp.Enabled == false)
             return;
 
+        //IH - Start
+        if (_gravityWellQuery.TryGetComponent(shuttleUid.Value, out var gravityWell) && gravityWell.BlocksFtl)
+        {
+            _popup.PopupEntity(Loc.GetString("shuttle-console-gravity-blocked"), ent.Owner);
+            return;
+        }
+        //IH - End
+
         // Check shuttle can even FTL
         if (!_shuttle.CanFTL(shuttleUid.Value, out var reason))
         {

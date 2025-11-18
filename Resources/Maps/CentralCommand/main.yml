@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 08/02/2025 19:00:26
-  entityCount: 6948
+  time: 11/05/2025 15:19:15
+  entityCount: 6949
 maps:
 - 8000
 grids:
@@ -34,19 +34,6 @@ tilemap:
 entities:
 - proto: ""
   entities:
-  - uid: 8000
-    components:
-    - type: MetaData
-      name: Central Command Map
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: OccluderTree
-    - type: LoadedMap
   - uid: 1668
     components:
     - type: MetaData
@@ -184,9 +171,7 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
-    # SS14RU
     - type: EconomyInsuranceServer
-    # SS14RU
     - type: BecomesStation
       id: centcomm
     - type: Gravity
@@ -2962,6 +2947,18 @@ entities:
     - type: GasTileOverlay
     - type: SpreaderGrid
     - type: GridPathfinding
+  - uid: 8000
+    components:
+    - type: MetaData
+      name: Central Command Map
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: PhysicsMap
+    - type: GridTree
+    - type: MovedGrids
+    - type: Broadphase
+    - type: OccluderTree
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 1455
@@ -18377,10 +18374,10 @@ entities:
         title: null
 - proto: ClothingShoesBootsLaceup
   entities:
-  - uid: 3722
+  - uid: 3902
     components:
     - type: Transform
-      pos: -16.568241,9.145143
+      pos: -15.435006,8.840947
       parent: 1668
   - uid: 6953
     components:
@@ -28351,7 +28348,7 @@ entities:
   - uid: 3459
     components:
     - type: Transform
-      pos: -24.5,12.5
+      pos: -22.5,12.5
       parent: 1668
 - proto: PottedPlant21
   entities:
@@ -32286,6 +32283,13 @@ entities:
     components:
     - type: Transform
       pos: -12.532179,11.55442
+      parent: 1668
+- proto: SafeCentCom
+  entities:
+  - uid: 3722
+    components:
+    - type: Transform
+      pos: -24.5,12.5
       parent: 1668
 - proto: Screen
   entities:

@@ -89,7 +89,7 @@
     state: eng
   - type: EconomyBankTerminal
     allowCurrency: Thaler
-    linkedAccount: NT-Engineer
+    linkedAccount: NT-Engineering
 
 - type: entity
   id: CCTerminal
@@ -101,4 +101,4 @@
     state: cc
   - type: EconomyBankTerminal
     allowCurrency: Thaler
-    linkedAccount: NT-Centcom
+    linkedAccount: NT-CentCom

@@ -1,7 +1,7 @@
-﻿<controls:FancyWindow xmlns="https://spacestation14.io"
+<controls:FancyWindow xmlns="https://spacestation14.io"
                 xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-                MinSize="270 130"
-                SetSize="360 180">
+                MinSize="320 190"
+                SetSize="420 240">
     <BoxContainer Margin="4 0" Orientation="Horizontal">
         <BoxContainer Orientation="Vertical" HorizontalExpand="True">
             <GridContainer Margin="2 0 0 0" Columns="2">
@@ -24,6 +24,14 @@
                 <ProgressBar Name="ChargeBar" MaxValue="255">
                     <Label Name="ChargeText" Margin="4 0" Text="0 %" />
                 </ProgressBar>
+                <!-- IH - Start -->
+                <!-- Station Mass -->
+                <Label Name="MassTitle" Text="{Loc 'gravity-generator-window-mass'}" StyleClasses="StatusFieldTitle" Visible="False" />
+                <Label Name="MassValue" Text="&#8212;" Visible="False" />
+                <!-- FTL -->
+                <Label Name="FtlTitle" Text="{Loc 'gravity-generator-window-ftl'}" StyleClasses="StatusFieldTitle" Visible="False" />
+                <Label Name="FtlValue" Text="&#8212;" Visible="False" />
+                <!-- IH - End -->
             </GridContainer>
         </BoxContainer>
         <PanelContainer Margin="12 0 0 0" StyleClasses="Inset" VerticalAlignment="Center">

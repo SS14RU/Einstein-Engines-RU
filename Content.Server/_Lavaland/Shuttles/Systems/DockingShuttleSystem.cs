@@ -117,7 +117,13 @@ public sealed class DockingShuttleSystem : SharedDockingShuttleSystem
     /// </summary>
     private void OnAddStation(EntityUid uid, DockingShuttleComponent component, ShuttleAddStationEvent args)
     {
-        component.Station = args.MapUid;
+        //IH - Start
+        component.Station ??= args.MapUid;
+
+        if (component.LocationUID.Contains(args.GridUid))
+            return;
+        //IH - END
+
         component.currentlocation = args.GridUid.Id;
         AddDestinationUID(component, args.MapId, args.GridUid);
     }

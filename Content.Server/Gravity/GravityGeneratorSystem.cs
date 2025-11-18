@@ -1,6 +1,10 @@
+using System;
+using Content.Server.AWS.Gravity;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Gravity;
+using Robust.Shared.GameObjects;
+using Robust.Shared.Maths;
 
 namespace Content.Server.Gravity;
 
@@ -8,7 +12,6 @@ public sealed class GravityGeneratorSystem : EntitySystem
 {
     [Dependency] private readonly GravitySystem _gravitySystem = default!;
     [Dependency] private readonly SharedPointLightSystem _lights = default!;
-
     public override void Initialize()
     {
         base.Initialize();
@@ -24,6 +27,10 @@ public sealed class GravityGeneratorSystem : EntitySystem
         var query = EntityQueryEnumerator<GravityGeneratorComponent, PowerChargeComponent>();
         while (query.MoveNext(out var uid, out var grav, out var charge))
         {
+            //IH - Start
+            var switchedOn = charge.SwitchedOn;
+            //IH - End
+
             if (!_lights.TryGetLight(uid, out var pointLight))
                 continue;
 
@@ -36,21 +43,33 @@ public sealed class GravityGeneratorSystem : EntitySystem
     private void OnActivated(Entity<GravityGeneratorComponent> ent, ref ChargedMachineActivatedEvent args)
     {
         ent.Comp.GravityActive = true;
+
         if (TryComp<TransformComponent>(ent, out var xform) &&
             TryComp(xform.ParentUid, out GravityComponent? gravity))
         {
             _gravitySystem.EnableGravity(xform.ParentUid, gravity);
         }
+
+        //IH - Start
+        var fieldEvent = new AwsGravityGeneratorFieldSystem.AwsGravityGeneratorActivatedEvent(ent);
+        RaiseLocalEvent(ent.Owner, ref fieldEvent);
+        //IH - End
     }
 
     private void OnDeactivated(Entity<GravityGeneratorComponent> ent, ref ChargedMachineDeactivatedEvent args)
     {
         ent.Comp.GravityActive = false;
+
         if (TryComp<TransformComponent>(ent, out var xform) &&
             TryComp(xform.ParentUid, out GravityComponent? gravity))
         {
             _gravitySystem.RefreshGravity(xform.ParentUid, gravity);
         }
+
+        //IH - Start
+        var fieldEvent = new AwsGravityGeneratorFieldSystem.AwsGravityGeneratorDeactivatedEvent(ent);
+        RaiseLocalEvent(ent.Owner, ref fieldEvent);
+        //IH - End
     }
 
     private void OnParentChanged(EntityUid uid, GravityGeneratorComponent component, ref EntParentChangedMessage args)
@@ -59,5 +78,12 @@ public sealed class GravityGeneratorSystem : EntitySystem
         {
             _gravitySystem.RefreshGravity(args.OldParent.Value, gravity);
         }
+
+        //IH - Start
+        var fieldEvent = new AwsGravityGeneratorFieldSystem.AwsGravityGeneratorParentChangedEvent(
+            new Entity<GravityGeneratorComponent>(uid, component),
+            args.OldParent);
+        RaiseLocalEvent(uid, ref fieldEvent);
+        //IH - End
     }
 }
