@@ -14,6 +14,7 @@ using Content.Shared.Access.Components;
 using Content.Server.Access.Components;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Timing;
 using System.Diagnostics.CodeAnalysis;
@@ -34,6 +35,7 @@ using Robust.Shared.Toolshed.TypeParsers;
 using System;
 using System.Collections.ObjectModel;
 using Content.Shared.NameIdentifier;
+using Robust.Shared.Log;
 
 namespace Content.Server.AWS.Economy.Bank
 {
@@ -52,6 +54,8 @@ namespace Content.Server.AWS.Economy.Bank
         [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
 
+        private ISawmill _sawmill = default!;
+
         private double _salaryMultiplier = 1.0;
 
         public double SalaryMultiplier => _salaryMultiplier;
@@ -59,7 +63,8 @@ namespace Content.Server.AWS.Economy.Bank
 #pragma warning disable RA0028
         public override void Initialize()
         {
-            SubscribeLocalEvent<EconomyAccountHolderComponent, ComponentInit>(OnAccountComponentInit);
+            _sawmill = Logger.GetSawmill("economy.accounts");
+            SubscribeLocalEvent<EconomyAccountHolderComponent, MapInitEvent>(OnAccountComponentMapInit);
             SubscribeLocalEvent<EconomyBankAccountComponent, ComponentRemove>(OnBankComponentRemove);
 
             SubscribeLocalEvent<EconomyBankTerminalComponent, InteractUsingEvent>(OnTerminalInteracted);
@@ -156,9 +161,15 @@ namespace Content.Server.AWS.Economy.Bank
         /// Enables a card or a bank account (described in setup) for usage.
         /// </summary>
         [PublicAPI]
-        public bool TryActivate(Entity<EconomyAccountHolderComponent> entity, [NotNullWhen(true)] out Entity<EconomyBankAccountComponent>? activatedAccount)
+        public bool TryActivate(Entity<EconomyAccountHolderComponent> entity,
+            [NotNullWhen(true)] out Entity<EconomyBankAccountComponent>? activatedAccount,
+            bool skipIfIdCard = false)
         {
             activatedAccount = null;
+
+            if (skipIfIdCard && HasComp<IdCardComponent>(entity.Owner))
+                return false;
+
             if (!_prototypeManager.TryIndex(entity.Comp.AccountIdByProto, out EconomyAccountIdPrototype? proto))
                 return false;
 
@@ -198,7 +209,7 @@ namespace Content.Server.AWS.Economy.Bank
             accountName = accountSetup.AccountName ?? accountName;
             balance = accountSetup.Balance ?? balance;
 
-            TryCreateAccount(
+            var created = TryCreateAccount(
                 accountID,
                 accountName,
                 accountSetup.AllowedCurrency ?? "Thaler",
@@ -211,6 +222,16 @@ namespace Content.Server.AWS.Economy.Bank
                 salary,
                 cords,
                 out var account);
+
+            if (created)
+            {
+                var holderName = MetaData(entity.Owner).EntityName;
+                var stationTag = station?.ToString() ?? "null";
+                var salaryText = salary?.ToString() ?? "null";
+                _sawmill.Info(
+                    $"Created account '{accountID}' ('{accountName}') for holder '{holderName}' ({entity.Owner}). " +
+                    $"Job={jobName?.ToString() ?? "null"}, Balance={balance}, Salary={salaryText}, Station={stationTag}, Coords={cords}.");
+            }
 
             activatedAccount = account;
             entity.Comp.AccountID = accountID;
@@ -641,13 +662,13 @@ namespace Content.Server.AWS.Economy.Bank
             return res;
         }
 
-        private void OnAccountComponentInit(Entity<EconomyAccountHolderComponent> entity, ref ComponentInit args)
+        private void OnAccountComponentMapInit(Entity<EconomyAccountHolderComponent> entity, ref MapInitEvent args)
         {
             // if has id card comp, then it will be initialized in the other place.
-            if (entity.Comp.AccountSetup is null || HasComp<IdCardComponent>(entity))
+            if (entity.Comp.AccountSetup is null || HasComp<IdCardComponent>(entity.Owner))
                 return;
 
-            TryActivate(entity, out _);
+            TryActivate(entity, out _, skipIfIdCard: true);
         }
 
         private void OnBankComponentRemove(Entity<EconomyBankAccountComponent> entity, ref ComponentRemove args)
@@ -773,7 +794,7 @@ namespace Content.Server.AWS.Economy.Bank
             if (TryComp<VendingMachineComponent>(uid, out var machineComponent))
             {
                 vendingMachineComponent = machineComponent;
-                if (!TryBuildVendingPurchaseReason(uid, machineComponent, out purchaseReason, out var vendingError))
+                if (!TryBuildVendingPurchaseReason(uid, component, machineComponent, out purchaseReason, out var vendingError))
                 {
                     var error = vendingError ?? Loc.GetString("economyBankTerminal-component-vending-error");
                     _popupSystem.PopupEntity(error, uid, type: PopupType.MediumCaution);
@@ -808,7 +829,7 @@ namespace Content.Server.AWS.Economy.Bank
 
             if (vendingMachineComponent is not null)
             {
-                if (!TryTransactionFromVendingMachine(uid, args.User, vendingMachineComponent, out _))
+                if (!TryTransactionFromVendingMachine(uid, args.User, component, vendingMachineComponent, out _))
                 {
                     Withdraw(receiverAccount.Value.Comp.AccountID, uid, amount);
                     var error = Loc.GetString("economyBankTerminal-component-vending-error");
@@ -831,18 +852,20 @@ namespace Content.Server.AWS.Economy.Bank
         //SS14RU - end
 
 
-        private bool TryBuildVendingPurchaseReason(EntityUid uid, VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? reason, out string? error)
+        private bool TryBuildVendingPurchaseReason(EntityUid uid, EconomyBankTerminalComponent terminal,
+            VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? reason, out string? error)
         {
             reason = null;
             error = null;
 
-            if (vendingMachine.SelectedItemId is not { } selectedItemId)
+            if (terminal.PendingItemId is not { } selectedItemId)
             {
                 error = Loc.GetString("economyBankTerminal-component-vending-error");
                 return false;
             }
 
-            if (!vendingMachine.Inventory.TryGetValue(selectedItemId, out var entry) || entry.Price <= 0)
+            var entry = GetPendingEntry(uid, terminal, vendingMachine);
+            if (entry == null || entry.Price <= 0)
             {
                 error = Loc.GetString("economyBankTerminal-component-vending-error");
                 return false;
@@ -868,19 +891,40 @@ namespace Content.Server.AWS.Economy.Bank
             return true;
         }
 
-        private bool TryTransactionFromVendingMachine(EntityUid uid, EntityUid user, VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? itemName)
+        private bool TryTransactionFromVendingMachine(EntityUid uid, EntityUid user, EconomyBankTerminalComponent terminal,
+            VendingMachineComponent vendingMachine, [NotNullWhen(true)] out string? itemName)
         {
             itemName = null;
-            if (vendingMachine.SelectedItemId is not { } selectedItemID)
+            if (terminal.PendingItemId is not { } selectedItemID)
                 return false;
 
-            if (!vendingMachine.Inventory.TryGetValue(selectedItemID, out var entry) || entry.Price <= 0)
+            var entry = GetPendingEntry(uid, terminal, vendingMachine);
+            if (entry == null || entry.Price <= 0)
                 return false;
 
-            itemName = vendingMachine.SelectedItemId;
-            vendingMachine.SelectedItemId = null;
-            _vendingMachine.AuthorizedVend(uid, user, vendingMachine.SelectedItemInventoryType, selectedItemID, vendingMachine);
+            itemName = selectedItemID;
+            var inventoryType = terminal.PendingInventoryType;
+            terminal.PendingItemId = null;
+            terminal.PendingInventoryType = InventoryType.Regular;
+            _vendingMachine.AuthorizedVend(uid, user, inventoryType, selectedItemID, vendingMachine);
             return !vendingMachine.Denying;
+        }
+
+        private VendingMachineInventoryEntry? GetPendingEntry(EntityUid uid, EconomyBankTerminalComponent terminal,
+            VendingMachineComponent vendingMachine)
+        {
+            var selectedItemId = terminal.PendingItemId;
+            if (selectedItemId == null)
+                return null;
+
+            return terminal.PendingInventoryType switch
+            {
+                InventoryType.Emagged when HasComp<EmaggedComponent>(uid) =>
+                    vendingMachine.EmaggedInventory.GetValueOrDefault(selectedItemId),
+                InventoryType.Contraband when vendingMachine.Contraband =>
+                    vendingMachine.ContrabandInventory.GetValueOrDefault(selectedItemId),
+                _ => vendingMachine.Inventory.GetValueOrDefault(selectedItemId)
+            };
         }
 
         private void OnManagementConsoleChangeHolderIDMessage(Entity<EconomyManagementConsoleComponent> ent, ref EconomyManagementConsoleChangeHolderIDMessage args)

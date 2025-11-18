@@ -55,8 +55,8 @@ public sealed class EconomyBankVendingSystem : EntitySystem
             entry.Price,
             Loc.GetString("economyBankTerminal-component-vending-reason", ("itemName", itemName)));
 
-        component.SelectedItemInventoryType = args.Type;
-        component.SelectedItemId = args.ID;
+        terminal.PendingItemId = args.ID;
+        terminal.PendingInventoryType = args.Type;
         args.Handled = true;
     }
 

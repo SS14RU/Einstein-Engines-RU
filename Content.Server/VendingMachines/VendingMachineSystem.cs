@@ -1,15 +1,16 @@
-//SS14RU - start
 using System;
 using System.Collections.Generic;
-//SS14RU - end
 using System.Linq;
 using System.Numerics;
+using Content.Server._Lavaland.Procedural.Components;
 using Content.Server.Advertise;
 using Content.Server.Advertise.Components;
 using Content.Server.Cargo.Systems;
 using Content.Server.Emp;
+using Content.Server.GameTicking;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Station.Systems;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Actions;
@@ -19,14 +20,10 @@ using Content.Shared.DoAfter;
 using Content.Shared.Emag.Components;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Emp;
-//SS14RU - start
 using Content.Shared.Cargo.Prototypes;
-//SS14RU - end
 using Content.Shared.Popups;
 using Content.Shared.Power;
-//SS14RU - start
 using Content.Shared.Storage.Components;
-//SS14RU - end
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
 using Content.Shared.VendingMachines;
@@ -35,6 +32,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Map;
 using Robust.Shared.Timing;
 
 namespace Content.Server.VendingMachines
@@ -52,6 +50,8 @@ namespace Content.Server.VendingMachines
 
         [Dependency] private readonly SharedPointLightSystem _light = default!;
         [Dependency] private readonly EmagSystem _emag = default!;
+        [Dependency] private readonly StationSystem _stations = default!;
+        [Dependency] private readonly GameTicker _ticker = default!;
 
         private const float WallVendEjectDistanceFromWall = 1f;
 
@@ -81,15 +81,22 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
         }
 
-        //SS14RU - start
+        //IH - start
         protected override void RecalculateEntriesPrice(EntityUid uid, VendingMachineComponent component)
         {
+            if (!component.PriceEligible)
+            {
+                if (ResetInventoryPrices(component))
+                    Dirty(uid, component);
+                return;
+            }
+
             base.RecalculateEntriesPrice(uid, component);
 
             var ev = new VendingMachineRecalculatePriceEvent(uid, component);
             RaiseLocalEvent(uid, ev);
         }
-        //SS14RU - end
+        //IH - end
 
         private void OnSelectMessage(EntityUid uid, VendingMachineComponent component, VendingMachineSelectMessage args)
         {
@@ -110,8 +117,17 @@ namespace Content.Server.VendingMachines
 
         protected override void OnMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
         {
+            //IH - Start
+            var eligible = HasPriceEligibility(uid);
+            var changed = component.PriceEligible != eligible;
+            component.PriceEligible = eligible;
+            //IH - End
             base.OnMapInit(uid, component, args);
 
+            //IH - Start
+            if (changed)
+                Dirty(uid, component);
+            //IH - End
             if (HasComp<ApcPowerReceiverComponent>(uid))
             {
                 TryUpdateVisualState(uid, component);
@@ -120,6 +136,10 @@ namespace Content.Server.VendingMachines
 
         private void OnVendingPrice(EntityUid uid, VendingMachineComponent component, ref PriceCalculationEvent args)
         {
+            //IH - Start
+            if (!component.PriceEligible)
+                return;
+            //IH - End
             var price = 0.0;
 
             foreach (var entry in component.Inventory.Values)
@@ -601,5 +621,50 @@ namespace Content.Server.VendingMachines
 
             args.Price += priceSets.Max();
         }
+        //IH - Start
+        private static bool ResetInventoryPrices(VendingMachineComponent component)
+        {
+            var dirty = false;
+            dirty |= ResetInventoryPrices(component.Inventory);
+            dirty |= ResetInventoryPrices(component.EmaggedInventory);
+            dirty |= ResetInventoryPrices(component.ContrabandInventory);
+            return dirty;
+        }
+
+        private static bool ResetInventoryPrices(Dictionary<string, VendingMachineInventoryEntry> inventory)
+        {
+            var dirty = false;
+            foreach (var entry in inventory.Values)
+            {
+                if (entry.Price == 0)
+                    continue;
+
+                entry.Price = 0;
+                dirty = true;
+            }
+
+            return dirty;
+        }
+
+        private bool HasPriceEligibility(EntityUid uid, TransformComponent? xform = null)
+        {
+            if (!Resolve(uid, ref xform, logMissing:false))
+                return false;
+
+            if (xform.GridUid is EntityUid gridUid && HasComp<LavalandStationComponent>(gridUid))
+                return true;
+
+            var defaultMap = _ticker.DefaultMap;
+            if (defaultMap == MapId.Nullspace)
+                return false;
+
+            var mainStation = _stations.GetStationInMap(defaultMap);
+            if (mainStation == null)
+                return false;
+
+            var owningStation = _stations.GetOwningStation(uid, xform);
+            return owningStation == mainStation;
+        }
+        //IH - End
     }
 }
