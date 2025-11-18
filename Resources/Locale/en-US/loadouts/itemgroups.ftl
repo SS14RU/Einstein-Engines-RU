@@ -477,20 +477,20 @@ character-item-group-LoadoutMedicalInternOuter = Medical Intern Outerwear
 character-item-group-LoadoutMedicalInternShoes = Medical Intern Shoes
 character-item-group-LoadoutMedicalInternUniforms = Medical Intern Uniforms
 
-# Medical - Paramedic
-character-item-group-LoadoutParamedicBackpacks = Paramedic Backpacks
-character-item-group-LoadoutParamedicBelt = Paramedic Belt
-character-item-group-LoadoutParamedicEars = Paramedic Ears
-character-item-group-LoadoutParamedicEquipment = Paramedic Equipment
-character-item-group-LoadoutParamedicEyes = Paramedic Eyewear
-character-item-group-LoadoutParamedicGloves = Paramedic Gloves
-character-item-group-LoadoutParamedicHead = Paramedic Headgear
-character-item-group-LoadoutParamedicId = Paramedic Id
-character-item-group-LoadoutParamedicNeck = Paramedic Neckwear
-character-item-group-LoadoutParamedicMask = Paramedic Masks
-character-item-group-LoadoutParamedicOuter = Paramedic Outerwear
-character-item-group-LoadoutParamedicShoes = Paramedic Shoes
-character-item-group-LoadoutParamedicUniforms = Paramedic Uniforms
+# Medical - Field medical specialist
+character-item-group-LoadoutParamedicBackpacks = Field medical specialist Backpacks
+character-item-group-LoadoutParamedicBelt = Field medical specialist Belt
+character-item-group-LoadoutParamedicEars = Field medical specialist Ears
+character-item-group-LoadoutParamedicEquipment = Field medical specialist Equipment
+character-item-group-LoadoutParamedicEyes = Field medical specialist Eyewear
+character-item-group-LoadoutParamedicGloves = Field medical specialist Gloves
+character-item-group-LoadoutParamedicHead = Field medical specialist Headgear
+character-item-group-LoadoutParamedicId = Field medical specialist Id
+character-item-group-LoadoutParamedicNeck = Field medical specialist Neckwear
+character-item-group-LoadoutParamedicMask = Field medical specialist Masks
+character-item-group-LoadoutParamedicOuter = Field medical specialist Outerwear
+character-item-group-LoadoutParamedicShoes = Field medical specialist Shoes
+character-item-group-LoadoutParamedicUniforms = Field medical specialist Uniforms
 
 # Medical - Psychologist
 character-item-group-LoadoutPsychologistBackpacks = Psychologist Backpacks

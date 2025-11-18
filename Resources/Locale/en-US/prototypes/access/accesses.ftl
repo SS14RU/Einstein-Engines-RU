@@ -19,7 +19,7 @@ id-card-access-level-research = Research
 id-card-access-level-chief-medical-officer = Chief Medical Officer
 id-card-access-level-medical = Medical
 id-card-access-level-chemistry = Chemistry
-id-card-access-level-paramedic = Paramedic
+id-card-access-level-paramedic = Field medical specialist
 id-card-access-level-psychologist = Psychologist
 
 id-card-access-level-quartermaster = Logistics Officer

@@ -62,8 +62,8 @@ ent-ClothingOuterCoatLabViro = лабораторный халат (вирусы
     .desc = Костюм, защищающий от бактерий и вирусов. Имеет зеленую полоску на плече.
     .suffix = { "" }
 
-ent-ClothingOuterCoatParamedicWB = ветровка парамедика
-    .desc = Надежная ветровка парамедика на случай космического ветра.
+ent-ClothingOuterCoatParamedicWB = ветровка полевого медицинского специалиста
+    .desc = Надежная ветровка Полевого медицинского специалиста на случай космического ветра.
     .suffix = { "" }
 
 ent-ClothingUniformJumpsuitCluwne = костюм клувна

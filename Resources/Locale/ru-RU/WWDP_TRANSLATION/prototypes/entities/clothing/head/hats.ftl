@@ -190,12 +190,12 @@ ent-ClothingHeadHatHoodGoliathCloak = капюшон плаща голиафа
     .desc = Капюшон плаща голиафа сделан из шкуры фауны с далекой планеты.
     .suffix = { "" }
 
-ent-ClothingHeadHatParamedicsoft = кепка парамедика
-    .desc = Это бейсболка парамедика с медицинским логотипом.
+ent-ClothingHeadHatParamedicsoft = кепка полевого медицинского специалиста
+    .desc = Это бейсболка Полевого медицинского специалиста с медицинским логотипом.
     .suffix = { "" }
 
-ent-ClothingHeadHatParamedicsoftFlipped = кепка парамедика (перевёрнутая)
-    .desc = Это бейсболка парамедика с медицинским логотипом. Перевёрнутая.
+ent-ClothingHeadHatParamedicsoftFlipped = кепка Полевого медицинского специалиста (перевёрнутая)
+    .desc = Это бейсболка Полевого медицинского специалиста с медицинским логотипом. Перевёрнутая.
     .suffix = { "" }
 
 ent-ClothingHeadHatInspector = фуражка инспектора

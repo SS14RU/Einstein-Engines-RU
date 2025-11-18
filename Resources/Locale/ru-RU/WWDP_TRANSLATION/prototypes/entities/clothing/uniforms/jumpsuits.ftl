@@ -118,7 +118,7 @@ ent-ClothingUniformJumpsuitMime = костюм мима
     .desc = ...
     .suffix = { "" }
 
-ent-ClothingUniformJumpsuitParamedic = комбинезон парамедика
+ent-ClothingUniformJumpsuitParamedic = комбинезон полевого медицинского специалиста
     .desc = На нем есть плюс, это хорошо, верно?
     .suffix = { "" }
 

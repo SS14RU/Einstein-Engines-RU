@@ -19,7 +19,7 @@ id-card-access-level-research = Научный
 id-card-access-level-chief-medical-officer = Главный Врач
 id-card-access-level-medical = Медицинский
 id-card-access-level-chemistry = Химия
-id-card-access-level-paramedic = Парамедик
+id-card-access-level-paramedic = Полевой медицинский специалист
 
 id-card-access-level-psychologist = Психолог
 

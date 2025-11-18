@@ -1065,7 +1065,7 @@ ent-ClothingOuterCoatLeatherJacket = Кожаная куртка
 
 
 ent-ClothingOuterCoatCybersunWindbreaker = Ветровка Cybersun
-    .desc = Ветровка парамедика с эмблемой медотдела Cybersun. Выполнена из баллистического волокна.
+    .desc = Ветровка Полевого медицинского специалиста с эмблемой медотдела Cybersun. Выполнена из баллистического волокна.
 
 
 ent-ClothingOuterCoatIdrisIncorporatedWindbreaker = Ветровка Idris Inc.
@@ -1154,7 +1154,7 @@ ent-ClothingShoesBootsWinterMime = зимние сапоги мима
 
 ent-ClothingShoesBootsWinterMiner = зимние сапоги шахтёра
 
-ent-ClothingShoesBootsWinterParamedic = зимние сапоги парамедика
+ent-ClothingShoesBootsWinterParamedic = зимние сапоги Полевого медицинского специалиста
 
 ent-ClothingShoesBootsWinterLogisticsOfficer = зимние сапоги логиста
 
@@ -2416,7 +2416,7 @@ ent-ClothingHeadEnvirohelmMime = шлем мима
     .desc = Нарисовано. Не стирается. Не разговаривает.
 
 
-ent-ClothingHeadEnvirohelmParamedic = шлем парамедика
+ent-ClothingHeadEnvirohelmParamedic = шлем Полевого медицинского специалиста
     .desc = Темно-синие полосы говорят: "Я спасаю жизни быстро и стильно".
 
 
@@ -2895,7 +2895,7 @@ ent-ClothingHeadHatHoodWinterMime = зимний капюшон мима
 ent-ClothingHeadHatHoodWinterMiner = зимний капюшон шахтёра
 
 
-ent-ClothingHeadHatHoodWinterPara = зимний капюшон парамедика
+ent-ClothingHeadHatHoodWinterPara = зимний капюшон Полевого медицинского специалиста
 
 
 ent-ClothingHeadHatHoodWinterQM = зимний капюшон квартирмейстера
@@ -3824,7 +3824,7 @@ ent-ClothingUniformEnvirosuitMime = плазмокостюм мима
     .desc = Очень... неброский.
 
 
-ent-ClothingUniformEnvirosuitParamedic = плазмокостюм парамедика
+ent-ClothingUniformEnvirosuitParamedic = плазмокостюм Полевого медицинского специалиста
     .desc = Костюм для тех, кто бегает к трупам быстрее, чем врачи успевают проснуться.
 
 
@@ -9511,7 +9511,7 @@ ent-LockerFreezerBase = морозильник
 ent-LockerJanitor = шкаф уборщика
 
 
-ent-LockerParamedic = шкаф парамедика
+ent-LockerParamedic = шкаф Полевого медицинского специалиста
 
 
 ent-LockerBrigmedic = шкаф санитарного офицера
@@ -16612,7 +16612,7 @@ ent-ClothingUniformJumpsuitMedicalUniformChemistry = оранжевая форм
     .desc = Прочная, водоотталкивающая форма для химиков. Защищает от кислот на 0.3% лучше обычной. Мы проверяли.
 
 
-ent-ClothingUniformJumpsuitParamedicUniform = форма парамедика
+ent-ClothingUniformJumpsuitParamedicUniform = форма Полевого медицинского специалиста
     .desc = Много карманов, светоотражающие полосы и крест на груди. На плечах — логотип NanoTrasen. Всё, как положено.
 
 

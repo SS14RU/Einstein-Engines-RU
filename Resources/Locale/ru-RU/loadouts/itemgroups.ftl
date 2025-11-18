@@ -510,19 +510,19 @@ character-item-group-LoadoutMedicalInternUniforms = Униформа интер�
 
 # Medical - Paramedic
 # Medical - Paramedic
-character-item-group-LoadoutParamedicBackpacks = Рюкзаки парамедика
-character-item-group-LoadoutParamedicBelt = Пояс парамедика
-character-item-group-LoadoutParamedicEars = Уши парамедика
-character-item-group-LoadoutParamedicEquipment = Снаряжение парамедика
-character-item-group-LoadoutParamedicEyes = Очки парамедика
-character-item-group-LoadoutParamedicGloves = Перчатки парамедика
-character-item-group-LoadoutParamedicHead = Головной убор парамедика
-character-item-group-LoadoutParamedicId = ID-карта парамедика
-character-item-group-LoadoutParamedicNeck = Шея парамедика
-character-item-group-LoadoutParamedicMask = Маски парамедика
-character-item-group-LoadoutParamedicOuter = Верхняя одежда парамедика
-character-item-group-LoadoutParamedicShoes = Обувь парамедика
-character-item-group-LoadoutParamedicUniforms = Униформа парамедика
+character-item-group-LoadoutParamedicBackpacks = Рюкзаки Полевого медицинского специалиста
+character-item-group-LoadoutParamedicBelt = Пояс Полевого медицинского специалиста
+character-item-group-LoadoutParamedicEars = Уши Полевого медицинского специалиста
+character-item-group-LoadoutParamedicEquipment = Снаряжение Полевого медицинского специалиста
+character-item-group-LoadoutParamedicEyes = Очки Полевого медицинского специалиста
+character-item-group-LoadoutParamedicGloves = Перчатки Полевого медицинского специалиста
+character-item-group-LoadoutParamedicHead = Головной убор Полевого медицинского специалиста
+character-item-group-LoadoutParamedicId = ID-карта Полевого медицинского специалиста
+character-item-group-LoadoutParamedicNeck = Шея Полевого медицинского специалиста
+character-item-group-LoadoutParamedicMask = Маски Полевого медицинского специалиста
+character-item-group-LoadoutParamedicOuter = Верхняя одежда Полевого медицинского специалиста
+character-item-group-LoadoutParamedicShoes = Обувь Полевого медицинского специалиста
+character-item-group-LoadoutParamedicUniforms = Униформа Полевого медицинского специалиста
 
 # Medical - Psychologist
 # Medical - Psychologist

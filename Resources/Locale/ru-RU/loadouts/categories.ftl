@@ -65,7 +65,7 @@ loadout-category-JobsMedicalChemist = Химик
 loadout-category-JobsMedicalChiefMedicalOfficer = Главный врач
 loadout-category-JobsMedicalMedicalDoctor = Врач
 loadout-category-JobsMedicalMedicalIntern = Интерн
-loadout-category-JobsMedicalParamedic = Парамедик
+loadout-category-JobsMedicalParamedic = Полевой медицинский специалист
 loadout-category-JobsMedicalPsychologist = Психолог
 loadout-category-JobsMedicalSeniorPhysician = Ведущий врач
 

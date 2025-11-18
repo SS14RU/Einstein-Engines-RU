@@ -43,10 +43,10 @@ ent-ClothingUniformJumpsuitRepairmanNT = комбинезон ремонтник
 ent-ClothingUniformJumpsuitRepairmanSyndie = комбинезон ремонтника синдиката
    .desc = Функциональный, модный и крутой. Инженеры Nanotrasen хотели бы, чтобы они выглядели так же хорошо, как сейчас.
 
-ent-ClothingUniformJumpsuitParamedicNT = комбинезон парамедика
+ent-ClothingUniformJumpsuitParamedicNT = комбинезон Полевого медицинского специалиста
    .desc = Базовый бело-синий комбинезон, сшитый для парамедиков Nanotrasen, дислоцированных в боевых секторах.
 
-ent-ClothingUniformJumpsuitParamedicSyndie = комбинезон парамедика синдиката
+ent-ClothingUniformJumpsuitParamedicSyndie = комбинезон Полевого медицинского специалиста синдиката
    .desc = По какой-то причине, надевая это, вы чувствуете, что ужасно близки к нарушению Женевской конвенции.
 
 ent-ClothingUniformJumpsuitChiefEngineerNT = комбинезон старшего инженера

@@ -97,7 +97,7 @@ mapping-template-medicalairlocks = Шлюзы Медблока
 
 mapping-template-chemistryairlocks = Шлюзы Химлаборатории
 
-mapping-template-paramedic = Парамедик
+mapping-template-paramedic = Полевой медицинский специалист
 
 mapping-template-cmoairlocks = Шлюзы СМО
 

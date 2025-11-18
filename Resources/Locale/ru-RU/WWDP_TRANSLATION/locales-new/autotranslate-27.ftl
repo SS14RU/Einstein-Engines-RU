@@ -7,7 +7,7 @@ ent-LampInterrogator = лампа следователя
 ent-CultistCuffs = самодельные стяжки
     .desc = Самодельные наручники из запасных тросов.
 
-ent-ParamedicIDCard = ID карта парамедика
+ent-ParamedicIDCard = ID карта Полевого медицинского специалиста
     .desc = { ent-IDCardStandard.desc }
 
 ent-BrigmedicIDCard = ID карта бригмедика

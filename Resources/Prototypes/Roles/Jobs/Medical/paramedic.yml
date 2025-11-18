@@ -22,8 +22,39 @@
   - Maintenance
   - External
   - Paramedic
-  extendedAccess:
+  #SS14RU-start
+  - Command
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - ResearchDirector
+  - Quartermaster
+  - Bar
+  - Service
+  - Janitor
+  - Theatre
+  - Kitchen
+  - Hydroponics
+  - Cryogenics
+  - Lawyer
+  - Cargo
+  - Boxer
+  - Clown
+  - Library
+  - Mime
+  - Musician
+  - Reporter
+  - Zookeeper
+  - Atmospherics
   - Chemistry
+  - Chapel
+  - Engineering
+  - Research
+  - Salvage
+  - Mail
+  - Psychologist
+  - Corpsman
+#SS14RU-end
   special:
   - !type:AddComponentSpecial
     components:
@@ -41,16 +72,19 @@
     shoes: ClothingShoesColorBlue
     id: ParamedicPDA
     ears: ClothingHeadsetMedical
-    # WD EDIT START
-    # belt: ClothingBeltMedicalEMTFilled
-    # pocket1: HandheldGPSBasic
+#SS14RU-start
+    outerClothing: ClothingOuterHardsuitVoidParamed
+    belt: ClothingBeltMedicalEMTFilled
+    pocket1: WeaponPistolMk58
     # pocket2: HandheldCrewMonitor
-    # WD EDIT END
+#SS14RU-end
   storage:
     back:
-    - EmergencyRollerBedSpawnFolded
+    - MagazinePistolSubMachineGun
+    - WeaponSubMachineGunDrozd
+    - MagazinePistol
     - BodyBagFolded
-    - Portafib
+    # - Portafib
 
 - type: startingGear
   id: ParamedicPlasmamanGear

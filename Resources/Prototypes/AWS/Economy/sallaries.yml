@@ -166,8 +166,8 @@
       sallary: 25
       accountId: NT-Medical
     Paramedic:
-      startMoney: 60
-      sallary: 60
+      startMoney: 75
+      sallary: 75
       accountId: NT-Medical
     # Science
     ResearchAssistant:

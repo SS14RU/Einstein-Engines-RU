@@ -52,7 +52,7 @@ steal-target-ammo-techfab = печатная плата техфаба патр�
 
 steal-target-wardens-cap = фуражка бейлифа
 
-steal-target-paramedic-hardsuit = пустотный скафандр парамедика
+steal-target-paramedic-hardsuit = пустотный скафандр полевого медицинского специалиста
 
 steal-target-medical-techfab = медицинский ТехФаб (машинная плата)
 

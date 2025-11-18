@@ -58,5 +58,5 @@ ent-SpawnPointSeniorPhysician = Точка спавна медицинского
 ent-SpawnPointSeniorSalvageSpecialist = Точка спавна охтника карго
    .desc = ""
 
-ent-SpawnPointParamedic = Точка спавна парамедика
+ent-SpawnPointParamedic = Точка спавна Полевого медицинского специалиста
    .desc = ""
