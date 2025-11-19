@@ -40,6 +40,8 @@ public sealed class EconomyManagementConsoleUserInterfaceState : BoundUserInterf
     public bool? CanReachPayDay;
     public string? JobName;
     public ulong? Salary;
+    public ulong? PayrollSalary;
+    public bool? PayrollCanReachPayDay;
 }
 
 [Serializable, NetSerializable]

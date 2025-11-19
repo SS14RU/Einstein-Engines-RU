@@ -28,14 +28,13 @@ using Content.Shared.AWS.Economy.Bank;
 using System.Security.Principal;
 using Robust.Shared;
 using Content.Server.GameTicking;
-using Content.Shared.Mind.Components;
-using Content.Shared.Mind;
-using Content.Shared.Roles.Jobs;
 using Robust.Shared.Toolshed.TypeParsers;
 using System;
 using System.Collections.ObjectModel;
 using Content.Shared.NameIdentifier;
 using Robust.Shared.Log;
+using Content.Server.Roles.Jobs;
+using Robust.Server.Player;
 
 namespace Content.Server.AWS.Economy.Bank
 {
@@ -251,10 +250,13 @@ namespace Content.Server.AWS.Economy.Bank
             if (!TryGetAccount(accountID, out var entity))
                 return false;
 
-            if (accountID == "NT-CentCom")
+            if (IsCentralCommandAccount(accountID))
                 return false;
 
             var account = entity.Value.Comp;
+            if (IsRestrictedDepartmentAccount(account) && param != EconomyBankAccountParam.Blocked)
+                return false;
+
             switch (param)
             {
                 case EconomyBankAccountParam.AccountName:
@@ -944,6 +946,9 @@ namespace Content.Server.AWS.Economy.Bank
             if (!TryGetAccount(args.NewID, out var account))
                 return;
 
+            if (IsCentralCommandAccount(account.Value.Comp.AccountID) || IsRestrictedDepartmentAccount(account.Value.Comp))
+                return;
+
             holderComp.AccountID = account.Value.Comp.AccountID;
             holderComp.AccountName = account.Value.Comp.AccountName;
             Dirty(holder, holderComp);
@@ -1031,6 +1036,53 @@ namespace Content.Server.AWS.Economy.Bank
             }
 
             UpdateManagementConsoleUserInterface(ent, null);
+        }
+
+        protected override void AdjustManagementConsoleState(Entity<EconomyManagementConsoleComponent> ent,
+            EconomyBankAccountComponent? bankAccount,
+            EconomyManagementConsoleUserInterfaceState state)
+        {
+            base.AdjustManagementConsoleState(ent, bankAccount, state);
+
+            if (bankAccount is null)
+                return;
+
+            if (!IsRestrictedDepartmentAccount(bankAccount))
+                return;
+
+            if (!TryGetAssignedPayroll(bankAccount, out var payroll, out var canReach))
+                return;
+
+            state.PayrollSalary = payroll;
+            state.PayrollCanReachPayDay = canReach;
+        }
+
+        private bool TryGetAssignedPayroll(EconomyBankAccountComponent account, out ulong payroll, out bool canReach)
+        {
+            payroll = 0;
+            canReach = false;
+
+            var accounts = GetAccounts(EconomyBankAccountMask.All);
+            var found = false;
+            foreach (var (_, entity) in accounts)
+            {
+                var comp = entity.Comp;
+                if (comp.JobName is not { } jobId)
+                    continue;
+
+                if (!TryGetSalaryJobEntry(jobId, DefaultSalariesPrototypeId, out var jobEntry))
+                    continue;
+
+                if (jobEntry.Value.AccountId != account.AccountID)
+                    continue;
+
+                var salary = comp.Salary ?? jobEntry.Value.Sallary;
+                payroll += salary;
+                found = true;
+            }
+
+            canReach = payroll == 0 || account.Balance >= payroll;
+            return found || payroll == 0;
         }
 
         [PublicAPI]

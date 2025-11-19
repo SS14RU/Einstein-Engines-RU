@@ -5,11 +5,13 @@ economybanksystem-management-console-management-block = Заблокирован
 economybanksystem-management-console-management-unblock = Разблокирован
 economybanksystem-management-console-management-salary = Зарплата
 economybanksystem-management-console-management-salary-reachable = Возможна ({$salary})
-economybanksystem-management-console-management-salary-not-reachable = Невозможна
+economybanksystem-management-console-management-salary-not-reachable = Невозможна ({$salary})
 economybanksystem-management-console-management-initialized-title = Счёт на носителе
 economybanksystem-management-console-management-initialized = Действителен
 economybanksystem-management-console-management-not-initialized = Не действителен
 economybanksystem-management-console-management-job-preset = Должность
+economybanksystem-management-console-management-job-placeholder-department = Счёт отдела
+economybanksystem-management-console-management-job-placeholder-cash = Касса отдела
 economybanksystem-management-console-bonus-payer-account = Счёт выплаты
 economybanksystem-management-console-bonus-total-bonus = Итого к выплате
 economybanksystem-management-console-bonus-percent = Множитель премии, %
@@ -29,6 +31,7 @@ economybanksystem-management-console-bonus-pay-button = Выплатить пр�
 economybanksystem-management-console-bonus-clear-selected-button = Очистить выбранные счета
 
 economybanksystem-management-console-error-invalid-account = Счёт не найден!
+economybanksystem-management-console-error-protected-account = Этот счёт нельзя использовать на консоли
 
 economybanksystem-management-console-management-tab = Управление счетами
 economybanksystem-management-console-account-holder-tab = Счёт целевой карты
