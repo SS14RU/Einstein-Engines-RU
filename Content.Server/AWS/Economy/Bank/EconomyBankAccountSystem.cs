@@ -53,6 +53,8 @@ namespace Content.Server.AWS.Economy.Bank
         [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
 
+        private static readonly TimeSpan ManagementConsoleActionCooldown = TimeSpan.FromSeconds(0.5);
+        private readonly Dictionary<EntityUid, TimeSpan> _consoleCooldowns = new();
         private ISawmill _sawmill = default!;
 
         private double _salaryMultiplier = 1.0;
@@ -931,6 +933,9 @@ namespace Content.Server.AWS.Economy.Bank
 
         private void OnManagementConsoleChangeHolderIDMessage(Entity<EconomyManagementConsoleComponent> ent, ref EconomyManagementConsoleChangeHolderIDMessage args)
         {
+            if (!TryThrottleManagementConsole(ent.Owner))
+                return;
+
             if (!TryComp<AccessReaderComponent>(ent, out var accessReader) || ent.Comp.CardSlot.Item is not { } idCard)
                 return;
 
@@ -957,6 +962,9 @@ namespace Content.Server.AWS.Economy.Bank
 
         private void OnManagementConsoleInitAccountOnHolderMessage(Entity<EconomyManagementConsoleComponent> ent, ref EconomyManagementConsoleInitAccountOnHolderMessage args)
         {
+            if (!TryThrottleManagementConsole(ent.Owner))
+                return;
+
             if (!TryComp<AccessReaderComponent>(ent, out var accessReader) || ent.Comp.CardSlot.Item is not { } idCard)
                 return;
 
@@ -978,6 +986,9 @@ namespace Content.Server.AWS.Economy.Bank
 
         private void OnManagementConsoleParameterMessage(Entity<EconomyManagementConsoleComponent> ent, ref EconomyManagementConsoleChangeParameterMessage args)
         {
+            if (!TryThrottleManagementConsole(ent.Owner))
+                return;
+
             if (!TryComp<AccessReaderComponent>(ent, out var accessReader) || ent.Comp.CardSlot.Item is not { } idCard)
                 return;
 
@@ -997,6 +1008,9 @@ namespace Content.Server.AWS.Economy.Bank
 
         private void OnManagementConsolePayBonusMessage(Entity<EconomyManagementConsoleComponent> ent, ref EconomyManagementConsolePayBonusMessage args)
         {
+            if (!TryThrottleManagementConsole(ent.Owner))
+                return;
+
             // Check for priveleges
             if (!TryComp<AccessReaderComponent>(ent, out var accessReader) || ent.Comp.CardSlot.Item is not { } idCard)
                 return;
@@ -1066,32 +1080,15 @@ namespace Content.Server.AWS.Economy.Bank
             state.PayrollCanReachPayDay = canReach;
         }
 
-        private bool TryGetAssignedPayroll(EconomyBankAccountComponent account, out ulong payroll, out bool canReach)
+        private bool TryThrottleManagementConsole(EntityUid console)
         {
-            payroll = 0;
-            canReach = false;
+            var curTime = _gameTiming.CurTime;
 
-            var accounts = GetAccounts(EconomyBankAccountMask.All);
-            var found = false;
-            foreach (var (_, entity) in accounts)
-            {
-                var comp = entity.Comp;
-                if (comp.JobName is not { } jobId)
-                    continue;
+            if (_consoleCooldowns.TryGetValue(console, out var nextAvailable) && nextAvailable > curTime)
+                return false;
 
-                if (!TryGetSalaryJobEntry(jobId, DefaultSalariesPrototypeId, out var jobEntry))
-                    continue;
-
-                if (jobEntry.Value.AccountId != account.AccountID)
-                    continue;
-
-                var salary = comp.Salary ?? jobEntry.Value.Sallary;
-                payroll += salary;
-                found = true;
-            }
-
-            canReach = payroll == 0 || account.Balance >= payroll;
-            return found || payroll == 0;
+            _consoleCooldowns[console] = curTime + ManagementConsoleActionCooldown;
+            return true;
         }
 
         [PublicAPI]

@@ -173,6 +173,35 @@ namespace Content.Shared.AWS.Economy.Bank
         {
         }
 
+        [PublicAPI]
+        public bool TryGetAssignedPayroll(EconomyBankAccountComponent account, out ulong payroll, out bool canReach)
+        {
+            payroll = 0;
+            canReach = false;
+
+            var accounts = GetAccounts(EconomyBankAccountMask.All);
+            var found = false;
+            foreach (var (_, entity) in accounts)
+            {
+                var comp = entity.Comp;
+                if (comp.JobName is not { } jobId)
+                    continue;
+
+                if (!TryGetSalaryJobEntry(jobId, DefaultSalariesPrototypeId, out var jobEntry))
+                    continue;
+
+                if (jobEntry.Value.AccountId != account.AccountID)
+                    continue;
+
+                var salary = comp.Salary ?? jobEntry.Value.Sallary;
+                payroll += salary;
+                found = true;
+            }
+
+            canReach = payroll == 0 || account.Balance >= payroll;
+            return found || payroll == 0;
+        }
+
         /// <summary>
         /// Returns JobEntry from salaries prototype.
         /// </summary>

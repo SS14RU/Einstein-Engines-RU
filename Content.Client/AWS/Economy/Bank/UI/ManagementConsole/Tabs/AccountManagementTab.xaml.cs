@@ -335,13 +335,19 @@ public sealed partial class AccountManagementTab : Control
                                                      Loc.GetString("economybanksystem-management-console-management-unblock");
         var salary = account.Salary ?? 0;
         var reachable = account.CanReachPayDay;
-        AccountPaydayStatusLabel.Text = reachable is not null ? (reachable.Value ? Loc.GetString("economybanksystem-management-console-management-salary-reachable", ("salary", salary)) :
-                                                                  Loc.GetString("economybanksystem-management-console-management-salary-not-reachable", ("salary", salary)))
-                                                   : "-";
+        var readOnly = IsReadOnlyAccount(account);
+        if (readOnly && _bankAccountSystem.TryGetAssignedPayroll(account, out var payroll, out var payrollCanReach))
+        {
+            salary = payroll;
+            reachable = payrollCanReach;
+        }
+        AccountPaydayStatusLabel.Text = reachable
+            ? Loc.GetString("economybanksystem-management-console-management-salary-reachable", ("salary", salary))
+            : Loc.GetString("economybanksystem-management-console-management-salary-not-reachable", ("salary", salary));
         BlockButton.Text = account.Blocked ? Loc.GetString("economybanksystem-management-console-management-unblock-button") :
                                              Loc.GetString("economybanksystem-management-console-management-block-button");
         UpdateJobPreset(account, account.JobName);
-        SalaryAmountBox.Value = (int)salary;
+        SalaryAmountBox.Value = (int) salary;
     }
 
     private void SetDefaultJob(ProtoId<JobPrototype>? job)
