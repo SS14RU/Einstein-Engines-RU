@@ -149,6 +149,24 @@ namespace Content.Shared.AWS.Economy.Bank
             return IsDepartmentAccount(account) || IsDepartmentCashAccount(account);
         }
 
+        protected bool IsAccountAllowedForConsole(EconomyManagementConsoleComponent console, EconomyBankAccountComponent account)
+        {
+            if (!console.AllowCentralCommandAccount && IsCentralCommandAccount(account.AccountID))
+                return false;
+
+            if (!console.AllowRestrictedAccounts && IsRestrictedDepartmentAccount(account))
+                return false;
+
+            return console.AllowedAccountMask switch
+            {
+                EconomyBankAccountMask.All => true,
+                EconomyBankAccountMask.NotBlocked => !account.Blocked,
+                EconomyBankAccountMask.Blocked => account.Blocked,
+                EconomyBankAccountMask.ByTags => console.AllowedAccountTags != null && account.AccountTags.Any(console.AllowedAccountTags.Contains),
+                _ => true
+            };
+        }
+
         protected virtual void AdjustManagementConsoleState(Entity<EconomyManagementConsoleComponent> ent,
             EconomyBankAccountComponent? bankAccount,
             EconomyManagementConsoleUserInterfaceState state)
@@ -407,6 +425,9 @@ namespace Content.Shared.AWS.Economy.Bank
         [PublicAPI]
         public void UpdateManagementConsoleUserInterface(Entity<EconomyManagementConsoleComponent> ent, EconomyBankAccountComponent? bankAccount)
         {
+            if (bankAccount is not null && !IsAccountAllowedForConsole(ent.Comp, bankAccount))
+                bankAccount = null;
+
             var stateInfo = GetManagementConsoleInsertedCardsStateInfo(ent);
             var netHolder = GetNetEntity(stateInfo.Item3);
             var uiState = new EconomyManagementConsoleUserInterfaceState()
@@ -415,6 +436,12 @@ namespace Content.Shared.AWS.Economy.Bank
                 IDCardName = stateInfo.Item2,
                 AccountHolder = netHolder,
                 HolderID = stateInfo.Item3?.Comp.AccountID,
+                DefaultJob = ent.Comp.DefaultJob,
+                SalaryButtonSteps = new List<int>(ent.Comp.SalaryButtonSteps),
+                AccountMask = ent.Comp.AllowedAccountMask,
+                AccountTags = ent.Comp.AllowedAccountTags != null ? new List<BankAccountTag>(ent.Comp.AllowedAccountTags) : null,
+                AllowCentralCommandAccount = ent.Comp.AllowCentralCommandAccount,
+                AllowRestrictedAccounts = ent.Comp.AllowRestrictedAccounts,
                 AccountID = bankAccount?.AccountID,
                 AccountName = bankAccount?.AccountName,
                 Balance = bankAccount?.Balance,

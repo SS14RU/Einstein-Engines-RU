@@ -988,6 +988,9 @@ namespace Content.Server.AWS.Economy.Bank
             if (!TryGetAccount(args.AccountID, out var account))
                 return;
 
+             if (!IsAccountAllowedForConsole(ent.Comp, account.Value.Comp))
+                 return;
+
             TrySetAccountParameter(args.AccountID, args.Param, args.Value);
             UpdateManagementConsoleUserInterface(ent, account.Value.Comp);
         }
@@ -1005,6 +1008,9 @@ namespace Content.Server.AWS.Economy.Bank
             if (!TryGetAccount(args.Payer, out var payerAccount))
                 return;
 
+            if (!IsAccountAllowedForConsole(ent.Comp, payerAccount.Value.Comp))
+                return;
+
             var accounts = GetAccounts(EconomyBankAccountMask.ByTags, new List<BankAccountTag> { BankAccountTag.Personal });
             var accountList = args.Accounts;
             var intersectedAccounts = accounts.Where(account => accountList.Contains(account.Value.Comp.AccountID)).GetEnumerator();
@@ -1015,6 +1021,9 @@ namespace Content.Server.AWS.Economy.Bank
             {
                 var account = intersectedAccounts.Current.Value.Comp;
                 if (account.Salary is null)
+                    continue;
+
+                if (!IsAccountAllowedForConsole(ent.Comp, account))
                     continue;
 
                 var bonus = (ulong) (account.Salary * args.BonusPercent);

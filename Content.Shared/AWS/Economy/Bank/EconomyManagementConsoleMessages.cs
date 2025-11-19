@@ -1,4 +1,7 @@
+using Content.Shared.Roles;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
+using System.Collections.Generic;
 
 namespace Content.Shared.AWS.Economy.Bank;
 
@@ -30,6 +33,12 @@ public sealed class EconomyManagementConsoleUserInterfaceState : BoundUserInterf
     public string? IDCardName;
     public NetEntity? AccountHolder;
     public string? HolderID;
+    public ProtoId<JobPrototype>? DefaultJob;
+    public List<int>? SalaryButtonSteps;
+    public EconomyBankAccountMask AccountMask = EconomyBankAccountMask.All;
+    public List<BankAccountTag>? AccountTags;
+    public bool AllowCentralCommandAccount;
+    public bool AllowRestrictedAccounts;
 
     // Account that has been selected when performing the last action (this is kinda dumb yeah)
     public string? AccountID;
