@@ -19555,13 +19555,6 @@ entities:
     - type: Transform
       pos: -28.440887,17.64114
       parent: 2
-- proto: ClothingNeckLGBTPin
-  entities:
-  - uid: 8195
-    components:
-    - type: Transform
-      pos: 2.6020877,-21.379698
-      parent: 2
 - proto: ClothingNeckScarfStripedBlack
   entities:
   - uid: 8060

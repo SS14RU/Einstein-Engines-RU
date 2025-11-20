@@ -91127,16 +91127,6 @@ entities:
     - type: Transform
       pos: -29.524712,-14.356471
       parent: 2
-- proto: VendingMachineRestockPride
-  entities:
-  - uid: 8937
-    components:
-    - type: Transform
-      pos: -53.490845,-46.68229
-      parent: 2
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
 - proto: VendingMachineRestockTankDispenser
   entities:
   - uid: 14610

@@ -4,8 +4,3 @@
     prefix: thankyou-courierdrobe-
     count: 2
 
-- type: localizedDataset
-  id: PrideDrobeGoodbyes
-  values:
-    prefix: thankyou-pride-
-    count: 2

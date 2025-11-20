@@ -46646,9 +46646,6 @@ entities:
   entities:
   - uid: 6988
     components:
-    - type: MetaData
-      desc: Happy pride month!
-      name: pride month crown
     - type: Transform
       pos: -55.447285,-35.27587
       parent: 2
@@ -46756,13 +46753,6 @@ entities:
     components:
     - type: Transform
       pos: -54.295135,50.98366
-      parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 7006
-    components:
-    - type: Transform
-      pos: -54.46124,-28.943243
       parent: 2
 - proto: ClothingNeckScarfStripedGreen
   entities:
@@ -124106,13 +124096,6 @@ entities:
     components:
     - type: Transform
       pos: -31.5,33.5
-      parent: 2
-- proto: VendingMachinePride
-  entities:
-  - uid: 18760
-    components:
-    - type: Transform
-      pos: -45.5,17.5
       parent: 2
 - proto: VendingMachineRepDrobe
   entities:

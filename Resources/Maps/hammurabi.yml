@@ -245700,13 +245700,6 @@ entities:
     - type: Transform
       pos: -34.5,-12.5
       parent: 1
-- proto: VendingMachinePride
-  entities:
-  - uid: 2577
-    components:
-    - type: Transform
-      pos: -55.5,33.5
-      parent: 1
 - proto: VendingMachineRepDrobe
   entities:
   - uid: 8012

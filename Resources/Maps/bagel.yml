@@ -60108,20 +60108,6 @@ entities:
     - type: Transform
       pos: -41.75516,14.452198
       parent: 2
-- proto: ClothingNeckAromanticPin
-  entities:
-  - uid: 9306
-    components:
-    - type: Transform
-      pos: 83.621025,-13.51627
-      parent: 2
-- proto: ClothingNeckBisexualPin
-  entities:
-  - uid: 9307
-    components:
-    - type: Transform
-      pos: -20.494595,5.7531924
-      parent: 2
 - proto: ClothingNeckBling
   entities:
   - uid: 9308
@@ -60139,13 +60125,6 @@ entities:
     - type: Physics
       angularDamping: 0
       linearDamping: 0
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 9310
-    components:
-    - type: Transform
-      pos: -40.498245,-36.02266
-      parent: 2
 - proto: ClothingNeckHeadphones
   entities:
   - uid: 9311
@@ -60157,27 +60136,6 @@ entities:
     components:
     - type: Transform
       pos: -38.4609,19.6876
-      parent: 2
-- proto: ClothingNeckIntersexPin
-  entities:
-  - uid: 9313
-    components:
-    - type: Transform
-      pos: -12.770909,19.336336
-      parent: 2
-- proto: ClothingNeckLesbianPin
-  entities:
-  - uid: 9314
-    components:
-    - type: Transform
-      pos: -10.308835,13.564301
-      parent: 2
-- proto: ClothingNeckLGBTPin
-  entities:
-  - uid: 9315
-    components:
-    - type: Transform
-      pos: -11.221505,22.789167
       parent: 2
 - proto: ClothingNeckMantleCMO
   entities:
@@ -60215,13 +60173,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingNeckNonBinaryPin
-  entities:
-  - uid: 9322
-    components:
-    - type: Transform
-      pos: -6.8039737,15.288539
-      parent: 2
 - proto: ClothingNeckScarfStripedBlue
   entities:
   - uid: 9323
@@ -60288,13 +60239,6 @@ entities:
     components:
     - type: Transform
       pos: -63.651737,-1.4881696
-      parent: 2
-- proto: ClothingNeckTransPin
-  entities:
-  - uid: 9334
-    components:
-    - type: Transform
-      pos: -8.970711,16.51249
       parent: 2
 - proto: ClothingOuterApron
   entities:
@@ -108922,13 +108866,6 @@ entities:
     components:
     - type: Transform
       pos: 21.334734,-11.3924055
-      parent: 2
-- proto: LGBTQHandyFlag
-  entities:
-  - uid: 16608
-    components:
-    - type: Transform
-      pos: -41.49743,-36.512333
       parent: 2
 - proto: LightBulb
   entities:

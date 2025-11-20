@@ -174204,57 +174204,6 @@ entities:
     - type: Transform
       pos: 84.5,40.5
       parent: 2
-- proto: LGBTQFlag
-  entities:
-  - uid: 755
-    components:
-    - type: Transform
-      pos: 4.5,24.5
-      parent: 2
-  - uid: 37541
-    components:
-    - type: Transform
-      pos: -6.5,-3.5
-      parent: 2
-  - uid: 37542
-    components:
-    - type: Transform
-      pos: 4.5,-30.5
-      parent: 2
-  - uid: 37547
-    components:
-    - type: Transform
-      pos: 4.5,-49.5
-      parent: 2
-  - uid: 37548
-    components:
-    - type: Transform
-      pos: -1.5,-49.5
-      parent: 2
-- proto: LGBTQHandyFlag
-  entities:
-  - uid: 4080
-    components:
-    - type: Transform
-      pos: 6.5761847,-34.404533
-      parent: 2
-  - uid: 37189
-    components:
-    - type: Transform
-      pos: 13.527647,41.66988
-      parent: 2
-  - uid: 37546
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.4556704,-33.39672
-      parent: 2
-  - uid: 37552
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5806704,-33.256096
-      parent: 2
 - proto: LightBulbBroken
   entities:
   - uid: 4609
@@ -217716,28 +217665,6 @@ entities:
     components:
     - type: Transform
       pos: -56.5,2.5
-      parent: 2
-- proto: VendingMachinePride
-  entities:
-  - uid: 2543
-    components:
-    - type: Transform
-      pos: 4.5,23.5
-      parent: 2
-  - uid: 6200
-    components:
-    - type: Transform
-      pos: -36.5,-23.5
-      parent: 2
-  - uid: 6382
-    components:
-    - type: Transform
-      pos: -8.5,18.5
-      parent: 2
-  - uid: 13070
-    components:
-    - type: Transform
-      pos: 5.5,-31.5
       parent: 2
 - proto: VendingMachineRepDrobe
   entities:
