@@ -36,7 +36,6 @@ holiday-name-garbage-day = Дня мусора
 holiday-name-international-picnic-day = Международного дня пикника
 holiday-name-fathers-day = Дня отца
 holiday-name-summer-solstice = летнего солнцестояния
-holiday-name-stonewall-riots-anniversary = День Дня
 holiday-name-doctor-day = День Дня
 holiday-name-ufo-day = Международного дня НЛО
 holiday-name-us-independence-day = День Дня
@@ -46,20 +45,16 @@ holiday-name-friendship-day = Дня дружбы
 holiday-name-beer-day = Дня пива
 holiday-name-talk-like-a-pirate-day = Дня «Говори как пират»
 holiday-name-programmers-day = Дня программиста
-holiday-name-bisexual-pride-day = День Дня
 holiday-name-stupid-questions-day = Дня глупых вопросов
 holiday-name-animals-day = Дня защиты животных
 holiday-name-smiling-day = Дня улыбки
-holiday-name-lesbian-day = День Дня
 holiday-name-canadian-thanksgiving = День Дня
-holiday-name-spirit-day = Дня сильных духом
 holiday-name-halloween = Хэллоуина
 holiday-name-vegan-day = День Дня
 holiday-name-armistice-day = Дня перемирия
 holiday-name-kindness-day = Дня доброты
 holiday-name-life-day = День Дня
 holiday-name-flowers-day = Дня цветов
-holiday-name-transgender-remembrance-day = День Дня
 holiday-name-saying-hello-day = Дня приветствий
 holiday-name-thanksgiving = День Дня
 holiday-name-sinterklaas = Синтерклааса
@@ -70,7 +65,6 @@ holiday-name-christmas = католического Рождества
 holiday-name-festive-season = наступающего Нового года
 holiday-name-boxing-day = Дня подарков
 holiday-name-friday-thirteenth = Дня неприятностей
-holiday-name-national-coming-out-day = День Дня
 
 ## Custom congrats
 

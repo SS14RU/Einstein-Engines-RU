@@ -96226,13 +96226,6 @@ entities:
     - type: Transform
       pos: -17.5,11.5
       parent: 2
-- proto: VendingMachinePride
-  entities:
-  - uid: 14757
-    components:
-    - type: Transform
-      pos: -2.5,6.5
-      parent: 2
 - proto: VendingMachineRepDrobe
   entities:
   - uid: 14758

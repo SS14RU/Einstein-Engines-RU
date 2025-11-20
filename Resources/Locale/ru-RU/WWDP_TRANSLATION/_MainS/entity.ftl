@@ -1710,9 +1710,6 @@ ent-BaseVendingMachineRestockDeltaV = коробка пополнения авт
     .desc = Коробка для пополнения торговых автоматов корпоративными вкусностями.
 
 
-ent-VendingMachineRestockPride = коробка пополнения Pride-O-Mat
-    .desc = Станции срочно нужно больше плюшевых акул, и ты это знаешь.
-
 
 ent-VendingMachineRestockSustenance = коробка пополнения автомата с едой
     .desc = Заключённые тоже должны есть. Никто не говорил, что вкусно.
@@ -1852,9 +1849,6 @@ ent-FaxMachineListeningSyndie = факс-машина прослушки (дал
 ent-SyndicateMonitoringServer = подозрительный сервер мониторинга экипажа
     .desc = Получает и передаёт данные с сенсоров скафандров.
 
-
-ent-VendingMachinePride = Pride-O-Mat
-    .desc = Торговый автомат, полный преступлений.
 
 
 ent-VendingMachineCourierDrobe = КурьерДроб
@@ -3243,9 +3237,6 @@ ent-ClothingNeckNecklacePendantSilverLarge = большое серебряное
 ent-ClothingNeckPinBase = значок
     .desc = будь ничем — творя преступления
 
-
-ent-ClothingNeckGayPin = гей значок
-    .desc = будь гей — и пусть весь мир подождёт
 
 
 ent-ClothingNeckAutismPin = аутичный значок
@@ -5105,9 +5096,6 @@ ent-MobWatcherIcewing = ледокрылый наблюдатель
 
 ent-MobWatcherMagmawing = магмокрылый наблюдатель
 
-
-ent-MobWatcherPride = прайд-наблюдатель
-    .desc = Редкий подвид, появляющийся только в июне. Яркий. Грозный. Горд.
 
 
 ent-MobLivingLight = световое существо
@@ -7356,9 +7344,6 @@ ent-NTHandyFlag = ручной флаг НаноТрейзен
 ent-SyndieHandyFlag = ручной флаг Синдиката
     .desc = Для настоящих бунтарей. Смерть NT!
 
-
-ent-LGBTQHandyFlag = ЛГБТ-флажок
-    .desc = Будь геем, твори беззаконие.
 
 
 ent-PirateHandyFlag = пиратский флажок
@@ -9753,9 +9738,6 @@ ent-NTFlag = флаг НаноТрейзен
 ent-SyndieFlag = флаг Синдиката
     .desc = Пахнет кровью. Смерть NT!
 
-
-ent-LGBTQFlag = флаг ЛГБТК+
-    .desc = Флаг «Будь геем — нарушай закон».
 
 
 ent-PirateFlag = пиратский флаг

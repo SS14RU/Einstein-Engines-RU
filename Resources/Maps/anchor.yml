@@ -13508,8 +13508,8 @@ entities:
   - uid: 102
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: шлюз
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: С€Р»СЋР·
     - type: Transform
       pos: 69.5,60.5
       parent: 2
@@ -13677,8 +13677,8 @@ entities:
   - uid: 124
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: рамка стеклянного шлюза
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: СЂР°РјРєР° СЃС‚РµРєР»СЏРЅРЅРѕРіРѕ С€Р»СЋР·Р°
     - type: Transform
       pos: 64.5,59.5
       parent: 2
@@ -15199,8 +15199,8 @@ entities:
   - uid: 278
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: внешний шлюз
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: РІРЅРµС€РЅРёР№ С€Р»СЋР·
     - type: Transform
       pos: 74.5,56.5
       parent: 2
@@ -15215,8 +15215,8 @@ entities:
   - uid: 279
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: внешний шлюз
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: РІРЅРµС€РЅРёР№ С€Р»СЋР·
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 79.5,57.5
@@ -15455,7 +15455,7 @@ entities:
     components:
     - type: MetaData
       desc: I'm escaping to the one place that hasn't been corrupted by capitalism!
-      name: эвакуация
+      name: СЌРІР°РєСѓР°С†РёСЏ
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 63.5,63.5
@@ -16125,16 +16125,16 @@ entities:
   - uid: 374
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: стеклянный шлюз
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: СЃС‚РµРєР»СЏРЅРЅС‹Р№ С€Р»СЋР·
     - type: Transform
       pos: 63.5,59.5
       parent: 2
   - uid: 375
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: стеклянный шлюз
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: СЃС‚РµРєР»СЏРЅРЅС‹Р№ С€Р»СЋР·
     - type: Transform
       pos: 69.5,56.5
       parent: 2
@@ -16569,32 +16569,32 @@ entities:
   - uid: 432
     components:
     - type: MetaData
-      desc: Он открывается, закрывается и, возможно, раздавит вас.
-      name: солнечный
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ Рё, РІРѕР·РјРѕР¶РЅРѕ, СЂР°Р·РґР°РІРёС‚ РІР°СЃ.
+      name: СЃРѕР»РЅРµС‡РЅС‹Р№
     - type: Transform
       pos: 71.5,45.5
       parent: 2
   - uid: 433
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: северные панели
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: СЃРµРІРµСЂРЅС‹Рµ РїР°РЅРµР»Рё
     - type: Transform
       pos: 72.5,54.5
       parent: 2
   - uid: 434
     components:
     - type: MetaData
-      desc: Он открывается, закрывается, и может раздавить вас.
-      name: северные панели
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ, Рё РјРѕР¶РµС‚ СЂР°Р·РґР°РІРёС‚СЊ РІР°СЃ.
+      name: СЃРµРІРµСЂРЅС‹Рµ РїР°РЅРµР»Рё
     - type: Transform
       pos: 71.5,54.5
       parent: 2
   - uid: 435
     components:
     - type: MetaData
-      desc: Он открывается, закрывается и, возможно, раздавит вас.
-      name: солнечный
+      desc: РћРЅ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ Рё, РІРѕР·РјРѕР¶РЅРѕ, СЂР°Р·РґР°РІРёС‚ РІР°СЃ.
+      name: СЃРѕР»РЅРµС‡РЅС‹Р№
     - type: Transform
       pos: 72.5,45.5
       parent: 2
@@ -21238,7 +21238,7 @@ entities:
   - uid: 1140
     components:
     - type: MetaData
-      desc: This one says 'ᶠᵘⁿ'.
+      desc: This one says 'ISOLATION'.
       name: isolation
     - type: Transform
       pos: -76.5,-73.5
@@ -21290,7 +21290,7 @@ entities:
   - uid: 1145
     components:
     - type: MetaData
-      desc: This one says 'FREE AIRᵇᵘᵈ'.
+      desc: This one says 'FREE AIR'.
       name: EVA
     - type: Transform
       pos: -19.5,-19.5
@@ -77518,14 +77518,6 @@ entities:
     components:
     - type: Transform
       pos: -31.286428,-54.622658
-      parent: 2
-- proto: ClothingNeckCloakAce
-  entities:
-  - uid: 12074
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -15.525635,-30.416811
       parent: 2
 - proto: ClothingNeckCloakMoth
   entities:
@@ -137857,7 +137849,7 @@ entities:
   - uid: 20994
     components:
     - type: MetaData
-      desc: Safety Moth™ lets you know that while ALL the cool kids smoke, it causes cancer, it can also lower your immune system and make you susceptible to all kinds of other diseases and not to mention second hand smoke which can do the same to innocent bystanders!
+      desc: Safety Mothв„ў lets you know that while ALL the cool kids smoke, it causes cancer, it can also lower your immune system and make you susceptible to all kinds of other diseases and not to mention second hand smoke which can do the same to innocent bystanders!
       name: Safety Moth - Smoking
     - type: Transform
       pos: -32.5,-46.5
@@ -137867,7 +137859,7 @@ entities:
   - uid: 20995
     components:
     - type: MetaData
-      desc: This informational poster uses Safety Moth™ to tell the viewer that they really exist. "You're more than just pixels, you are you!"
+      desc: This informational poster uses Safety Mothв„ў to tell the viewer that they really exist. "You're more than just pixels, you are you!"
       name: Safety Moth - Motivational
     - type: Transform
       pos: 73.5,3.5
@@ -156118,8 +156110,8 @@ entities:
   - uid: 24192
     components:
     - type: MetaData
-      desc: энергия течет к людям.
-      name: российский спутник substation
+      desc: СЌРЅРµСЂРіРёСЏ С‚РµС‡РµС‚ Рє Р»СЋРґСЏРј.
+      name: СЂРѕСЃСЃРёР№СЃРєРёР№ СЃРїСѓС‚РЅРёРє substation
     - type: Transform
       pos: 76.5,59.5
       parent: 2

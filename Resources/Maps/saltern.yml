@@ -29936,13 +29936,6 @@ entities:
     - type: Physics
       angularDamping: 0
       linearDamping: 0
-- proto: ClothingNeckNonBinaryPin
-  entities:
-  - uid: 4813
-    components:
-    - type: Transform
-      pos: 43.27403,-8.317395
-      parent: 2
 - proto: ClothingNeckScarfStripedBlue
   entities:
   - uid: 4814
@@ -59055,7 +59048,7 @@ entities:
       stampedBy:
       - stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
-      content: "[color=#1b487e]███░███░░░░██░░░░[/color]\r\n[color=#1b487e]░██░████░░░██░░░░[/color]\r\n[color=#1b487e]░░█░██░██░░██░█░░[/color]               [head=3]NanoTrasen[/head]\r\n[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]           NTSS-38a Saltern[/bold]\r\n[color=#1b487e]░░░░██░░░████░███[/color]\r\n=============================================\r\n                     NOTICE TO ENGINEERING STAFF\r\n=============================================\r\nDue to corporate restructuring, and the presence of an updated Mk8 Supermatter engine, we have decided to reduce operational costs on our newest model of \"Saltern\" class stations. This state of the art Supermatter engine costs 450 million Spesos to design, produce, and implement on our stations. We have opted to save on operational costs by not supplying this station with an Antimatter Engine, which we should remind you, costs 150 Million Spesos to produce. \n\nIf you are lacking in qualified and trained engineering personnel to operate the Supermatter engine, consider using these generators in combination with station Solar Arrays. Additional fuel may be obtained from the Logistics department.\n=============================================\r\n                            "
+      content: "[color=#1b487e]в–€в–€в–€в–‘в–€в–€в–€в–‘в–‘в–‘в–‘в–€в–€в–‘в–‘в–‘в–‘[/color]\r\n[color=#1b487e]в–‘в–€в–€в–‘в–€в–€в–€в–€в–‘в–‘в–‘в–€в–€в–‘в–‘в–‘в–‘[/color]\r\n[color=#1b487e]в–‘в–‘в–€в–‘в–€в–€в–‘в–€в–€в–‘в–‘в–€в–€в–‘в–€в–‘в–‘[/color]               [head=3]NanoTrasen[/head]\r\n[color=#1b487e]в–‘в–‘в–‘в–‘в–€в–€в–‘в–‘в–€в–€в–‘в–€в–€в–‘в–€в–€в–‘[/color] [bold]           NTSS-38a Saltern[/bold]\r\n[color=#1b487e]в–‘в–‘в–‘в–‘в–€в–€в–‘в–‘в–‘в–€в–€в–€в–€в–‘в–€в–€в–€[/color]\r\n=============================================\r\n                     NOTICE TO ENGINEERING STAFF\r\n=============================================\r\nDue to corporate restructuring, and the presence of an updated Mk8 Supermatter engine, we have decided to reduce operational costs on our newest model of \"Saltern\" class stations. This state of the art Supermatter engine costs 450 million Spesos to design, produce, and implement on our stations. We have opted to save on operational costs by not supplying this station with an Antimatter Engine, which we should remind you, costs 150 Million Spesos to produce. \n\nIf you are lacking in qualified and trained engineering personnel to operate the Supermatter engine, consider using these generators in combination with station Solar Arrays. Additional fuel may be obtained from the Logistics department.\n=============================================\r\n                            "
     - type: Physics
       angularDamping: 0
       linearDamping: 0

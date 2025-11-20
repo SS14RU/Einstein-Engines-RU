@@ -62491,13 +62491,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -38.538452,122.52728
       parent: 33
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 9288
-    components:
-    - type: Transform
-      pos: -50.546757,40.480946
-      parent: 33
 - proto: ClothingNeckHeadphones
   entities:
   - uid: 24440
@@ -176115,13 +176108,6 @@ entities:
     components:
     - type: Transform
       pos: -19.5,42.5
-      parent: 33
-- proto: VendingMachinePride
-  entities:
-  - uid: 27721
-    components:
-    - type: Transform
-      pos: -16.5,-1.5
       parent: 33
 - proto: VendingMachinePwrGame
   entities:

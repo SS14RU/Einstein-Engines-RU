@@ -19332,17 +19332,17 @@ entities:
   - uid: 1127
     components:
     - type: MetaData
-      name: 'Sindicato: Uma ameaça?'
+      name: 'Sindicato: Uma ameaГ§a?'
     - type: Transform
       parent: 1126
     - type: Paper
       content: >2-
-         Antes de tudo, quero esclarecer algumas coisas. Recomendo não buscar mais informações sobre o Sindicato ou qualquer coisa relacionada a ele. Se fizer isso, enfrentará um grande perigo e pode muito bem acabar sendo morto. Estou fazendo isso na tentativa de informar o máximo de pessoas possível sobre o que a NanoTrasen esconde. Algumas informações são bastante incertas devido à grande censura que ocorre pela NanoTrasen, e não poderei responder algumas dúvidas que surgirão ao longo deste livro. Por fim, espero que tenha uma boa leitura.
+         Antes de tudo, quero esclarecer algumas coisas. Recomendo nГЈo buscar mais informaГ§Гµes sobre o Sindicato ou qualquer coisa relacionada a ele. Se fizer isso, enfrentarГЎ um grande perigo e pode muito bem acabar sendo morto. Estou fazendo isso na tentativa de informar o mГЎximo de pessoas possГ­vel sobre o que a NanoTrasen esconde. Algumas informaГ§Гµes sГЈo bastante incertas devido Г  grande censura que ocorre pela NanoTrasen, e nГЈo poderei responder algumas dГєvidas que surgirГЈo ao longo deste livro. Por fim, espero que tenha uma boa leitura.
 
         Ass. Olivia Hass
 
 
-        [color=red]Este livro teve a circulação proibida e qualquer exemplar dele deve ser queimado.[/color]
+        [color=red]Este livro teve a circulaГ§ГЈo proibida e qualquer exemplar dele deve ser queimado.[/color]
     - type: Physics
       canCollide: False
   - uid: 1128
@@ -19354,40 +19354,40 @@ entities:
       parent: 1126
     - type: Paper
       content: >-
-        Nas esferas do misticismo e das forças indomáveis, existe uma entidade de poder inigualável conhecida como o A Marionete Suprema. Apesar de seu nome, esse ser extraordinário está longe de ser uma marionete real; ele tem o tamanho de um humano médio, e sua aparência pode mudar de tempos em tempos. Ele incorpora uma misteriosa combinação de poder e consciência, exigindo um mestre para orientar suas ações. A natureza do Boneco está intrinsicamente ligada ao controle, sua existência depende de um mestre que pode aproveitar suas imensas capacidades.
+        Nas esferas do misticismo e das forГ§as indomГЎveis, existe uma entidade de poder inigualГЎvel conhecida como o A Marionete Suprema. Apesar de seu nome, esse ser extraordinГЎrio estГЎ longe de ser uma marionete real; ele tem o tamanho de um humano mГ©dio, e sua aparГЄncia pode mudar de tempos em tempos. Ele incorpora uma misteriosa combinaГ§ГЈo de poder e consciГЄncia, exigindo um mestre para orientar suas aГ§Гµes. A natureza do Boneco estГЎ intrinsicamente ligada ao controle, sua existГЄncia depende de um mestre que pode aproveitar suas imensas capacidades.
 
 
-        A Marionete Suprema possui um arsenal de habilidades e capacidades extraordinárias, tornando-o uma força a ser reconhecida. Quando o mestre emite um comando, a Marionete o executa com uma eficiência, habilidade e sutileza inigualáveis. Seja uma infiltração delicada, uma manobra estratégica ou uma exibição de poder bruto, a Marionete realiza sua ordem dada impecavelmente, sem deixar margem para erro.
+        A Marionete Suprema possui um arsenal de habilidades e capacidades extraordinГЎrias, tornando-o uma forГ§a a ser reconhecida. Quando o mestre emite um comando, a Marionete o executa com uma eficiГЄncia, habilidade e sutileza inigualГЎveis. Seja uma infiltraГ§ГЈo delicada, uma manobra estratГ©gica ou uma exibiГ§ГЈo de poder bruto, a Marionete realiza sua ordem dada impecavelmente, sem deixar margem para erro.
 
 
-        No entanto, a verdadeira arte da Marionete reside na teatralidade e intriga de seus comandos. O desempenho da Marionete está intrinsecamente ligado às habilidades criativas e teatrais de seu mestre. Quanto mais envolvente, cativante e dramático o cenário criado pelo mestre, mais pronunciada e extraordinária se torna a execução da Marionete. Um comando sem brilho teatral e mundano leva a resultados ineficientes ou falhas, enquanto uma ordem brilhantemente concebida e narrada desbloqueia todo o potencial das habilidades da Marionete.
+        No entanto, a verdadeira arte da Marionete reside na teatralidade e intriga de seus comandos. O desempenho da Marionete estГЎ intrinsecamente ligado Г s habilidades criativas e teatrais de seu mestre. Quanto mais envolvente, cativante e dramГЎtico o cenГЎrio criado pelo mestre, mais pronunciada e extraordinГЎria se torna a execuГ§ГЈo da Marionete. Um comando sem brilho teatral e mundano leva a resultados ineficientes ou falhas, enquanto uma ordem brilhantemente concebida e narrada desbloqueia todo o potencial das habilidades da Marionete.
 
 
-        Mas cuidado, pois a Marionete abriga uma inclinação secreta e traiçoeira. Se o mestre falhar repetidamente em cativar a Marionete com cenários fascinantes, a insatisfação penetra lentamente na consciência da entidade. À medida que a Marionete anseia por mais emoção e realização, o vínculo entre mestre e a Marionete começa a se fraturar. Gradualmente, o descontentamento da Marionete se transforma em uma animosidade perigosa, e com insatisfação suficiente, ela pode se voltar contra seu mestre com consequências letais.
+        Mas cuidado, pois a Marionete abriga uma inclinaГ§ГЈo secreta e traiГ§oeira. Se o mestre falhar repetidamente em cativar a Marionete com cenГЎrios fascinantes, a insatisfaГ§ГЈo penetra lentamente na consciГЄncia da entidade. ГЂ medida que a Marionete anseia por mais emoГ§ГЈo e realizaГ§ГЈo, o vГ­nculo entre mestre e a Marionete comeГ§a a se fraturar. Gradualmente, o descontentamento da Marionete se transforma em uma animosidade perigosa, e com insatisfaГ§ГЈo suficiente, ela pode se voltar contra seu mestre com consequГЄncias letais.
 
 
-        Assim, a Marionete Suprema caminha numa corda bamba delicada entre lealdade e rebelião, tornando a relação entre mestre e entidade uma dança precária. O mestre deve se esforçar continuamente para cativar e fascinar a Marionete, garantindo sua devoção e lealdade inabaláveis. De forma relativamente simples, esta entidade vê-se a si mesma como personagem de uma obra de ficção, ao mesmo tempo que vê o seu mestre como o criador da obra.
+        Assim, a Marionete Suprema caminha numa corda bamba delicada entre lealdade e rebeliГЈo, tornando a relaГ§ГЈo entre mestre e entidade uma danГ§a precГЎria. O mestre deve se esforГ§ar continuamente para cativar e fascinar a Marionete, garantindo sua devoГ§ГЈo e lealdade inabalГЎveis. De forma relativamente simples, esta entidade vГЄ-se a si mesma como personagem de uma obra de ficГ§ГЈo, ao mesmo tempo que vГЄ o seu mestre como o criador da obra.
 
 
-        Nas sombras do mistério e do poder oculto, a Marionete Suprema aguarda aqueles que ousam comandá-lo. Será você o escolhido para desbloquear seu potencial ilimitado, ou sucumbirá ao seu crescente descontentamento e enfrentará as consequências graves? A escolha reside em sua capacidade de domar o enigma da poderosa entidade que é a Marionete Suprema.
+        Nas sombras do mistГ©rio e do poder oculto, a Marionete Suprema aguarda aqueles que ousam comandГЎ-lo. SerГЎ vocГЄ o escolhido para desbloquear seu potencial ilimitado, ou sucumbirГЎ ao seu crescente descontentamento e enfrentarГЎ as consequГЄncias graves? A escolha reside em sua capacidade de domar o enigma da poderosa entidade que Г© a Marionete Suprema.
     - type: Physics
       canCollide: False
   - uid: 1129
     components:
     - type: MetaData
       name: >
-        Catalogo de Magias Hiper Desenvolvidas #1: (Maldição) - Alegoria do Peso Perpétuo:
+        Catalogo de Magias Hiper Desenvolvidas #1: (MaldiГ§ГЈo) - Alegoria do Peso PerpГ©tuo:
     - type: Transform
       parent: 1126
     - type: Paper
       content: >-
-        A pessoa afetada por esta maldição se encontra aprisionada em um ciclo interminável de tarefas exaustivas, sendo compelida a cumpri-las sem descanso. Trata-se de uma maldição cruel que mergulha a vítima em um estado de fadiga extrema, permitindo-lhe descansar apenas quando seu corpo sucumbe ao desmaio.
+        A pessoa afetada por esta maldiГ§ГЈo se encontra aprisionada em um ciclo interminГЎvel de tarefas exaustivas, sendo compelida a cumpri-las sem descanso. Trata-se de uma maldiГ§ГЈo cruel que mergulha a vГ­tima em um estado de fadiga extrema, permitindo-lhe descansar apenas quando seu corpo sucumbe ao desmaio.
 
 
-        Aqueles sob efeito da Alegoria do Peso Perpétuo vivenciam uma corrente interminável de tarefas, cujo número parece ser infinito. Essas tarefas podem variar em natureza, indo desde atividades físicas extenuantes até tarefas mentais exaustivas, sempre se adaptando às habilidades e destrezas individuais da vítima. A maldição não apenas exige que as tarefas sejam concluídas, mas também pressiona a pessoa afetada a executá-las com eficiência e perfeição, deixando pouco espaço para falhas.
+        Aqueles sob efeito da Alegoria do Peso PerpГ©tuo vivenciam uma corrente interminГЎvel de tarefas, cujo nГєmero parece ser infinito. Essas tarefas podem variar em natureza, indo desde atividades fГ­sicas extenuantes atГ© tarefas mentais exaustivas, sempre se adaptando Г s habilidades e destrezas individuais da vГ­tima. A maldiГ§ГЈo nГЈo apenas exige que as tarefas sejam concluГ­das, mas tambГ©m pressiona a pessoa afetada a executГЎ-las com eficiГЄncia e perfeiГ§ГЈo, deixando pouco espaГ§o para falhas.
 
 
-        Enquanto a Maldição do Peso Eterno é implacável em suas imposições de tarefas, ela concede à pessoa afetada um mínimo de livre-arbítrio. A vítima pode escolher a ordem em que realiza as tarefas e até mesmo o tipo de atividade que deseja empreender, dentro dos limites impostos pela maldição. Essa capacidade de escolha paradoxalmente intensifica o sofrimento da pessoa, pois ela deve decidir constantemente qual tarefa realizar, sabendo que nunca haverá um fim para essa demanda interminável.
+        Enquanto a MaldiГ§ГЈo do Peso Eterno Г© implacГЎvel em suas imposiГ§Гµes de tarefas, ela concede Г  pessoa afetada um mГ­nimo de livre-arbГ­trio. A vГ­tima pode escolher a ordem em que realiza as tarefas e atГ© mesmo o tipo de atividade que deseja empreender, dentro dos limites impostos pela maldiГ§ГЈo. Essa capacidade de escolha paradoxalmente intensifica o sofrimento da pessoa, pois ela deve decidir constantemente qual tarefa realizar, sabendo que nunca haverГЎ um fim para essa demanda interminГЎvel.
     - type: Physics
       canCollide: False
 - proto: BookChemicalCompendium
@@ -59325,27 +59325,6 @@ entities:
     - type: Transform
       pos: 19.387924,-13.55324
       parent: 2
-- proto: ClothingNeckAsexualPin
-  entities:
-  - uid: 8843
-    components:
-    - type: Transform
-      pos: 36.19758,26.417822
-      parent: 2
-- proto: ClothingNeckCloakAce
-  entities:
-  - uid: 8844
-    components:
-    - type: Transform
-      pos: 36.222733,26.699072
-      parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 8845
-    components:
-    - type: Transform
-      pos: 36.63746,30.719614
-      parent: 2
 - proto: ClothingNeckClownmedal
   entities:
   - uid: 908
@@ -59382,13 +59361,6 @@ entities:
     components:
     - type: Transform
       pos: 20.564407,-13.356026
-      parent: 2
-- proto: ClothingNeckTransPin
-  entities:
-  - uid: 8850
-    components:
-    - type: Transform
-      pos: 36.29247,30.486513
       parent: 2
 - proto: ClothingOuterArmorBulletproof
   entities:
@@ -71339,14 +71311,14 @@ entities:
       pos: -27.5,-32.5
       parent: 2
     - type: FaxMachine
-      name: Ciência
+      name: CiГЄncia
   - uid: 10784
     components:
     - type: Transform
       pos: -8.5,31.5
       parent: 2
     - type: FaxMachine
-      name: Segurança
+      name: SeguranГ§a
   - uid: 10785
     components:
     - type: Transform
@@ -71388,14 +71360,14 @@ entities:
       pos: 26.5,-19.5
       parent: 2
     - type: FaxMachine
-      name: Médico Chefe
+      name: MГ©dico Chefe
   - uid: 10791
     components:
     - type: Transform
       pos: 41.5,-25.5
       parent: 2
     - type: FaxMachine
-      name: Médica
+      name: MГ©dica
   - uid: 10792
     components:
     - type: Transform
@@ -71416,7 +71388,7 @@ entities:
       pos: -26.5,44.5
       parent: 2
     - type: FaxMachine
-      name: Segurança Chefe
+      name: SeguranГ§a Chefe
   - uid: 10795
     components:
     - type: Transform
@@ -71439,7 +71411,7 @@ entities:
       pos: -8.5,48.5
       parent: 2
     - type: FaxMachine
-      name: Capitão
+      name: CapitГЈo
 - proto: filingCabinetDrawerRandom
   entities:
   - uid: 10798
@@ -111819,40 +111791,40 @@ entities:
   - uid: 1227
     components:
     - type: MetaData
-      name: Formulário de Trabalho
+      name: FormulГЎrio de Trabalho
     - type: Transform
       parent: 1226
     - type: Paper
       content: >-
-        [color=#002159]█▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▄
+        [color=#002159]в–€в–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–€в–„
 
-        █   ▀██   █▄      █               █
+        в–€ вЂ‰ в–Ђв–€в–€ вЂ‰ в–€в–„ вЂ‰  вЂ‰ в–€ вЂ‰  вЂ‰  вЂ‰  вЂ‰  вЂ‰ в–€
 
-        █         ▀   █▀█▄█   ▄         █  [head=1]Nanotrasen[/head]
+        в–€ вЂ‰  вЂ‰  вЂ‰ в–Ђ вЂ‰ в–€в–Ђв–€в–„в–€ вЂ‰ в–„ вЂ‰  вЂ‰  вЂ‰ в–€  [head=1]Nanotrasen[/head]
 
-        █               █      ▀█   ██▄   █
+        в–€ вЂ‰  вЂ‰  вЂ‰  вЂ‰  вЂ‰ в–€ вЂ‰  вЂ‰ в–Ђв–€ вЂ‰ в–€в–€в–„ вЂ‰ в–€
 
-        ▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄█  [head=1]Technologies[/head][/color]
+        в–Ђв–€в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–€  [head=1]Technologies[/head][/color]
 
 
-        [color=#002159][head=1] FORMULÁRIO DE TRABALHO [/head]
+        [color=#002159][head=1] FORMULГЃRIO DE TRABALHO [/head]
 
         [/color]
 
-        [head=2] Informações [/head]
+        [head=2] InformaГ§Гµes [/head]
 
 
         Nome:
 
         Idade:
 
-        Raça:
+        RaГ§a:
 
-        Descrição:
+        DescriГ§ГЈo:
 
         Habilidades:
 
-        Afiliação com a Nanotrasen:
+        AfiliaГ§ГЈo com a Nanotrasen:
 
 
         [color=#002159][head=2] Trabalho [/head][/color]
@@ -111871,13 +111843,13 @@ entities:
         [bullet/] Este papel [bold][color=#ff0000]DEVE[/color][/bold] ser entregue ao head do departamento em que a pessoa quer o emprego.
 
 
-        [bullet/] Se você (head do departamento) permite que esta pessoa trabalhe no seu departamento, carimbe este papel e entregue no meu escritório.
+        [bullet/] Se vocГЄ (head do departamento) permite que esta pessoa trabalhe no seu departamento, carimbe este papel e entregue no meu escritГіrio.
 
 
-        [bullet/] Se você não permite, me avise pelo rádio ou simplesmente não devolva o papel.
+        [bullet/] Se vocГЄ nГЈo permite, me avise pelo rГЎdio ou simplesmente nГЈo devolva o papel.
 
 
-        [bullet/] Não irei dar trabalho para pessoas sem este papel estar carimbado.
+        [bullet/] NГЈo irei dar trabalho para pessoas sem este papel estar carimbado.
     - type: Physics
       canCollide: False
   - uid: 16286
@@ -112054,20 +112026,20 @@ entities:
       - stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
       content: >
-        [color=#002159]█▀▀▀▀▀▀▀▀▀▀▀▀▀▀█▄
+        [color=#002159]в–€в–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–Ђв–€в–„
 
-        █   ▀██   █▄      █               █
+        в–€ вЂ‰ в–Ђв–€в–€ вЂ‰ в–€в–„ вЂ‰  вЂ‰ в–€ вЂ‰  вЂ‰  вЂ‰  вЂ‰  вЂ‰ в–€
 
-        █         ▀   █▀█▄█   ▄         █  [head=1]Nanotrasen[/head]
+        в–€ вЂ‰  вЂ‰  вЂ‰ в–Ђ вЂ‰ в–€в–Ђв–€в–„в–€ вЂ‰ в–„ вЂ‰  вЂ‰  вЂ‰ в–€  [head=1]Nanotrasen[/head]
 
-        █               █      ▀█   ██▄   █
+        в–€ вЂ‰  вЂ‰  вЂ‰  вЂ‰  вЂ‰ в–€ вЂ‰  вЂ‰ в–Ђв–€ вЂ‰ в–€в–€в–„ вЂ‰ в–€
 
-        ▀█▄▄▄▄▄▄▄▄▄▄▄▄▄▄█  [head=1]Technologies[/head][/color]
+        в–Ђв–€в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–„в–€  [head=1]Technologies[/head][/color]
 
 
         [bold]--------------------------------------------------------------------------[/bold]
 
-         O sistema de correios da estação ainda não estão terminados e ficará pronto em tempo inderteminado. Para entregar coisas em deptos especificos, adicionamos aberturas na maints de cada depto para entrega.
+         O sistema de correios da estaГ§ГЈo ainda nГЈo estГЈo terminados e ficarГЎ pronto em tempo inderteminado. Para entregar coisas em deptos especificos, adicionamos aberturas na maints de cada depto para entrega.
   - uid: 16319
     components:
     - type: Transform
@@ -123655,7 +123627,7 @@ entities:
   - uid: 18157
     components:
     - type: MetaData
-      name: Espaçar
+      name: EspaГ§ar
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -19.502998,-33.73403
@@ -126680,7 +126652,7 @@ entities:
   - uid: 18464
     components:
     - type: MetaData
-      name: SMES Telecomunicações
+      name: SMES TelecomunicaГ§Гµes
     - type: Transform
       pos: 8.5,34.5
       parent: 2
@@ -130235,7 +130207,7 @@ entities:
   - uid: 19070
     components:
     - type: MetaData
-      name: Substation do Serviço
+      name: Substation do ServiГ§o
     - type: Transform
       pos: 10.5,27.5
       parent: 2
@@ -130247,14 +130219,14 @@ entities:
   - uid: 19072
     components:
     - type: MetaData
-      name: Substarion da Médica
+      name: Substarion da MГ©dica
     - type: Transform
       pos: 13.5,-2.5
       parent: 2
   - uid: 19073
     components:
     - type: MetaData
-      name: Substation da Segurança
+      name: Substation da SeguranГ§a
     - type: Transform
       pos: -29.5,15.5
       parent: 2
@@ -130278,7 +130250,7 @@ entities:
   - uid: 19077
     components:
     - type: MetaData
-      name: Substation da Ciência
+      name: Substation da CiГЄncia
     - type: Transform
       pos: -22.5,-54.5
       parent: 2
@@ -132184,7 +132156,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSupply
       nameSet: True
-      id: Área principal
+      id: ГЃrea principal
   - uid: 19276
     components:
     - type: Transform
@@ -151856,7 +151828,7 @@ entities:
       pos: -80.5,-52.5
       parent: 2
     - type: WarpPoint
-      location: Lançador
+      location: LanГ§ador
 - proto: WarpPointBombing
   entities:
   - uid: 22734

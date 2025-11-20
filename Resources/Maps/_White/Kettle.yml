@@ -67742,13 +67742,6 @@ entities:
     - type: Transform
       pos: -9.277243,-53.417923
       parent: 82
-- proto: ClothingNeckAsexualPin
-  entities:
-  - uid: 7133
-    components:
-    - type: Transform
-      pos: -0.7473192,-39.581512
-      parent: 82
 - proto: ClothingNeckBling
   entities:
   - uid: 12187
@@ -67776,13 +67769,6 @@ entities:
     components:
     - type: Transform
       pos: -11.35714,-6.7504005
-      parent: 82
-- proto: ClothingNeckPansexualPin
-  entities:
-  - uid: 7253
-    components:
-    - type: Transform
-      pos: 24.309896,47.73986
       parent: 82
 - proto: ClothingNeckScarfStripedGreen
   entities:
@@ -79464,63 +79450,63 @@ entities:
       pos: 44.5,-13.5
       parent: 82
     - type: FaxMachine
-      name: Бриг
+      name: Р‘СЂРёРі
   - uid: 2981
     components:
     - type: Transform
       pos: -13.5,-28.5
       parent: 82
     - type: FaxMachine
-      name: Офис Репортёра
+      name: РћС„РёСЃ Р РµРїРѕСЂС‚С‘СЂР°
   - uid: 8037
     components:
     - type: Transform
       pos: -53.5,2.5
       parent: 82
     - type: FaxMachine
-      name: Детектив
+      name: Р”РµС‚РµРєС‚РёРІ
   - uid: 12215
     components:
     - type: Transform
       pos: 60.5,-7.5
       parent: 82
     - type: FaxMachine
-      name: Офис ХОСа
+      name: РћС„РёСЃ РҐРћРЎР°
   - uid: 13941
     components:
     - type: Transform
       pos: -42.5,-34.5
       parent: 82
     - type: FaxMachine
-      name: Офис СМО
+      name: РћС„РёСЃ РЎРњРћ
   - uid: 16804
     components:
     - type: Transform
       pos: -21.5,-29.5
       parent: 82
     - type: FaxMachine
-      name: Офис Психолога
+      name: РћС„РёСЃ РџСЃРёС…РѕР»РѕРіР°
   - uid: 21620
     components:
     - type: Transform
       pos: -8.5,-53.5
       parent: 82
     - type: FaxMachine
-      name: Мим
+      name: РњРёРј
   - uid: 22696
     components:
     - type: Transform
       pos: 27.5,-22.5
       parent: 82
     - type: FaxMachine
-      name: Офис Адвоката
+      name: РћС„РёСЃ РђРґРІРѕРєР°С‚Р°
   - uid: 25868
     components:
     - type: Transform
       pos: 6.5,-13.5
       parent: 82
     - type: FaxMachine
-      name: Мостик
+      name: РњРѕСЃС‚РёРє
       destinationAddress: Bridge
   - uid: 25874
     components:
@@ -79528,28 +79514,28 @@ entities:
       pos: 29.5,59.5
       parent: 82
     - type: FaxMachine
-      name: РНД
+      name: Р РќР”
   - uid: 25875
     components:
     - type: Transform
       pos: -12.5,39.5
       parent: 82
     - type: FaxMachine
-      name: Инженерный Отдел
+      name: ?????????? ?????
   - uid: 25880
     components:
     - type: Transform
       pos: -51.5,-27.5
       parent: 82
     - type: FaxMachine
-      name: Медицинский Отдел
+      name: РњРµРґРёС†РёРЅСЃРєРёР№ РћС‚РґРµР»
   - uid: 25881
     components:
     - type: Transform
       pos: -11.5,-0.5
       parent: 82
     - type: FaxMachine
-      name: Офис ХОПа
+      name: РћС„РёСЃ РҐРћРџР°
   - uid: 25887
     components:
     - type: Transform
@@ -79559,14 +79545,14 @@ entities:
     - type: Physics
       bodyType: Dynamic
     - type: FaxMachine
-      name: Логистика
+      name: Р›РѕРіРёСЃС‚РёРєР°
   - uid: 25889
     components:
     - type: Transform
       pos: 52.5,-39.5
       parent: 82
     - type: FaxMachine
-      name: Пермабриг
+      name: РџРµСЂРјР°Р±СЂРёРі
 - proto: FaxMachineCaptain
   entities:
   - uid: 26681
@@ -122722,7 +122708,7 @@ entities:
       parent: 82
     - type: Paper
       content: >
-        Ты думал здесь что-то будет?
+        РўС‹ РґСѓРјР°Р» Р·РґРµСЃСЊ С‡С‚Рѕ-С‚Рѕ Р±СѓРґРµС‚?
   - uid: 25872
     components:
     - type: Transform
@@ -123246,7 +123232,7 @@ entities:
   - uid: 26594
     components:
     - type: MetaData
-      name: святой дух
+      name: СЃРІСЏС‚РѕР№ РґСѓС…
     - type: Transform
       pos: -9.407837,33.592533
       parent: 82
@@ -151150,7 +151136,7 @@ entities:
   - uid: 26593
     components:
     - type: MetaData
-      desc: Фигурка, изображающая священника, молящегося о богоугодных вещах. Валейфар.
+      desc: Р¤РёРіСѓСЂРєР°, РёР·РѕР±СЂР°Р¶Р°СЋС‰Р°СЏ СЃРІСЏС‰РµРЅРЅРёРєР°, РјРѕР»СЏС‰РµРіРѕСЃСЏ Рѕ Р±РѕРіРѕСѓРіРѕРґРЅС‹С… РІРµС‰Р°С…. Р’Р°Р»РµР№С„Р°СЂ.
     - type: Transform
       pos: -15.631889,8.744456
       parent: 82
@@ -151173,7 +151159,7 @@ entities:
   - uid: 26592
     components:
     - type: MetaData
-      desc: Фигурка, изображающая клоуна. Вы с содроганием думаете о том, что же, возможно, люди уже успели сделать с этой фигуркой. Дудлз.
+      desc: Р¤РёРіСѓСЂРєР°, РёР·РѕР±СЂР°Р¶Р°СЋС‰Р°СЏ РєР»РѕСѓРЅР°. Р’С‹ СЃ СЃРѕРґСЂРѕРіР°РЅРёРµРј РґСѓРјР°РµС‚Рµ Рѕ С‚РѕРј, С‡С‚Рѕ Р¶Рµ, РІРѕР·РјРѕР¶РЅРѕ, Р»СЋРґРё СѓР¶Рµ СѓСЃРїРµР»Рё СЃРґРµР»Р°С‚СЊ СЃ СЌС‚РѕР№ С„РёРіСѓСЂРєРѕР№. Р”СѓРґР»Р·.
     - type: Transform
       pos: -15.277721,8.661123
       parent: 82
@@ -151182,7 +151168,7 @@ entities:
   - uid: 26596
     components:
     - type: MetaData
-      desc: Фигурка, изображающая юриста в свежепошитом костюме. Рэйчел Синклер.
+      desc: Р¤РёРіСѓСЂРєР°, РёР·РѕР±СЂР°Р¶Р°СЋС‰Р°СЏ СЋСЂРёСЃС‚Р° РІ СЃРІРµР¶РµРїРѕС€РёС‚РѕРј РєРѕСЃС‚СЋРјРµ. Р СЌР№С‡РµР» РЎРёРЅРєР»РµСЂ.
     - type: Transform
       pos: 60.70382,-16.352417
       parent: 82
@@ -151191,14 +151177,14 @@ entities:
   - uid: 26597
     components:
     - type: MetaData
-      desc: Фигурка, изображающая врача, в халате и со шприцем. Кор Кардэн
+      desc: "Вырванный плакат: текст размазан и почти нечитаем."
     - type: Transform
       pos: -49.706615,-26.172882
       parent: 82
   - uid: 26598
     components:
     - type: MetaData
-      desc: Фигурка, изображающая врача, в халате и со шприцем. Вета Игрит.
+      desc: "Потрёпанный плакат с выцветшими каракулями, ничего не разобрать."
     - type: Transform
       pos: -49.52953,-26.329132
       parent: 82
@@ -151207,7 +151193,7 @@ entities:
   - uid: 26595
     components:
     - type: MetaData
-      desc: Фигурка, изображающая прославленного главу научного отдела. Александр Милоухов.
+      desc: Р¤РёРіСѓСЂРєР°, РёР·РѕР±СЂР°Р¶Р°СЋС‰Р°СЏ РїСЂРѕСЃР»Р°РІР»РµРЅРЅРѕРіРѕ РіР»Р°РІСѓ РЅР°СѓС‡РЅРѕРіРѕ РѕС‚РґРµР»Р°. РђР»РµРєСЃР°РЅРґСЂ РњРёР»РѕСѓС…РѕРІ.
     - type: Transform
       pos: 29.518936,63.57479
       parent: 82

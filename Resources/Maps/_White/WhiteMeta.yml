@@ -62730,13 +62730,6 @@ entities:
     - type: Transform
       pos: 6.498452,-14.246428
       parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 9831
-    components:
-    - type: Transform
-      pos: -12.481159,-67.51491
-      parent: 2
 - proto: ClothingNeckHeadphones
   entities:
   - uid: 9832
@@ -77157,7 +77150,7 @@ entities:
   - uid: 27664
     components:
     - type: MetaData
-      desc: L̵̃ͅǪ̶͗A̴̙̅F̸͓̎
+      desc: LМµМѓН…OМ¶Н—МЁAМґМ…М™FМёМЋН“
       name: Forbidden loaf
     - type: Transform
       parent: 27663
