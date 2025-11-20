@@ -286,11 +286,6 @@
     occurrence: 2
     weekday: Monday
 
-  shouldCelebrate:
-    !type:WeekdayInMonth
-    occurrence: 3
-    weekday: Thursday
-
 - type: holiday
   id: Halloween
   name: holiday-name-halloween
