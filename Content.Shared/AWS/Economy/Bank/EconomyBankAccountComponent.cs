@@ -55,6 +55,7 @@ namespace Content.Shared.AWS.Economy.Bank
         [ViewVariables(VVAccess.ReadWrite)]
         [AutoNetworkedField]
         public List<BankAccountTag> AccountTags = new();
+
     }
 
     [Serializable, NetSerializable]

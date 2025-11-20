@@ -159,7 +159,6 @@ public sealed class AwsGravityGeneratorFieldSystem : EntitySystem
     private void ApplyGridEffects(EntityUid gridUid, GridGravityWellComponent well)
     {
         UpdateGridMass(gridUid, well);
-        Dirty(gridUid, well);
     }
 
     private void UpdateGridMass(EntityUid gridUid, GridGravityWellComponent well)

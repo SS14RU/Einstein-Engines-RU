@@ -7,5 +7,6 @@ public enum BankAccountTag
 {
     Department,
     Station,
-    Personal
+    Personal,
+    CashRegister
 }

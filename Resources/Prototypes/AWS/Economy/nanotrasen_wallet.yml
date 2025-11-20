@@ -338,6 +338,7 @@
       balance: 250
       accountTags:
         - Department
+        - CashRegister
 
 - type: entity
   parent: BankAccountNanotrasen
@@ -365,6 +366,7 @@
       balance: 125
       accountTags:
         - Department
+        - CashRegister
 
 - type: entity
   parent: BankAccountNanotrasen
@@ -392,6 +394,7 @@
       balance: 125
       accountTags:
         - Department
+        - CashRegister
 
 - type: entity
   parent: BankAccountNanotrasen
@@ -419,6 +422,7 @@
       balance: 100
       accountTags:
         - Department
+        - CashRegister
 
 - type: entity
   parent: BankAccountNanotrasen
@@ -446,6 +450,7 @@
       balance: 50
       accountTags:
         - Department
+        - CashRegister
 
 #Сейфы
 - type: entity

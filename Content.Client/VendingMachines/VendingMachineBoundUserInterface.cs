@@ -4,7 +4,6 @@ using Content.Shared.VendingMachines;
 using Robust.Client.UserInterface;
 using Robust.Shared.Input;
 using System.Linq;
-using Content.Shared.Emag.Components;
 
 namespace Content.Client.VendingMachines
 {
@@ -80,20 +79,6 @@ namespace Content.Client.VendingMachines
             _menu.OnClose -= Close;
             _menu.Dispose();
         }
-
-        //SS14-RU
-        private VendingMachineInventoryEntry? GetEntry(EntityUid uid, VendingMachineComponent component)
-        {
-            string selectedId = component.SelectedItemId!;
-            if (component.SelectedItemInventoryType == InventoryType.Emagged && EntMan.HasComponent<EmaggedComponent>(uid))
-                return component.EmaggedInventory.GetValueOrDefault(selectedId);
-
-            if (component.SelectedItemInventoryType == InventoryType.Contraband && component.Contraband)
-                return component.ContrabandInventory.GetValueOrDefault(selectedId);
-
-            return component.Inventory.GetValueOrDefault(selectedId);
-        }
-        //SS14-RU
 
         private void OnSearchChanged(string? filter)
         {

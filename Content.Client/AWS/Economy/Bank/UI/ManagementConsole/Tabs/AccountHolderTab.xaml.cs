@@ -3,6 +3,8 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Client.UserInterface;
 using Content.Shared.AWS.Economy.Bank;
 using Robust.Shared.Prototypes;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Roles;
 using Robust.Client.UserInterface.Controls;
@@ -12,21 +14,30 @@ namespace Content.Client.AWS.Economy.Bank.UI.ManagementConsole.Tabs;
 [GenerateTypedNameReferences]
 public sealed partial class AccountHolderTab : Control
 {
-    private EconomyBankAccountComponent? _currentAccount;
+    private string? _currentAccountId;
 
     [Dependency] private readonly EntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-    private List<string> _jobs = new();
-    private static ProtoId<JobPrototype> _defaultJob = "Passenger";
+    private readonly List<string> _jobs = new();
+    private static readonly ProtoId<JobPrototype> DefaultJobPrototype = "Passenger";
+    private static readonly int[] DefaultSalaryButtons = { -10, -1, 1, 10 };
+    private ProtoId<JobPrototype> _defaultJob = DefaultJobPrototype;
+    private EconomyBankAccountSystemShared _bankAccountSystem = default!;
+    private string _defaultJobName = string.Empty;
+    private int _defaultJobIndex = -1;
+    private EconomyBankAccountMask _accountMask = EconomyBankAccountMask.All;
+    private List<BankAccountTag>? _accountTags;
+    private bool _allowCentralAccounts;
+    private bool _allowRestrictedAccounts;
 
     public Entity<EconomyAccountHolderComponent>? CurrentCard;
     public bool Priveleged;
 
-    public Action<EconomyBankAccountComponent, string>? OnChangeNamePressed;
-    public Action<EconomyBankAccountComponent>? OnBlockAccountPressed;
-    public Action<EconomyBankAccountComponent, string>? OnChangeJob;
-    public Action<EconomyBankAccountComponent, ulong>? OnChangeSalary;
+    public Action<string, string>? OnChangeNamePressed;
+    public Action<string, bool>? OnBlockAccountPressed;
+    public Action<string, string>? OnChangeJob;
+    public Action<string, ulong>? OnChangeSalary;
     public Action<NetEntity, string>? OnChangeAccountPressed;
     public Action<NetEntity>? OnInitializeAccountPressed;
 
@@ -34,6 +45,9 @@ public sealed partial class AccountHolderTab : Control
     {
         IoCManager.InjectDependencies(this);
         RobustXamlLoader.Load(this);
+
+        _bankAccountSystem = _entityManager.System<EconomyBankAccountSystemShared>();
+        SetDefaultJob(null);
 
         var jobs = _prototypeManager.EnumeratePrototypes<JobPrototype>().ToList();
         jobs.Sort((x, y) => string.Compare(x.LocalizedName, y.LocalizedName, StringComparison.CurrentCulture));
@@ -46,11 +60,8 @@ public sealed partial class AccountHolderTab : Control
             JobPresetOptionButton.AddItem(Loc.GetString(job.Name), _jobs.Count - 1);
         }
 
-        SalaryAmountBox.AddLeftButton(-10, "-10");
-        SalaryAmountBox.AddLeftButton(-1, "-1");
-        SalaryAmountBox.AddRightButton(1, "+1");
-        SalaryAmountBox.AddRightButton(10, "+10");
-        SalaryAmountBox.SetButtonDisabled(true);
+        UpdateDefaultJobIndex();
+        ConfigureSalaryButtons(null);
 
         GetAccount(CurrentCard);
 
@@ -58,50 +69,58 @@ public sealed partial class AccountHolderTab : Control
 
         ChangeNameButton.OnPressed += _ =>
         {
-            if (_currentAccount is null)
+            if (_currentAccountId is null)
                 return;
 
-            OnChangeNamePressed?.Invoke(_currentAccount, ChangeNamePrompt.Text);
+            OnChangeNamePressed?.Invoke(_currentAccountId, ChangeNamePrompt.Text);
         };
         BlockButton.OnPressed += _ =>
         {
-            if (_currentAccount is null)
+            if (_currentAccountId is null)
                 return;
 
-            OnBlockAccountPressed?.Invoke(_currentAccount);
+            var blocked = TryGetCurrentAccount(out var account) && account.Blocked;
+            OnBlockAccountPressed?.Invoke(_currentAccountId, !blocked);
         };
         JobPresetOptionButton.OnItemSelected += args =>
         {
             args.Button.SelectId(args.Id);
 
             var bankAccountSystem = _entityManager.System<EconomyBankAccountSystemShared>();
-            if (bankAccountSystem.TryGetSalaryJobEntry(_jobs[args.Id], "NanotrasenDefaultSallaries", out var jobEntry))
+            if (bankAccountSystem.TryGetSalaryJobEntry(_jobs[args.Id], EconomyBankAccountSystemShared.DefaultSalariesPrototypeId, out var jobEntry))
                 SalaryAmountBox.Value = (int)jobEntry.Value.Sallary;
         };
         ChangeSalaryInfoButton.OnPressed += _ =>
         {
-            if (_currentAccount is null)
+            if (_currentAccountId is null || !TryGetCurrentAccount(out var account))
                 return;
 
-            var jobName = _currentAccount.JobName;
-            var salary = _currentAccount.Salary;
+            var jobName = account.JobName;
+            var salary = account.Salary;
+            var selectedJob = _jobs[JobPresetOptionButton.SelectedId];
             if (JobPresetOptionButton.SelectedId != _jobs.IndexOf(jobName.GetValueOrDefault()))
-                OnChangeJob?.Invoke(_currentAccount, _jobs[JobPresetOptionButton.SelectedId]);
+                OnChangeJob?.Invoke(_currentAccountId, selectedJob);
             if (SalaryAmountBox.Value != (int)salary.GetValueOrDefault())
-                OnChangeSalary?.Invoke(_currentAccount, (ulong)SalaryAmountBox.Value);
+                OnChangeSalary?.Invoke(_currentAccountId, (ulong)SalaryAmountBox.Value);
         };
         ChangeAccountButton.OnPressed += _ =>
         {
             if (CurrentCard is null)
                 return;
 
-            var economySystem = _entityManager.System<EconomyBankAccountSystemShared>();
-            if (!economySystem.IsValidAccount(ChangeAccountPrompt.Text))
+            if (!_bankAccountSystem.TryGetAccount(ChangeAccountPrompt.Text, out var targetAccount))
             {
                 ErrorLabel.Text = Loc.GetString("economybanksystem-management-console-error-invalid-account");
                 return;
             }
 
+            if (!IsAccountAllowed(targetAccount.Value.Comp))
+            {
+                ErrorLabel.Text = Loc.GetString("economybanksystem-management-console-error-protected-account");
+                return;
+            }
+
+            ErrorLabel.Text = string.Empty;
             var netEntity = _entityManager.GetNetEntity(CurrentCard.Value);
             OnChangeAccountPressed?.Invoke(netEntity, ChangeAccountPrompt.Text);
         };
@@ -115,18 +134,38 @@ public sealed partial class AccountHolderTab : Control
         };
     }
 
+    public void ApplyConfiguration(ProtoId<JobPrototype>? defaultJob,
+                                   IReadOnlyList<int>? salaryButtons,
+                                   EconomyBankAccountMask accountMask,
+                                   IReadOnlyList<BankAccountTag>? accountTags,
+                                   bool allowCentralAccounts,
+                                   bool allowRestrictedAccounts)
+    {
+        _accountMask = accountMask;
+        _accountTags = accountTags is { Count: > 0 } tags ? new List<BankAccountTag>(tags) : null;
+        _allowCentralAccounts = allowCentralAccounts;
+        _allowRestrictedAccounts = allowRestrictedAccounts;
+
+        SetDefaultJob(defaultJob);
+        ConfigureSalaryButtons(salaryButtons);
+
+        if (TryGetCurrentAccount(out var account))
+            UpdateJobPreset(account, account.JobName);
+        else
+            UpdateJobPreset(null, null);
+    }
+
     private void GetAccount(EconomyAccountHolderComponent? accountHolder)
     {
-        var economySystem = _entityManager.System<EconomyBankAccountSystemShared>();
-        if (accountHolder is not null && economySystem.TryGetAccount(accountHolder.AccountID, out var accountEnt))
+        if (accountHolder is not null && _bankAccountSystem.TryGetAccount(accountHolder.AccountID, out var accountEnt))
         {
-            _currentAccount = accountEnt.Value.Comp;
+            _currentAccountId = accountEnt.Value.Comp.AccountID;
             FillAccount(accountEnt.Value.Comp);
             UpdateButtons(Priveleged);
             return;
         }
 
-        _currentAccount = null;
+        _currentAccountId = null;
         FillAccount(null);
         UpdateButtons(Priveleged);
     }
@@ -146,25 +185,26 @@ public sealed partial class AccountHolderTab : Control
         AccountBlockStatusLabel.Text = blocked;
         BlockButton.Text = blockedButton;
         var salary = account?.Salary ?? 0;
-        var paydayStatus = account is not null ? (account.CanReachPayDay ? Loc.GetString("economybanksystem-management-console-management-salary-reachable", ("salary", salary)) : Loc.GetString("economybanksystem-management-console-management-salary-not-reachable"))
+        var paydayStatus = account is not null ? (account.CanReachPayDay ? Loc.GetString("economybanksystem-management-console-management-salary-reachable", ("salary", salary)) : Loc.GetString("economybanksystem-management-console-management-salary-not-reachable", ("salary", salary)))
                                                : "-";
         AccountPaydayStatusLabel.Text = paydayStatus;
-        JobPresetOptionButton.SelectId(GetJobIndex(account?.JobName));
+        UpdateJobPreset(account, account?.JobName);
         SalaryAmountBox.Value = (int)salary;
     }
 
     private void UpdateButtons(bool priveleged)
     {
-        var noAccount = !priveleged || _currentAccount is null;
+        var noAccount = !priveleged || _currentAccountId is null;
+        var readOnly = TryGetCurrentAccount(out var account) && IsReadOnlyAccount(account);
 
-        ChangeNameButton.Disabled = noAccount;
+        ChangeNameButton.Disabled = noAccount || readOnly;
         BlockButton.Disabled = noAccount;
-        ChangeAccountButton.Disabled = !priveleged || CurrentCard is null;
-        InitializeAccountButton.Disabled = !priveleged || _currentAccount is not null || CurrentCard is null;
-        JobPresetOptionButton.Disabled = noAccount;
-        SalaryAmountBox.LineEditDisabled = noAccount;
-        SalaryAmountBox.SetButtonDisabled(noAccount);
-        ChangeSalaryInfoButton.Disabled = noAccount;
+        ChangeAccountButton.Disabled = !priveleged || CurrentCard is null || readOnly;
+        InitializeAccountButton.Disabled = !priveleged || _currentAccountId is not null || CurrentCard is null;
+        JobPresetOptionButton.Disabled = noAccount || readOnly;
+        SalaryAmountBox.LineEditDisabled = noAccount || readOnly;
+        SalaryAmountBox.SetButtonDisabled(noAccount || readOnly);
+        ChangeSalaryInfoButton.Disabled = noAccount || readOnly;
     }
 
     private void OnSalaryValueChanged(ValueChangedEventArgs args)
@@ -175,10 +215,54 @@ public sealed partial class AccountHolderTab : Control
         SalaryAmountBox.ValueChanged += OnSalaryValueChanged;
     }
 
+    private bool IsReadOnlyAccount(EconomyBankAccountComponent account)
+    {
+        if (_bankAccountSystem.IsCentralCommandAccount(account.AccountID))
+            return true;
+
+        return _bankAccountSystem.IsRestrictedDepartmentAccount(account);
+    }
+
+    private string GetRestrictedJobText(EconomyBankAccountComponent account)
+    {
+        var key = _bankAccountSystem.IsDepartmentCashAccount(account)
+            ? "economybanksystem-management-console-management-job-placeholder-cash"
+            : "economybanksystem-management-console-management-job-placeholder-department";
+        return Loc.GetString(key);
+    }
+
+    private void UpdateJobPreset(EconomyBankAccountComponent? account, string? jobName)
+    {
+        if (_defaultJobIndex >= 0)
+            JobPresetOptionButton.SetItemText(_defaultJobIndex, _defaultJobName);
+
+        if (account != null && IsReadOnlyAccount(account))
+        {
+            if (_defaultJobIndex >= 0)
+            {
+                JobPresetOptionButton.SetItemText(_defaultJobIndex, GetRestrictedJobText(account));
+                JobPresetOptionButton.SelectId(_defaultJobIndex);
+            }
+            return;
+        }
+
+        JobPresetOptionButton.SelectId(GetJobIndex(jobName));
+    }
+
     private int GetJobIndex(string? jobName)
     {
-        var jobIndex = jobName is not null ? _jobs.IndexOf(jobName) : _jobs.IndexOf(_defaultJob);
-        return jobIndex < 0 ? _jobs.IndexOf(_defaultJob) : jobIndex;
+        if (jobName is not null)
+        {
+            var jobIndex = _jobs.IndexOf(jobName);
+            if (jobIndex >= 0)
+                return jobIndex;
+        }
+
+        var defaultIndex = _jobs.IndexOf(_defaultJob);
+        if (defaultIndex >= 0)
+            return defaultIndex;
+
+        return _jobs.Count > 0 ? 0 : -1;
     }
 
     public void OnUpdateState(string? holderID,
@@ -189,23 +273,28 @@ public sealed partial class AccountHolderTab : Control
                               bool? blocked,
                               bool? canReachPayDay,
                               string? jobName,
-                              ulong? salary)
+                              ulong? salary,
+                              ulong? payrollSalary,
+                              bool? payrollCanReach)
     {
         if (CurrentCard is null || holderID is null)
         {
-            _currentAccount = null;
+            _currentAccountId = null;
             FillAccount(null);
             UpdateButtons(Priveleged);
             return;
         }
 
-        if (holderID != accountID)
+        if (accountID is null || holderID != accountID)
         {
-            FillAccount(_currentAccount);
+            RefreshCurrentAccountDisplay();
             UpdateButtons(Priveleged);
             return;
         }
 
+        _currentAccountId = accountID;
+
+        var lookupAccountId = accountID;
         AccountInitLabel.Text = accountID is not null ? Loc.GetString("economybanksystem-management-console-management-initialized") :
                                                       Loc.GetString("economybanksystem-management-console-management-not-initialized");
         accountID ??= "-";
@@ -219,17 +308,116 @@ public sealed partial class AccountHolderTab : Control
                                                 : "-";
         AccountBlockStatusLabel.Text = accountBlocked;
         BlockButton.Text = blockedButton;
-        salary ??= 0;
-        var paydayStatus = canReachPayDay is not null ? (canReachPayDay.Value ? Loc.GetString("economybanksystem-management-console-management-salary-reachable", ("salary", salary)) : Loc.GetString("economybanksystem-management-console-management-salary-not-reachable"))
+        EconomyBankAccountComponent? accountComp = null;
+        if (lookupAccountId != null && _bankAccountSystem.TryGetAccount(lookupAccountId, out var foundAccount))
+            accountComp = foundAccount.Value.Comp;
+
+        var accountSalary = salary ?? 0;
+        var displaySalary = payrollSalary ?? accountSalary;
+        var displayReachable = payrollCanReach ?? canReachPayDay;
+        var paydayStatus = displayReachable is not null ? (displayReachable.Value ? Loc.GetString("economybanksystem-management-console-management-salary-reachable", ("salary", displaySalary)) : Loc.GetString("economybanksystem-management-console-management-salary-not-reachable", ("salary", displaySalary)))
                                                       : "-";
         AccountPaydayStatusLabel.Text = paydayStatus;
-        JobPresetOptionButton.SelectId(GetJobIndex(jobName));
-        SalaryAmountBox.Value = (int)salary;
+        var salaryValue = accountComp is not null && IsReadOnlyAccount(accountComp) ? displaySalary : accountSalary;
+        SalaryAmountBox.Value = (int) salaryValue;
 
-        _currentAccount = null;
-        var economySystem = _entityManager.System<EconomyBankAccountSystemShared>();
-        if (economySystem.TryGetAccount(accountID, out var foundAccount))
-            _currentAccount = foundAccount.Value.Comp;
+        UpdateJobPreset(accountComp, jobName);
         UpdateButtons(Priveleged);
+    }
+
+    private void SetDefaultJob(ProtoId<JobPrototype>? job)
+    {
+        _defaultJob = job ?? DefaultJobPrototype;
+        if (_prototypeManager.TryIndex(_defaultJob, out var defaultJobPrototype))
+            _defaultJobName = Loc.GetString(defaultJobPrototype.Name);
+        else
+            _defaultJobName = _defaultJob;
+
+        UpdateDefaultJobIndex();
+    }
+
+    private void UpdateDefaultJobIndex()
+    {
+        _defaultJobIndex = GetJobIndex(null);
+        if (_defaultJobIndex < 0 && _jobs.Count > 0)
+            _defaultJobIndex = 0;
+    }
+
+    private void ConfigureSalaryButtons(IReadOnlyList<int>? buttonSteps)
+    {
+        var source = buttonSteps is { Count: > 0 } steps ? steps : DefaultSalaryButtons;
+        var leftButtons = new List<int>();
+        var rightButtons = new List<int>();
+
+        foreach (var value in source)
+        {
+            if (value < 0)
+                leftButtons.Add(value);
+            else if (value > 0)
+                rightButtons.Add(value);
+        }
+
+        if (leftButtons.Count == 0 && rightButtons.Count == 0)
+        {
+            foreach (var value in DefaultSalaryButtons)
+            {
+                if (value < 0)
+                    leftButtons.Add(value);
+                else if (value > 0)
+                    rightButtons.Add(value);
+            }
+        }
+
+        SalaryAmountBox.SetButtons(leftButtons, rightButtons);
+        SalaryAmountBox.SetButtonDisabled(true);
+    }
+
+    private void RefreshCurrentAccountDisplay()
+    {
+        if (_currentAccountId is null)
+        {
+            FillAccount(null);
+            return;
+        }
+
+        if (_bankAccountSystem.TryGetAccount(_currentAccountId, out var account))
+        {
+            FillAccount(account.Value.Comp);
+            return;
+        }
+
+        _currentAccountId = null;
+        FillAccount(null);
+    }
+
+    private bool TryGetCurrentAccount([NotNullWhen(true)] out EconomyBankAccountComponent? account)
+    {
+        account = null;
+        if (_currentAccountId is null)
+            return false;
+
+        if (!_bankAccountSystem.TryGetAccount(_currentAccountId, out var foundAccount))
+            return false;
+
+        account = foundAccount.Value.Comp;
+        return true;
+    }
+
+    private bool IsAccountAllowed(EconomyBankAccountComponent account)
+    {
+        if (!_allowCentralAccounts && _bankAccountSystem.IsCentralCommandAccount(account.AccountID))
+            return false;
+
+        if (!_allowRestrictedAccounts && _bankAccountSystem.IsRestrictedDepartmentAccount(account))
+            return false;
+
+        return _accountMask switch
+        {
+            EconomyBankAccountMask.All => true,
+            EconomyBankAccountMask.NotBlocked => !account.Blocked,
+            EconomyBankAccountMask.Blocked => account.Blocked,
+            EconomyBankAccountMask.ByTags => _accountTags != null && account.AccountTags.Any(_accountTags.Contains),
+            _ => true
+        };
     }
 }

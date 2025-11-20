@@ -56,6 +56,12 @@ namespace Content.Shared.VendingMachines
         public bool Broken;
 
         /// <summary>
+        /// IH: фиксирует, можно ли вычислять цену вендинга (например, для продажи).
+        /// </summary>
+        [DataField, AutoNetworkedField]
+        public bool PriceEligible;
+
+        /// <summary>
         /// When true, will forcefully throw any object it dispenses
         /// </summary>
         [DataField("speedLimiter")]
@@ -206,14 +212,6 @@ namespace Content.Shared.VendingMachines
         public bool LoopDenyAnimation = true;
         #endregion
 
-        /// <summary>
-        /// SS14RU
-        /// </summary>
-        public string? SelectedItemId;
-        /// <summary>
-        /// SS14RU
-        /// </summary>
-        public InventoryType SelectedItemInventoryType;
     }
 
     [Serializable, NetSerializable]

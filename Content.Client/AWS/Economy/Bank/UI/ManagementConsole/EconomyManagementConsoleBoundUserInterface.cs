@@ -41,42 +41,38 @@ public sealed class EconomyManagementConsoleBoundUserInterface : BoundUserInterf
         _menu?.UpdateState(consoleState);
     }
 
-    public void BlockAccountToggle(EconomyBankAccountComponent? account)
+    public void BlockAccountToggle(string accountId, bool blocked)
     {
-        if (account is null)
-            return;
-
-        var blocked = !account.Blocked;
-        var msg = new EconomyManagementConsoleChangeParameterMessage(account.AccountID, EconomyBankAccountParam.Blocked, blocked);
+        var msg = new EconomyManagementConsoleChangeParameterMessage(accountId, EconomyBankAccountParam.Blocked, blocked);
 
         SendMessage(msg);
     }
 
-    public void ChangeName(EconomyBankAccountComponent? account, string newName)
+    public void ChangeName(string accountId, string newName)
     {
         // reeeee hardcoding
-        if (account is null || newName.Length > 40)
+        if (string.IsNullOrEmpty(accountId) || newName.Length > 40)
             return;
 
-        var msg = new EconomyManagementConsoleChangeParameterMessage(account.AccountID, EconomyBankAccountParam.AccountName, newName);
+        var msg = new EconomyManagementConsoleChangeParameterMessage(accountId, EconomyBankAccountParam.AccountName, newName);
         SendMessage(msg);
     }
 
-    public void ChangeJob(EconomyBankAccountComponent? account, string jobName)
+    public void ChangeJob(string accountId, string jobName)
     {
-        if (account is null)
+        if (string.IsNullOrEmpty(accountId))
             return;
 
-        var msg = new EconomyManagementConsoleChangeParameterMessage(account.AccountID, EconomyBankAccountParam.JobName, jobName);
+        var msg = new EconomyManagementConsoleChangeParameterMessage(accountId, EconomyBankAccountParam.JobName, jobName);
         SendMessage(msg);
     }
 
-    public void ChangeSalary(EconomyBankAccountComponent? account, ulong salary)
+    public void ChangeSalary(string accountId, ulong salary)
     {
-        if (account is null)
+        if (string.IsNullOrEmpty(accountId))
             return;
 
-        var msg = new EconomyManagementConsoleChangeParameterMessage(account.AccountID, EconomyBankAccountParam.Salary, salary);
+        var msg = new EconomyManagementConsoleChangeParameterMessage(accountId, EconomyBankAccountParam.Salary, salary);
         SendMessage(msg);
     }
 

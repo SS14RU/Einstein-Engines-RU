@@ -1,4 +1,5 @@
 using Content.Shared.Store;
+using Content.Shared.VendingMachines;
 using Robust.Shared.Prototypes;
 using Robust.Shared.GameStates;
 
@@ -24,5 +25,14 @@ namespace Content.Shared.AWS.Economy.Bank
 
         [ViewVariables(VVAccess.ReadWrite), DataField]
         public bool AllowUiEdit = false;
+
+        /// <summary>
+        ///     Stores data about the selected vending item while the terminal processes the purchase.
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        public string? PendingItemId;
+
+        [ViewVariables(VVAccess.ReadWrite)]
+        public InventoryType PendingInventoryType = InventoryType.Regular;
     }
 }

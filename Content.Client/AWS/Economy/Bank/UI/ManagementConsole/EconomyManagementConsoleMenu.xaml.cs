@@ -60,16 +60,28 @@ public sealed partial class EconomyManagementConsoleMenu : FancyWindow
 
     private void UpdateAccountManagement(EconomyManagementConsoleUserInterfaceState state)
     {
+        AccountManagementTab.ApplyConfiguration(state.DefaultJob,
+            state.SalaryButtonSteps,
+            state.AccountMask,
+            state.AccountTags,
+            state.AllowCentralCommandAccount,
+            state.AllowRestrictedAccounts);
         AccountManagementTab.Priveleged = state.Priveleged;
         AccountManagementTab.UpdateAccountList();
-        AccountManagementTab.OnUpdateState(state.AccountID, state.AccountName, state.Balance, state.Penalty, state.Blocked, state.CanReachPayDay, state.JobName, state.Salary);
+        AccountManagementTab.OnUpdateState(state.AccountID, state.AccountName, state.Balance, state.Penalty, state.Blocked, state.CanReachPayDay, state.JobName, state.Salary, state.PayrollSalary, state.PayrollCanReachPayDay);
     }
 
     private void UpdateHolder(EconomyManagementConsoleUserInterfaceState state, Entity<EconomyAccountHolderComponent>? holder)
     {
+        AccountHolderTab.ApplyConfiguration(state.DefaultJob,
+            state.SalaryButtonSteps,
+            state.AccountMask,
+            state.AccountTags,
+            state.AllowCentralCommandAccount,
+            state.AllowRestrictedAccounts);
         AccountHolderTab.CurrentCard = holder ?? null;
         AccountHolderTab.Priveleged = state.Priveleged;
-        AccountHolderTab.OnUpdateState(state.HolderID, state.AccountID, state.AccountName, state.Balance, state.Penalty, state.Blocked, state.CanReachPayDay, state.JobName, state.Salary);
+        AccountHolderTab.OnUpdateState(state.HolderID, state.AccountID, state.AccountName, state.Balance, state.Penalty, state.Blocked, state.CanReachPayDay, state.JobName, state.Salary, state.PayrollSalary, state.PayrollCanReachPayDay);
     }
 
     private void UpdateBonus(bool priveleged)

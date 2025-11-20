@@ -16,6 +16,7 @@ using Content.Shared.Mind;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Mind.Components;
 using Robust.Shared.Analyzers;
+using Robust.Shared.GameObjects;
 
 namespace Content.Shared.AWS.Economy.Bank
 {
@@ -30,6 +31,8 @@ namespace Content.Shared.AWS.Economy.Bank
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         private const int MaxAtmHistoryEntries = 10;
+        public const string CentralCommandAccountId = "NT-CentCom";
+        public const string DefaultSalariesPrototypeId = "NanotrasenDefaultSallaries";
 
         private EntityQuery<ContainerManagerComponent> _containerQuery;
         private bool _containerQueryInitialized;
@@ -56,6 +59,7 @@ namespace Content.Shared.AWS.Economy.Bank
             SubscribeLocalEvent<EconomyManagementConsoleComponent, ComponentRemove>(OnManagementConsoleRemove);
             SubscribeLocalEvent<EconomyManagementConsoleComponent, EntInsertedIntoContainerMessage>(OnManagementConsoleSlotChanged);
             SubscribeLocalEvent<EconomyManagementConsoleComponent, EntRemovedFromContainerMessage>(OnManagementConsoleEntRemoved);
+            SubscribeLocalEvent<EconomyManagementConsoleComponent, BoundUIOpenedEvent>(OnManagementConsoleBoundUiOpened);
         }
 
         /// <summary>
@@ -113,6 +117,89 @@ namespace Content.Shared.AWS.Economy.Bank
             }
 
             return result;
+        }
+
+        [PublicAPI]
+        public bool IsCentralCommandAccount(string accountID)
+        {
+            return accountID == CentralCommandAccountId;
+        }
+
+        [PublicAPI]
+        public bool IsDepartmentCashAccount(EconomyBankAccountComponent account)
+        {
+            return account.AccountTags.Contains(BankAccountTag.CashRegister);
+        }
+
+        [PublicAPI]
+        public bool IsDepartmentAccount(EconomyBankAccountComponent account)
+        {
+            if (!account.AccountTags.Contains(BankAccountTag.Department))
+                return false;
+
+            if (account.AccountTags.Contains(BankAccountTag.Personal))
+                return false;
+
+            return !IsDepartmentCashAccount(account);
+        }
+
+        [PublicAPI]
+        public bool IsRestrictedDepartmentAccount(EconomyBankAccountComponent account)
+        {
+            return IsDepartmentAccount(account) || IsDepartmentCashAccount(account);
+        }
+
+        protected bool IsAccountAllowedForConsole(EconomyManagementConsoleComponent console, EconomyBankAccountComponent account)
+        {
+            if (!console.AllowCentralCommandAccount && IsCentralCommandAccount(account.AccountID))
+                return false;
+
+            if (!console.AllowRestrictedAccounts && IsRestrictedDepartmentAccount(account))
+                return false;
+
+            return console.AllowedAccountMask switch
+            {
+                EconomyBankAccountMask.All => true,
+                EconomyBankAccountMask.NotBlocked => !account.Blocked,
+                EconomyBankAccountMask.Blocked => account.Blocked,
+                EconomyBankAccountMask.ByTags => console.AllowedAccountTags != null && account.AccountTags.Any(console.AllowedAccountTags.Contains),
+                _ => true
+            };
+        }
+
+        protected virtual void AdjustManagementConsoleState(Entity<EconomyManagementConsoleComponent> ent,
+            EconomyBankAccountComponent? bankAccount,
+            EconomyManagementConsoleUserInterfaceState state)
+        {
+        }
+
+        [PublicAPI]
+        public bool TryGetAssignedPayroll(EconomyBankAccountComponent account, out ulong payroll, out bool canReach)
+        {
+            payroll = 0;
+            canReach = false;
+
+            var accounts = GetAccounts(EconomyBankAccountMask.All);
+            var found = false;
+            foreach (var (_, entity) in accounts)
+            {
+                var comp = entity.Comp;
+                if (comp.JobName is not { } jobId)
+                    continue;
+
+                if (!TryGetSalaryJobEntry(jobId, DefaultSalariesPrototypeId, out var jobEntry))
+                    continue;
+
+                if (jobEntry.Value.AccountId != account.AccountID)
+                    continue;
+
+                var salary = comp.Salary ?? jobEntry.Value.Sallary;
+                payroll += salary;
+                found = true;
+            }
+
+            canReach = payroll == 0 || account.Balance >= payroll;
+            return found || payroll == 0;
         }
 
         /// <summary>
@@ -327,6 +414,21 @@ namespace Content.Shared.AWS.Economy.Bank
             UpdateManagementConsoleUserInterface(ent, account);
         }
 
+        private void OnManagementConsoleBoundUiOpened(Entity<EconomyManagementConsoleComponent> ent, ref BoundUIOpenedEvent args)
+        {
+            if (args.UiKey is not EconomyManagementConsoleUiKey.Key)
+                return;
+
+            EconomyBankAccountComponent? account = null;
+            if (TryComp(ent.Comp.TargetCardSlot.Item, out EconomyAccountHolderComponent? holder) &&
+                TryGetAccount(holder.AccountID, out var accountEnt))
+            {
+                account = accountEnt.Value.Comp;
+            }
+
+            UpdateManagementConsoleUserInterface(ent, account);
+        }
+
         [PublicAPI]
         public (bool, string?, Entity<EconomyAccountHolderComponent>?) GetManagementConsoleInsertedCardsStateInfo(Entity<EconomyManagementConsoleComponent> ent)
         {
@@ -352,6 +454,9 @@ namespace Content.Shared.AWS.Economy.Bank
         [PublicAPI]
         public void UpdateManagementConsoleUserInterface(Entity<EconomyManagementConsoleComponent> ent, EconomyBankAccountComponent? bankAccount)
         {
+            if (bankAccount is not null && !IsAccountAllowedForConsole(ent.Comp, bankAccount))
+                bankAccount = null;
+
             var stateInfo = GetManagementConsoleInsertedCardsStateInfo(ent);
             var netHolder = GetNetEntity(stateInfo.Item3);
             var uiState = new EconomyManagementConsoleUserInterfaceState()
@@ -360,6 +465,12 @@ namespace Content.Shared.AWS.Economy.Bank
                 IDCardName = stateInfo.Item2,
                 AccountHolder = netHolder,
                 HolderID = stateInfo.Item3?.Comp.AccountID,
+                DefaultJob = ent.Comp.DefaultJob,
+                SalaryButtonSteps = new List<int>(ent.Comp.SalaryButtonSteps),
+                AccountMask = ent.Comp.AllowedAccountMask,
+                AccountTags = ent.Comp.AllowedAccountTags != null ? new List<BankAccountTag>(ent.Comp.AllowedAccountTags) : null,
+                AllowCentralCommandAccount = ent.Comp.AllowCentralCommandAccount,
+                AllowRestrictedAccounts = ent.Comp.AllowRestrictedAccounts,
                 AccountID = bankAccount?.AccountID,
                 AccountName = bankAccount?.AccountName,
                 Balance = bankAccount?.Balance,
@@ -369,6 +480,8 @@ namespace Content.Shared.AWS.Economy.Bank
                 JobName = bankAccount?.JobName,
                 Salary = bankAccount?.Salary
             };
+
+            AdjustManagementConsoleState(ent, bankAccount, uiState);
             _userInterfaceSystem.SetUiState(ent.Owner, EconomyManagementConsoleUiKey.Key, uiState);
         }
 

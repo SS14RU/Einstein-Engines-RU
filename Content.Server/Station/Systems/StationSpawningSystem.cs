@@ -1,5 +1,8 @@
+using Content.Server._Lavaland.Procedural.Components;
+using Content.Server.Access.Components;
 using Content.Server.Access.Systems;
 using Content.Server.DetailExaminable;
+using Content.Server.GameTicking;
 using Content.Server.Humanoid;
 using Content.Server.IdentityManagement;
 using Content.Server.Mind.Commands;
@@ -24,6 +27,7 @@ using Content.Shared.Roles;
 using Content.Shared.Station;
 using JetBrains.Annotations;
 using Robust.Shared.Configuration;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -51,6 +55,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly InternalEncryptionKeySpawner _internalEncryption = default!;
     [Dependency] private readonly EconomyBankAccountSystem _bankAccountSystem = default!;
+    [Dependency] private readonly StationSystem _stationSystem = default!;
+    [Dependency] private readonly GameTicker _gameTicker = default!;
 
     private bool _randomizeCharacters;
 
@@ -213,11 +219,52 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         if (pdaComponent != null)
             _pdaSystem.SetOwner(idUid.Value, pdaComponent, entity, characterName);
+        //IH - Start
+        var preset = EnsureComp<PresetIdCardComponent>(cardId);
+        preset.JobName = jobPrototype.ID;
 
-        // SS14RU
         if (TryComp<EconomyAccountHolderComponent>(cardId, out var economyAccountHolder))
-            _bankAccountSystem.TryActivate((cardId, economyAccountHolder), out _);
-        // SS14RU
+        {
+            economyAccountHolder.AccountName = characterName;
+            Dirty(cardId, economyAccountHolder);
+
+            if (ShouldAssignBankAccount(entity, station))
+                _bankAccountSystem.TryActivate((cardId, economyAccountHolder), out _);
+        }
+    }
+
+    private bool ShouldAssignBankAccount(EntityUid entity, EntityUid? station, TransformComponent? xform = null)
+    {
+        if (!Resolve(entity, ref xform, logMissing: false))
+            return false;
+
+        if (station != null && IsEligibleMainStation(station.Value))
+            return true;
+
+        if (xform.GridUid is EntityUid grid && HasComp<LavalandStationComponent>(grid))
+            return true;
+
+        var defaultMap = _gameTicker.DefaultMap;
+        if (defaultMap == MapId.Nullspace)
+            return false;
+
+        var mainStation = _stationSystem.GetStationInMap(defaultMap);
+        if (mainStation == null)
+            return false;
+
+        var owningStation = _stationSystem.GetOwningStation(entity, xform);
+        return owningStation == mainStation;
+    }
+
+    private bool IsEligibleMainStation(EntityUid station)
+    {
+        var defaultMap = _gameTicker.DefaultMap;
+        if (defaultMap == MapId.Nullspace)
+            return false;
+
+        var mainStation = _stationSystem.GetStationInMap(defaultMap);
+        return mainStation == station;
+        //IH - end
     }
 
 
