@@ -70,6 +70,7 @@ namespace Content.IntegrationTests.Tests
             // "Europa", // De-rotated, has significant issues.
             "Meta", // Maintained by Ichai
             "Cyberiad", // Maintained by Ichai
+            "SS14RUCyberiad", // WWDP variant
             "Lambda", // Maintained by Ichai
             "Bagel", // Maintained by Ichai
             "Northway", // Maintained by Violet
