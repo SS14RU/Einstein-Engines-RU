@@ -21238,7 +21238,7 @@ entities:
   - uid: 1140
     components:
     - type: MetaData
-      desc: This one says 'б¶ бµвЃї'.
+      desc: This one says 'ISOLATION'.
       name: isolation
     - type: Transform
       pos: -76.5,-73.5
@@ -21290,7 +21290,7 @@ entities:
   - uid: 1145
     components:
     - type: MetaData
-      desc: This one says 'FREE AIRбµ‡бµбµ€'.
+      desc: This one says 'FREE AIR'.
       name: EVA
     - type: Transform
       pos: -19.5,-19.5
